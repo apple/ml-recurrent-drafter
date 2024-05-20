@@ -29,11 +29,10 @@ _test_recurrent_drafting_config: Dict[str, Any] = {
 def test_maintain_logits(
     batch_size: int, beam_width: int, vocab_size: int, device: mx.Device
 ) -> None:
-    if torch.cuda.is_available() and device == mx.gpu:
+    if not mx.metal.is_available() and device == mx.gpu:
         return
     mx.set_default_device(device)
     recurrent_drafting.rng.seed_pytorch(123)
-    mx.random.seed(123)
     logits = numpy.random.rand(batch_size, beam_width, vocab_size)
     ref_logits = recurrent_drafting.modeling_drafter.maintain_logits(torch.tensor(logits))
     mlx_logits = mlx_recurrent_drafting.modeling_drafter.maintain_logits(mx.array(logits))
@@ -46,11 +45,10 @@ def test_maintain_logits(
 )
 @pytest.mark.parametrize("device", [mx.gpu, mx.cpu])
 def test_warp_logits(batch_size: int, beam_width: int, vocab_size: int, device: mx.Device) -> None:
-    if torch.cuda.is_available() and device == mx.gpu:
+    if not mx.metal.is_available() and device == mx.gpu:
         return
     mx.set_default_device(device)
     recurrent_drafting.rng.seed_pytorch(123)
-    mx.random.seed(123)
     logits = numpy.random.rand(batch_size, beam_width, vocab_size)
     ref_logits = recurrent_drafting.modeling_drafter.warp_logits(torch.tensor(logits))
     mlx_logits = mlx_recurrent_drafting.modeling_drafter.warp_logits(mx.array(logits))
@@ -88,11 +86,10 @@ def load_test_models(
 def test_drafter_beam_search(
     rnn: bool, batch_size: int, beam_width: int, beam_length: int, device: mx.Device
 ) -> None:
-    if torch.cuda.is_available() and device == mx.gpu:
+    if not mx.metal.is_available() and device == mx.gpu:
         return
     mx.set_default_device(device)
     recurrent_drafting.rng.seed_pytorch(123)
-    mx.random.seed(123)
     ref_model, mlx_model = load_test_models(rnn)
     init_token = numpy.random.randint(low=0, high=VOCAB_SIZE, size=(batch_size,))
     prompt_state = numpy.random.rand(batch_size, HIDDEN_SIZE).astype(numpy.float32)
