@@ -3,6 +3,8 @@ from typing import Tuple
 
 import mlx.core as mx
 import mlx.nn
+import numpy
+import pytest
 import recurrent_drafting
 import torch
 
@@ -36,10 +38,13 @@ def test_rope() -> None:
 def _parity_check(
     ref_model: recurrent_drafting.modeling_llama.LlamaForCausalLM,
     mlx_model: mlx_recurrent_drafting.modeling_llama.Model,
+    input_ids: numpy.ndarray,
+    position_ids: numpy.ndarray,
+    mask: numpy.ndarray,
 ) -> None:
-    input_ids = torch.tensor([[1, 2, 3, 4, 5, 6]], device=ref_model.device)  # in vocab_size
+    assert input_ids.shape == position_ids.shape
     batch_size, input_length = input_ids.shape
-
+    ref_input_ids = torch.tensor(input_ids)
     ref_cache = recurrent_drafting.kv_cache.Cache(
         batch_size=batch_size,
         max_length=input_length + 1,
@@ -47,16 +52,12 @@ def _parity_check(
         n_heads=ref_model.config.num_key_value_heads,
         head_dim=ref_model.config.hidden_size // ref_model.config.num_attention_heads,
         dtype=ref_model.dtype,
-        device=input_ids.device,
+        device=ref_input_ids.device,
     )
-    ref_attn_mask = recurrent_drafting.attention.causal_mask(
-        input_ids, input_ids.shape[1], input_ids.device
-    )
-    ref_position_ids = torch.arange(
-        0, input_ids.shape[1], dtype=torch.long, device=input_ids.device
-    ).expand(input_ids.shape)
+    ref_attn_mask = torch.tensor(mask)
+    ref_position_ids = torch.tensor(position_ids)
     ref_logits = ref_model(
-        input_ids,
+        ref_input_ids,
         past_key_values=ref_cache.sliced,
         attention_mask=ref_attn_mask,
         position_ids=ref_position_ids,
@@ -71,9 +72,10 @@ def _parity_check(
         dtype=mlx_model.model.embed_tokens.weight.dtype,
         device=mx.Device(mx.DeviceType.gpu),
     )
-    mlx_input_ids = mx.array(input_ids.numpy())
-    mlx_mask = mlx_recurrent_drafting.attention.causal_mask(mlx_input_ids, mlx_input_ids.shape[1])
-    mlx_logits = mlx_model(mlx_input_ids, mlx_mask, mlx_cache.sliced)
+    mlx_input_ids = mx.array(input_ids)
+    mlx_mask = mx.array(mask)
+    mlx_position_ids = mx.array(position_ids)
+    mlx_logits = mlx_model(mlx_input_ids, mlx_position_ids, mlx_mask, mlx_cache.sliced)
     assert mx.all(mx.allclose(mlx_logits, mx.array(ref_logits.numpy()), atol=1e-4, rtol=1e-4))
     for c1, c2 in zip(mlx_cache.sliced, ref_cache.sliced):
         q1, v1 = c1
@@ -123,6 +125,40 @@ def load_test_models() -> Tuple[
     return ref_model, mlx_model
 
 
-def test_parity() -> None:
+@pytest.mark.parametrize(
+    ["input_ids", "position_ids", "beam_shape"],
+    [
+        pytest.param(
+            numpy.array([[1, 2, 3, 4, 5, 6]]),
+            numpy.array([[0, 1, 2, 3, 4, 5]]),
+            mlx_recurrent_drafting.modeling_drafter.BeamShape(1, 6),
+        ),
+        pytest.param(
+            numpy.array([[1, 2, 3, 4, 5, 6]]),
+            numpy.array([[0, 1, 2, 0, 1, 2]]),
+            mlx_recurrent_drafting.modeling_drafter.BeamShape(2, 3),
+        ),
+        pytest.param(
+            numpy.array([[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]]),
+            numpy.array([[0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2]]),
+            mlx_recurrent_drafting.modeling_drafter.BeamShape(5, 3),
+        ),
+    ],
+)
+@pytest.mark.parametrize("device", [mx.gpu])  # mx.cpu fails the unit test
+def test_parity_with_no_compression(
+    input_ids: numpy.ndarray,
+    position_ids: numpy.ndarray,
+    beam_shape: mlx_recurrent_drafting.modeling_drafter.BeamShape,
+    device: mx.Device,
+) -> None:
+    mx.set_default_device(device)
     ref_model, mlx_model = load_test_models()
-    _parity_check(ref_model, mlx_model)
+    mask = numpy.array(
+        mlx_recurrent_drafting.attention.causal_mask(
+            mx.ones(shape=(1, beam_shape.length), dtype=mx.bool_), beam_shape.length
+        )
+    )
+    eye = numpy.eye(beam_shape.width, dtype=int)
+    mask = numpy.kron(eye, mask)
+    _parity_check(ref_model, mlx_model, input_ids, position_ids, mask)

@@ -77,22 +77,45 @@ class Attention(nn.Module):
     def __call__(
         self,
         x: mx.array,
+        position_ids: mx.array,  # required by rotary embedding
         mask: mx.array,
         cache: Tuple[kv_cache.View, kv_cache.View],
     ) -> mx.array:
+        # Only support batch_size = 1
+        assert position_ids.shape[0] == x.shape[0] == 1
+        assert position_ids.shape[1] == x.shape[1]
         B, L, _ = x.shape
 
         queries, keys, values = self.q_proj(x), self.k_proj(x), self.v_proj(x)
 
-        # Prepare the queries, keys and values for the attention computation
-        queries = queries.reshape(B, L, self.n_heads, -1).transpose(0, 2, 1, 3)
-        keys = keys.reshape(B, L, self.n_kv_heads, -1).transpose(0, 2, 1, 3)
-        values = values.reshape(B, L, self.n_kv_heads, -1).transpose(0, 2, 1, 3)
+        # Assume no tree attention or any other input compression algorithm is applied
+        beam_length = (position_ids[0][-1] - position_ids[0][0] + 1).item()
+        beam_width = L // beam_length
+        assert beam_width * beam_length == L
 
-        # TODO Must rotate based on position ids, or we have to repeat the kv cache.
+        # Prepare the queries, keys and values for RoPE computation
+        queries = queries.reshape(B * beam_width, beam_length, self.n_heads, -1).transpose(
+            0, 2, 1, 3
+        )
+        keys = keys.reshape(B * beam_width, beam_length, self.n_kv_heads, -1).transpose(0, 2, 1, 3)
+        values = values.reshape(B * beam_width, beam_length, self.n_kv_heads, -1).transpose(
+            0, 2, 1, 3
+        )
+
+        # Compute RoPE
         key_cache, value_cache = cache
         queries = self.rope(queries, offset=key_cache.shape[2])
         keys = self.rope(keys, offset=value_cache.shape[2])
+
+        # Prepare the queries, keys and values for the attention computation
+        queries = (
+            queries.transpose(0, 2, 1, 3).reshape(B, L, self.n_heads, -1).transpose(0, 2, 1, 3)
+        )
+        keys = keys.transpose(0, 2, 1, 3).reshape(B, L, self.n_kv_heads, -1).transpose(0, 2, 1, 3)
+        values = (
+            values.transpose(0, 2, 1, 3).reshape(B, L, self.n_kv_heads, -1).transpose(0, 2, 1, 3)
+        )
+
         keys = key_cache.cat(keys)  # in-place
         values = value_cache.cat(values)  # in-place
 
@@ -128,10 +151,11 @@ class TransformerBlock(nn.Module):
     def __call__(
         self,
         x: mx.array,
+        position_ids: mx.array,  # required by rotary embedding
         mask: mx.array,
         cache: Tuple[kv_cache.View, kv_cache.View],
     ) -> mx.array:
-        r = self.self_attn(self.input_layernorm(x), mask, cache)
+        r = self.self_attn(self.input_layernorm(x), position_ids, mask, cache)
         h = x + r
         r = self.mlp(self.post_attention_layernorm(h))
         out = h + r
@@ -152,6 +176,7 @@ class LlamaModel(nn.Module):
     def __call__(
         self,
         inputs: mx.array,
+        position_ids: mx.array,  # required by rotary embedding
         mask: mx.array,
         cache: Tuple[Tuple[kv_cache.View, kv_cache.View], ...],
     ) -> mx.array:
@@ -159,7 +184,7 @@ class LlamaModel(nn.Module):
         bias = attention.bias(mask, h.dtype)
 
         for layer, c in zip(self.layers, cache):
-            h = layer(h, bias, cache=c)
+            h = layer(h, position_ids, bias, cache=c)
         return self.norm(h)
 
 
@@ -174,11 +199,12 @@ class Model(nn.Module):
     def __call__(
         self,
         inputs: mx.array,
+        position_ids: mx.array,  # required by rotary embedding
         mask: mx.array,
         cache: Tuple[Tuple[kv_cache.View, kv_cache.View], ...],
     ) -> mx.array:
         assert inputs.shape[0] == 1  # Only supports batch_size=1 for now.
-        out = self.model(inputs, mask, cache)
+        out = self.model(inputs, position_ids, mask, cache)
         return self.lm_head(out)
 
     @property
