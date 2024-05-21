@@ -32,7 +32,7 @@ def test_maintain_logits(
     if not mx.metal.is_available() and device == mx.gpu:
         return
     mx.set_default_device(device)
-    recurrent_drafting.rng.seed_pytorch(123)
+    numpy.random.seed(123)
     logits = numpy.random.rand(batch_size, beam_width, vocab_size)
     ref_logits = recurrent_drafting.modeling_drafter.maintain_logits(torch.tensor(logits))
     mlx_logits = mlx_recurrent_drafting.modeling_drafter.maintain_logits(mx.array(logits))
@@ -48,7 +48,7 @@ def test_warp_logits(batch_size: int, beam_width: int, vocab_size: int, device: 
     if not mx.metal.is_available() and device == mx.gpu:
         return
     mx.set_default_device(device)
-    recurrent_drafting.rng.seed_pytorch(123)
+    numpy.random.seed(123)
     logits = numpy.random.rand(batch_size, beam_width, vocab_size)
     ref_logits = recurrent_drafting.modeling_drafter.warp_logits(torch.tensor(logits))
     mlx_logits = mlx_recurrent_drafting.modeling_drafter.warp_logits(mx.array(logits))
