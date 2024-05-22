@@ -204,8 +204,8 @@ class Model(nn.Module):
         cache: Tuple[Tuple[kv_cache.View, kv_cache.View], ...],
     ) -> mx.array:
         assert inputs.shape[0] == 1  # Only supports batch_size=1 for now.
-        out = self.model(inputs, position_ids, mask, cache)
-        return self.lm_head(out)
+        h = self.model(inputs, position_ids, mask, cache)
+        return h, self.lm_head(h)
 
     @property
     def layers(self) -> List[TransformerBlock]:

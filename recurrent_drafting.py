@@ -5,6 +5,9 @@ from typing import Optional, Tuple
 import mlx.core as mx
 import mlx.nn
 
+from mlx_recurrent_drafting import attention, kv_cache, modeling_drafter
+from mlx_recurrent_drafting.modeling_drafter import BeamShape
+
 
 @dataclass
 class SamplingArgs:
@@ -231,3 +234,214 @@ def _prepare_next_input(
     # Collect the draft input for next
     accepted_last_token_state = _select_one_per_row(selected_last_hidden_state, n_tokens_in_seq)
     return accepted_last_token_state, next_tokens
+
+
+def _count_left_paddings(tokens: mx.array, pad_token_id: int):
+    return mx.sum(mx.cumprod((tokens == pad_token_id).astype(mx.int32), axis=-1), axis=-1)
+
+
+def _present_kv_as_beam(
+    beam_shape: BeamShape,
+    past_kv_length: int,
+    cache: kv_cache.Cache,
+) -> Tuple[Tuple[mx.array, mx.array], ...]:
+    """Split past keys, values and update the kv_cache. Return present keys and values.
+
+    Returns:
+      present_key_values: A [num_layers, 2] tuple.
+      present_key_values[k][0] is the k-th layer key Tensor with shape
+      (
+        batch_size * num_kv_heads,
+        beam_width,
+        beam_length,
+        head_dim,
+      )
+      present_key_values[k][1] is the k-th layer value Tensor with shape
+      (
+        batch_size * num_kv_heads,
+        beam_width,
+        beam_length,
+        head_dim,
+      )
+    """
+    batch_size, n_heads, _, head_dim = cache.sliced[0][0].shape
+    present_key_values: Tuple[Tuple[mx.array, mx.array], ...] = ()
+    for key_value in cache.sliced:
+        key, value = key_value
+        present_key = key.slice(past_kv_length).reshape(
+            (batch_size * n_heads, beam_shape.width, beam_shape.length, head_dim)
+        )
+        present_value = value.slice(past_kv_length).reshape(
+            (batch_size * n_heads, beam_shape.width, beam_shape.length, head_dim)
+        )
+        present_key_values = present_key_values + ((present_key, present_value),)
+
+        key.length = value.length = past_kv_length
+
+    return present_key_values
+
+
+def _update_kv_cache_and_input_ids(
+    input_ids: mx.array,
+    n_tokens_in_seq: mx.array,
+    seq_in_beam: mx.array,
+    beams: mx.array,
+    cache: kv_cache.Cache,
+    pad_token_id: int,
+) -> mx.array:
+    """This function appends accepted tokens to input_ids and the associated keys and values to the
+    KV cache. Input ids and the KV cache are right-aligned and left-padded to prepare for the next
+    text decoding loop step.
+
+      input_ids: (batch_size, previous_seq_len)
+
+      n_tokens_in_seq: (batch_size) The maximal number of accepted tokens.
+
+      seq_in_beam: (batch_size) The index of the sequence candidate which has the maximal
+      number of accepted tokens in a beam.
+
+      beams: (batch_size, beam_width, beam_length) Generated from the drafter model.
+
+      pad_token_id: Pad token id.
+
+    Returns:
+
+      appended_input_ids: (batch_size, previous_seq_len+1+max(n_tokens_in_seq)) Updated input
+      ids with the accepted tokens for the next iteration.
+
+    An Example:
+
+          input_ids |    selected_beams
+
+        - hello what     |    is    your  name  <pad> <pad>
+        - <pad> I        |    am    bob   how   are   you
+
+        num_prev_left_pads = [0, 1]
+        n_tokens_in_seq = [2, 4] (Note this doesn't include the token sampled from llm.)
+        seq_len = [5, 6]
+        max_seq_len = 6
+        num_realigned_left_pads = [1, 0]
+
+        After the token appendment and re-alignment
+
+          appended_input_ids
+
+        - <pad> hello what  is    your  name
+        - I     am    bob   how   are   you
+
+    """
+    assert input_ids.dtype in [mx.int32, mx.int64]
+    batch_size, beam_width, beam_length = beams.shape
+    # Caluate the max new length.
+    num_prev_left_pads = _count_left_paddings(input_ids, pad_token_id)
+    # concat_length: (batch_size,)
+    n_tokens_in_seq_with_init = n_tokens_in_seq + 1
+    seq_len = input_ids.shape[1] - num_prev_left_pads + n_tokens_in_seq_with_init
+    max_seq_len = mx.max(seq_len)
+    num_realigned_left_pads = max_seq_len - seq_len
+
+    # Gather along selected beam index dimension.
+    selected_seqs = _select_one_per_row(beams, seq_in_beam)
+
+    # Collect the present keys and values
+    present_key_values = _present_kv_as_beam(
+        beam_shape=BeamShape(beam_width, beam_length),
+        past_kv_length=input_ids.shape[1],
+        cache=cache,
+    )
+    # Not counting the draft_init_token since it is used in drafting.
+    _, _, _, n_heads, _, head_dim = cache._cache.shape
+    key_seq_in_beam = mx.repeat(seq_in_beam[:, None], n_heads, axis=1).reshape(-1)
+    value_seq_in_beam = mx.repeat(seq_in_beam[:, None], n_heads, axis=1).reshape(-1)
+    for key_value, present_key_value in zip(cache.sliced, present_key_values):
+        past_key, past_value = key_value
+        present_key, present_value = present_key_value
+        selected_present_key = _select_one_per_row(present_key, key_seq_in_beam)
+        selected_present_key = selected_present_key.reshape(
+            (batch_size, n_heads, beam_length, head_dim)
+        )
+        selected_present_value = _select_one_per_row(present_value, value_seq_in_beam)
+        selected_present_value = selected_present_value.reshape(
+            (batch_size, n_heads, beam_length, head_dim)
+        )
+        past_key.cat(selected_present_key)
+        past_value.cat(selected_present_value)
+
+    # Updating kv_cache.View requires shifting examples with different offsets.
+    # Modified from the pytorch version. TODO: The pytorch version seems having a bug
+    combined_key_value = cache._cache[:, :, :, :, : cache.sliced[0][0].length, :]
+    for i in range(batch_size):
+        start = num_prev_left_pads[i]
+        end = input_ids.shape[1] + n_tokens_in_seq_with_init[i]
+        assert max_seq_len - num_realigned_left_pads[i] == end - start
+        # Right aligned.
+        cache._cache[:, :, i, :, num_realigned_left_pads[i].item() : max_seq_len.item(), :] = (
+            combined_key_value[:, :, i, :, start.item() : end.item(), :]
+        )
+
+    # Collect new input_ids.
+    appended_input_ids = mx.full(
+        shape=(batch_size, max_seq_len.item()), vals=pad_token_id, dtype=input_ids.dtype
+    )
+    for i in range(batch_size):
+        # Copy previous ids, excluding the pad ids on the left.
+        start = num_realigned_left_pads[i]
+        end = start + input_ids.shape[1] - num_prev_left_pads[i]
+        appended_input_ids[i, start.item() : end.item()] = input_ids[
+            i, num_prev_left_pads[i].item() :
+        ]
+        # Copy accepted proposed ids.
+        start = end
+        end = start + n_tokens_in_seq_with_init[i]
+        appended_input_ids[i, start.item() : end.item()] = selected_seqs[
+            i, : n_tokens_in_seq_with_init[i].item()
+        ]
+
+    # Reset key and value length.
+    for key, value in cache.sliced:
+        key.length = value.length = appended_input_ids.shape[1]
+
+    return appended_input_ids
+
+
+def _comprehend_prompt(
+    llm: mlx.nn.Module,
+    input_ids: mx.array,
+    cache: kv_cache.Cache,
+    sampling_args: SamplingArgs,
+    pad_token_id: int,
+) -> Tuple[mx.array, mx.array]:
+    """Calls llm to convert input_ids into cached keys and values. Also reuse the hidden states from
+    the call to predict the next token and append it to input_ids.
+
+      input_ids: (batch_size, prompt_length)
+
+    Returns:
+
+      draft_input: (batch_size, hidden_size). The hidden state of the last token.
+
+      next_token: (batch_size). The next token generated from input_ids.
+    """
+    assert input_ids.dtype in [mx.int32, mx.int64]
+    causal_mask = attention.causal_mask(input_ids != pad_token_id, input_ids.shape[1])
+    position_ids = (
+        mx.repeat(mx.arange(input_ids.shape[1], dtype=mx.int32), repeats=input_ids.shape[0], axis=0)
+        - _count_left_paddings(input_ids, pad_token_id)[..., None]
+    )
+    hidden_states, logits = llm(
+        input_ids,
+        position_ids=position_ids,
+        mask=causal_mask,
+        cache=cache.sliced,
+    )
+    last_token_state = hidden_states[:, -1, :]
+    next_token_logits = modeling_drafter.warp_logits(logits[:, -1, :])
+    next_token = (
+        mx.argmax(next_token_logits, axis=-1)
+        if sampling_args.greedy
+        else mx.random.categorical(logits=next_token_logits / sampling_args.temperature)
+    )
+    return (
+        last_token_state,
+        next_token,
+    )

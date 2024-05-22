@@ -56,12 +56,14 @@ def _parity_check(
     )
     ref_attn_mask = torch.tensor(mask)
     ref_position_ids = torch.tensor(position_ids)
-    ref_logits = ref_model(
+    ref_output = ref_model(
         ref_input_ids,
         past_key_values=ref_cache.sliced,
         attention_mask=ref_attn_mask,
         position_ids=ref_position_ids,
-    ).logits.detach()
+    )
+    ref_logits = ref_output.logits
+    ref_hidden_states = ref_output.hidden_states
 
     mlx_cache = mlx_recurrent_drafting.kv_cache.Cache(
         batch_size=batch_size,
@@ -75,7 +77,12 @@ def _parity_check(
     mlx_input_ids = mx.array(input_ids)
     mlx_mask = mx.array(mask)
     mlx_position_ids = mx.array(position_ids)
-    mlx_logits = mlx_model(mlx_input_ids, mlx_position_ids, mlx_mask, mlx_cache.sliced)
+    mlx_hidden_states, mlx_logits = mlx_model(
+        mlx_input_ids, mlx_position_ids, mlx_mask, mlx_cache.sliced
+    )
+    assert mx.all(
+        mx.allclose(mlx_hidden_states, mx.array(ref_hidden_states.numpy()), atol=1e-4, rtol=1e-4)
+    )
     assert mx.all(mx.allclose(mlx_logits, mx.array(ref_logits.numpy()), atol=1e-4, rtol=1e-4))
     for c1, c2 in zip(mlx_cache.sliced, ref_cache.sliced):
         q1, v1 = c1
