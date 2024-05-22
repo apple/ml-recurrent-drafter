@@ -12,6 +12,7 @@ import torch
 import mlx_recurrent_drafting
 import mlx_recurrent_drafting.recurrent_drafting
 from mlx_recurrent_drafting.modeling_drafter import LOG_0
+from mlx_recurrent_drafting.modeling_llama_test import load_test_models
 
 
 @pytest.mark.parametrize(
@@ -187,3 +188,170 @@ def test_choose_from_candidates(
 
     assert mx.all(mlx_n_tokens_in_seq == mx.array(ref_n_tokens_in_seq))
     # TODO how to verify ref_seq_in_beam and mlx_seq_in_beam? The max selection can be different.
+
+
+@pytest.mark.parametrize("shape", [(1, 4), (3, 17)])
+def test_count_left_paddings(shape: Tuple[int]) -> None:
+    numpy.random.seed(123)
+    x = numpy.random.randint(low=0, high=2, size=shape)
+    ref_o = recurrent_drafting.recurrent_drafting._count_left_paddings(torch.tensor(x), 0)
+    mlx_o = mlx_recurrent_drafting.recurrent_drafting._count_left_paddings(mx.array(x), 0)
+    assert mx.all(mlx_o == mx.array(ref_o))
+
+
+@pytest.mark.parametrize(["beam_width", "beam_length"], [pytest.param(1, 3), pytest.param(3, 17)])
+@pytest.mark.parametrize("past_kv_len", [0, 1, 7])
+def test_present_kv_as_beam(beam_width: int, beam_length: int, past_kv_len: int) -> None:
+    numpy.random.seed(123)
+    batch_size, max_len, n_layers, n_heads, head_dim = 2, 100, 4, 4, 4
+    ref_cache = recurrent_drafting.kv_cache.Cache(
+        batch_size, max_len, n_layers, n_heads, head_dim, torch.float32, device=torch.device("cpu")
+    )
+    mlx_cache = mlx_recurrent_drafting.kv_cache.Cache(
+        batch_size, max_len, n_layers, n_heads, head_dim, mx.float32, device=mx.gpu
+    )
+    for layer_i in range(n_layers):
+        for kv_i in range(2):
+            kv_len = past_kv_len + beam_width * beam_length
+            kvs = numpy.random.rand(batch_size, n_heads, kv_len, head_dim)
+            ref_cache.sliced[layer_i][kv_i].cat(torch.tensor(kvs))
+            mlx_cache.sliced[layer_i][kv_i].cat(mx.array(kvs))
+
+    ref_kv = recurrent_drafting.recurrent_drafting._present_kv_as_beam(
+        recurrent_drafting.modeling_drafter.BeamShape(beam_width, beam_length),
+        past_kv_len,
+        ref_cache,
+    )
+    mlx_kv = mlx_recurrent_drafting.recurrent_drafting._present_kv_as_beam(
+        mlx_recurrent_drafting.modeling_drafter.BeamShape(beam_width, beam_length),
+        past_kv_len,
+        mlx_cache,
+    )
+
+    assert len(mlx_kv) == n_layers
+    for layer_i in range(n_layers):
+        for kv_j in range(2):
+            assert mx.all(
+                mx.allclose(mlx_kv[layer_i][kv_j], mx.array(ref_kv[layer_i][kv_j].numpy()))
+            )
+
+
+@pytest.mark.parametrize(["beam_width", "beam_length"], [pytest.param(1, 3), pytest.param(3, 17)])
+@pytest.mark.parametrize("past_kv_len", [1, 7])
+@pytest.mark.parametrize("batch_size", [1, 7])
+def test_update_kv_cache_and_input_ids(
+    batch_size: int, beam_width: int, beam_length: int, past_kv_len: int
+) -> None:
+    numpy.random.seed(123)
+    max_len, n_layers, n_heads, head_dim = 100, 4, 4, 4
+    input_ids = numpy.random.randint(low=0, high=100, size=(batch_size, past_kv_len))
+    seq_in_beam = numpy.random.randint(low=0, high=beam_width, size=(batch_size,))
+    n_tokens_in_seq = numpy.random.randint(low=0, high=beam_length - 1, size=(batch_size,))
+    beams = numpy.random.randint(low=1, high=100, size=(batch_size, beam_width, beam_length))
+    beams[..., 0] = 1  # token sampled from llm
+
+    ref_cache = recurrent_drafting.kv_cache.Cache(
+        batch_size, max_len, n_layers, n_heads, head_dim, torch.float32, device=torch.device("cpu")
+    )
+    mlx_cache = mlx_recurrent_drafting.kv_cache.Cache(
+        batch_size, max_len, n_layers, n_heads, head_dim, mx.float32, device=mx.gpu
+    )
+    for layer_i in range(n_layers):
+        for kv_i in range(2):
+            kv_len = past_kv_len + beam_width * beam_length
+            kvs = numpy.random.rand(batch_size, n_heads, kv_len, head_dim)
+            ref_cache.sliced[layer_i][kv_i].cat(torch.tensor(kvs))
+            mlx_cache.sliced[layer_i][kv_i].cat(mx.array(kvs))
+
+    ref_appended_input_ids = recurrent_drafting.recurrent_drafting._update_kv_cache_and_input_ids(
+        torch.tensor(input_ids),
+        torch.tensor(n_tokens_in_seq),
+        torch.tensor(seq_in_beam),
+        torch.tensor(beams),
+        ref_cache,
+        pad_token_id=0,
+    )
+
+    mlx_appended_input_ids = (
+        mlx_recurrent_drafting.recurrent_drafting._update_kv_cache_and_input_ids(
+            mx.array(input_ids),
+            mx.array(n_tokens_in_seq),
+            mx.array(seq_in_beam),
+            mx.array(beams),
+            mlx_cache,
+            pad_token_id=0,
+        )
+    )
+    assert mx.all(mlx_appended_input_ids == mx.array(ref_appended_input_ids.numpy()))
+
+
+@pytest.mark.parametrize("prompt_len", [1, 7])
+@pytest.mark.parametrize("batch_size", [1])
+@pytest.mark.parametrize("temperature", [0.1, 0.5])
+@pytest.mark.parametrize("greedy", [True, False])
+@unittest.mock.patch("mlx.core.random.categorical")
+@unittest.mock.patch("torch.distributions.Categorical")
+def test_comprehend_prompt(
+    ref_categorical_mock: unittest.mock.MagicMock,
+    mlx_categorical_mock: unittest.mock.MagicMock,
+    temperature: float,
+    greedy: bool,
+    batch_size: int,
+    prompt_len: int,
+):
+    numpy.random.seed(123)
+
+    ref_llm, mlx_llm = load_test_models()
+    config = ref_llm.config
+    n_layers, n_heads, head_dim = (
+        config.num_hidden_layers,
+        config.num_key_value_heads,
+        config.hidden_size // config.num_attention_heads,
+    )
+    max_len, vocab_size = prompt_len + 1, config.vocab_size
+    pad_token_id = 0
+
+    logits = numpy.random.rand(batch_size, prompt_len, vocab_size) * LOG_0
+    samples = logits[:, -1, :].argmax(axis=-1)
+    sample_mock = unittest.mock.Mock()
+    sample_mock.sample.return_value = torch.tensor(samples)
+    ref_categorical_mock.return_value = sample_mock
+    mlx_categorical_mock.return_value = torch.tensor(samples)
+
+    input_ids = numpy.random.randint(low=1, high=vocab_size, size=(batch_size, prompt_len))
+
+    ref_cache = recurrent_drafting.kv_cache.Cache(
+        batch_size, max_len, n_layers, n_heads, head_dim, torch.float32, device=torch.device("cpu")
+    )
+    mlx_cache = mlx_recurrent_drafting.kv_cache.Cache(
+        batch_size, max_len, n_layers, n_heads, head_dim, mx.float32, device=mx.gpu
+    )
+
+    ref_state, ref_token = recurrent_drafting.recurrent_drafting._comprehend_prompt(
+        ref_llm,
+        torch.tensor(input_ids),
+        ref_cache,
+        recurrent_drafting.recurrent_drafting.SamplingArgs(temperature, greedy),
+        pad_token_id,
+    )
+
+    mlx_state, mlx_token = mlx_recurrent_drafting.recurrent_drafting._comprehend_prompt(
+        mlx_llm,
+        mx.array(input_ids),
+        mlx_cache,
+        mlx_recurrent_drafting.recurrent_drafting.SamplingArgs(temperature, greedy),
+        pad_token_id,
+    )
+
+    assert mx.all(mx.allclose(mlx_state, mx.array(ref_state)))
+    assert mx.all(mlx_token == mx.array(ref_token))
+
+    # check the probs/logits for sampling
+    if not greedy:
+        mlx_categorical_mock.assert_called()
+        assert mx.all(
+            mx.allclose(
+                mx.softmax(mlx_categorical_mock.call_args.kwargs["logits"], axis=-1),
+                mx.array(ref_categorical_mock.call_args.kwargs["probs"]),
+            )
+        )
