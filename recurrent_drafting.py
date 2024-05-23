@@ -445,3 +445,31 @@ def _comprehend_prompt(
         last_token_state,
         next_token,
     )
+
+
+def _verify_candidates(
+    llm: mlx.nn.Module,
+    input_ids: mx.array,
+    beams: mx.array,
+    cache: kv_cache.Cache,
+    pad_token_id: int,
+) -> Tuple[mx.array, mx.array]:
+    packed_beams, mask, position_offsets = attention.pack(
+        beams, padding_mask=(input_ids != pad_token_id).astype(input_ids.dtype)
+    )
+    past_kv_len = (
+        cache.sliced[0][0].length - _count_left_paddings(input_ids, pad_token_id)[..., None]
+    )
+    hidden_states, logits = llm(
+        packed_beams,
+        mask=mask,
+        cache=cache.sliced,
+        position_ids=past_kv_len + position_offsets,
+    )
+
+    logits = modeling_drafter.warp_logits(logits)
+    hidden_states = attention.unpack(hidden_states, beams.shape[1], beams.shape[2])
+    logits = attention.unpack(logits, beams.shape[1], beams.shape[2])
+    # No need to unpack the kv cache since without compression, keys and values are
+    # at the correct place.
+    return hidden_states, logits

@@ -11,6 +11,7 @@ import torch
 
 import mlx_recurrent_drafting
 import mlx_recurrent_drafting.recurrent_drafting
+from mlx_recurrent_drafting.attention_test import BEAMS_NO_COMMON_PREFIX
 from mlx_recurrent_drafting.modeling_drafter import LOG_0
 from mlx_recurrent_drafting.modeling_llama_test import load_test_models
 
@@ -370,3 +371,58 @@ def test_comprehend_prompt(
                 mx.array(ref_categorical_mock.call_args.kwargs["probs"]),
             )
         )
+
+
+@torch.inference_mode()
+@pytest.mark.parametrize("prompt_len", [1, 7])
+def test_verify_candidates(prompt_len: int) -> None:
+    numpy.random.seed(123)
+    batch_size = 1
+    beams = BEAMS_NO_COMMON_PREFIX
+    beam_width, beam_length = beams.shape[1], beams.shape[2]
+
+    ref_llm, mlx_llm = load_test_models()
+    config = ref_llm.config
+    n_layers, n_heads, head_dim = (
+        config.num_hidden_layers,
+        config.num_key_value_heads,
+        config.hidden_size // config.num_attention_heads,
+    )
+    max_len, vocab_size = prompt_len + beam_width * beam_length, config.vocab_size
+    pad_token_id = 0
+
+    input_ids = numpy.random.randint(low=1, high=vocab_size, size=(batch_size, prompt_len))
+
+    ref_cache = recurrent_drafting.kv_cache.Cache(
+        batch_size, max_len, n_layers, n_heads, head_dim, torch.float32, device=torch.device("cpu")
+    )
+    mlx_cache = mlx_recurrent_drafting.kv_cache.Cache(
+        batch_size, max_len, n_layers, n_heads, head_dim, mx.float32, device=mx.gpu
+    )
+    for layer_i in range(n_layers):
+        for kv_i in range(2):
+            kvs = numpy.random.rand(batch_size, n_heads, prompt_len, head_dim)
+            ref_cache.sliced[layer_i][kv_i].cat(torch.tensor(kvs))
+            mlx_cache.sliced[layer_i][kv_i].cat(mx.array(kvs))
+
+    stats_mock = unittest.mock.Mock()
+    stats_mock.time.return_value.__enter__ = lambda *args: None
+    stats_mock.time.return_value.__exit__ = lambda *args: None
+    ref_states, ref_logits = recurrent_drafting.recurrent_drafting._verify_candidates(
+        stats_mock,
+        ref_llm,
+        torch.tensor(input_ids),
+        torch.tensor(BEAMS_NO_COMMON_PREFIX),
+        ref_cache,
+        pad_token_id,
+    )
+
+    mlx_states, mlx_logits = mlx_recurrent_drafting.recurrent_drafting._verify_candidates(
+        mlx_llm, mx.array(input_ids), mx.array(BEAMS_NO_COMMON_PREFIX), mlx_cache, pad_token_id
+    )
+
+    assert mx.all(mx.allclose(mlx_states, mx.array(ref_states.numpy())))
+    assert mx.all(mx.allclose(mlx_logits, mx.array(ref_logits.numpy())))
+    assert mx.all(
+        mx.allclose(mlx_cache._cache, mx.array(ref_cache._cache.numpy()), atol=1e-4, rtol=1e-4)
+    )
