@@ -138,6 +138,9 @@ def test_greedy_choose_from_candidates(batch_size: int, beam_width: int, beam_le
     )
 
     assert mx.all(mlx_n_tokens_in_seq == mx.array(ref_n_tokens_in_seq.numpy()))
+    # Check the selected sequence has the correct number of tokens accepted == mlx_n_tokens_in_seq
+    # Comparing mlx_seq_in_beam == ref_seq_in_beam can be incorrect because mlx and pytorch can
+    # choose different longest sequence.
     for batch_i in range(batch_size):
         selected_beam_by_drafter_by_mx = mx.array(
             beams_by_drafter[batch_i][mlx_seq_in_beam[batch_i]]
@@ -171,14 +174,12 @@ def test_choose_from_candidates(
         low=-10, high=0, size=(batch_size, beam_width, beam_length - 1, vocab_size)
     )
 
-    rand_vals = numpy.random.rand(batch_size, beam_width, 1)
+    rand_vals = numpy.random.rand(batch_size, beam_width, beam_length - 1)
     mx_rand.return_value = mx.array(rand_vals)
     torch_rand.return_value = torch.tensor(rand_vals)
 
-    ref_n_tokens_in_seq, ref_seq_in_beam = (
-        recurrent_drafting.recurrent_drafting._choose_from_candidates(
-            torch.tensor(beams), torch.tensor(log_probs_by_llm), torch.tensor(log_probs_by_drafter)
-        )
+    ref_n_tokens_in_seq, _ = recurrent_drafting.recurrent_drafting._choose_from_candidates(
+        torch.tensor(beams), torch.tensor(log_probs_by_llm), torch.tensor(log_probs_by_drafter)
     )
     mlx_n_tokens_in_seq, mlx_seq_in_beam = (
         mlx_recurrent_drafting.recurrent_drafting._choose_from_candidates(
@@ -187,7 +188,21 @@ def test_choose_from_candidates(
     )
 
     assert mx.all(mlx_n_tokens_in_seq == mx.array(ref_n_tokens_in_seq))
-    # TODO how to verify ref_seq_in_beam and mlx_seq_in_beam? The max selection can be different.
+    # Check the selected sequence has the correct number of tokens accepted == mlx_n_tokens_in_seq.
+    # Comparing mlx_seq_in_beam == ref_seq_in_beam can be incorrect because mlx and pytorch can
+    # choose different longest sequence.
+    for batch_i in range(batch_size):
+        seq_i = mlx_seq_in_beam[batch_i]
+        cur_beam = mx.array(beams[batch_i][seq_i][1:])
+        cur_log_probs_llm = mx.array(log_probs_by_llm[batch_i][seq_i][:-1])[
+            mx.arange(beam_length - 1), cur_beam
+        ]
+        cur_log_probs_drafter = mx.array(log_probs_by_drafter[batch_i][seq_i])[
+            mx.arange(beam_length - 1), cur_beam
+        ]
+        cm = mx.exp(cur_log_probs_llm - cur_log_probs_drafter) > mx.array(rand_vals[batch_i][seq_i])
+        count_accepted = mx.sum(mx.cumprod(cm.astype(mx.int32), axis=-1), axis=-1)
+        assert count_accepted.item() == mlx_n_tokens_in_seq[batch_i]
 
 
 @pytest.mark.parametrize("shape", [(1, 4), (3, 17)])
