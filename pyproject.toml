@@ -1,0 +1,12 @@
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+exclude =  ["benchmark"]
+ignore_missing_imports = true # https://stackoverflow.com/a/57815124/724872
+disallow_subclassing_any = false # https://stackoverflow.com/a/49990980/724872
+warn_return_any = false
+# disallow_untyped_defs = true Enable it after we fix all the defs, or leave it here.
+
+[tool.black]
+line-length = 100

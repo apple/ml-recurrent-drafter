@@ -1,0 +1,57 @@
+digraph G {
+    graph [fontname = "Monaco"];
+    node [fontname = "Monaco"];
+    edge [fontname = "Monaco"];
+
+    node [shape=plaintext, style=filled];
+
+    subgraph cluster_pack {
+        label="pack";
+	    labeljust="l";
+	    fillcolor=linen;
+	    style=filled;
+        _dedup_prefix, _pack_beams, _get_unpacker, _get_causal_mask, prefix_tree, packed_token_indices [fillcolor=linen];
+    }
+    unpack [shape=box, fillcolor=linen];
+    LLM [shape=box, fillcolor=linen];
+    "kv_cache.unpack" [shape=box, fillcolor=linen];
+
+    beams [fillcolor=tomato];
+    padding_mask [fillcolor=tomato];
+
+    beams -> _dedup_prefix -> prefix_tree;
+
+    beams -> _pack_beams -> packed_beams;
+    prefix_tree -> _pack_beams -> packed_token_indices;
+
+    beams -> _get_unpacker -> unpacker;
+    prefix_tree -> _get_unpacker;
+
+    unpacker [fillcolor=seagreen1];
+    causal_mask [fillcolor=seagreen1];
+    packed_beams [fillcolor=seagreen1];
+    position_offsets [fillcolor=seagreen1];
+
+    unpacker -> _get_causal_mask -> causal_mask;
+    packed_token_indices -> _get_causal_mask;
+    padding_mask -> _get_causal_mask;
+    packed_token_indices -> position_offsets;
+
+    packed_beams -> LLM -> packed_logits -> unpack -> logits;
+    causal_mask -> LLM -> packed_hidden_states -> unpack -> hidden_states;
+    position_offsets -> LLM;
+    LLM -> packed_kv_cache -> "kv_cache.unpack" -> kv_cache;
+    unpacker -> unpack;
+    unpacker -> "kv_cache.unpack";
+
+    packed_hidden_states [fillcolor=plum1];
+    packed_logits [fillcolor=plum1];
+    packed_kv_cache [fillcolor=plum1];
+
+    logits [fillcolor=paleturquoise];
+    hidden_states [fillcolor=paleturquoise];
+    kv_cache [fillcolor=paleturquoise];
+
+    {rank=same; beams, padding_mask}
+    {rank=same; packed_beams, causal_mask}
+}

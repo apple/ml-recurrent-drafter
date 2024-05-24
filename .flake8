@@ -1,0 +1,19 @@
+[flake8]
+# flake8 and black are complementary to each other and are both recommended for Python projects
+# (https://sbarnea.com/lint/black/). However, flake8 conflicts with black on E203.
+# flake8 requires no whitespace before ':' but black adds whitespace before ':'. I had to ignore E203.
+ignore = E203,W503
+
+exclude =
+  .git
+  .mypy_cache
+  .pytest_cache
+  .venv
+  __pycache__
+  build
+  dist
+  out
+  venv
+
+per-file-ignores = __init__.py:F401
+max-line-length = 100
