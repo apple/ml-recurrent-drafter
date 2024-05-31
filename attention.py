@@ -66,7 +66,7 @@ def bias(causal_mask: mx.array, dtype: mx.Dtype) -> mx.array:
     Returns:
         attn_bias (batch_size, .., query_len, key_value_len)
     """
-    return mx.logical_not(causal_mask) * LOG_0 + causal_mask * 0.0
+    return mx.logical_not(causal_mask) * LOG_0
 
 
 def pack(
