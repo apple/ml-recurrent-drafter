@@ -55,7 +55,7 @@ def test_warp_logits(batch_size: int, beam_width: int, vocab_size: int, device: 
     assert mx.allclose(mlx_logits, mx.array(ref_logits.numpy()), atol=1e-2, rtol=1e-2).item()
 
 
-def load_test_models(
+def create_test_models(
     rnn: bool,
 ) -> Tuple[
     recurrent_drafting.modeling_drafter.Drafter, mlx_recurrent_drafting.modeling_drafter.Drafter
@@ -90,7 +90,7 @@ def test_drafter_beam_search(
         return
     mx.set_default_device(device)
     recurrent_drafting.rng.seed_pytorch(123)
-    ref_model, mlx_model = load_test_models(rnn)
+    ref_model, mlx_model = create_test_models(rnn)
     init_token = numpy.random.randint(low=0, high=VOCAB_SIZE, size=(batch_size,))
     prompt_state = numpy.random.rand(batch_size, HIDDEN_SIZE).astype(numpy.float32)
     embeddings_weight = numpy.random.rand(VOCAB_SIZE, HIDDEN_SIZE).astype(numpy.float32)

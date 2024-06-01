@@ -116,7 +116,7 @@ _test_llama_config = {
 }
 
 
-def load_test_models() -> Tuple[
+def create_test_models() -> Tuple[
     recurrent_drafting.modeling_llama.LlamaForCausalLM,
     mlx_recurrent_drafting.modeling_llama.Model,
 ]:
@@ -124,8 +124,6 @@ def load_test_models() -> Tuple[
     mx.random.seed(123)
     ref_cfg = recurrent_drafting.modeling_llama.LlamaConfig(**_test_llama_config)
     ref_model = recurrent_drafting.modeling_llama.LlamaForCausalLM(ref_cfg)
-    mlx_args = mlx_recurrent_drafting.modeling_llama.ModelArgs.from_dict(_test_llama_config)
-    mlx_model = mlx_recurrent_drafting.modeling_llama.Model(mlx_args)
     with tempfile.TemporaryDirectory() as tmpdirname:
         ref_model.save_pretrained(tmpdirname)
         mlx_model = mlx_recurrent_drafting.modeling_llama.load_model(tmpdirname)
@@ -160,7 +158,7 @@ def test_parity_with_no_compression(
     device: mx.Device,
 ) -> None:
     mx.set_default_device(device)
-    ref_model, mlx_model = load_test_models()
+    ref_model, mlx_model = create_test_models()
     mask = numpy.array(
         mlx_recurrent_drafting.attention.causal_mask(
             mx.ones(shape=(1, beam_shape.length), dtype=mx.bool_), beam_shape.length

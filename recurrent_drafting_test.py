@@ -10,10 +10,8 @@ import recurrent_drafting
 import torch
 
 import mlx_recurrent_drafting
-import mlx_recurrent_drafting.recurrent_drafting
 from mlx_recurrent_drafting.attention_test import BEAMS_NO_COMMON_PREFIX
 from mlx_recurrent_drafting.modeling_drafter import LOG_0
-from mlx_recurrent_drafting.modeling_llama_test import load_test_models
 
 
 @pytest.mark.parametrize(
@@ -317,7 +315,7 @@ def test_comprehend_prompt(
 ):
     numpy.random.seed(123)
 
-    ref_llm, mlx_llm = load_test_models()
+    ref_llm, mlx_llm = mlx_recurrent_drafting.modeling_llama_test.create_test_models()
     config = ref_llm.config
     n_layers, n_heads, head_dim = (
         config.num_hidden_layers,
@@ -381,7 +379,7 @@ def test_verify_candidates(prompt_len: int) -> None:
     beams = BEAMS_NO_COMMON_PREFIX
     beam_width, beam_length = beams.shape[1], beams.shape[2]
 
-    ref_llm, mlx_llm = load_test_models()
+    ref_llm, mlx_llm = mlx_recurrent_drafting.modeling_llama_test.create_test_models()
     config = ref_llm.config
     n_layers, n_heads, head_dim = (
         config.num_hidden_layers,
