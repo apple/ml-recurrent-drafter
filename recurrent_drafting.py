@@ -5,8 +5,7 @@ from typing import Optional, Tuple
 import mlx.core as mx
 import mlx.nn
 
-from mlx_recurrent_drafting import attention, kv_cache, modeling_drafter
-from mlx_recurrent_drafting.modeling_drafter import BeamShape
+from . import attention, kv_cache, modeling_drafter, tree_attention
 
 
 @dataclass
@@ -241,7 +240,7 @@ def _count_left_paddings(tokens: mx.array, pad_token_id: int):
 
 
 def _present_kv_as_beam(
-    beam_shape: BeamShape,
+    beam_shape: modeling_drafter.BeamShape,
     past_kv_length: int,
     cache: kv_cache.Cache,
 ) -> Tuple[Tuple[mx.array, mx.array], ...]:
@@ -345,7 +344,7 @@ def _update_kv_cache_and_input_ids(
 
     # Collect the present keys and values
     present_key_values = _present_kv_as_beam(
-        beam_shape=BeamShape(beam_width, beam_length),
+        beam_shape=modeling_drafter.BeamShape(beam_width, beam_length),
         past_kv_length=input_ids.shape[1],
         cache=cache,
     )
@@ -454,7 +453,7 @@ def _verify_candidates(
     cache: kv_cache.Cache,
     pad_token_id: int,
 ) -> Tuple[mx.array, mx.array]:
-    packed_beams, mask, position_offsets = attention.pack(
+    packed_beams, mask, position_offsets = tree_attention.pack(
         beams, padding_mask=(input_ids != pad_token_id).astype(input_ids.dtype)
     )
     past_kv_len = (
@@ -468,8 +467,8 @@ def _verify_candidates(
     )
 
     logits = modeling_drafter.warp_logits(logits)
-    hidden_states = attention.unpack(hidden_states, beams.shape[1], beams.shape[2])
-    logits = attention.unpack(logits, beams.shape[1], beams.shape[2])
+    hidden_states = tree_attention.unpack(hidden_states, beams.shape[1], beams.shape[2])
+    logits = tree_attention.unpack(logits, beams.shape[1], beams.shape[2])
     # No need to unpack the kv cache since without compression, keys and values are
     # at the correct place.
     return hidden_states, logits

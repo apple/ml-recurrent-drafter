@@ -10,8 +10,9 @@ import recurrent_drafting
 import torch
 
 import mlx_recurrent_drafting
-from mlx_recurrent_drafting.attention_test import BEAMS_NO_COMMON_PREFIX
 from mlx_recurrent_drafting.modeling_drafter import LOG_0
+
+from . import modeling_llama_test, tree_attention_test
 
 
 @pytest.mark.parametrize(
@@ -315,7 +316,7 @@ def test_comprehend_prompt(
 ):
     numpy.random.seed(123)
 
-    ref_llm, mlx_llm = mlx_recurrent_drafting.modeling_llama_test.create_test_models()
+    ref_llm, mlx_llm = modeling_llama_test.create_test_models()
     config = ref_llm.config
     n_layers, n_heads, head_dim = (
         config.num_hidden_layers,
@@ -376,7 +377,7 @@ def test_comprehend_prompt(
 def test_verify_candidates(prompt_len: int) -> None:
     numpy.random.seed(123)
     batch_size = 1
-    beams = BEAMS_NO_COMMON_PREFIX
+    beams = tree_attention_test.BEAMS_NO_COMMON_PREFIX
     beam_width, beam_length = beams.shape[1], beams.shape[2]
 
     ref_llm, mlx_llm = mlx_recurrent_drafting.modeling_llama_test.create_test_models()
@@ -410,13 +411,17 @@ def test_verify_candidates(prompt_len: int) -> None:
         stats_mock,
         ref_llm,
         torch.tensor(input_ids),
-        torch.tensor(BEAMS_NO_COMMON_PREFIX),
+        torch.tensor(tree_attention_test.BEAMS_NO_COMMON_PREFIX),
         ref_cache,
         pad_token_id,
     )
 
     mlx_states, mlx_logits = mlx_recurrent_drafting.recurrent_drafting._verify_candidates(
-        mlx_llm, mx.array(input_ids), mx.array(BEAMS_NO_COMMON_PREFIX), mlx_cache, pad_token_id
+        mlx_llm,
+        mx.array(input_ids),
+        mx.array(tree_attention_test.BEAMS_NO_COMMON_PREFIX),
+        mlx_cache,
+        pad_token_id,
     )
 
     assert mx.all(mx.allclose(mlx_states, mx.array(ref_states.numpy())))
