@@ -7,6 +7,7 @@ import numpy
 import pytest
 import recurrent_drafting
 import torch
+import transformers
 
 import mlx_recurrent_drafting
 import mlx_recurrent_drafting.attention
@@ -122,7 +123,7 @@ def create_test_models() -> Tuple[
 ]:
     recurrent_drafting.rng.seed_pytorch(123)
     mx.random.seed(123)
-    ref_cfg = recurrent_drafting.modeling_llama.LlamaConfig(**_test_llama_config)
+    ref_cfg = transformers.models.llama.configuration_llama.LlamaConfig(**_test_llama_config)
     ref_model = recurrent_drafting.modeling_llama.LlamaForCausalLM(ref_cfg)
     with tempfile.TemporaryDirectory() as tmpdirname:
         ref_model.save_pretrained(tmpdirname)
