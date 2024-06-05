@@ -3,20 +3,20 @@
 https://github.com/ml-explore/mlx-examples/blob/main/llms/mlx_lm/models/llama.py
 with pre-allocated KV cache."""
 import glob
-import inspect
 import json
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple, Union
+from typing import Dict, List, Optional, Tuple, Union
 
 import mlx.core as mx
 import mlx.nn as nn
+from mlx_lm.models.base import BaseModelArgs
 
 from . import attention, kv_cache
 
 
 @dataclass
-class ModelArgs:
+class ModelArgs(BaseModelArgs):
     model_type: str
     hidden_size: int
     num_hidden_layers: int
@@ -40,10 +40,6 @@ class ModelArgs:
 
             if self.rope_scaling["type"] != "linear":
                 raise ValueError("rope_scaling 'type' currently only supports 'linear'")
-
-    @classmethod
-    def from_dict(cls, params: Dict[str, Any]):
-        return cls(**{k: v for k, v in params.items() if k in inspect.signature(cls).parameters})
 
 
 class Attention(nn.Module):
@@ -172,6 +168,10 @@ class LlamaModel(nn.Module):
         self.embed_tokens = nn.Embedding(args.vocab_size, args.hidden_size)
         self.layers = [TransformerBlock(args=args) for _ in range(args.num_hidden_layers)]
         self.norm = nn.RMSNorm(args.hidden_size, eps=args.rms_norm_eps)
+
+    @property
+    def input_embeddings(self):
+        return self.embed_tokens
 
     def __call__(
         self,

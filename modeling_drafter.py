@@ -1,16 +1,19 @@
 # Copyright © 2024 Apple Inc.
+import json
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Tuple
 
 import mlx.core as mx
 from mlx import nn
+from mlx_lm.models.base import BaseModelArgs
 
 LOG_0 = -50000.0
 LOG_1 = 0.0
 
 
 @dataclass
-class ModelArgs:
+class ModelArgs(BaseModelArgs):
     hidden_size: int
     vocab_size: int
     exit_dim: int
@@ -215,7 +218,7 @@ class Drafter(nn.Module):
                 axis=2,
             )
 
-        return beams, log_p_token_in_beam
+        return beams.astype(mx.int64), log_p_token_in_beam
 
     def assert_valid(self) -> None:
         assert isinstance(self.input_proj, nn.Linear)
@@ -226,3 +229,13 @@ class Drafter(nn.Module):
         )
         assert self.lm_head is not None
         assert len(self.lm_head) == self.args.num_draft_layers + 1
+
+
+def load_model(model_path: str) -> Drafter:
+    config = {}
+    with open(Path(model_path) / "config.json", "r") as f:
+        config = json.loads(f.read())
+    drafter = Drafter(ModelArgs.from_dict(config))
+    path = str(Path(model_path) / "model.safetensors")
+    drafter.load_weights(path)
+    return drafter

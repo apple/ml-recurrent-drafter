@@ -1,11 +1,11 @@
 # Copyright © 2024 Apple Inc.
 from dataclasses import dataclass
-from typing import Optional, Tuple
+from typing import Generator, Optional, Tuple
 
 import mlx.core as mx
 import mlx.nn
 
-from . import attention, kv_cache, modeling_drafter, tree_attention
+from . import attention, kv_cache, modeling_drafter, modeling_llama, tree_attention
 
 
 @dataclass
@@ -472,3 +472,192 @@ def _verify_candidates(
     # No need to unpack the kv cache since without compression, keys and values are
     # at the correct place.
     return hidden_states, logits
+
+
+def _greedy_accept_candidate_tokens(
+    input_ids: mx.array,
+    beams_by_drafter: mx.array,
+    logits_by_llm: mx.array,
+    last_hidden_state: mx.array,
+    cache: kv_cache.Cache,
+    pad_token_id: int,
+) -> Tuple[mx.array, mx.array, mx.array, mx.array]:
+    beams_by_llm = mx.argmax(logits_by_llm, axis=-1)
+    n_tokens_in_seq, seq_in_beam = _greedy_choose_from_candidates(
+        beams_by_drafter,
+        beams_by_llm,
+    )
+    input_ids = _update_kv_cache_and_input_ids(
+        input_ids=input_ids,
+        n_tokens_in_seq=n_tokens_in_seq,
+        seq_in_beam=seq_in_beam,
+        beams=beams_by_drafter,
+        cache=cache,
+        pad_token_id=pad_token_id,
+    )
+    last_token_state, next_tokens = _greedy_prepare_next_input(
+        beams_by_llm, last_hidden_state, seq_in_beam, n_tokens_in_seq
+    )
+
+    return last_token_state, input_ids, next_tokens, n_tokens_in_seq
+
+
+def _accept_candidate_tokens(
+    input_ids: mx.array,
+    beams: mx.array,
+    log_probs_by_drafter: mx.array,
+    logits_by_llm: mx.array,
+    last_hidden_state: mx.array,
+    cache: kv_cache.Cache,
+    pad_token_id: int,
+    temperature: float,
+) -> Tuple[mx.array, mx.array, mx.array, mx.array]:
+    log_probs_by_llm = mlx.nn.log_softmax(logits_by_llm / temperature, axis=-1)
+    n_tokens_in_seq, seq_in_beam = _choose_from_candidates(
+        beams,
+        log_probs_by_llm,
+        log_probs_by_drafter,
+    )
+    input_ids = _update_kv_cache_and_input_ids(
+        input_ids=input_ids,
+        n_tokens_in_seq=n_tokens_in_seq,
+        seq_in_beam=seq_in_beam,
+        beams=beams,
+        cache=cache,
+        pad_token_id=pad_token_id,
+    )
+    last_token_state, next_tokens = _prepare_next_input(
+        log_probs_by_drafter=log_probs_by_drafter,
+        log_probs_by_llm=log_probs_by_llm,
+        last_hidden_state=last_hidden_state,
+        seq_in_beam=seq_in_beam,
+        n_tokens_in_seq=n_tokens_in_seq,
+    )
+
+    return last_token_state, input_ids, next_tokens, n_tokens_in_seq
+
+
+def n_kv_heads(model: mlx.nn.Module) -> int:
+    if isinstance(model, modeling_llama.Model):
+        return model.args.num_key_value_heads  # type: ignore
+    else:
+        raise TypeError(f"Unsupported base model type {type(model)}")
+
+
+class ReDrafterModel(mlx.nn.Module):
+    def __init__(
+        self,
+        llm: mlx.nn.Module,
+        drafter: modeling_drafter.Drafter,
+    ):
+        super().__init__()
+        self.llm = llm
+        self.drafter = drafter
+
+    def generate(
+        self,
+        input_ids: mx.array,
+        max_length: int,
+        beam_shape: modeling_drafter.BeamShape = modeling_drafter.BeamShape(10, -1),
+        sampling_args: SamplingArgs = SamplingArgs(1.0, False),
+        special_tokens: SpecialTokens = SpecialTokens(0, 1),
+    ) -> Generator[mx.array, None, None]:
+        for output_tokens in self._generate(
+            input_ids=input_ids,
+            max_length=max_length,
+            beam_shape=beam_shape,
+            sampling_args=sampling_args,
+            special_tokens=special_tokens,
+        ):
+            yield output_tokens
+
+    def _generate(
+        self,
+        input_ids: mx.array,
+        max_length: int,
+        beam_shape: modeling_drafter.BeamShape,
+        sampling_args: SamplingArgs,
+        special_tokens: SpecialTokens,
+    ) -> Generator[mx.array, None, None]:
+        assert input_ids.dtype in [mx.int32, mx.int64]
+        batch_size, seq_len = input_ids.shape
+        init_seq_len = seq_len
+
+        cache = kv_cache.Cache(
+            batch_size=batch_size,
+            max_length=max_length + beam_shape.length * beam_shape.width,
+            n_layers=self.llm.args.num_hidden_layers,
+            n_heads=n_kv_heads(self.llm),
+            head_dim=self.llm.args.hidden_size // self.llm.args.num_attention_heads,
+            dtype=self.llm.lm_head.weight.dtype,
+            device=mx.default_device(),
+        )
+
+        drafting_context, drafting_init_tokens = _comprehend_prompt(
+            self.llm,
+            input_ids,
+            cache,
+            sampling_args,
+            special_tokens.pad,
+        )
+        while seq_len < max_length:
+            # Call the draft head to generate candidates.
+            # Generate draft candidates conditioning on the draft_input and next_token.
+            beams, log_probs_by_drafter = self.drafter.beam_search_candidates(
+                drafting_context,
+                drafting_init_tokens,
+                self.llm.model.input_embeddings,
+                beam_shape,
+            )
+            hidden_states, logits_by_llm = _verify_candidates(
+                self.llm,
+                input_ids,
+                beams,
+                cache,
+                special_tokens.pad,
+            )
+            if sampling_args.greedy:
+                (
+                    drafting_context,
+                    input_ids,
+                    drafting_init_tokens,
+                    n_tokens_in_seq,
+                ) = _greedy_accept_candidate_tokens(
+                    input_ids,
+                    beams,
+                    logits_by_llm,
+                    hidden_states,
+                    cache,
+                    special_tokens.pad,
+                )
+            else:
+                (
+                    drafting_context,
+                    input_ids,
+                    drafting_init_tokens,
+                    n_tokens_in_seq,
+                ) = _accept_candidate_tokens(
+                    input_ids,
+                    beams,
+                    log_probs_by_drafter,
+                    logits_by_llm,
+                    last_hidden_state=hidden_states,
+                    cache=cache,
+                    pad_token_id=special_tokens.pad,
+                    temperature=sampling_args.temperature,
+                )
+
+            output_tokens = mx.concatenate((input_ids, drafting_init_tokens[..., None]), axis=-1)
+            seq_len = output_tokens.shape[1]
+            yield (
+                output_tokens[:, :max_length]
+                if output_tokens.shape[1] > max_length
+                else output_tokens
+            )
+            # EOS check for the whole batch.
+            if (
+                special_tokens.eos is not None
+                and ((output_tokens[:, init_seq_len:] == special_tokens.eos).sum(axis=-1) > 0).sum()
+                == batch_size
+            ):
+                break

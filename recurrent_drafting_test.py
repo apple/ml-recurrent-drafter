@@ -405,8 +405,8 @@ def test_verify_candidates(prompt_len: int) -> None:
             mlx_cache.sliced[layer_i][kv_i].cat(mx.array(kvs))
 
     stats_mock = unittest.mock.Mock()
-    stats_mock.time.return_value.__enter__ = lambda *args: None
-    stats_mock.time.return_value.__exit__ = lambda *args: None
+    stats_mock.time.return_value.__enter__ = lambda *_: None
+    stats_mock.time.return_value.__exit__ = lambda *_: None
     ref_states, ref_logits = recurrent_drafting.recurrent_drafting._verify_candidates(
         stats_mock,
         ref_llm,
