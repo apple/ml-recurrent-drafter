@@ -57,7 +57,7 @@ def load_llm(llm_dir: str, dtype: mx.Dtype) -> mlx.nn.Module:
         config = json.loads(f.read())
     assert config["model_type"] == "llama"
     llm = mlx_recurrent_drafting.modeling_llama.load_model(model_path)
-    llm.setdefault(dtype)
+    llm.set_dtype(dtype)
     return llm
 
 
@@ -232,7 +232,7 @@ def chat(
         for output_token_ids in output_generator:
             mx.eval(output_token_ids)
             decoded_output = tokenizer.decode([t.item() for t in output_token_ids[0]])
-            print(decoded_output[len(prompt) :], end="")
+            print(decoded_output[len(prompt) :], end="", flush=True)
             prompt = decoded_output
         print()
 
