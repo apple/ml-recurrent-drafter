@@ -73,7 +73,6 @@ def _parity_check(
         n_heads=ref_model.config.num_key_value_heads,
         head_dim=mlx_model.args.hidden_size // mlx_model.args.num_attention_heads,
         dtype=mlx_model.model.embed_tokens.weight.dtype,
-        device=mx.Device(mx.DeviceType.gpu),
     )
     mlx_input_ids = mx.array(input_ids)
     mlx_mask = mx.array(mask)

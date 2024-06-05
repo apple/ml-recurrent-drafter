@@ -223,7 +223,7 @@ def test_present_kv_as_beam(beam_width: int, beam_length: int, past_kv_len: int)
         batch_size, max_len, n_layers, n_heads, head_dim, torch.float32, device=torch.device("cpu")
     )
     mlx_cache = mlx_recurrent_drafting.kv_cache.Cache(
-        batch_size, max_len, n_layers, n_heads, head_dim, mx.float32, device=mx.gpu
+        batch_size, max_len, n_layers, n_heads, head_dim, mx.float32
     )
     for layer_i in range(n_layers):
         for kv_i in range(2):
@@ -269,7 +269,7 @@ def test_update_kv_cache_and_input_ids(
         batch_size, max_len, n_layers, n_heads, head_dim, torch.float32, device=torch.device("cpu")
     )
     mlx_cache = mlx_recurrent_drafting.kv_cache.Cache(
-        batch_size, max_len, n_layers, n_heads, head_dim, mx.float32, device=mx.gpu
+        batch_size, max_len, n_layers, n_heads, head_dim, mx.float32
     )
     for layer_i in range(n_layers):
         for kv_i in range(2):
@@ -339,7 +339,7 @@ def test_comprehend_prompt(
         batch_size, max_len, n_layers, n_heads, head_dim, torch.float32, device=torch.device("cpu")
     )
     mlx_cache = mlx_recurrent_drafting.kv_cache.Cache(
-        batch_size, max_len, n_layers, n_heads, head_dim, mx.float32, device=mx.gpu
+        batch_size, max_len, n_layers, n_heads, head_dim, mx.float32
     )
 
     ref_state, ref_token = recurrent_drafting.recurrent_drafting._comprehend_prompt(
@@ -396,7 +396,7 @@ def test_verify_candidates(prompt_len: int) -> None:
         batch_size, max_len, n_layers, n_heads, head_dim, torch.float32, device=torch.device("cpu")
     )
     mlx_cache = mlx_recurrent_drafting.kv_cache.Cache(
-        batch_size, max_len, n_layers, n_heads, head_dim, mx.float32, device=mx.gpu
+        batch_size, max_len, n_layers, n_heads, head_dim, mx.float32
     )
     for layer_i in range(n_layers):
         for kv_i in range(2):

@@ -7,9 +7,8 @@ from . import kv_cache
 def test_cache() -> None:
     batch_size, max_length, n_layers, n_heads, head_dim, kv = 7, 11, 3, 5, 2, 2
     _dtype = mx.float32
-    _device = mx.Device(mx.DeviceType.cpu)
 
-    cache = kv_cache.Cache(batch_size, max_length, n_layers, n_heads, head_dim, _dtype, _device)
+    cache = kv_cache.Cache(batch_size, max_length, n_layers, n_heads, head_dim, _dtype)
     assert cache._cache.shape == (n_layers, 2, batch_size, n_heads, max_length, head_dim)
     assert cache._cache.dtype == _dtype
     assert len(cache.sliced) == n_layers
