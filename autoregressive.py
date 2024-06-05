@@ -26,7 +26,6 @@ def streaming_generate(
             n_heads=recurrent_drafting.n_kv_heads(model),
             head_dim=model.args.hidden_size // model.args.num_attention_heads,
             dtype=model.lm_head.weight.dtype,
-            device=mx.default_device(),
         )
         if supports_cache(model)
         else None

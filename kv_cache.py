@@ -41,12 +41,10 @@ class Cache:
         n_heads: int,
         head_dim: int,  # config.hidden_size // config.num_attention_heads
         dtype: mx.Dtype,
-        device: mx.Device,
     ) -> None:
         self._cache = mx.zeros(
             [n_layers, 2, batch_size, n_heads, max_length, head_dim],  # 2 for key and value
             dtype=dtype,
-            stream=device,
         )
         self.sliced = tuple(
             (View(self._cache, layer, 0), View(self._cache, layer, 1)) for layer in range(n_layers)

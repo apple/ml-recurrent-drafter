@@ -590,7 +590,6 @@ class ReDrafterModel(mlx.nn.Module):
             n_heads=n_kv_heads(self.llm),
             head_dim=self.llm.args.hidden_size // self.llm.args.num_attention_heads,
             dtype=self.llm.lm_head.weight.dtype,
-            device=mx.default_device(),
         )
 
         drafting_context, drafting_init_tokens = _comprehend_prompt(
