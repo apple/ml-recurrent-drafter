@@ -42,10 +42,12 @@ from absl import app, flags
 from mlx_lm.utils import get_model_path
 from sentencepiece import SentencePieceProcessor
 
-import mlx_recurrent_drafting
-import mlx_recurrent_drafting.modeling_llama
-import mlx_recurrent_drafting.recurrent_drafting
-from mlx_recurrent_drafting.modeling_drafter import BeamShape
+from mlx_recurrent_drafting import (
+    autoregressive,
+    modeling_drafter,
+    modeling_llama,
+    recurrent_drafting,
+)
 
 FLAGS = flags.FLAGS
 
@@ -56,15 +58,13 @@ def load_llm(llm_dir: str, dtype: mx.Dtype) -> mlx.nn.Module:
     with open(model_path / "config.json", "r") as f:
         config = json.loads(f.read())
     assert config["model_type"] == "llama"
-    llm = mlx_recurrent_drafting.modeling_llama.load_model(model_path)
+    llm = modeling_llama.load_model(model_path)
     llm.set_dtype(dtype)
     return llm
 
 
-def load_drafter(
-    drafter_dir: str, dtype: mx.Dtype
-) -> mlx_recurrent_drafting.modeling_drafter.Drafter:
-    drafter = mlx_recurrent_drafting.modeling_drafter.load_model(drafter_dir)
+def load_drafter(drafter_dir: str, dtype: mx.Dtype) -> modeling_drafter.Drafter:
+    drafter = modeling_drafter.load_model(drafter_dir)
     drafter.set_dtype(dtype)
     return drafter
 
@@ -72,36 +72,7 @@ def load_drafter(
 def load_tokenizer(tokenizer_dir: str) -> SentencePieceProcessor:
     model_path = get_model_path(tokenizer_dir)
     tokenizer = SentencePieceProcessor(model_file=str(model_path / "tokenizer.model"))
-    return tokenizer, mlx_recurrent_drafting.recurrent_drafting.SpecialTokens(
-        tokenizer.pad_id(), tokenizer.eos_id()
-    )
-
-
-def tokenize(
-    batch_generator: Generator[List[str], None, None],
-    tokenizer: SentencePieceProcessor,
-) -> Generator[mx.array, None, None]:
-    for batch in batch_generator:
-        assert len(batch) == 1
-        yield mx.array([[tokenizer.bos_id()] + tokenizer.encode(batch)[0]])
-
-
-def generate(
-    input_generator: Generator[mx.array, None, None],
-    model: mlx_recurrent_drafting.recurrent_drafting.ReDrafterModel,
-    max_length: int,
-    beam_shape: BeamShape,
-    sampling_args: mlx_recurrent_drafting.recurrent_drafting.SamplingArgs,
-    special_tokens: mlx_recurrent_drafting.recurrent_drafting.SpecialTokens,
-) -> Generator[Generator[mx.array, None, None], None, None]:
-    for input_ids in input_generator:
-        yield model.generate(
-            input_ids,
-            max_length,
-            beam_shape,
-            sampling_args,
-            special_tokens,
-        )
+    return tokenizer, recurrent_drafting.SpecialTokens(tokenizer.pad_id(), tokenizer.eos_id())
 
 
 VICUNA_SYSTEM_PROMPT = (
@@ -147,6 +118,44 @@ def batch(
             b = []
 
 
+def tokenize(
+    batch_generator: Generator[List[str], None, None],
+    tokenizer: SentencePieceProcessor,
+) -> Generator[mx.array, None, None]:
+    for batch in batch_generator:
+        assert len(batch) == 1
+        yield mx.array([[tokenizer.bos_id()] + tokenizer.encode(batch)[0]])
+
+
+def generate(
+    input_generator: Generator[mx.array, None, None],
+    model: recurrent_drafting.ReDrafterModel,
+    max_length: int,
+    beam_shape: modeling_drafter.BeamShape,
+    sampling_args: recurrent_drafting.SamplingArgs,
+    special_tokens: recurrent_drafting.SpecialTokens,
+    autoregression: bool,
+) -> Generator[Generator[mx.array, None, None], None, None]:
+    for input_ids in input_generator:
+        if autoregression:
+            streaming_generator = autoregressive.streaming_generate(
+                model.llm,
+                input_ids,
+                max_length,
+                special_tokens,
+            )
+            # Only take tokens from the generator
+            yield (input_ids for input_ids, _ in streaming_generator)
+        else:
+            yield model.generate(
+                input_ids,
+                max_length,
+                beam_shape,
+                sampling_args,
+                special_tokens,
+            )
+
+
 def main(_: List[str]) -> None:
     # Only supports batch_size=1
     assert FLAGS.batch_size == 1
@@ -156,7 +165,7 @@ def main(_: List[str]) -> None:
     llm = load_llm(os.path.expanduser(FLAGS.hf_llm), dtype)
     drafter = load_drafter(os.path.expanduser(FLAGS.hf_drafter), dtype)
     tokenizer, special_tokens = load_tokenizer(os.path.expanduser(FLAGS.hf_tokenizer))
-    model = mlx_recurrent_drafting.recurrent_drafting.ReDrafterModel(llm=llm, drafter=drafter)
+    model = recurrent_drafting.ReDrafterModel(llm=llm, drafter=drafter)
     if FLAGS.eval_mt_bench:
         prompt_generator = load_mt_bench_prompt(
             max_length=FLAGS.max_prompt_length,
@@ -169,13 +178,13 @@ def main(_: List[str]) -> None:
 
 
 def model_type(model: mlx.nn.Module) -> str:
-    return {mlx_recurrent_drafting.modeling_llama.Model: "vicuna"}[type(model)]  # type:ignore
+    return {modeling_llama.Model: "vicuna"}[type(model)]  # type:ignore
 
 
 def eval_mt_bench(
-    model: mlx_recurrent_drafting.recurrent_drafting.ReDrafterModel,
+    model: recurrent_drafting.ReDrafterModel,
     tokenizer: SentencePieceProcessor,
-    special_tokens: mlx_recurrent_drafting.recurrent_drafting.SpecialTokens,
+    special_tokens: recurrent_drafting.SpecialTokens,
     prompt_generator: Generator[str, None, None],
 ) -> None:
     for batch_output_generator in tqdm.tqdm(
@@ -189,11 +198,10 @@ def eval_mt_bench(
             ),
             model,
             max_length=FLAGS.max_prompt_length + FLAGS.max_generation_length,
-            beam_shape=BeamShape(FLAGS.beam_width, FLAGS.beam_length),
-            sampling_args=mlx_recurrent_drafting.recurrent_drafting.SamplingArgs(
-                FLAGS.temperature, FLAGS.greedy_search
-            ),
+            beam_shape=modeling_drafter.BeamShape(FLAGS.beam_width, FLAGS.beam_length),
+            sampling_args=recurrent_drafting.SamplingArgs(FLAGS.temperature, FLAGS.greedy_search),
             special_tokens=special_tokens,
+            autoregression=FLAGS.autoregression,
         ),
     ):
         batch_output_token_ids = next(batch_output_generator)
@@ -204,9 +212,9 @@ def eval_mt_bench(
 
 
 def chat(
-    model: mlx_recurrent_drafting.recurrent_drafting.ReDrafterModel,
+    model: recurrent_drafting.ReDrafterModel,
     tokenizer: SentencePieceProcessor,
-    special_tokens: mlx_recurrent_drafting.recurrent_drafting.SpecialTokens,
+    special_tokens: recurrent_drafting.SpecialTokens,
 ) -> None:
     while True:
         user_input = input("chat> ")
@@ -221,11 +229,12 @@ def chat(
                 input_generator,
                 model,
                 max_length=FLAGS.max_prompt_length + FLAGS.max_generation_length,
-                beam_shape=BeamShape(FLAGS.beam_width, FLAGS.beam_length),
-                sampling_args=mlx_recurrent_drafting.recurrent_drafting.SamplingArgs(
+                beam_shape=modeling_drafter.BeamShape(FLAGS.beam_width, FLAGS.beam_length),
+                sampling_args=recurrent_drafting.SamplingArgs(
                     FLAGS.temperature, FLAGS.greedy_search
                 ),
                 special_tokens=special_tokens,
+                autoregression=FLAGS.autoregression,
             )
         )
         print(prompt, end="")
@@ -248,6 +257,7 @@ def define_flags() -> None:
     flags.DEFINE_integer("batch_size", 1, "Batch size")
     flags.DEFINE_integer("beam_length", -1, "Beam length of drafter model beam search")
     flags.DEFINE_integer("beam_width", 10, "Number of candidates of drafter model beam search")
+    flags.DEFINE_bool("autoregression", False, "Turn on to generate with auto-regression.")
     flags.DEFINE_bool("greedy_search", False, "Greedy search for ReDrafter.")
     flags.DEFINE_float("temperature", 1.0, "Sampling randomness for ReDrafter.")
     flags.DEFINE_integer("rng_seed", 123, "RNG seed.")
