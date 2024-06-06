@@ -58,7 +58,7 @@ def load_llm(llm_dir: str, dtype: mx.Dtype) -> mlx.nn.Module:
     with open(model_path / "config.json", "r") as f:
         config = json.loads(f.read())
     assert config["model_type"] == "llama"
-    llm = modeling_llama.load_model(model_path)
+    llm = modeling_llama.load_model(str(model_path))
     llm.set_dtype(dtype)
     return llm
 
