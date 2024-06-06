@@ -238,4 +238,6 @@ def load_model(model_path: str) -> Drafter:
     drafter = Drafter(ModelArgs.from_dict(config))
     path = str(Path(model_path) / "model.safetensors")
     drafter.load_weights(path)
+    mx.eval(drafter.parameters())
+    drafter.eval()
     return drafter

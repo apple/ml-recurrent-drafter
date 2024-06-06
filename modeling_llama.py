@@ -225,17 +225,17 @@ def sanitize(weights: Dict[str, mx.array]) -> Dict[str, mx.array]:
     return {k: v for k, v in weights.items() if "self_attn.rotary_emb.inv_freq" not in k}
 
 
-def load_model(model_path) -> Model:
-    model_path = Path(model_path)
-
-    weight_files = glob.glob(str(model_path / "model*.safetensors"))
+def load_model(model_path: str) -> Model:
+    weight_files = glob.glob(str(Path(model_path) / "model*.safetensors"))
     weights = {}
     for wf in weight_files:
         weights.update(mx.load(wf))
 
-    with open(model_path / "config.json", "r") as f:
+    with open(Path(model_path) / "config.json", "r") as f:
         config = json.loads(f.read())
 
     model = Model(ModelArgs.from_dict(config))
     model.load_weights(list(sanitize(weights).items()))
+    mx.eval(model.parameters())
+    model.eval()
     return model
