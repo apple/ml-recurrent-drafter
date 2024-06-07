@@ -1,15 +1,15 @@
 import time
 
+import mlx
 import mlx.core as mx
 import mlx_lm
 
 from mlx_recurrent_drafting import kv_cache
 
 
-def benchmark_kv_cache_cat():
+def benchmark_kv_cache_cat(max_len: int):
     n_layer, n_kv_heads = 1, 32
     head_dim = 4096 // n_kv_heads
-    max_len = 100
     batch_size = 1
     v = mx.ones([batch_size, n_kv_heads, 1, head_dim]).astype(mx.bfloat16)
     mx.eval(v)
@@ -35,7 +35,7 @@ def benchmark_kv_cache_cat():
     for _ in range(max_len):
         test_kv_cache.sliced[0][0].cat(v)  # key
         test_kv_cache.sliced[0][1].cat(v)  # value
-    mx.eval(test_kv_cache.sliced[0][0], test_kv_cache.sliced[0][1])
+    mx.eval(test_kv_cache._cache)
     toc = time.perf_counter()
     tpi = 1e3 * (toc - tic) / max_len
     print(f"test_kv Time per iteration {tpi:.3f} (ms)")
@@ -72,6 +72,10 @@ def benchmark_array_assignment():
 
 if __name__ == "__main__":
     print("** Comparing KV cache cat **")
-    benchmark_kv_cache_cat()
+    benchmark_kv_cache_cat(128)
+    benchmark_kv_cache_cat(1024)
+    benchmark_kv_cache_cat(4096)
+    benchmark_kv_cache_cat(65536)
+    mlx.core.metal.clear_cache()
     print("** Comparing array assignment **")
     benchmark_array_assignment()
