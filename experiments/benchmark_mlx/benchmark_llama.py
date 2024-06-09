@@ -1,5 +1,4 @@
 import os
-import time
 
 import mlx
 import mlx.core as mx
@@ -11,7 +10,7 @@ import mlx_recurrent_drafting
 
 MODEL_PATH = os.path.expanduser("~/m/vicuna-7b-v1.3-bf16")
 NUM_NEW_TOKENS = 100
-INPUT_IDS = mx.array([[1, 2, 3, 4, 5, 6]])
+PROMPT = mx.array([[1, 2, 3, 4, 5, 6]])
 
 
 def load_ref_model() -> mlx.nn.Module:
@@ -25,74 +24,59 @@ def load_base_model() -> mlx_recurrent_drafting.modeling_llama.Model:
 
 
 def benchmark_base_model() -> None:
+    @mlx_recurrent_drafting.time_mlx.function("test process prompt takes")
+    def process_prompt(prompt, base_model, sliced_cache):
+        mask = mlx_recurrent_drafting.attention.causal_mask(
+            mx.ones(shape=(1, prompt.shape[1]), dtype=mx.bool_), prompt.shape[1]
+        )
+        logits = base_model(prompt, mx.arange(prompt.shape[1])[None], mask, sliced_cache)
+        return logits[1][:, -1, :]
+
+    @mlx_recurrent_drafting.time_mlx.function(f"test generate {NUM_NEW_TOKENS} tokens takes")
+    def generate_tokens(logits, model, cache, prompt_len):
+        for i in range(NUM_NEW_TOKENS - 1):
+            y = mx.argmax(mx.softmax(logits), axis=-1)
+            mask = mlx_recurrent_drafting.attention.causal_mask(
+                mx.ones(shape=(1, prompt_len + i + 1), dtype=mx.bool_), 1
+            )
+            logits = model(y[None], mx.array([[prompt_len + i + 1]]), mask, cache)[1][:, -1, :]
+        return mx.argmax(logits, axis=-1)
+
     base_model = load_base_model()
-    # prepare cache
     cache = mlx_recurrent_drafting.kv_cache.Cache(
         batch_size=1,
-        max_length=INPUT_IDS.shape[1] + NUM_NEW_TOKENS,
+        max_length=PROMPT.shape[1] + NUM_NEW_TOKENS,
         n_layers=base_model.args.num_hidden_layers,
-        n_heads=base_model.args.num_key_value_heads,  # type:ignore
+        n_heads=base_model.args.num_key_value_heads or base_model.args.num_attention_heads,
         head_dim=base_model.args.hidden_size // base_model.args.num_attention_heads,
         dtype=base_model.model.embed_tokens.weight.dtype,
     )
-
-    # prompt
-    toi = time.perf_counter()
-    mask = mlx_recurrent_drafting.attention.causal_mask(
-        mx.ones(shape=(1, INPUT_IDS.shape[1]), dtype=mx.bool_), INPUT_IDS.shape[1]
-    )
-    logits = base_model(INPUT_IDS, mx.arange(INPUT_IDS.shape[1])[None], mask, cache.sliced)[1][
-        :, -1, :
-    ]
-    mx.eval(logits)
-    toc = time.perf_counter()
-    tpi = 1e3 * (toc - toi)
-    print(f"test prompt processing takes {tpi:.3f} (ms)")
-
-    # generation
-    toi = time.perf_counter()
-    for i in range(NUM_NEW_TOKENS - 1):
-        y = mx.argmax(mx.softmax(logits), axis=-1)
-        mask = mlx_recurrent_drafting.attention.causal_mask(
-            mx.ones(shape=(1, INPUT_IDS.shape[1] + i + 1), dtype=mx.bool_), 1
-        )
-        logits = base_model(y[None], mx.array([[INPUT_IDS.shape[1] + i + 1]]), mask, cache.sliced)[
-            1
-        ][:, -1, :]
-    y = mx.argmax(logits, axis=-1)
-    mx.eval(y)
-    toc = time.perf_counter()
-    tpi = 1e3 * (toc - toi) / NUM_NEW_TOKENS
-    print(f"test each new token takes {tpi:.3f} (ms)")
+    logits = process_prompt(PROMPT, base_model, cache.sliced)
+    generate_tokens(logits, base_model, cache.sliced, PROMPT.shape[1])
 
 
 def benchmark_ref_model() -> None:
+    @mlx_recurrent_drafting.time_mlx.function("ref prompt processing takes")
+    def process_prompt(prompt, model, cache):
+        return model(prompt, cache=cache)[:, -1, :]
+
+    @mlx_recurrent_drafting.time_mlx.function(f"ref generate {NUM_NEW_TOKENS} tokens takes")
+    def generate_tokens(logits, model, cache):
+        for _ in range(NUM_NEW_TOKENS - 1):
+            y = mx.argmax(mx.softmax(logits), axis=-1)
+            logits = ref_model(y[None], ref_cache)[:, -1, :]
+        return mx.argmax(logits, axis=-1)
+
     ref_model = load_ref_model()
-    # prepare cache
-    head_dim = ref_model.args.hidden_size // ref_model.args.num_attention_heads
     ref_cache = [
-        mlx_lm.models.base.KVCache(head_dim, ref_model.args.num_key_value_heads)
+        mlx_lm.models.base.KVCache(
+            ref_model.args.hidden_size // ref_model.args.num_attention_heads,
+            ref_model.args.num_key_value_heads,
+        )
         for _ in range(ref_model.args.num_hidden_layers)
     ]
-
-    # prompt
-    toi = time.perf_counter()
-    logits = ref_model(INPUT_IDS, cache=ref_cache)[:, -1, :]
-    mx.eval(logits)
-    toc = time.perf_counter()
-    tpi = 1e3 * (toc - toi)
-    print(f"ref prompt processing takes {tpi:.3f} (ms)")
-
-    # generation
-    toi = time.perf_counter()
-    for _ in range(NUM_NEW_TOKENS - 1):
-        y = mx.argmax(mx.softmax(logits), axis=-1)
-        logits = ref_model(y[None], ref_cache)[:, -1, :]
-    y = mx.argmax(logits, axis=-1)
-    mx.eval(y)
-    toc = time.perf_counter()
-    tpi = 1e3 * (toc - toi) / NUM_NEW_TOKENS
-    print(f"ref each new token takes {tpi:.3f} (ms)")
+    logits = process_prompt(PROMPT, ref_model, ref_cache)
+    generate_tokens(logits, ref_model, ref_cache)
 
 
 if __name__ == "__main__":
