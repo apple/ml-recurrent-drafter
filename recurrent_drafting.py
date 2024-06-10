@@ -349,7 +349,7 @@ def _update_kv_cache_and_input_ids(
         cache=cache,
     )
     # Not counting the draft_init_token since it is used in drafting.
-    _, _, _, n_heads, _, head_dim = cache._cache.shape
+    _, n_heads, _, head_dim = cache.sliced[0][0].shape
     key_seq_in_beam = mx.repeat(seq_in_beam[:, None], n_heads, axis=1).reshape(-1)
     value_seq_in_beam = mx.repeat(seq_in_beam[:, None], n_heads, axis=1).reshape(-1)
     for key_value, present_key_value in zip(cache.sliced, present_key_values):
@@ -367,16 +367,17 @@ def _update_kv_cache_and_input_ids(
         past_value.cat(selected_present_value)
 
     # Updating kv_cache.View requires shifting examples with different offsets.
-    # Modified from the pytorch version. TODO: The pytorch version seems having a bug
-    combined_key_value = cache._cache[:, :, :, :, : cache.sliced[0][0].length, :]
+    # Modified from the pytorch version.
     for i in range(batch_size):
         start = num_prev_left_pads[i]
         end = input_ids.shape[1] + n_tokens_in_seq_with_init[i]
         assert max_seq_len - num_realigned_left_pads[i] == end - start
         # Right aligned.
-        cache._cache[:, :, i, :, num_realigned_left_pads[i].item() : max_seq_len.item(), :] = (
-            combined_key_value[:, :, i, :, start.item() : end.item(), :]
-        )
+        for layer in range(len(cache.sliced)):
+            for kv in range(2):
+                cache.sliced[layer][kv]._cache[
+                    i, :, num_realigned_left_pads[i].item() : max_seq_len.item(), :
+                ] = cache.sliced[layer][kv]._cache[i, :, start.item() : end.item(), :]
 
     # Collect new input_ids.
     appended_input_ids = mx.full(

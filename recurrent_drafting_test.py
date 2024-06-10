@@ -426,6 +426,13 @@ def test_verify_candidates(prompt_len: int) -> None:
 
     assert mx.all(mx.allclose(mlx_states, mx.array(ref_states.numpy())))
     assert mx.all(mx.allclose(mlx_logits, mx.array(ref_logits.numpy())))
-    assert mx.all(
-        mx.allclose(mlx_cache._cache, mx.array(ref_cache._cache.numpy()), atol=1e-4, rtol=1e-4)
-    )
+    for layer in range(len(mlx_cache.sliced)):
+        for kv in range(2):
+            assert mx.all(
+                mx.allclose(
+                    mlx_cache.sliced[layer][kv]._cache,
+                    mx.array(ref_cache._cache.numpy()[layer][kv]),
+                    atol=1e-4,
+                    rtol=1e-4,
+                )
+            )

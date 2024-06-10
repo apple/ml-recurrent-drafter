@@ -80,9 +80,11 @@ def benchmark_ref_model() -> None:
 
 
 if __name__ == "__main__":
-    print("** Benchmark Ref Model **")
-    mlx.core.metal.clear_cache()
-    benchmark_ref_model()
-    print("** Benchmark Base Model **")
-    mlx.core.metal.clear_cache()
-    benchmark_base_model()
+    for i in range(5):
+        print(f"run {i}")
+        print("** Benchmark Ref Model **")
+        mlx.core.metal.clear_cache()
+        benchmark_ref_model()
+        print("** Benchmark Base Model **")
+        mlx.core.metal.clear_cache()
+        benchmark_base_model()
