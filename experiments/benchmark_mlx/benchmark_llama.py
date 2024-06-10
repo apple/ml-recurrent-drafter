@@ -13,16 +13,6 @@ NUM_NEW_TOKENS = 100
 PROMPT = mx.array([[1, 2, 3, 4, 5, 6]])
 
 
-def load_ref_model() -> mlx.nn.Module:
-    ref_model, _ = mlx_lm.utils.load(MODEL_PATH)
-    return ref_model
-
-
-def load_base_model() -> mlx_recurrent_drafting.modeling_llama.Model:
-    base_model = mlx_recurrent_drafting.modeling_llama.load_model(MODEL_PATH)
-    return base_model
-
-
 def benchmark_base_model() -> None:
     @mlx_recurrent_drafting.time_mlx.function("test process prompt takes")
     def process_prompt(prompt, base_model, sliced_cache):
@@ -42,7 +32,7 @@ def benchmark_base_model() -> None:
             logits = model(y[None], mx.array([[prompt_len + i + 1]]), mask, cache)[1][:, -1, :]
         return mx.argmax(logits, axis=-1)
 
-    base_model = load_base_model()
+    base_model = mlx_recurrent_drafting.modeling_llama.load_model(MODEL_PATH)
     cache = mlx_recurrent_drafting.kv_cache.Cache(
         batch_size=1,
         max_length=PROMPT.shape[1] + NUM_NEW_TOKENS,
@@ -67,7 +57,7 @@ def benchmark_ref_model() -> None:
             logits = ref_model(y[None], ref_cache)[:, -1, :]
         return mx.argmax(logits, axis=-1)
 
-    ref_model = load_ref_model()
+    ref_model, _ = mlx_lm.utils.load(MODEL_PATH)
     ref_cache = [
         mlx_lm.models.base.KVCache(
             ref_model.args.hidden_size // ref_model.args.num_attention_heads,
