@@ -84,13 +84,17 @@ def _parity_check(
         mx.allclose(mlx_hidden_states, mx.array(ref_hidden_states.numpy()), atol=1e-4, rtol=1e-4)
     )
     assert mx.all(mx.allclose(mlx_logits, mx.array(ref_logits.numpy()), atol=1e-4, rtol=1e-4))
-    for c1, c2 in zip(mlx_cache.sliced, ref_cache.sliced):
+    for i, (c1, c2) in enumerate(zip(mlx_cache.sliced, ref_cache.sliced)):
         q1, v1 = c1
         q2, v2 = c2
         assert q1.length == q2.length
         assert v1.length == v2.length
-        assert mx.all(mx.allclose(q1._cache, mx.array(q2._cache.numpy()), atol=1e-4, rtol=1e-4))
-        assert mx.all(mx.allclose(v1._cache, mx.array(v2._cache.numpy()), atol=1e-4, rtol=1e-4))
+        assert mx.all(
+            mx.allclose(q1._cache, mx.array(q2._cache.numpy()[i][0]), atol=1e-4, rtol=1e-4)
+        )
+        assert mx.all(
+            mx.allclose(v1._cache, mx.array(v2._cache.numpy()[i][1]), atol=1e-4, rtol=1e-4)
+        )
 
 
 _test_llama_config = {

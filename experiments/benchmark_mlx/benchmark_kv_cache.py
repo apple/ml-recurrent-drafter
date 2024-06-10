@@ -30,12 +30,16 @@ def benchmark_kv_cache_cat(max_len: int):
     test_kv_cache = kv_cache.Cache(
         batch_size, max_len, n_layer, n_kv_heads, head_dim, dtype=mx.bfloat16
     )
-    mx.eval(test_kv_cache._cache)
+    for kc, vc in test_kv_cache.sliced:
+        mx.eval(kc._cache)
+        mx.eval(vc._cache)
     tic = time.perf_counter()
     for _ in range(max_len):
         test_kv_cache.sliced[0][0].cat(v)  # key
         test_kv_cache.sliced[0][1].cat(v)  # value
-    mx.eval(test_kv_cache._cache)
+    for kc, vc in test_kv_cache.sliced:
+        mx.eval(kc._cache)
+        mx.eval(vc._cache)
     toc = time.perf_counter()
     tpi = 1e3 * (toc - tic) / max_len
     print(f"test_kv Time per iteration {tpi:.3f} (ms)")

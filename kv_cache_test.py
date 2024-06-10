@@ -9,10 +9,12 @@ def test_cache() -> None:
     _dtype = mx.float32
 
     cache = kv_cache.Cache(batch_size, max_length, n_layers, n_heads, head_dim, _dtype)
-    assert cache._cache.shape == (n_layers, 2, batch_size, n_heads, max_length, head_dim)
-    assert cache._cache.dtype == _dtype
     assert len(cache.sliced) == n_layers
-    assert all(len(cache.sliced[i]) == kv for i in range(n_layers))
+    for k_cache, v_cache in cache.sliced:
+        assert k_cache._cache.shape == (batch_size, n_heads, max_length, head_dim)
+        assert v_cache._cache.shape == (batch_size, n_heads, max_length, head_dim)
+        assert k_cache._cache.dtype == _dtype
+        assert v_cache._cache.dtype == _dtype
     assert all(
         cache.sliced[i][j].shape == (batch_size, n_heads, 0, head_dim)
         for i in range(n_layers)
