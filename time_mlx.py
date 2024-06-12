@@ -1,8 +1,15 @@
 import time
-from typing import Callable
+from typing import Callable, Dict, List
 
 import mlx.core as mx
 import mlx.nn
+
+ledger: Dict[str, List[float]] = {}
+
+
+def clear_ledger():
+    global ledger
+    ledger = {}
 
 
 def function(msg: str):
@@ -33,7 +40,8 @@ def function(msg: str):
             result = g(*args, **kwargs)
             eval_arg(result)
             timing = 1e3 * (time.perf_counter() - tic)
-            print(f"{msg} {timing:.3f} (ms)")
+            global ledger
+            ledger.setdefault(msg, []).append(timing)
             return result
 
         return g_wrapped
