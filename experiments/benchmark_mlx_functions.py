@@ -48,7 +48,7 @@ def benchmark_linear_projection(
 
     iteration = 32
 
-    @time_mlx.function(f"run {iteration} linear forward takes")
+    @time_mlx.function(f"run {iteration} linear projection takes")
     def time_linear(q_proj, k_proj, v_proj, x):
         for _ in range(iteration):
             mx.eval(q_proj(x), k_proj(x), v_proj(x))
