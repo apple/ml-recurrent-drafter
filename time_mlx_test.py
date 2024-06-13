@@ -27,17 +27,19 @@ def two_projs():
 
 def test_time_mlx_two_projs():
     for _ in range(10):
-        time_mlx.clear_ledger()
+        ledger = time_mlx.ledger
+        ledger.reset()
         two_projs()
         assert (
-            time_mlx.ledger["create_projs"][0] + time_mlx.ledger["run_projs"][0]
-            < time_mlx.ledger["two_projs"][0]
+            ledger.records_dict["two_projscreate_projs"].timing[0]
+            + ledger.records_dict["two_projsrun_projs"].timing[0]
+            < ledger.records_dict["two_projs"].timing[0]
         )
         assert (
             math.fabs(
-                time_mlx.ledger["create_projs"][0]
-                + time_mlx.ledger["run_projs"][0]
-                - time_mlx.ledger["two_projs"][0]
+                ledger.records_dict["two_projscreate_projs"].timing[0]
+                + ledger.records_dict["two_projsrun_projs"].timing[0]
+                - ledger.records_dict["two_projs"].timing[0]
             )
             < 1  # ms
         )
