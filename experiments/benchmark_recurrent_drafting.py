@@ -50,7 +50,7 @@ def _get_recurrent_drafting_model(model_type: str = "llama") -> recurrent_drafti
     return _test_recurrent_drafting_model_singleton[model_type]
 
 
-@time_mlx.function("time ReDrafter.generate takes")
+@time_mlx.function("benchmark_recurrent_drafting.recurrent_drafting_generate")
 def recurrent_drafting_generate(
     model: recurrent_drafting.ReDrafterModel,
     input_ids: mx.array,
@@ -81,7 +81,7 @@ def benchmark_recurrent_drafting(beam_width: int, beam_length: int):
     recurrent_drafting_generate(
         model,
         input_ids=PROMPT,
-        max_length=100,
+        max_length=PROMPT.shape[1] + 100,
         beam_shape=modeling_drafter.BeamShape(beam_width, beam_length),
         sampling_args=recurrent_drafting.SamplingArgs(1.0, True),
     )
@@ -130,11 +130,19 @@ def benchmark_verify_candidates(beam_width: int, beam_length: int):
 if __name__ == "__main__":
     for i in range(2):
         print(f"run {i}")
+        ledger = time_mlx.ledger
+        ledger.reset()
         benchmark_recurrent_drafting(1, 2)
-        benchmark_recurrent_drafting(3, 3)
-        benchmark_recurrent_drafting(6, 3)
+        ledger.print()
+
+        ledger.reset()
         benchmark_recurrent_drafting(6, 6)
-        benchmark_verify_candidates(1, 2)
-        benchmark_verify_candidates(3, 3)
-        benchmark_verify_candidates(6, 3)
+        ledger.print()
+
+        ledger.reset()
+        benchmark_verify_candidates(1, 1)
+        ledger.print()
+
+        ledger.reset()
         benchmark_verify_candidates(6, 6)
+        ledger.print()
