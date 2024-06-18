@@ -133,16 +133,16 @@ if __name__ == "__main__":
         ledger = time_mlx.ledger
         ledger.reset()
         benchmark_recurrent_drafting(1, 2)
-        ledger.print()
+        ledger.print_table()
 
         ledger.reset()
         benchmark_recurrent_drafting(6, 6)
-        ledger.print()
+        ledger.print_table()
 
         ledger.reset()
         benchmark_verify_candidates(1, 1)
-        ledger.print()
+        ledger.print_table()
 
         ledger.reset()
         benchmark_verify_candidates(6, 6)
-        ledger.print()
+        ledger.print_table()
