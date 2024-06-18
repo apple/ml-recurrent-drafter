@@ -128,21 +128,11 @@ def benchmark_verify_candidates(beam_width: int, beam_length: int):
 
 
 if __name__ == "__main__":
+    ledger = time_mlx.ledger
     for i in range(2):
         print(f"run {i}")
-        ledger = time_mlx.ledger
-        ledger.reset()
-        benchmark_recurrent_drafting(1, 2)
-        ledger.print_table()
-
-        ledger.reset()
-        benchmark_recurrent_drafting(6, 6)
-        ledger.print_table()
-
-        ledger.reset()
-        benchmark_verify_candidates(1, 1)
-        ledger.print_table()
-
-        ledger.reset()
-        benchmark_verify_candidates(6, 6)
-        ledger.print_table()
+        for bw in range(1, 48):
+            for bl in range(2, 10):
+                ledger.reset()
+                benchmark_recurrent_drafting(bw, bl)
+                ledger.print_table()
