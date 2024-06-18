@@ -23,7 +23,7 @@ def benchmark_sdpa(
 
     iteration = 32
 
-    @time_mlx.function(f"run {iteration} sdpa takes")
+    @time_mlx.function(f"run {iteration} mlx sdpa takes")
     def time_sdpa(q, k, v):
         for _ in range(iteration):
             mx.eval(mx.fast.scaled_dot_product_attention(q, k, v, scale=1.0, mask=m))
@@ -34,33 +34,36 @@ def benchmark_sdpa(
 def benchmark_linear_projection(
     input_dims: int, output_dims: int, q_len: int, dtype: mx.Dtype
 ) -> None:
-    q_proj = mlx.nn.Linear(input_dims, output_dims, bias=False)
-    q_proj.set_dtype(dtype)
-    k_proj = mlx.nn.Linear(input_dims, output_dims, bias=False)
-    k_proj.set_dtype(dtype)
-    v_proj = mlx.nn.Linear(input_dims, output_dims, bias=False)
-    v_proj.set_dtype(dtype)
+    proj = mlx.nn.Linear(input_dims, output_dims, bias=False)
+    proj.set_dtype(dtype)
     x = mx.random.uniform(shape=(1, q_len, input_dims)).astype(dtype)
-    mx.eval(q_proj, k_proj, v_proj, x)
+    mx.eval(proj, x)
     # warm up
     for _ in range(10):
-        mx.eval(q_proj(x))
+        mx.eval(proj(x))
 
     iteration = 32
 
-    @time_mlx.function(f"run {iteration} linear projection takes")
-    def time_linear(q_proj, k_proj, v_proj, x):
+    @time_mlx.function(f"run {iteration} mlx linear projection takes")
+    def time_linear(proj, x):
         for _ in range(iteration):
-            mx.eval(q_proj(x), k_proj(x), v_proj(x))
+            mx.eval(proj(x))
 
-    return time_linear(q_proj, k_proj, v_proj, x)
+    return time_linear(proj, x)
 
 
 if __name__ == "__main__":
     mx.random.seed(123)
-    for bw in range(1, 50):
-        for bl in range(1, 10):
+    for bw in range(10, 510, 10):
+        for bl in range(10, 110, 10):
+            time_mlx.ledger.reset()
             print(f"benchmark beam_width {bw} beam_length {bl}")
             q_len = bw * bl
-            benchmark_sdpa(1, 32, q_len, q_len + 100, 128, mx.bfloat16)
+            # benchmark_sdpa(1, 32, q_len, q_len + 100, 128, mx.bfloat16)
             benchmark_linear_projection(4096, 4096, q_len, mx.bfloat16)
+            time_mlx.ledger.print_summary()
+
+    # bw 350 bl 50 for sdpa OOM
+    # safe:
+    #   - bw 350 bl 40 for sdpa
+    #   - bw 500 bl 100 for linear projection

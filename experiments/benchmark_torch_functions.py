@@ -22,41 +22,39 @@ def benchmark_sdpa(
     # warm up
     for _ in range(10):
         torch.nn.functional.scaled_dot_product_attention(q, k, v, scale=1.0, attn_mask=m)
+    torch.cuda.synchronize(device)
     tic = time.perf_counter()
     iteration = 32
     for _ in range(iteration):
         torch.nn.functional.scaled_dot_product_attention(q, k, v, scale=1.0, attn_mask=m)
+    torch.cuda.synchronize(device)
     timing = 1e3 * (time.perf_counter() - tic)
-    print(f"{iteration} x torch sdpa take {timing: .3f} (ms)")
+    print(f"run {iteration} torch sdpa takes {timing: .3f} (ms)")
 
 
 def benchmark_linear_projection(
     input_dims: int, output_dims: int, q_len: int, dtype: torch.dtype
 ) -> None:
     device = torch.device("cuda")
-    q_proj = torch.nn.Linear(input_dims, output_dims, bias=False).to(dtype).to(device)
-    k_proj = torch.nn.Linear(input_dims, output_dims, bias=False).to(dtype).to(device)
-    v_proj = torch.nn.Linear(input_dims, output_dims, bias=False).to(dtype).to(device)
+    proj = torch.nn.Linear(input_dims, output_dims, bias=False).to(dtype).to(device)
     x = torch.randn(size=(1, q_len, input_dims)).to(dtype).to(device)
     # warm up
-    for _ in range(5):
-        q_proj(x)
-        k_proj(x)
-        v_proj(x)
+    for _ in range(10):
+        proj(x)
+    torch.cuda.synchronize(device)
     tic = time.perf_counter()
     iteration = 32
     for _ in range(iteration):
-        q_proj(x)
-        k_proj(x)
-        v_proj(x)
+        proj(x)
+    torch.cuda.synchronize(device)
     timing = 1e3 * (time.perf_counter() - tic)
-    print(f"{iteration} x torch proj take {timing: .3f} (ms)")
+    print(f"run {iteration} torch linear projection takes {timing: .3f} (ms)")
 
 
 if __name__ == "__main__":
     rng.seed_pytorch(123)
-    for bw in range(1, 50):
-        for bl in range(1, 10):
+    for bw in range(1, 125, 2):
+        for bl in range(1, 25, 2):
             print(f"benchmark beam_width {bw} beam_length {bl}")
             q_len = bw * bl
             benchmark_sdpa(1, 32, q_len, q_len + 100, 128, torch.bfloat16)

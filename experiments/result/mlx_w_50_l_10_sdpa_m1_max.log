@@ -1,882 +1,882 @@
 benchmark beam_width 1 beam_length 1
-run 32 sdpa takes 11.014 (ms)
+run 32 mlx sdpa takes 9.407 (ms)
 benchmark beam_width 1 beam_length 2
-run 32 sdpa takes 10.214 (ms)
+run 32 mlx sdpa takes 9.264 (ms)
 benchmark beam_width 1 beam_length 3
-run 32 sdpa takes 9.630 (ms)
+run 32 mlx sdpa takes 8.827 (ms)
 benchmark beam_width 1 beam_length 4
-run 32 sdpa takes 9.621 (ms)
+run 32 mlx sdpa takes 8.910 (ms)
 benchmark beam_width 1 beam_length 5
-run 32 sdpa takes 9.965 (ms)
+run 32 mlx sdpa takes 9.338 (ms)
 benchmark beam_width 1 beam_length 6
-run 32 sdpa takes 9.895 (ms)
+run 32 mlx sdpa takes 9.280 (ms)
 benchmark beam_width 1 beam_length 7
-run 32 sdpa takes 9.992 (ms)
+run 32 mlx sdpa takes 9.102 (ms)
 benchmark beam_width 1 beam_length 8
-run 32 sdpa takes 10.079 (ms)
+run 32 mlx sdpa takes 9.111 (ms)
 benchmark beam_width 1 beam_length 9
-run 32 sdpa takes 9.764 (ms)
+run 32 mlx sdpa takes 8.960 (ms)
 benchmark beam_width 2 beam_length 1
-run 32 sdpa takes 9.946 (ms)
+run 32 mlx sdpa takes 8.719 (ms)
 benchmark beam_width 2 beam_length 2
-run 32 sdpa takes 10.134 (ms)
+run 32 mlx sdpa takes 9.472 (ms)
 benchmark beam_width 2 beam_length 3
-run 32 sdpa takes 9.454 (ms)
+run 32 mlx sdpa takes 9.703 (ms)
 benchmark beam_width 2 beam_length 4
-run 32 sdpa takes 8.704 (ms)
+run 32 mlx sdpa takes 9.925 (ms)
 benchmark beam_width 2 beam_length 5
-run 32 sdpa takes 9.345 (ms)
+run 32 mlx sdpa takes 9.258 (ms)
 benchmark beam_width 2 beam_length 6
-run 32 sdpa takes 10.877 (ms)
+run 32 mlx sdpa takes 9.654 (ms)
 benchmark beam_width 2 beam_length 7
-run 32 sdpa takes 10.445 (ms)
+run 32 mlx sdpa takes 9.860 (ms)
 benchmark beam_width 2 beam_length 8
-run 32 sdpa takes 10.433 (ms)
+run 32 mlx sdpa takes 9.823 (ms)
 benchmark beam_width 2 beam_length 9
-run 32 sdpa takes 10.920 (ms)
+run 32 mlx sdpa takes 10.587 (ms)
 benchmark beam_width 3 beam_length 1
-run 32 sdpa takes 10.994 (ms)
+run 32 mlx sdpa takes 10.189 (ms)
 benchmark beam_width 3 beam_length 2
-run 32 sdpa takes 11.145 (ms)
+run 32 mlx sdpa takes 9.907 (ms)
 benchmark beam_width 3 beam_length 3
-run 32 sdpa takes 10.196 (ms)
+run 32 mlx sdpa takes 9.779 (ms)
 benchmark beam_width 3 beam_length 4
-run 32 sdpa takes 9.859 (ms)
+run 32 mlx sdpa takes 9.194 (ms)
 benchmark beam_width 3 beam_length 5
-run 32 sdpa takes 10.002 (ms)
+run 32 mlx sdpa takes 9.293 (ms)
 benchmark beam_width 3 beam_length 6
-run 32 sdpa takes 10.144 (ms)
+run 32 mlx sdpa takes 9.423 (ms)
 benchmark beam_width 3 beam_length 7
-run 32 sdpa takes 10.157 (ms)
+run 32 mlx sdpa takes 9.262 (ms)
 benchmark beam_width 3 beam_length 8
-run 32 sdpa takes 10.146 (ms)
+run 32 mlx sdpa takes 9.385 (ms)
 benchmark beam_width 3 beam_length 9
-run 32 sdpa takes 10.471 (ms)
+run 32 mlx sdpa takes 9.072 (ms)
 benchmark beam_width 4 beam_length 1
-run 32 sdpa takes 9.942 (ms)
+run 32 mlx sdpa takes 9.056 (ms)
 benchmark beam_width 4 beam_length 2
-run 32 sdpa takes 9.998 (ms)
+run 32 mlx sdpa takes 9.161 (ms)
 benchmark beam_width 4 beam_length 3
-run 32 sdpa takes 9.095 (ms)
+run 32 mlx sdpa takes 9.164 (ms)
 benchmark beam_width 4 beam_length 4
-run 32 sdpa takes 9.600 (ms)
+run 32 mlx sdpa takes 9.515 (ms)
 benchmark beam_width 4 beam_length 5
-run 32 sdpa takes 9.635 (ms)
+run 32 mlx sdpa takes 9.361 (ms)
 benchmark beam_width 4 beam_length 6
-run 32 sdpa takes 9.844 (ms)
+run 32 mlx sdpa takes 9.586 (ms)
 benchmark beam_width 4 beam_length 7
-run 32 sdpa takes 9.924 (ms)
+run 32 mlx sdpa takes 9.596 (ms)
 benchmark beam_width 4 beam_length 8
-run 32 sdpa takes 10.220 (ms)
+run 32 mlx sdpa takes 9.386 (ms)
 benchmark beam_width 4 beam_length 9
-run 32 sdpa takes 10.839 (ms)
+run 32 mlx sdpa takes 10.234 (ms)
 benchmark beam_width 5 beam_length 1
-run 32 sdpa takes 10.067 (ms)
+run 32 mlx sdpa takes 9.165 (ms)
 benchmark beam_width 5 beam_length 2
-run 32 sdpa takes 9.934 (ms)
+run 32 mlx sdpa takes 9.836 (ms)
 benchmark beam_width 5 beam_length 3
-run 32 sdpa takes 10.024 (ms)
+run 32 mlx sdpa takes 9.868 (ms)
 benchmark beam_width 5 beam_length 4
-run 32 sdpa takes 10.088 (ms)
+run 32 mlx sdpa takes 9.610 (ms)
 benchmark beam_width 5 beam_length 5
-run 32 sdpa takes 10.296 (ms)
+run 32 mlx sdpa takes 9.591 (ms)
 benchmark beam_width 5 beam_length 6
-run 32 sdpa takes 10.528 (ms)
+run 32 mlx sdpa takes 11.035 (ms)
 benchmark beam_width 5 beam_length 7
-run 32 sdpa takes 10.959 (ms)
+run 32 mlx sdpa takes 12.608 (ms)
 benchmark beam_width 5 beam_length 8
-run 32 sdpa takes 10.903 (ms)
+run 32 mlx sdpa takes 11.451 (ms)
 benchmark beam_width 5 beam_length 9
-run 32 sdpa takes 11.060 (ms)
+run 32 mlx sdpa takes 11.414 (ms)
 benchmark beam_width 6 beam_length 1
-run 32 sdpa takes 9.834 (ms)
+run 32 mlx sdpa takes 9.447 (ms)
 benchmark beam_width 6 beam_length 2
-run 32 sdpa takes 9.955 (ms)
+run 32 mlx sdpa takes 9.384 (ms)
 benchmark beam_width 6 beam_length 3
-run 32 sdpa takes 10.200 (ms)
+run 32 mlx sdpa takes 9.342 (ms)
 benchmark beam_width 6 beam_length 4
-run 32 sdpa takes 9.850 (ms)
+run 32 mlx sdpa takes 9.721 (ms)
 benchmark beam_width 6 beam_length 5
-run 32 sdpa takes 10.727 (ms)
+run 32 mlx sdpa takes 9.684 (ms)
 benchmark beam_width 6 beam_length 6
-run 32 sdpa takes 10.867 (ms)
+run 32 mlx sdpa takes 9.837 (ms)
 benchmark beam_width 6 beam_length 7
-run 32 sdpa takes 10.873 (ms)
+run 32 mlx sdpa takes 10.731 (ms)
 benchmark beam_width 6 beam_length 8
-run 32 sdpa takes 11.028 (ms)
+run 32 mlx sdpa takes 10.296 (ms)
 benchmark beam_width 6 beam_length 9
-run 32 sdpa takes 11.219 (ms)
+run 32 mlx sdpa takes 10.441 (ms)
 benchmark beam_width 7 beam_length 1
-run 32 sdpa takes 9.970 (ms)
+run 32 mlx sdpa takes 8.965 (ms)
 benchmark beam_width 7 beam_length 2
-run 32 sdpa takes 9.629 (ms)
+run 32 mlx sdpa takes 9.020 (ms)
 benchmark beam_width 7 beam_length 3
-run 32 sdpa takes 10.253 (ms)
+run 32 mlx sdpa takes 9.316 (ms)
 benchmark beam_width 7 beam_length 4
-run 32 sdpa takes 10.194 (ms)
+run 32 mlx sdpa takes 9.176 (ms)
 benchmark beam_width 7 beam_length 5
-run 32 sdpa takes 10.640 (ms)
+run 32 mlx sdpa takes 10.342 (ms)
 benchmark beam_width 7 beam_length 6
-run 32 sdpa takes 10.624 (ms)
+run 32 mlx sdpa takes 10.472 (ms)
 benchmark beam_width 7 beam_length 7
-run 32 sdpa takes 11.045 (ms)
+run 32 mlx sdpa takes 10.512 (ms)
 benchmark beam_width 7 beam_length 8
-run 32 sdpa takes 11.033 (ms)
+run 32 mlx sdpa takes 10.709 (ms)
 benchmark beam_width 7 beam_length 9
-run 32 sdpa takes 11.081 (ms)
+run 32 mlx sdpa takes 10.838 (ms)
 benchmark beam_width 8 beam_length 1
-run 32 sdpa takes 9.909 (ms)
+run 32 mlx sdpa takes 9.129 (ms)
 benchmark beam_width 8 beam_length 2
-run 32 sdpa takes 9.864 (ms)
+run 32 mlx sdpa takes 9.432 (ms)
 benchmark beam_width 8 beam_length 3
-run 32 sdpa takes 10.219 (ms)
+run 32 mlx sdpa takes 9.581 (ms)
 benchmark beam_width 8 beam_length 4
-run 32 sdpa takes 10.384 (ms)
+run 32 mlx sdpa takes 9.391 (ms)
 benchmark beam_width 8 beam_length 5
-run 32 sdpa takes 11.026 (ms)
+run 32 mlx sdpa takes 10.282 (ms)
 benchmark beam_width 8 beam_length 6
-run 32 sdpa takes 10.188 (ms)
+run 32 mlx sdpa takes 10.344 (ms)
 benchmark beam_width 8 beam_length 7
-run 32 sdpa takes 10.351 (ms)
+run 32 mlx sdpa takes 10.491 (ms)
 benchmark beam_width 8 beam_length 8
-run 32 sdpa takes 10.554 (ms)
+run 32 mlx sdpa takes 10.778 (ms)
 benchmark beam_width 8 beam_length 9
-run 32 sdpa takes 12.097 (ms)
+run 32 mlx sdpa takes 11.190 (ms)
 benchmark beam_width 9 beam_length 1
-run 32 sdpa takes 8.939 (ms)
+run 32 mlx sdpa takes 9.297 (ms)
 benchmark beam_width 9 beam_length 2
-run 32 sdpa takes 9.081 (ms)
+run 32 mlx sdpa takes 9.543 (ms)
 benchmark beam_width 9 beam_length 3
-run 32 sdpa takes 9.305 (ms)
+run 32 mlx sdpa takes 9.591 (ms)
 benchmark beam_width 9 beam_length 4
-run 32 sdpa takes 10.252 (ms)
+run 32 mlx sdpa takes 10.280 (ms)
 benchmark beam_width 9 beam_length 5
-run 32 sdpa takes 10.522 (ms)
+run 32 mlx sdpa takes 10.091 (ms)
 benchmark beam_width 9 beam_length 6
-run 32 sdpa takes 11.121 (ms)
+run 32 mlx sdpa takes 10.257 (ms)
 benchmark beam_width 9 beam_length 7
-run 32 sdpa takes 11.257 (ms)
+run 32 mlx sdpa takes 10.658 (ms)
 benchmark beam_width 9 beam_length 8
-run 32 sdpa takes 12.264 (ms)
+run 32 mlx sdpa takes 11.471 (ms)
 benchmark beam_width 9 beam_length 9
-run 32 sdpa takes 12.084 (ms)
+run 32 mlx sdpa takes 12.475 (ms)
 benchmark beam_width 10 beam_length 1
-run 32 sdpa takes 10.122 (ms)
+run 32 mlx sdpa takes 10.446 (ms)
 benchmark beam_width 10 beam_length 2
-run 32 sdpa takes 10.225 (ms)
+run 32 mlx sdpa takes 9.668 (ms)
 benchmark beam_width 10 beam_length 3
-run 32 sdpa takes 10.344 (ms)
+run 32 mlx sdpa takes 10.506 (ms)
 benchmark beam_width 10 beam_length 4
-run 32 sdpa takes 10.946 (ms)
+run 32 mlx sdpa takes 10.010 (ms)
 benchmark beam_width 10 beam_length 5
-run 32 sdpa takes 11.116 (ms)
+run 32 mlx sdpa takes 10.659 (ms)
 benchmark beam_width 10 beam_length 6
-run 32 sdpa takes 11.305 (ms)
+run 32 mlx sdpa takes 10.606 (ms)
 benchmark beam_width 10 beam_length 7
-run 32 sdpa takes 11.757 (ms)
+run 32 mlx sdpa takes 12.025 (ms)
 benchmark beam_width 10 beam_length 8
-run 32 sdpa takes 12.183 (ms)
+run 32 mlx sdpa takes 12.358 (ms)
 benchmark beam_width 10 beam_length 9
-run 32 sdpa takes 12.745 (ms)
+run 32 mlx sdpa takes 12.438 (ms)
 benchmark beam_width 11 beam_length 1
-run 32 sdpa takes 9.965 (ms)
+run 32 mlx sdpa takes 9.884 (ms)
 benchmark beam_width 11 beam_length 2
-run 32 sdpa takes 9.975 (ms)
+run 32 mlx sdpa takes 10.251 (ms)
 benchmark beam_width 11 beam_length 3
-run 32 sdpa takes 10.913 (ms)
+run 32 mlx sdpa takes 10.486 (ms)
 benchmark beam_width 11 beam_length 4
-run 32 sdpa takes 11.101 (ms)
+run 32 mlx sdpa takes 10.752 (ms)
 benchmark beam_width 11 beam_length 5
-run 32 sdpa takes 11.336 (ms)
+run 32 mlx sdpa takes 11.141 (ms)
 benchmark beam_width 11 beam_length 6
-run 32 sdpa takes 12.279 (ms)
+run 32 mlx sdpa takes 11.595 (ms)
 benchmark beam_width 11 beam_length 7
-run 32 sdpa takes 12.376 (ms)
+run 32 mlx sdpa takes 11.574 (ms)
 benchmark beam_width 11 beam_length 8
-run 32 sdpa takes 12.637 (ms)
+run 32 mlx sdpa takes 11.936 (ms)
 benchmark beam_width 11 beam_length 9
-run 32 sdpa takes 13.458 (ms)
+run 32 mlx sdpa takes 12.621 (ms)
 benchmark beam_width 12 beam_length 1
-run 32 sdpa takes 9.900 (ms)
+run 32 mlx sdpa takes 9.811 (ms)
 benchmark beam_width 12 beam_length 2
-run 32 sdpa takes 10.303 (ms)
+run 32 mlx sdpa takes 10.065 (ms)
 benchmark beam_width 12 beam_length 3
-run 32 sdpa takes 10.769 (ms)
+run 32 mlx sdpa takes 10.596 (ms)
 benchmark beam_width 12 beam_length 4
-run 32 sdpa takes 11.051 (ms)
+run 32 mlx sdpa takes 10.876 (ms)
 benchmark beam_width 12 beam_length 5
-run 32 sdpa takes 11.324 (ms)
+run 32 mlx sdpa takes 10.958 (ms)
 benchmark beam_width 12 beam_length 6
-run 32 sdpa takes 11.925 (ms)
+run 32 mlx sdpa takes 12.116 (ms)
 benchmark beam_width 12 beam_length 7
-run 32 sdpa takes 12.622 (ms)
+run 32 mlx sdpa takes 12.315 (ms)
 benchmark beam_width 12 beam_length 8
-run 32 sdpa takes 12.720 (ms)
+run 32 mlx sdpa takes 12.486 (ms)
 benchmark beam_width 12 beam_length 9
-run 32 sdpa takes 12.724 (ms)
+run 32 mlx sdpa takes 12.685 (ms)
 benchmark beam_width 13 beam_length 1
-run 32 sdpa takes 9.968 (ms)
+run 32 mlx sdpa takes 9.924 (ms)
 benchmark beam_width 13 beam_length 2
-run 32 sdpa takes 10.380 (ms)
+run 32 mlx sdpa takes 10.061 (ms)
 benchmark beam_width 13 beam_length 3
-run 32 sdpa takes 10.626 (ms)
+run 32 mlx sdpa takes 10.587 (ms)
 benchmark beam_width 13 beam_length 4
-run 32 sdpa takes 11.046 (ms)
+run 32 mlx sdpa takes 10.959 (ms)
 benchmark beam_width 13 beam_length 5
-run 32 sdpa takes 12.081 (ms)
+run 32 mlx sdpa takes 12.043 (ms)
 benchmark beam_width 13 beam_length 6
-run 32 sdpa takes 12.506 (ms)
+run 32 mlx sdpa takes 11.719 (ms)
 benchmark beam_width 13 beam_length 7
-run 32 sdpa takes 12.396 (ms)
+run 32 mlx sdpa takes 12.201 (ms)
 benchmark beam_width 13 beam_length 8
-run 32 sdpa takes 13.238 (ms)
+run 32 mlx sdpa takes 13.142 (ms)
 benchmark beam_width 13 beam_length 9
-run 32 sdpa takes 13.165 (ms)
+run 32 mlx sdpa takes 12.962 (ms)
 benchmark beam_width 14 beam_length 1
-run 32 sdpa takes 9.975 (ms)
+run 32 mlx sdpa takes 9.870 (ms)
 benchmark beam_width 14 beam_length 2
-run 32 sdpa takes 10.186 (ms)
+run 32 mlx sdpa takes 10.032 (ms)
 benchmark beam_width 14 beam_length 3
-run 32 sdpa takes 10.925 (ms)
+run 32 mlx sdpa takes 10.668 (ms)
 benchmark beam_width 14 beam_length 4
-run 32 sdpa takes 10.821 (ms)
+run 32 mlx sdpa takes 10.978 (ms)
 benchmark beam_width 14 beam_length 5
-run 32 sdpa takes 12.105 (ms)
+run 32 mlx sdpa takes 11.934 (ms)
 benchmark beam_width 14 beam_length 6
-run 32 sdpa takes 12.408 (ms)
+run 32 mlx sdpa takes 12.255 (ms)
 benchmark beam_width 14 beam_length 7
-run 32 sdpa takes 12.996 (ms)
+run 32 mlx sdpa takes 13.102 (ms)
 benchmark beam_width 14 beam_length 8
-run 32 sdpa takes 12.065 (ms)
+run 32 mlx sdpa takes 12.845 (ms)
 benchmark beam_width 14 beam_length 9
-run 32 sdpa takes 13.219 (ms)
+run 32 mlx sdpa takes 13.378 (ms)
 benchmark beam_width 15 beam_length 1
-run 32 sdpa takes 9.713 (ms)
+run 32 mlx sdpa takes 9.876 (ms)
 benchmark beam_width 15 beam_length 2
-run 32 sdpa takes 10.170 (ms)
+run 32 mlx sdpa takes 9.846 (ms)
 benchmark beam_width 15 beam_length 3
-run 32 sdpa takes 10.963 (ms)
+run 32 mlx sdpa takes 11.323 (ms)
 benchmark beam_width 15 beam_length 4
-run 32 sdpa takes 10.999 (ms)
+run 32 mlx sdpa takes 22.808 (ms)
 benchmark beam_width 15 beam_length 5
-run 32 sdpa takes 12.293 (ms)
+run 32 mlx sdpa takes 11.304 (ms)
 benchmark beam_width 15 beam_length 6
-run 32 sdpa takes 12.443 (ms)
+run 32 mlx sdpa takes 11.351 (ms)
 benchmark beam_width 15 beam_length 7
-run 32 sdpa takes 12.461 (ms)
+run 32 mlx sdpa takes 12.345 (ms)
 benchmark beam_width 15 beam_length 8
-run 32 sdpa takes 12.318 (ms)
+run 32 mlx sdpa takes 12.983 (ms)
 benchmark beam_width 15 beam_length 9
-run 32 sdpa takes 14.401 (ms)
+run 32 mlx sdpa takes 14.418 (ms)
 benchmark beam_width 16 beam_length 1
-run 32 sdpa takes 10.000 (ms)
+run 32 mlx sdpa takes 9.812 (ms)
 benchmark beam_width 16 beam_length 2
-run 32 sdpa takes 10.447 (ms)
+run 32 mlx sdpa takes 10.297 (ms)
 benchmark beam_width 16 beam_length 3
-run 32 sdpa takes 11.080 (ms)
+run 32 mlx sdpa takes 10.860 (ms)
 benchmark beam_width 16 beam_length 4
-run 32 sdpa takes 11.302 (ms)
+run 32 mlx sdpa takes 11.307 (ms)
 benchmark beam_width 16 beam_length 5
-run 32 sdpa takes 12.364 (ms)
+run 32 mlx sdpa takes 12.113 (ms)
 benchmark beam_width 16 beam_length 6
-run 32 sdpa takes 12.792 (ms)
+run 32 mlx sdpa takes 12.568 (ms)
 benchmark beam_width 16 beam_length 7
-run 32 sdpa takes 12.985 (ms)
+run 32 mlx sdpa takes 12.753 (ms)
 benchmark beam_width 16 beam_length 8
-run 32 sdpa takes 13.290 (ms)
+run 32 mlx sdpa takes 13.097 (ms)
 benchmark beam_width 16 beam_length 9
-run 32 sdpa takes 14.749 (ms)
+run 32 mlx sdpa takes 14.521 (ms)
 benchmark beam_width 17 beam_length 1
-run 32 sdpa takes 9.302 (ms)
+run 32 mlx sdpa takes 9.962 (ms)
 benchmark beam_width 17 beam_length 2
-run 32 sdpa takes 11.172 (ms)
+run 32 mlx sdpa takes 10.705 (ms)
 benchmark beam_width 17 beam_length 3
-run 32 sdpa takes 10.946 (ms)
+run 32 mlx sdpa takes 10.892 (ms)
 benchmark beam_width 17 beam_length 4
-run 32 sdpa takes 12.151 (ms)
+run 32 mlx sdpa takes 11.912 (ms)
 benchmark beam_width 17 beam_length 5
-run 32 sdpa takes 12.173 (ms)
+run 32 mlx sdpa takes 12.272 (ms)
 benchmark beam_width 17 beam_length 6
-run 32 sdpa takes 13.199 (ms)
+run 32 mlx sdpa takes 13.009 (ms)
 benchmark beam_width 17 beam_length 7
-run 32 sdpa takes 13.148 (ms)
+run 32 mlx sdpa takes 13.015 (ms)
 benchmark beam_width 17 beam_length 8
-run 32 sdpa takes 14.427 (ms)
+run 32 mlx sdpa takes 14.154 (ms)
 benchmark beam_width 17 beam_length 9
-run 32 sdpa takes 15.073 (ms)
+run 32 mlx sdpa takes 14.603 (ms)
 benchmark beam_width 18 beam_length 1
-run 32 sdpa takes 10.078 (ms)
+run 32 mlx sdpa takes 9.830 (ms)
 benchmark beam_width 18 beam_length 2
-run 32 sdpa takes 10.654 (ms)
+run 32 mlx sdpa takes 10.726 (ms)
 benchmark beam_width 18 beam_length 3
-run 32 sdpa takes 11.153 (ms)
+run 32 mlx sdpa takes 10.847 (ms)
 benchmark beam_width 18 beam_length 4
-run 32 sdpa takes 12.204 (ms)
+run 32 mlx sdpa takes 11.900 (ms)
 benchmark beam_width 18 beam_length 5
-run 32 sdpa takes 12.545 (ms)
+run 32 mlx sdpa takes 12.422 (ms)
 benchmark beam_width 18 beam_length 6
-run 32 sdpa takes 12.723 (ms)
+run 32 mlx sdpa takes 12.656 (ms)
 benchmark beam_width 18 beam_length 7
-run 32 sdpa takes 13.488 (ms)
+run 32 mlx sdpa takes 13.493 (ms)
 benchmark beam_width 18 beam_length 8
-run 32 sdpa takes 14.566 (ms)
+run 32 mlx sdpa takes 14.858 (ms)
 benchmark beam_width 18 beam_length 9
-run 32 sdpa takes 17.921 (ms)
+run 32 mlx sdpa takes 15.839 (ms)
 benchmark beam_width 19 beam_length 1
-run 32 sdpa takes 11.424 (ms)
+run 32 mlx sdpa takes 9.898 (ms)
 benchmark beam_width 19 beam_length 2
-run 32 sdpa takes 11.258 (ms)
+run 32 mlx sdpa takes 10.607 (ms)
 benchmark beam_width 19 beam_length 3
-run 32 sdpa takes 13.099 (ms)
+run 32 mlx sdpa takes 11.139 (ms)
 benchmark beam_width 19 beam_length 4
-run 32 sdpa takes 16.822 (ms)
+run 32 mlx sdpa takes 12.144 (ms)
 benchmark beam_width 19 beam_length 5
-run 32 sdpa takes 17.994 (ms)
+run 32 mlx sdpa takes 12.977 (ms)
 benchmark beam_width 19 beam_length 6
-run 32 sdpa takes 19.132 (ms)
+run 32 mlx sdpa takes 12.807 (ms)
 benchmark beam_width 19 beam_length 7
-run 32 sdpa takes 21.057 (ms)
+run 32 mlx sdpa takes 14.421 (ms)
 benchmark beam_width 19 beam_length 8
-run 32 sdpa takes 30.342 (ms)
+run 32 mlx sdpa takes 14.762 (ms)
 benchmark beam_width 19 beam_length 9
-run 32 sdpa takes 33.718 (ms)
+run 32 mlx sdpa takes 16.020 (ms)
 benchmark beam_width 20 beam_length 1
-run 32 sdpa takes 11.989 (ms)
+run 32 mlx sdpa takes 9.995 (ms)
 benchmark beam_width 20 beam_length 2
-run 32 sdpa takes 14.344 (ms)
+run 32 mlx sdpa takes 10.711 (ms)
 benchmark beam_width 20 beam_length 3
-run 32 sdpa takes 15.034 (ms)
+run 32 mlx sdpa takes 10.750 (ms)
 benchmark beam_width 20 beam_length 4
-run 32 sdpa takes 20.415 (ms)
+run 32 mlx sdpa takes 11.722 (ms)
 benchmark beam_width 20 beam_length 5
-run 32 sdpa takes 23.254 (ms)
+run 32 mlx sdpa takes 13.064 (ms)
 benchmark beam_width 20 beam_length 6
-run 32 sdpa takes 26.082 (ms)
+run 32 mlx sdpa takes 12.941 (ms)
 benchmark beam_width 20 beam_length 7
-run 32 sdpa takes 30.414 (ms)
+run 32 mlx sdpa takes 14.529 (ms)
 benchmark beam_width 20 beam_length 8
-run 32 sdpa takes 32.719 (ms)
+run 32 mlx sdpa takes 15.133 (ms)
 benchmark beam_width 20 beam_length 9
-run 32 sdpa takes 34.995 (ms)
+run 32 mlx sdpa takes 16.352 (ms)
 benchmark beam_width 21 beam_length 1
-run 32 sdpa takes 12.142 (ms)
+run 32 mlx sdpa takes 9.987 (ms)
 benchmark beam_width 21 beam_length 2
-run 32 sdpa takes 14.604 (ms)
+run 32 mlx sdpa takes 10.763 (ms)
 benchmark beam_width 21 beam_length 3
-run 32 sdpa takes 16.348 (ms)
+run 32 mlx sdpa takes 11.355 (ms)
 benchmark beam_width 21 beam_length 4
-run 32 sdpa takes 20.306 (ms)
+run 32 mlx sdpa takes 12.366 (ms)
 benchmark beam_width 21 beam_length 5
-run 32 sdpa takes 23.508 (ms)
+run 32 mlx sdpa takes 12.825 (ms)
 benchmark beam_width 21 beam_length 6
-run 32 sdpa takes 26.183 (ms)
+run 32 mlx sdpa takes 13.376 (ms)
 benchmark beam_width 21 beam_length 7
-run 32 sdpa takes 31.255 (ms)
+run 32 mlx sdpa takes 14.841 (ms)
 benchmark beam_width 21 beam_length 8
-run 32 sdpa takes 37.249 (ms)
+run 32 mlx sdpa takes 15.872 (ms)
 benchmark beam_width 21 beam_length 9
-run 32 sdpa takes 40.833 (ms)
+run 32 mlx sdpa takes 16.747 (ms)
 benchmark beam_width 22 beam_length 1
-run 32 sdpa takes 14.342 (ms)
+run 32 mlx sdpa takes 10.051 (ms)
 benchmark beam_width 22 beam_length 2
-run 32 sdpa takes 16.184 (ms)
+run 32 mlx sdpa takes 10.842 (ms)
 benchmark beam_width 22 beam_length 3
-run 32 sdpa takes 19.066 (ms)
+run 32 mlx sdpa takes 11.881 (ms)
 benchmark beam_width 22 beam_length 4
-run 32 sdpa takes 20.475 (ms)
+run 32 mlx sdpa takes 12.361 (ms)
 benchmark beam_width 22 beam_length 5
-run 32 sdpa takes 24.187 (ms)
+run 32 mlx sdpa takes 12.748 (ms)
 benchmark beam_width 22 beam_length 6
-run 32 sdpa takes 30.111 (ms)
+run 32 mlx sdpa takes 14.447 (ms)
 benchmark beam_width 22 beam_length 7
-run 32 sdpa takes 30.695 (ms)
+run 32 mlx sdpa takes 14.902 (ms)
 benchmark beam_width 22 beam_length 8
-run 32 sdpa takes 36.068 (ms)
+run 32 mlx sdpa takes 16.195 (ms)
 benchmark beam_width 22 beam_length 9
-run 32 sdpa takes 41.422 (ms)
+run 32 mlx sdpa takes 17.815 (ms)
 benchmark beam_width 23 beam_length 1
-run 32 sdpa takes 12.791 (ms)
+run 32 mlx sdpa takes 9.979 (ms)
 benchmark beam_width 23 beam_length 2
-run 32 sdpa takes 15.907 (ms)
+run 32 mlx sdpa takes 10.783 (ms)
 benchmark beam_width 23 beam_length 3
-run 32 sdpa takes 20.685 (ms)
+run 32 mlx sdpa takes 11.966 (ms)
 benchmark beam_width 23 beam_length 4
-run 32 sdpa takes 23.018 (ms)
+run 32 mlx sdpa takes 12.199 (ms)
 benchmark beam_width 23 beam_length 5
-run 32 sdpa takes 28.689 (ms)
+run 32 mlx sdpa takes 13.074 (ms)
 benchmark beam_width 23 beam_length 6
-run 32 sdpa takes 35.424 (ms)
+run 32 mlx sdpa takes 14.474 (ms)
 benchmark beam_width 23 beam_length 7
-run 32 sdpa takes 47.457 (ms)
+run 32 mlx sdpa takes 15.745 (ms)
 benchmark beam_width 23 beam_length 8
-run 32 sdpa takes 56.334 (ms)
+run 32 mlx sdpa takes 16.288 (ms)
 benchmark beam_width 23 beam_length 9
-run 32 sdpa takes 52.721 (ms)
+run 32 mlx sdpa takes 18.246 (ms)
 benchmark beam_width 24 beam_length 1
-run 32 sdpa takes 26.144 (ms)
+run 32 mlx sdpa takes 10.055 (ms)
 benchmark beam_width 24 beam_length 2
-run 32 sdpa takes 43.163 (ms)
+run 32 mlx sdpa takes 10.817 (ms)
 benchmark beam_width 24 beam_length 3
-run 32 sdpa takes 20.210 (ms)
+run 32 mlx sdpa takes 11.712 (ms)
 benchmark beam_width 24 beam_length 4
-run 32 sdpa takes 20.264 (ms)
+run 32 mlx sdpa takes 12.324 (ms)
 benchmark beam_width 24 beam_length 5
-run 32 sdpa takes 24.138 (ms)
+run 32 mlx sdpa takes 12.587 (ms)
 benchmark beam_width 24 beam_length 6
-run 32 sdpa takes 29.826 (ms)
+run 32 mlx sdpa takes 14.727 (ms)
 benchmark beam_width 24 beam_length 7
-run 32 sdpa takes 35.236 (ms)
+run 32 mlx sdpa takes 16.048 (ms)
 benchmark beam_width 24 beam_length 8
-run 32 sdpa takes 37.905 (ms)
+run 32 mlx sdpa takes 16.724 (ms)
 benchmark beam_width 24 beam_length 9
-run 32 sdpa takes 32.820 (ms)
+run 32 mlx sdpa takes 18.341 (ms)
 benchmark beam_width 25 beam_length 1
-run 32 sdpa takes 13.696 (ms)
+run 32 mlx sdpa takes 10.173 (ms)
 benchmark beam_width 25 beam_length 2
-run 32 sdpa takes 11.637 (ms)
+run 32 mlx sdpa takes 10.904 (ms)
 benchmark beam_width 25 beam_length 3
-run 32 sdpa takes 12.258 (ms)
+run 32 mlx sdpa takes 12.180 (ms)
 benchmark beam_width 25 beam_length 4
-run 32 sdpa takes 12.845 (ms)
+run 32 mlx sdpa takes 13.092 (ms)
 benchmark beam_width 25 beam_length 5
-run 32 sdpa takes 13.522 (ms)
+run 32 mlx sdpa takes 13.431 (ms)
 benchmark beam_width 25 beam_length 6
-run 32 sdpa takes 14.995 (ms)
+run 32 mlx sdpa takes 14.693 (ms)
 benchmark beam_width 25 beam_length 7
-run 32 sdpa takes 16.149 (ms)
+run 32 mlx sdpa takes 16.284 (ms)
 benchmark beam_width 25 beam_length 8
-run 32 sdpa takes 18.064 (ms)
+run 32 mlx sdpa takes 17.864 (ms)
 benchmark beam_width 25 beam_length 9
-run 32 sdpa takes 19.429 (ms)
+run 32 mlx sdpa takes 19.482 (ms)
 benchmark beam_width 26 beam_length 1
-run 32 sdpa takes 9.909 (ms)
+run 32 mlx sdpa takes 10.092 (ms)
 benchmark beam_width 26 beam_length 2
-run 32 sdpa takes 10.705 (ms)
+run 32 mlx sdpa takes 10.839 (ms)
 benchmark beam_width 26 beam_length 3
-run 32 sdpa takes 11.992 (ms)
+run 32 mlx sdpa takes 12.229 (ms)
 benchmark beam_width 26 beam_length 4
-run 32 sdpa takes 12.991 (ms)
+run 32 mlx sdpa takes 13.180 (ms)
 benchmark beam_width 26 beam_length 5
-run 32 sdpa takes 14.449 (ms)
+run 32 mlx sdpa takes 14.440 (ms)
 benchmark beam_width 26 beam_length 6
-run 32 sdpa takes 14.594 (ms)
+run 32 mlx sdpa takes 14.780 (ms)
 benchmark beam_width 26 beam_length 7
-run 32 sdpa takes 16.245 (ms)
+run 32 mlx sdpa takes 16.216 (ms)
 benchmark beam_width 26 beam_length 8
-run 32 sdpa takes 17.958 (ms)
+run 32 mlx sdpa takes 17.879 (ms)
 benchmark beam_width 26 beam_length 9
-run 32 sdpa takes 20.029 (ms)
+run 32 mlx sdpa takes 19.339 (ms)
 benchmark beam_width 27 beam_length 1
-run 32 sdpa takes 10.387 (ms)
+run 32 mlx sdpa takes 9.279 (ms)
 benchmark beam_width 27 beam_length 2
-run 32 sdpa takes 10.917 (ms)
+run 32 mlx sdpa takes 10.275 (ms)
 benchmark beam_width 27 beam_length 3
-run 32 sdpa takes 12.430 (ms)
+run 32 mlx sdpa takes 11.563 (ms)
 benchmark beam_width 27 beam_length 4
-run 32 sdpa takes 12.871 (ms)
+run 32 mlx sdpa takes 11.875 (ms)
 benchmark beam_width 27 beam_length 5
-run 32 sdpa takes 14.407 (ms)
+run 32 mlx sdpa takes 13.354 (ms)
 benchmark beam_width 27 beam_length 6
-run 32 sdpa takes 16.047 (ms)
+run 32 mlx sdpa takes 15.243 (ms)
 benchmark beam_width 27 beam_length 7
-run 32 sdpa takes 16.917 (ms)
+run 32 mlx sdpa takes 16.399 (ms)
 benchmark beam_width 27 beam_length 8
-run 32 sdpa takes 18.283 (ms)
+run 32 mlx sdpa takes 18.291 (ms)
 benchmark beam_width 27 beam_length 9
-run 32 sdpa takes 20.146 (ms)
+run 32 mlx sdpa takes 19.981 (ms)
 benchmark beam_width 28 beam_length 1
-run 32 sdpa takes 10.110 (ms)
+run 32 mlx sdpa takes 9.874 (ms)
 benchmark beam_width 28 beam_length 2
-run 32 sdpa takes 11.244 (ms)
+run 32 mlx sdpa takes 10.924 (ms)
 benchmark beam_width 28 beam_length 3
-run 32 sdpa takes 12.493 (ms)
+run 32 mlx sdpa takes 12.364 (ms)
 benchmark beam_width 28 beam_length 4
-run 32 sdpa takes 12.826 (ms)
+run 32 mlx sdpa takes 12.737 (ms)
 benchmark beam_width 28 beam_length 5
-run 32 sdpa takes 14.527 (ms)
+run 32 mlx sdpa takes 14.401 (ms)
 benchmark beam_width 28 beam_length 6
-run 32 sdpa takes 15.505 (ms)
+run 32 mlx sdpa takes 15.814 (ms)
 benchmark beam_width 28 beam_length 7
-run 32 sdpa takes 17.890 (ms)
+run 32 mlx sdpa takes 17.801 (ms)
 benchmark beam_width 28 beam_length 8
-run 32 sdpa takes 18.670 (ms)
+run 32 mlx sdpa takes 18.590 (ms)
 benchmark beam_width 28 beam_length 9
-run 32 sdpa takes 19.693 (ms)
+run 32 mlx sdpa takes 19.821 (ms)
 benchmark beam_width 29 beam_length 1
-run 32 sdpa takes 10.555 (ms)
+run 32 mlx sdpa takes 10.193 (ms)
 benchmark beam_width 29 beam_length 2
-run 32 sdpa takes 11.210 (ms)
+run 32 mlx sdpa takes 11.044 (ms)
 benchmark beam_width 29 beam_length 3
-run 32 sdpa takes 12.743 (ms)
+run 32 mlx sdpa takes 12.314 (ms)
 benchmark beam_width 29 beam_length 4
-run 32 sdpa takes 12.788 (ms)
+run 32 mlx sdpa takes 12.653 (ms)
 benchmark beam_width 29 beam_length 5
-run 32 sdpa takes 14.871 (ms)
+run 32 mlx sdpa takes 14.589 (ms)
 benchmark beam_width 29 beam_length 6
-run 32 sdpa takes 16.382 (ms)
+run 32 mlx sdpa takes 16.033 (ms)
 benchmark beam_width 29 beam_length 7
-run 32 sdpa takes 18.051 (ms)
+run 32 mlx sdpa takes 17.521 (ms)
 benchmark beam_width 29 beam_length 8
-run 32 sdpa takes 19.699 (ms)
+run 32 mlx sdpa takes 21.607 (ms)
 benchmark beam_width 29 beam_length 9
-run 32 sdpa takes 22.244 (ms)
+run 32 mlx sdpa takes 33.490 (ms)
 benchmark beam_width 30 beam_length 1
-run 32 sdpa takes 10.369 (ms)
+run 32 mlx sdpa takes 11.724 (ms)
 benchmark beam_width 30 beam_length 2
-run 32 sdpa takes 10.904 (ms)
+run 32 mlx sdpa takes 12.503 (ms)
 benchmark beam_width 30 beam_length 3
-run 32 sdpa takes 12.381 (ms)
+run 32 mlx sdpa takes 13.403 (ms)
 benchmark beam_width 30 beam_length 4
-run 32 sdpa takes 13.305 (ms)
+run 32 mlx sdpa takes 12.943 (ms)
 benchmark beam_width 30 beam_length 5
-run 32 sdpa takes 14.976 (ms)
+run 32 mlx sdpa takes 14.821 (ms)
 benchmark beam_width 30 beam_length 6
-run 32 sdpa takes 16.289 (ms)
+run 32 mlx sdpa takes 16.185 (ms)
 benchmark beam_width 30 beam_length 7
-run 32 sdpa takes 18.365 (ms)
+run 32 mlx sdpa takes 18.212 (ms)
 benchmark beam_width 30 beam_length 8
-run 32 sdpa takes 19.991 (ms)
+run 32 mlx sdpa takes 19.819 (ms)
 benchmark beam_width 30 beam_length 9
-run 32 sdpa takes 22.072 (ms)
+run 32 mlx sdpa takes 22.284 (ms)
 benchmark beam_width 31 beam_length 1
-run 32 sdpa takes 10.555 (ms)
+run 32 mlx sdpa takes 10.272 (ms)
 benchmark beam_width 31 beam_length 2
-run 32 sdpa takes 11.391 (ms)
+run 32 mlx sdpa takes 11.209 (ms)
 benchmark beam_width 31 beam_length 3
-run 32 sdpa takes 12.933 (ms)
+run 32 mlx sdpa takes 17.330 (ms)
 benchmark beam_width 31 beam_length 4
-run 32 sdpa takes 13.006 (ms)
+run 32 mlx sdpa takes 12.757 (ms)
 benchmark beam_width 31 beam_length 5
-run 32 sdpa takes 15.136 (ms)
+run 32 mlx sdpa takes 14.797 (ms)
 benchmark beam_width 31 beam_length 6
-run 32 sdpa takes 16.317 (ms)
+run 32 mlx sdpa takes 16.501 (ms)
 benchmark beam_width 31 beam_length 7
-run 32 sdpa takes 18.300 (ms)
+run 32 mlx sdpa takes 18.127 (ms)
 benchmark beam_width 31 beam_length 8
-run 32 sdpa takes 20.137 (ms)
+run 32 mlx sdpa takes 19.671 (ms)
 benchmark beam_width 31 beam_length 9
-run 32 sdpa takes 22.372 (ms)
+run 32 mlx sdpa takes 21.780 (ms)
 benchmark beam_width 32 beam_length 1
-run 32 sdpa takes 10.402 (ms)
+run 32 mlx sdpa takes 9.395 (ms)
 benchmark beam_width 32 beam_length 2
-run 32 sdpa takes 11.125 (ms)
+run 32 mlx sdpa takes 10.374 (ms)
 benchmark beam_width 32 beam_length 3
-run 32 sdpa takes 12.241 (ms)
+run 32 mlx sdpa takes 11.896 (ms)
 benchmark beam_width 32 beam_length 4
-run 32 sdpa takes 13.242 (ms)
+run 32 mlx sdpa takes 12.684 (ms)
 benchmark beam_width 32 beam_length 5
-run 32 sdpa takes 15.418 (ms)
+run 32 mlx sdpa takes 15.037 (ms)
 benchmark beam_width 32 beam_length 6
-run 32 sdpa takes 16.274 (ms)
+run 32 mlx sdpa takes 16.199 (ms)
 benchmark beam_width 32 beam_length 7
-run 32 sdpa takes 18.780 (ms)
+run 32 mlx sdpa takes 18.652 (ms)
 benchmark beam_width 32 beam_length 8
-run 32 sdpa takes 19.490 (ms)
+run 32 mlx sdpa takes 19.880 (ms)
 benchmark beam_width 32 beam_length 9
-run 32 sdpa takes 23.357 (ms)
+run 32 mlx sdpa takes 23.326 (ms)
 benchmark beam_width 33 beam_length 1
-run 32 sdpa takes 10.650 (ms)
+run 32 mlx sdpa takes 10.628 (ms)
 benchmark beam_width 33 beam_length 2
-run 32 sdpa takes 11.922 (ms)
+run 32 mlx sdpa takes 12.047 (ms)
 benchmark beam_width 33 beam_length 3
-run 32 sdpa takes 13.384 (ms)
+run 32 mlx sdpa takes 13.040 (ms)
 benchmark beam_width 33 beam_length 4
-run 32 sdpa takes 14.476 (ms)
+run 32 mlx sdpa takes 14.499 (ms)
 benchmark beam_width 33 beam_length 5
-run 32 sdpa takes 15.805 (ms)
+run 32 mlx sdpa takes 15.755 (ms)
 benchmark beam_width 33 beam_length 6
-run 32 sdpa takes 17.945 (ms)
+run 32 mlx sdpa takes 18.017 (ms)
 benchmark beam_width 33 beam_length 7
-run 32 sdpa takes 19.885 (ms)
+run 32 mlx sdpa takes 19.557 (ms)
 benchmark beam_width 33 beam_length 8
-run 32 sdpa takes 21.856 (ms)
+run 32 mlx sdpa takes 21.746 (ms)
 benchmark beam_width 33 beam_length 9
-run 32 sdpa takes 23.839 (ms)
+run 32 mlx sdpa takes 23.682 (ms)
 benchmark beam_width 34 beam_length 1
-run 32 sdpa takes 10.817 (ms)
+run 32 mlx sdpa takes 10.586 (ms)
 benchmark beam_width 34 beam_length 2
-run 32 sdpa takes 11.947 (ms)
+run 32 mlx sdpa takes 11.862 (ms)
 benchmark beam_width 34 beam_length 3
-run 32 sdpa takes 13.121 (ms)
+run 32 mlx sdpa takes 12.913 (ms)
 benchmark beam_width 34 beam_length 4
-run 32 sdpa takes 14.438 (ms)
+run 32 mlx sdpa takes 14.514 (ms)
 benchmark beam_width 34 beam_length 5
-run 32 sdpa takes 15.494 (ms)
+run 32 mlx sdpa takes 15.970 (ms)
 benchmark beam_width 34 beam_length 6
-run 32 sdpa takes 17.516 (ms)
+run 32 mlx sdpa takes 17.952 (ms)
 benchmark beam_width 34 beam_length 7
-run 32 sdpa takes 20.036 (ms)
+run 32 mlx sdpa takes 19.978 (ms)
 benchmark beam_width 34 beam_length 8
-run 32 sdpa takes 22.324 (ms)
+run 32 mlx sdpa takes 22.024 (ms)
 benchmark beam_width 34 beam_length 9
-run 32 sdpa takes 24.093 (ms)
+run 32 mlx sdpa takes 24.023 (ms)
 benchmark beam_width 35 beam_length 1
-run 32 sdpa takes 10.403 (ms)
+run 32 mlx sdpa takes 10.741 (ms)
 benchmark beam_width 35 beam_length 2
-run 32 sdpa takes 11.438 (ms)
+run 32 mlx sdpa takes 11.989 (ms)
 benchmark beam_width 35 beam_length 3
-run 32 sdpa takes 12.086 (ms)
+run 32 mlx sdpa takes 16.106 (ms)
 benchmark beam_width 35 beam_length 4
-run 32 sdpa takes 14.677 (ms)
+run 32 mlx sdpa takes 14.432 (ms)
 benchmark beam_width 35 beam_length 5
-run 32 sdpa takes 16.138 (ms)
+run 32 mlx sdpa takes 16.149 (ms)
 benchmark beam_width 35 beam_length 6
-run 32 sdpa takes 18.444 (ms)
+run 32 mlx sdpa takes 18.247 (ms)
 benchmark beam_width 35 beam_length 7
-run 32 sdpa takes 19.894 (ms)
+run 32 mlx sdpa takes 20.109 (ms)
 benchmark beam_width 35 beam_length 8
-run 32 sdpa takes 21.838 (ms)
+run 32 mlx sdpa takes 22.345 (ms)
 benchmark beam_width 35 beam_length 9
-run 32 sdpa takes 24.307 (ms)
+run 32 mlx sdpa takes 24.234 (ms)
 benchmark beam_width 36 beam_length 1
-run 32 sdpa takes 10.666 (ms)
+run 32 mlx sdpa takes 10.792 (ms)
 benchmark beam_width 36 beam_length 2
-run 32 sdpa takes 11.915 (ms)
+run 32 mlx sdpa takes 12.013 (ms)
 benchmark beam_width 36 beam_length 3
-run 32 sdpa takes 12.834 (ms)
+run 32 mlx sdpa takes 18.043 (ms)
 benchmark beam_width 36 beam_length 4
-run 32 sdpa takes 14.874 (ms)
+run 32 mlx sdpa takes 13.833 (ms)
 benchmark beam_width 36 beam_length 5
-run 32 sdpa takes 16.075 (ms)
+run 32 mlx sdpa takes 16.086 (ms)
 benchmark beam_width 36 beam_length 6
-run 32 sdpa takes 18.276 (ms)
+run 32 mlx sdpa takes 18.324 (ms)
 benchmark beam_width 36 beam_length 7
-run 32 sdpa takes 19.749 (ms)
+run 32 mlx sdpa takes 19.590 (ms)
 benchmark beam_width 36 beam_length 8
-run 32 sdpa takes 23.498 (ms)
+run 32 mlx sdpa takes 23.320 (ms)
 benchmark beam_width 36 beam_length 9
-run 32 sdpa takes 27.356 (ms)
+run 32 mlx sdpa takes 27.505 (ms)
 benchmark beam_width 37 beam_length 1
-run 32 sdpa takes 10.618 (ms)
+run 32 mlx sdpa takes 10.616 (ms)
 benchmark beam_width 37 beam_length 2
-run 32 sdpa takes 12.290 (ms)
+run 32 mlx sdpa takes 12.181 (ms)
 benchmark beam_width 37 beam_length 3
-run 32 sdpa takes 13.137 (ms)
+run 32 mlx sdpa takes 12.773 (ms)
 benchmark beam_width 37 beam_length 4
-run 32 sdpa takes 14.579 (ms)
+run 32 mlx sdpa takes 14.779 (ms)
 benchmark beam_width 37 beam_length 5
-run 32 sdpa takes 16.395 (ms)
+run 32 mlx sdpa takes 21.107 (ms)
 benchmark beam_width 37 beam_length 6
-run 32 sdpa takes 19.091 (ms)
+run 32 mlx sdpa takes 17.904 (ms)
 benchmark beam_width 37 beam_length 7
-run 32 sdpa takes 21.887 (ms)
+run 32 mlx sdpa takes 21.467 (ms)
 benchmark beam_width 37 beam_length 8
-run 32 sdpa takes 23.747 (ms)
+run 32 mlx sdpa takes 23.596 (ms)
 benchmark beam_width 37 beam_length 9
-run 32 sdpa takes 27.816 (ms)
+run 32 mlx sdpa takes 28.017 (ms)
 benchmark beam_width 38 beam_length 1
-run 32 sdpa takes 10.837 (ms)
+run 32 mlx sdpa takes 10.727 (ms)
 benchmark beam_width 38 beam_length 2
-run 32 sdpa takes 12.346 (ms)
+run 32 mlx sdpa takes 12.131 (ms)
 benchmark beam_width 38 beam_length 3
-run 32 sdpa takes 13.039 (ms)
+run 32 mlx sdpa takes 12.744 (ms)
 benchmark beam_width 38 beam_length 4
-run 32 sdpa takes 14.713 (ms)
+run 32 mlx sdpa takes 14.873 (ms)
 benchmark beam_width 38 beam_length 5
-run 32 sdpa takes 16.828 (ms)
+run 32 mlx sdpa takes 16.498 (ms)
 benchmark beam_width 38 beam_length 6
-run 32 sdpa takes 19.633 (ms)
+run 32 mlx sdpa takes 19.430 (ms)
 benchmark beam_width 38 beam_length 7
-run 32 sdpa takes 21.911 (ms)
+run 32 mlx sdpa takes 22.955 (ms)
 benchmark beam_width 38 beam_length 8
-run 32 sdpa takes 24.384 (ms)
+run 32 mlx sdpa takes 23.912 (ms)
 benchmark beam_width 38 beam_length 9
-run 32 sdpa takes 27.843 (ms)
+run 32 mlx sdpa takes 31.163 (ms)
 benchmark beam_width 39 beam_length 1
-run 32 sdpa takes 10.849 (ms)
+run 32 mlx sdpa takes 10.524 (ms)
 benchmark beam_width 39 beam_length 2
-run 32 sdpa takes 12.355 (ms)
+run 32 mlx sdpa takes 12.085 (ms)
 benchmark beam_width 39 beam_length 3
-run 32 sdpa takes 13.240 (ms)
+run 32 mlx sdpa takes 12.955 (ms)
 benchmark beam_width 39 beam_length 4
-run 32 sdpa takes 14.766 (ms)
+run 32 mlx sdpa takes 14.501 (ms)
 benchmark beam_width 39 beam_length 5
-run 32 sdpa takes 17.924 (ms)
+run 32 mlx sdpa takes 17.678 (ms)
 benchmark beam_width 39 beam_length 6
-run 32 sdpa takes 19.738 (ms)
+run 32 mlx sdpa takes 19.707 (ms)
 benchmark beam_width 39 beam_length 7
-run 32 sdpa takes 22.370 (ms)
+run 32 mlx sdpa takes 22.230 (ms)
 benchmark beam_width 39 beam_length 8
-run 32 sdpa takes 24.249 (ms)
+run 32 mlx sdpa takes 24.148 (ms)
 benchmark beam_width 39 beam_length 9
-run 32 sdpa takes 28.839 (ms)
+run 32 mlx sdpa takes 28.951 (ms)
 benchmark beam_width 40 beam_length 1
-run 32 sdpa takes 10.837 (ms)
+run 32 mlx sdpa takes 10.757 (ms)
 benchmark beam_width 40 beam_length 2
-run 32 sdpa takes 12.440 (ms)
+run 32 mlx sdpa takes 12.323 (ms)
 benchmark beam_width 40 beam_length 3
-run 32 sdpa takes 13.143 (ms)
+run 32 mlx sdpa takes 13.029 (ms)
 benchmark beam_width 40 beam_length 4
-run 32 sdpa takes 15.498 (ms)
+run 32 mlx sdpa takes 15.449 (ms)
 benchmark beam_width 40 beam_length 5
-run 32 sdpa takes 17.970 (ms)
+run 32 mlx sdpa takes 17.949 (ms)
 benchmark beam_width 40 beam_length 6
-run 32 sdpa takes 20.225 (ms)
+run 32 mlx sdpa takes 19.746 (ms)
 benchmark beam_width 40 beam_length 7
-run 32 sdpa takes 22.639 (ms)
+run 32 mlx sdpa takes 22.244 (ms)
 benchmark beam_width 40 beam_length 8
-run 32 sdpa takes 24.382 (ms)
+run 32 mlx sdpa takes 24.121 (ms)
 benchmark beam_width 40 beam_length 9
-run 32 sdpa takes 29.244 (ms)
+run 32 mlx sdpa takes 28.883 (ms)
 benchmark beam_width 41 beam_length 1
-run 32 sdpa takes 11.105 (ms)
+run 32 mlx sdpa takes 10.716 (ms)
 benchmark beam_width 41 beam_length 2
-run 32 sdpa takes 12.494 (ms)
+run 32 mlx sdpa takes 12.267 (ms)
 benchmark beam_width 41 beam_length 3
-run 32 sdpa takes 13.202 (ms)
+run 32 mlx sdpa takes 13.107 (ms)
 benchmark beam_width 41 beam_length 4
-run 32 sdpa takes 16.020 (ms)
+run 32 mlx sdpa takes 15.756 (ms)
 benchmark beam_width 41 beam_length 5
-run 32 sdpa takes 18.019 (ms)
+run 32 mlx sdpa takes 18.065 (ms)
 benchmark beam_width 41 beam_length 6
-run 32 sdpa takes 20.189 (ms)
+run 32 mlx sdpa takes 19.970 (ms)
 benchmark beam_width 41 beam_length 7
-run 32 sdpa takes 23.291 (ms)
+run 32 mlx sdpa takes 23.273 (ms)
 benchmark beam_width 41 beam_length 8
-run 32 sdpa takes 27.443 (ms)
+run 32 mlx sdpa takes 26.148 (ms)
 benchmark beam_width 41 beam_length 9
-run 32 sdpa takes 29.736 (ms)
+run 32 mlx sdpa takes 29.353 (ms)
 benchmark beam_width 42 beam_length 1
-run 32 sdpa takes 10.824 (ms)
+run 32 mlx sdpa takes 10.747 (ms)
 benchmark beam_width 42 beam_length 2
-run 32 sdpa takes 11.964 (ms)
+run 32 mlx sdpa takes 12.218 (ms)
 benchmark beam_width 42 beam_length 3
-run 32 sdpa takes 13.125 (ms)
+run 32 mlx sdpa takes 13.286 (ms)
 benchmark beam_width 42 beam_length 4
-run 32 sdpa takes 15.846 (ms)
+run 32 mlx sdpa takes 15.903 (ms)
 benchmark beam_width 42 beam_length 5
-run 32 sdpa takes 18.452 (ms)
+run 32 mlx sdpa takes 18.265 (ms)
 benchmark beam_width 42 beam_length 6
-run 32 sdpa takes 20.029 (ms)
+run 32 mlx sdpa takes 19.678 (ms)
 benchmark beam_width 42 beam_length 7
-run 32 sdpa takes 23.729 (ms)
+run 32 mlx sdpa takes 23.699 (ms)
 benchmark beam_width 42 beam_length 8
-run 32 sdpa takes 27.708 (ms)
+run 32 mlx sdpa takes 27.640 (ms)
 benchmark beam_width 42 beam_length 9
-run 32 sdpa takes 29.808 (ms)
+run 32 mlx sdpa takes 29.854 (ms)
 benchmark beam_width 43 beam_length 1
-run 32 sdpa takes 11.004 (ms)
+run 32 mlx sdpa takes 10.885 (ms)
 benchmark beam_width 43 beam_length 2
-run 32 sdpa takes 12.302 (ms)
+run 32 mlx sdpa takes 12.369 (ms)
 benchmark beam_width 43 beam_length 3
-run 32 sdpa takes 14.644 (ms)
+run 32 mlx sdpa takes 14.546 (ms)
 benchmark beam_width 43 beam_length 4
-run 32 sdpa takes 15.950 (ms)
+run 32 mlx sdpa takes 15.754 (ms)
 benchmark beam_width 43 beam_length 5
-run 32 sdpa takes 18.570 (ms)
+run 32 mlx sdpa takes 18.190 (ms)
 benchmark beam_width 43 beam_length 6
-run 32 sdpa takes 21.707 (ms)
+run 32 mlx sdpa takes 21.504 (ms)
 benchmark beam_width 43 beam_length 7
-run 32 sdpa takes 24.083 (ms)
+run 32 mlx sdpa takes 23.772 (ms)
 benchmark beam_width 43 beam_length 8
-run 32 sdpa takes 27.918 (ms)
+run 32 mlx sdpa takes 27.985 (ms)
 benchmark beam_width 43 beam_length 9
-run 32 sdpa takes 32.651 (ms)
+run 32 mlx sdpa takes 32.589 (ms)
 benchmark beam_width 44 beam_length 1
-run 32 sdpa takes 11.132 (ms)
+run 32 mlx sdpa takes 10.775 (ms)
 benchmark beam_width 44 beam_length 2
-run 32 sdpa takes 12.561 (ms)
+run 32 mlx sdpa takes 12.300 (ms)
 benchmark beam_width 44 beam_length 3
-run 32 sdpa takes 14.379 (ms)
+run 32 mlx sdpa takes 14.701 (ms)
 benchmark beam_width 44 beam_length 4
-run 32 sdpa takes 16.267 (ms)
+run 32 mlx sdpa takes 16.002 (ms)
 benchmark beam_width 44 beam_length 5
-run 32 sdpa takes 18.010 (ms)
+run 32 mlx sdpa takes 18.068 (ms)
 benchmark beam_width 44 beam_length 6
-run 32 sdpa takes 21.657 (ms)
+run 32 mlx sdpa takes 21.852 (ms)
 benchmark beam_width 44 beam_length 7
-run 32 sdpa takes 24.336 (ms)
+run 32 mlx sdpa takes 24.046 (ms)
 benchmark beam_width 44 beam_length 8
-run 32 sdpa takes 28.812 (ms)
+run 32 mlx sdpa takes 28.767 (ms)
 benchmark beam_width 44 beam_length 9
-run 32 sdpa takes 32.842 (ms)
+run 32 mlx sdpa takes 32.778 (ms)
 benchmark beam_width 45 beam_length 1
-run 32 sdpa takes 10.956 (ms)
+run 32 mlx sdpa takes 10.770 (ms)
 benchmark beam_width 45 beam_length 2
-run 32 sdpa takes 12.436 (ms)
+run 32 mlx sdpa takes 12.458 (ms)
 benchmark beam_width 45 beam_length 3
-run 32 sdpa takes 14.438 (ms)
+run 32 mlx sdpa takes 14.465 (ms)
 benchmark beam_width 45 beam_length 4
-run 32 sdpa takes 16.027 (ms)
+run 32 mlx sdpa takes 16.223 (ms)
 benchmark beam_width 45 beam_length 5
-run 32 sdpa takes 19.556 (ms)
+run 32 mlx sdpa takes 19.527 (ms)
 benchmark beam_width 45 beam_length 6
-run 32 sdpa takes 22.046 (ms)
+run 32 mlx sdpa takes 21.960 (ms)
 benchmark beam_width 45 beam_length 7
-run 32 sdpa takes 24.570 (ms)
+run 32 mlx sdpa takes 24.207 (ms)
 benchmark beam_width 45 beam_length 8
-run 32 sdpa takes 29.293 (ms)
+run 32 mlx sdpa takes 29.050 (ms)
 benchmark beam_width 45 beam_length 9
-run 32 sdpa takes 33.670 (ms)
+run 32 mlx sdpa takes 36.428 (ms)
 benchmark beam_width 46 beam_length 1
-run 32 sdpa takes 11.140 (ms)
+run 32 mlx sdpa takes 10.846 (ms)
 benchmark beam_width 46 beam_length 2
-run 32 sdpa takes 12.302 (ms)
+run 32 mlx sdpa takes 11.934 (ms)
 benchmark beam_width 46 beam_length 3
-run 32 sdpa takes 14.783 (ms)
+run 32 mlx sdpa takes 14.095 (ms)
 benchmark beam_width 46 beam_length 4
-run 32 sdpa takes 16.368 (ms)
+run 32 mlx sdpa takes 15.807 (ms)
 benchmark beam_width 46 beam_length 5
-run 32 sdpa takes 19.651 (ms)
+run 32 mlx sdpa takes 19.489 (ms)
 benchmark beam_width 46 beam_length 6
-run 32 sdpa takes 22.333 (ms)
+run 32 mlx sdpa takes 22.108 (ms)
 benchmark beam_width 46 beam_length 7
-run 32 sdpa takes 27.153 (ms)
+run 32 mlx sdpa takes 27.062 (ms)
 benchmark beam_width 46 beam_length 8
-run 32 sdpa takes 29.317 (ms)
+run 32 mlx sdpa takes 29.516 (ms)
 benchmark beam_width 46 beam_length 9
-run 32 sdpa takes 34.937 (ms)
+run 32 mlx sdpa takes 36.174 (ms)
 benchmark beam_width 47 beam_length 1
-run 32 sdpa takes 11.007 (ms)
+run 32 mlx sdpa takes 10.181 (ms)
 benchmark beam_width 47 beam_length 2
-run 32 sdpa takes 12.892 (ms)
+run 32 mlx sdpa takes 12.003 (ms)
 benchmark beam_width 47 beam_length 3
-run 32 sdpa takes 14.748 (ms)
+run 32 mlx sdpa takes 13.907 (ms)
 benchmark beam_width 47 beam_length 4
-run 32 sdpa takes 16.142 (ms)
+run 32 mlx sdpa takes 15.372 (ms)
 benchmark beam_width 47 beam_length 5
-run 32 sdpa takes 19.806 (ms)
+run 32 mlx sdpa takes 19.233 (ms)
 benchmark beam_width 47 beam_length 6
-run 32 sdpa takes 22.632 (ms)
+run 32 mlx sdpa takes 22.332 (ms)
 benchmark beam_width 47 beam_length 7
-run 32 sdpa takes 28.602 (ms)
+run 32 mlx sdpa takes 27.802 (ms)
 benchmark beam_width 47 beam_length 8
-run 32 sdpa takes 29.896 (ms)
+run 32 mlx sdpa takes 29.616 (ms)
 benchmark beam_width 47 beam_length 9
-run 32 sdpa takes 35.436 (ms)
+run 32 mlx sdpa takes 35.466 (ms)
 benchmark beam_width 48 beam_length 1
-run 32 sdpa takes 11.287 (ms)
+run 32 mlx sdpa takes 10.670 (ms)
 benchmark beam_width 48 beam_length 2
-run 32 sdpa takes 12.738 (ms)
+run 32 mlx sdpa takes 11.979 (ms)
 benchmark beam_width 48 beam_length 3
-run 32 sdpa takes 14.839 (ms)
+run 32 mlx sdpa takes 14.441 (ms)
 benchmark beam_width 48 beam_length 4
-run 32 sdpa takes 16.297 (ms)
+run 32 mlx sdpa takes 16.051 (ms)
 benchmark beam_width 48 beam_length 5
-run 32 sdpa takes 19.879 (ms)
+run 32 mlx sdpa takes 19.866 (ms)
 benchmark beam_width 48 beam_length 6
-run 32 sdpa takes 23.221 (ms)
+run 32 mlx sdpa takes 23.331 (ms)
 benchmark beam_width 48 beam_length 7
-run 32 sdpa takes 27.520 (ms)
+run 32 mlx sdpa takes 27.297 (ms)
 benchmark beam_width 48 beam_length 8
-run 32 sdpa takes 29.569 (ms)
+run 32 mlx sdpa takes 29.290 (ms)
 benchmark beam_width 48 beam_length 9
-run 32 sdpa takes 35.610 (ms)
+run 32 mlx sdpa takes 35.560 (ms)
 benchmark beam_width 49 beam_length 1
-run 32 sdpa takes 11.190 (ms)
+run 32 mlx sdpa takes 10.921 (ms)
 benchmark beam_width 49 beam_length 2
-run 32 sdpa takes 13.305 (ms)
+run 32 mlx sdpa takes 13.026 (ms)
 benchmark beam_width 49 beam_length 3
-run 32 sdpa takes 14.963 (ms)
+run 32 mlx sdpa takes 14.636 (ms)
 benchmark beam_width 49 beam_length 4
-run 32 sdpa takes 17.714 (ms)
+run 32 mlx sdpa takes 17.715 (ms)
 benchmark beam_width 49 beam_length 5
-run 32 sdpa takes 20.190 (ms)
+run 32 mlx sdpa takes 23.218 (ms)
 benchmark beam_width 49 beam_length 6
-run 32 sdpa takes 23.694 (ms)
+run 32 mlx sdpa takes 23.397 (ms)
 benchmark beam_width 49 beam_length 7
-run 32 sdpa takes 27.969 (ms)
+run 32 mlx sdpa takes 28.058 (ms)
 benchmark beam_width 49 beam_length 8
-run 32 sdpa takes 32.513 (ms)
+run 32 mlx sdpa takes 32.702 (ms)
 benchmark beam_width 49 beam_length 9
-run 32 sdpa takes 36.047 (ms)
+run 32 mlx sdpa takes 35.940 (ms)
