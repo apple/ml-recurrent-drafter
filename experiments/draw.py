@@ -51,9 +51,7 @@ def parse_log_file(log_path: str) -> Tuple[List[int], List[int], List[float]]:
     return beam_width_list, beam_length_list, latency_list
 
 
-def draw_log_file(
-    log_path: str, pos: int, title: str, enable_forcasted: bool, fig: plt.Figure
-) -> None:
+def draw_log_file(log_path: str, pos: int, title: str, fig: plt.Figure) -> None:
     draw_surface(
         *parse_log_file(log_path),
         "batch size",
@@ -67,20 +65,21 @@ def draw_log_file(
 
 if __name__ == "__main__":
     plots: Dict[int, Tuple[str, str]] = {
-        221: ("MLX SDPA", "result/mlx_w_125_l_25_sdpa_m1_max.log"),
-        222: ("MLX Linear", "result/mlx_w_510_l_110_linear_projection_m1_max.log"),
-        223: ("H100 SDPA", "result/torch_w_125_l_25_sdpa_h100.log"),
-        224: ("H100 Linear", "result/torch_w_510_l_110_linear_projection_h100.log"),
+        321: ("MLX SDPA on M1 Max", "result/mlx_w_125_l_25_sdpa_m1_max.log"),
+        322: ("MLX Linear on M1 Max", "result/mlx_w_510_l_110_linear_projection_m1_max.log"),
+        323: ("PyTorch SDPA on A100", "result/torch_w_125_l_25_sdpa_a100.log"),
+        324: ("PyTorch Linear on A100", "result/torch_w_510_l_110_linear_projection_a100.log"),
+        325: ("PyTorch SDPA on H100", "result/torch_w_125_l_25_sdpa_h100.log"),
+        326: ("PyTorch Linear on H100", "result/torch_w_510_l_110_linear_projection_h100.log"),
     }
 
-    fig = plt.figure(figsize=(12, 10))
+    fig = plt.figure(figsize=(15, 20))
     for subplot, info in plots.items():
         draw_log_file(
             os.path.join(os.path.dirname(os.path.abspath(__file__)), info[1]),
             subplot,
             title=info[0],
             fig=fig,
-            enable_forcasted=False,
         )
     plt.tight_layout()
     plt.savefig("/tmp/perf_contour.png")
