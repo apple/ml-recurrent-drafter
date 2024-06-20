@@ -1,5 +1,5 @@
 import time
-from typing import Callable, Dict, List
+from typing import Callable, Dict, List, Optional
 
 import mlx.core as mx
 import mlx.nn
@@ -11,6 +11,7 @@ class _Record:
         self.msg = msg
         self.indentation = indentation
         self.timing: List[float] = []
+        self.parent: Optional[_Record] = None
 
 
 class Ledger:
@@ -28,13 +29,23 @@ class Ledger:
 
     def print_table(self):
         table = [
-            ["-" * r.indentation + "> " + r.msg, sum(r.timing) / len(r.timing), sum(r.timing)]
+            [
+                "-" * r.indentation + "> " + r.msg,
+                sum(r.timing) / len(r.timing),
+                sum(r.timing),
+                sum(r.timing) / sum(r.parent.timing) * 100 if r.parent else 100,
+            ]
             for r in self.records
         ]
         print(
             tabulate(
                 table,
-                headers=["function", "latency per run (ms)", "latency in total (ms)"],
+                headers=[
+                    "function",
+                    "latency per run (ms)",
+                    "latency in total (ms)",
+                    "Latency Ratio (%)",
+                ],
                 tablefmt="psql",
             )
         )
@@ -80,6 +91,7 @@ def function(msg: str):
                 r = _Record(msg, ledger.indentation)
                 ledger.records.append(r)
                 ledger.records_dict[ledger.key] = r
+                r.parent = ledger.records_dict[prev_key] if len(prev_key) > 0 else None
 
             tic = time.perf_counter()
             result = g(*args, **kwargs)
