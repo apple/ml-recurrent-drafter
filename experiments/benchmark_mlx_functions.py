@@ -1,3 +1,5 @@
+import sys
+
 import mlx.core as mx
 import mlx.nn
 
@@ -54,16 +56,25 @@ def benchmark_linear_projection(
 
 if __name__ == "__main__":
     mx.random.seed(123)
-    for bw in range(10, 510, 10):
-        for bl in range(10, 110, 10):
-            time_mlx.ledger.reset()
-            print(f"benchmark beam_width {bw} beam_length {bl}")
-            q_len = bw * bl
-            # benchmark_sdpa(1, 32, q_len, q_len + 100, 128, mx.bfloat16)
-            benchmark_linear_projection(4096, 4096, q_len, mx.bfloat16)
-            time_mlx.ledger.print_summary()
-
-    # bw 350 bl 50 for sdpa OOM
-    # safe:
+    # On M1 Max:
+    # - bw 350 bl 50 for sdpa OOM
+    # The following run well:
     #   - bw 350 bl 40 for sdpa
     #   - bw 500 bl 100 for linear projection
+    with open("/tmp/linear.log", "w") as sys.stdout:
+        for bw in range(10, 510, 10):
+            for bl in range(10, 110, 10):
+                time_mlx.ledger.reset()
+                print(f"benchmark beam_width {bw} beam_length {bl}")
+                q_len = bw * bl
+                benchmark_linear_projection(4096, 4096, q_len, mx.bfloat16)
+                time_mlx.ledger.print_summary()
+
+    with open("/tmp/sdpa.log", "w") as sys.stdout:
+        for bw in range(1, 125, 2):
+            for bl in range(1, 25, 2):
+                time_mlx.ledger.reset()
+                print(f"benchmark beam_width {bw} beam_length {bl}")
+                q_len = bw * bl
+                benchmark_sdpa(1, 32, q_len, q_len + 100, 128, mx.bfloat16)
+                time_mlx.ledger.print_summary()
