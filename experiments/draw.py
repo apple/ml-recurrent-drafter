@@ -21,11 +21,11 @@ def draw_surface(
     n_uniq_y = len(set(y_l))
     x = np.array(x_l, dtype=np.int32).reshape(n_uniq_x, n_uniq_y)
     y = np.array(y_l, dtype=np.int32).reshape(n_uniq_x, n_uniq_y)
-    z = np.array(z_l, dtype=np.int32).reshape(n_uniq_x, n_uniq_y)
-
+    z = np.array(z_l, dtype=np.float32).reshape(n_uniq_x, n_uniq_y)
+    z = z / 32.0  # benchmark_mlx|pytorch_functions.py calls each function for  32 times
     ax: Axes3D = fig.add_subplot(pos, projection="3d")
     ax.plot_surface(x, y, z, cmap="autumn_r", rstride=1, cstride=1, alpha=0.7)
-    ax.contour(x, y, z, 10, cmap="autumn_r", linestyles="solid", offset=-1)
+    ax.contour(x, y, z, 10, cmap="autumn_r", linestyles="solid", offset=-0.001)
     ax.contour(x, y, z, 10, colors="k", linestyles="solid")
     ax.set_xlabel(x_label)
     ax.set_ylabel(y_label)
@@ -54,8 +54,8 @@ def parse_log_file(log_path: str) -> Tuple[List[int], List[int], List[float]]:
 def draw_log_file(log_path: str, pos: int, title: str, fig: plt.Figure) -> None:
     draw_surface(
         *parse_log_file(log_path),
-        "batch size",
-        "sequence length",
+        "beam width",
+        "beam length",
         "latency (ms)",
         pos=pos,
         title=title,
@@ -65,12 +65,14 @@ def draw_log_file(log_path: str, pos: int, title: str, fig: plt.Figure) -> None:
 
 if __name__ == "__main__":
     plots: Dict[int, Tuple[str, str]] = {
-        321: ("MLX SDPA on M1 Max", "result/mlx_w_125_l_25_sdpa_m1_max.log"),
-        322: ("MLX Linear on M1 Max", "result/mlx_w_510_l_110_linear_projection_m1_max.log"),
-        323: ("PyTorch SDPA on A100", "result/torch_w_125_l_25_sdpa_a100.log"),
-        324: ("PyTorch Linear on A100", "result/torch_w_510_l_110_linear_projection_a100.log"),
-        325: ("PyTorch SDPA on H100", "result/torch_w_125_l_25_sdpa_h100.log"),
-        326: ("PyTorch Linear on H100", "result/torch_w_510_l_110_linear_projection_h100.log"),
+        421: ("MLX SDPA on M1 Max", "result/mlx_w_125_l_25_sdpa_m1_max.log"),
+        422: ("MLX Linear on M1 Max", "result/mlx_w_510_l_110_linear_projection_m1_max.log"),
+        423: ("MLX SDPA on M2 Ultra", "result/mlx_w_125_l_25_sdpa_m2_ultra.log"),
+        424: ("MLX Linear on M2 Ultra", "result/mlx_w_510_l_110_linear_projection_m2_ultra.log"),
+        425: ("PyTorch SDPA on A100", "result/torch_w_125_l_25_sdpa_a100.log"),
+        426: ("PyTorch Linear on A100", "result/torch_w_510_l_110_linear_projection_a100.log"),
+        427: ("PyTorch SDPA on H100", "result/torch_w_125_l_25_sdpa_h100.log"),
+        428: ("PyTorch Linear on H100", "result/torch_w_510_l_110_linear_projection_h100.log"),
     }
 
     fig = plt.figure(figsize=(15, 20))

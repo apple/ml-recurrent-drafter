@@ -1,0 +1,1488 @@
+benchmark beam_width 1 beam_length 1
+run 32 mlx sdpa takes 7.682 (ms)
+benchmark beam_width 1 beam_length 3
+run 32 mlx sdpa takes 7.980 (ms)
+benchmark beam_width 1 beam_length 5
+run 32 mlx sdpa takes 7.406 (ms)
+benchmark beam_width 1 beam_length 7
+run 32 mlx sdpa takes 7.414 (ms)
+benchmark beam_width 1 beam_length 9
+run 32 mlx sdpa takes 7.181 (ms)
+benchmark beam_width 1 beam_length 11
+run 32 mlx sdpa takes 7.203 (ms)
+benchmark beam_width 1 beam_length 13
+run 32 mlx sdpa takes 7.294 (ms)
+benchmark beam_width 1 beam_length 15
+run 32 mlx sdpa takes 7.304 (ms)
+benchmark beam_width 1 beam_length 17
+run 32 mlx sdpa takes 7.388 (ms)
+benchmark beam_width 1 beam_length 19
+run 32 mlx sdpa takes 7.422 (ms)
+benchmark beam_width 1 beam_length 21
+run 32 mlx sdpa takes 7.402 (ms)
+benchmark beam_width 1 beam_length 23
+run 32 mlx sdpa takes 7.387 (ms)
+benchmark beam_width 3 beam_length 1
+run 32 mlx sdpa takes 7.174 (ms)
+benchmark beam_width 3 beam_length 3
+run 32 mlx sdpa takes 7.209 (ms)
+benchmark beam_width 3 beam_length 5
+run 32 mlx sdpa takes 7.289 (ms)
+benchmark beam_width 3 beam_length 7
+run 32 mlx sdpa takes 7.481 (ms)
+benchmark beam_width 3 beam_length 9
+run 32 mlx sdpa takes 7.478 (ms)
+benchmark beam_width 3 beam_length 11
+run 32 mlx sdpa takes 7.414 (ms)
+benchmark beam_width 3 beam_length 13
+run 32 mlx sdpa takes 7.529 (ms)
+benchmark beam_width 3 beam_length 15
+run 32 mlx sdpa takes 7.659 (ms)
+benchmark beam_width 3 beam_length 17
+run 32 mlx sdpa takes 7.715 (ms)
+benchmark beam_width 3 beam_length 19
+run 32 mlx sdpa takes 7.679 (ms)
+benchmark beam_width 3 beam_length 21
+run 32 mlx sdpa takes 7.821 (ms)
+benchmark beam_width 3 beam_length 23
+run 32 mlx sdpa takes 8.235 (ms)
+benchmark beam_width 5 beam_length 1
+run 32 mlx sdpa takes 7.166 (ms)
+benchmark beam_width 5 beam_length 3
+run 32 mlx sdpa takes 7.302 (ms)
+benchmark beam_width 5 beam_length 5
+run 32 mlx sdpa takes 7.373 (ms)
+benchmark beam_width 5 beam_length 7
+run 32 mlx sdpa takes 7.489 (ms)
+benchmark beam_width 5 beam_length 9
+run 32 mlx sdpa takes 7.598 (ms)
+benchmark beam_width 5 beam_length 11
+run 32 mlx sdpa takes 7.622 (ms)
+benchmark beam_width 5 beam_length 13
+run 32 mlx sdpa takes 8.152 (ms)
+benchmark beam_width 5 beam_length 15
+run 32 mlx sdpa takes 8.207 (ms)
+benchmark beam_width 5 beam_length 17
+run 32 mlx sdpa takes 8.236 (ms)
+benchmark beam_width 5 beam_length 19
+run 32 mlx sdpa takes 8.546 (ms)
+benchmark beam_width 5 beam_length 21
+run 32 mlx sdpa takes 8.789 (ms)
+benchmark beam_width 5 beam_length 23
+run 32 mlx sdpa takes 8.936 (ms)
+benchmark beam_width 7 beam_length 1
+run 32 mlx sdpa takes 7.349 (ms)
+benchmark beam_width 7 beam_length 3
+run 32 mlx sdpa takes 7.372 (ms)
+benchmark beam_width 7 beam_length 5
+run 32 mlx sdpa takes 7.588 (ms)
+benchmark beam_width 7 beam_length 7
+run 32 mlx sdpa takes 7.519 (ms)
+benchmark beam_width 7 beam_length 9
+run 32 mlx sdpa takes 7.802 (ms)
+benchmark beam_width 7 beam_length 11
+run 32 mlx sdpa takes 8.364 (ms)
+benchmark beam_width 7 beam_length 13
+run 32 mlx sdpa takes 8.452 (ms)
+benchmark beam_width 7 beam_length 15
+run 32 mlx sdpa takes 8.793 (ms)
+benchmark beam_width 7 beam_length 17
+run 32 mlx sdpa takes 9.009 (ms)
+benchmark beam_width 7 beam_length 19
+run 32 mlx sdpa takes 9.791 (ms)
+benchmark beam_width 7 beam_length 21
+run 32 mlx sdpa takes 11.391 (ms)
+benchmark beam_width 7 beam_length 23
+run 32 mlx sdpa takes 12.242 (ms)
+benchmark beam_width 9 beam_length 1
+run 32 mlx sdpa takes 7.504 (ms)
+benchmark beam_width 9 beam_length 3
+run 32 mlx sdpa takes 7.374 (ms)
+benchmark beam_width 9 beam_length 5
+run 32 mlx sdpa takes 7.522 (ms)
+benchmark beam_width 9 beam_length 7
+run 32 mlx sdpa takes 7.799 (ms)
+benchmark beam_width 9 beam_length 9
+run 32 mlx sdpa takes 8.396 (ms)
+benchmark beam_width 9 beam_length 11
+run 32 mlx sdpa takes 8.731 (ms)
+benchmark beam_width 9 beam_length 13
+run 32 mlx sdpa takes 8.970 (ms)
+benchmark beam_width 9 beam_length 15
+run 32 mlx sdpa takes 9.672 (ms)
+benchmark beam_width 9 beam_length 17
+run 32 mlx sdpa takes 10.024 (ms)
+benchmark beam_width 9 beam_length 19
+run 32 mlx sdpa takes 11.049 (ms)
+benchmark beam_width 9 beam_length 21
+run 32 mlx sdpa takes 11.171 (ms)
+benchmark beam_width 9 beam_length 23
+run 32 mlx sdpa takes 12.181 (ms)
+benchmark beam_width 11 beam_length 1
+run 32 mlx sdpa takes 7.261 (ms)
+benchmark beam_width 11 beam_length 3
+run 32 mlx sdpa takes 7.465 (ms)
+benchmark beam_width 11 beam_length 5
+run 32 mlx sdpa takes 7.728 (ms)
+benchmark beam_width 11 beam_length 7
+run 32 mlx sdpa takes 8.135 (ms)
+benchmark beam_width 11 beam_length 9
+run 32 mlx sdpa takes 8.762 (ms)
+benchmark beam_width 11 beam_length 11
+run 32 mlx sdpa takes 8.956 (ms)
+benchmark beam_width 11 beam_length 13
+run 32 mlx sdpa takes 9.916 (ms)
+benchmark beam_width 11 beam_length 15
+run 32 mlx sdpa takes 10.798 (ms)
+benchmark beam_width 11 beam_length 17
+run 32 mlx sdpa takes 11.498 (ms)
+benchmark beam_width 11 beam_length 19
+run 32 mlx sdpa takes 12.253 (ms)
+benchmark beam_width 11 beam_length 21
+run 32 mlx sdpa takes 13.743 (ms)
+benchmark beam_width 11 beam_length 23
+run 32 mlx sdpa takes 14.103 (ms)
+benchmark beam_width 13 beam_length 1
+run 32 mlx sdpa takes 7.490 (ms)
+benchmark beam_width 13 beam_length 3
+run 32 mlx sdpa takes 7.618 (ms)
+benchmark beam_width 13 beam_length 5
+run 32 mlx sdpa takes 8.013 (ms)
+benchmark beam_width 13 beam_length 7
+run 32 mlx sdpa takes 8.417 (ms)
+benchmark beam_width 13 beam_length 9
+run 32 mlx sdpa takes 8.920 (ms)
+benchmark beam_width 13 beam_length 11
+run 32 mlx sdpa takes 10.051 (ms)
+benchmark beam_width 13 beam_length 13
+run 32 mlx sdpa takes 11.214 (ms)
+benchmark beam_width 13 beam_length 15
+run 32 mlx sdpa takes 12.112 (ms)
+benchmark beam_width 13 beam_length 17
+run 32 mlx sdpa takes 12.773 (ms)
+benchmark beam_width 13 beam_length 19
+run 32 mlx sdpa takes 13.855 (ms)
+benchmark beam_width 13 beam_length 21
+run 32 mlx sdpa takes 16.346 (ms)
+benchmark beam_width 13 beam_length 23
+run 32 mlx sdpa takes 15.762 (ms)
+benchmark beam_width 15 beam_length 1
+run 32 mlx sdpa takes 7.622 (ms)
+benchmark beam_width 15 beam_length 3
+run 32 mlx sdpa takes 7.681 (ms)
+benchmark beam_width 15 beam_length 5
+run 32 mlx sdpa takes 8.324 (ms)
+benchmark beam_width 15 beam_length 7
+run 32 mlx sdpa takes 8.745 (ms)
+benchmark beam_width 15 beam_length 9
+run 32 mlx sdpa takes 9.775 (ms)
+benchmark beam_width 15 beam_length 11
+run 32 mlx sdpa takes 11.005 (ms)
+benchmark beam_width 15 beam_length 13
+run 32 mlx sdpa takes 12.268 (ms)
+benchmark beam_width 15 beam_length 15
+run 32 mlx sdpa takes 13.348 (ms)
+benchmark beam_width 15 beam_length 17
+run 32 mlx sdpa takes 14.032 (ms)
+benchmark beam_width 15 beam_length 19
+run 32 mlx sdpa takes 15.544 (ms)
+benchmark beam_width 15 beam_length 21
+run 32 mlx sdpa takes 16.435 (ms)
+benchmark beam_width 15 beam_length 23
+run 32 mlx sdpa takes 17.617 (ms)
+benchmark beam_width 17 beam_length 1
+run 32 mlx sdpa takes 7.667 (ms)
+benchmark beam_width 17 beam_length 3
+run 32 mlx sdpa takes 7.603 (ms)
+benchmark beam_width 17 beam_length 5
+run 32 mlx sdpa takes 8.321 (ms)
+benchmark beam_width 17 beam_length 7
+run 32 mlx sdpa takes 8.892 (ms)
+benchmark beam_width 17 beam_length 9
+run 32 mlx sdpa takes 10.078 (ms)
+benchmark beam_width 17 beam_length 11
+run 32 mlx sdpa takes 11.416 (ms)
+benchmark beam_width 17 beam_length 13
+run 32 mlx sdpa takes 13.071 (ms)
+benchmark beam_width 17 beam_length 15
+run 32 mlx sdpa takes 14.021 (ms)
+benchmark beam_width 17 beam_length 17
+run 32 mlx sdpa takes 15.749 (ms)
+benchmark beam_width 17 beam_length 19
+run 32 mlx sdpa takes 17.392 (ms)
+benchmark beam_width 17 beam_length 21
+run 32 mlx sdpa takes 18.280 (ms)
+benchmark beam_width 17 beam_length 23
+run 32 mlx sdpa takes 20.803 (ms)
+benchmark beam_width 19 beam_length 1
+run 32 mlx sdpa takes 7.644 (ms)
+benchmark beam_width 19 beam_length 3
+run 32 mlx sdpa takes 7.658 (ms)
+benchmark beam_width 19 beam_length 5
+run 32 mlx sdpa takes 8.463 (ms)
+benchmark beam_width 19 beam_length 7
+run 32 mlx sdpa takes 9.584 (ms)
+benchmark beam_width 19 beam_length 9
+run 32 mlx sdpa takes 10.928 (ms)
+benchmark beam_width 19 beam_length 11
+run 32 mlx sdpa takes 12.455 (ms)
+benchmark beam_width 19 beam_length 13
+run 32 mlx sdpa takes 14.035 (ms)
+benchmark beam_width 19 beam_length 15
+run 32 mlx sdpa takes 15.583 (ms)
+benchmark beam_width 19 beam_length 17
+run 32 mlx sdpa takes 17.427 (ms)
+benchmark beam_width 19 beam_length 19
+run 32 mlx sdpa takes 18.322 (ms)
+benchmark beam_width 19 beam_length 21
+run 32 mlx sdpa takes 21.451 (ms)
+benchmark beam_width 19 beam_length 23
+run 32 mlx sdpa takes 22.886 (ms)
+benchmark beam_width 21 beam_length 1
+run 32 mlx sdpa takes 7.549 (ms)
+benchmark beam_width 21 beam_length 3
+run 32 mlx sdpa takes 7.804 (ms)
+benchmark beam_width 21 beam_length 5
+run 32 mlx sdpa takes 8.719 (ms)
+benchmark beam_width 21 beam_length 7
+run 32 mlx sdpa takes 9.881 (ms)
+benchmark beam_width 21 beam_length 9
+run 32 mlx sdpa takes 11.625 (ms)
+benchmark beam_width 21 beam_length 11
+run 32 mlx sdpa takes 13.775 (ms)
+benchmark beam_width 21 beam_length 13
+run 32 mlx sdpa takes 15.042 (ms)
+benchmark beam_width 21 beam_length 15
+run 32 mlx sdpa takes 16.119 (ms)
+benchmark beam_width 21 beam_length 17
+run 32 mlx sdpa takes 18.220 (ms)
+benchmark beam_width 21 beam_length 19
+run 32 mlx sdpa takes 21.443 (ms)
+benchmark beam_width 21 beam_length 21
+run 32 mlx sdpa takes 22.965 (ms)
+benchmark beam_width 21 beam_length 23
+run 32 mlx sdpa takes 25.652 (ms)
+benchmark beam_width 23 beam_length 1
+run 32 mlx sdpa takes 7.581 (ms)
+benchmark beam_width 23 beam_length 3
+run 32 mlx sdpa takes 8.146 (ms)
+benchmark beam_width 23 beam_length 5
+run 32 mlx sdpa takes 8.873 (ms)
+benchmark beam_width 23 beam_length 7
+run 32 mlx sdpa takes 10.498 (ms)
+benchmark beam_width 23 beam_length 9
+run 32 mlx sdpa takes 12.304 (ms)
+benchmark beam_width 23 beam_length 11
+run 32 mlx sdpa takes 14.089 (ms)
+benchmark beam_width 23 beam_length 13
+run 32 mlx sdpa takes 16.047 (ms)
+benchmark beam_width 23 beam_length 15
+run 32 mlx sdpa takes 17.793 (ms)
+benchmark beam_width 23 beam_length 17
+run 32 mlx sdpa takes 21.074 (ms)
+benchmark beam_width 23 beam_length 19
+run 32 mlx sdpa takes 22.750 (ms)
+benchmark beam_width 23 beam_length 21
+run 32 mlx sdpa takes 25.447 (ms)
+benchmark beam_width 23 beam_length 23
+run 32 mlx sdpa takes 29.237 (ms)
+benchmark beam_width 25 beam_length 1
+run 32 mlx sdpa takes 7.603 (ms)
+benchmark beam_width 25 beam_length 3
+run 32 mlx sdpa takes 8.356 (ms)
+benchmark beam_width 25 beam_length 5
+run 32 mlx sdpa takes 9.153 (ms)
+benchmark beam_width 25 beam_length 7
+run 32 mlx sdpa takes 10.860 (ms)
+benchmark beam_width 25 beam_length 9
+run 32 mlx sdpa takes 13.351 (ms)
+benchmark beam_width 25 beam_length 11
+run 32 mlx sdpa takes 15.268 (ms)
+benchmark beam_width 25 beam_length 13
+run 32 mlx sdpa takes 17.305 (ms)
+benchmark beam_width 25 beam_length 15
+run 32 mlx sdpa takes 18.684 (ms)
+benchmark beam_width 25 beam_length 17
+run 32 mlx sdpa takes 22.597 (ms)
+benchmark beam_width 25 beam_length 19
+run 32 mlx sdpa takes 24.999 (ms)
+benchmark beam_width 25 beam_length 21
+run 32 mlx sdpa takes 29.450 (ms)
+benchmark beam_width 25 beam_length 23
+run 32 mlx sdpa takes 32.953 (ms)
+benchmark beam_width 27 beam_length 1
+run 32 mlx sdpa takes 7.707 (ms)
+benchmark beam_width 27 beam_length 3
+run 32 mlx sdpa takes 8.339 (ms)
+benchmark beam_width 27 beam_length 5
+run 32 mlx sdpa takes 9.672 (ms)
+benchmark beam_width 27 beam_length 7
+run 32 mlx sdpa takes 11.407 (ms)
+benchmark beam_width 27 beam_length 9
+run 32 mlx sdpa takes 13.797 (ms)
+benchmark beam_width 27 beam_length 11
+run 32 mlx sdpa takes 15.650 (ms)
+benchmark beam_width 27 beam_length 13
+run 32 mlx sdpa takes 18.172 (ms)
+benchmark beam_width 27 beam_length 15
+run 32 mlx sdpa takes 21.409 (ms)
+benchmark beam_width 27 beam_length 17
+run 32 mlx sdpa takes 24.598 (ms)
+benchmark beam_width 27 beam_length 19
+run 32 mlx sdpa takes 28.993 (ms)
+benchmark beam_width 27 beam_length 21
+run 32 mlx sdpa takes 31.729 (ms)
+benchmark beam_width 27 beam_length 23
+run 32 mlx sdpa takes 35.302 (ms)
+benchmark beam_width 29 beam_length 1
+run 32 mlx sdpa takes 7.590 (ms)
+benchmark beam_width 29 beam_length 3
+run 32 mlx sdpa takes 8.357 (ms)
+benchmark beam_width 29 beam_length 5
+run 32 mlx sdpa takes 10.023 (ms)
+benchmark beam_width 29 beam_length 7
+run 32 mlx sdpa takes 12.183 (ms)
+benchmark beam_width 29 beam_length 9
+run 32 mlx sdpa takes 14.570 (ms)
+benchmark beam_width 29 beam_length 11
+run 32 mlx sdpa takes 16.418 (ms)
+benchmark beam_width 29 beam_length 13
+run 32 mlx sdpa takes 18.868 (ms)
+benchmark beam_width 29 beam_length 15
+run 32 mlx sdpa takes 22.792 (ms)
+benchmark beam_width 29 beam_length 17
+run 32 mlx sdpa takes 26.110 (ms)
+benchmark beam_width 29 beam_length 19
+run 32 mlx sdpa takes 32.084 (ms)
+benchmark beam_width 29 beam_length 21
+run 32 mlx sdpa takes 34.788 (ms)
+benchmark beam_width 29 beam_length 23
+run 32 mlx sdpa takes 38.213 (ms)
+benchmark beam_width 31 beam_length 1
+run 32 mlx sdpa takes 7.621 (ms)
+benchmark beam_width 31 beam_length 3
+run 32 mlx sdpa takes 8.417 (ms)
+benchmark beam_width 31 beam_length 5
+run 32 mlx sdpa takes 9.994 (ms)
+benchmark beam_width 31 beam_length 7
+run 32 mlx sdpa takes 12.351 (ms)
+benchmark beam_width 31 beam_length 9
+run 32 mlx sdpa takes 15.272 (ms)
+benchmark beam_width 31 beam_length 11
+run 32 mlx sdpa takes 17.805 (ms)
+benchmark beam_width 31 beam_length 13
+run 32 mlx sdpa takes 21.420 (ms)
+benchmark beam_width 31 beam_length 15
+run 32 mlx sdpa takes 24.802 (ms)
+benchmark beam_width 31 beam_length 17
+run 32 mlx sdpa takes 29.438 (ms)
+benchmark beam_width 31 beam_length 19
+run 32 mlx sdpa takes 33.644 (ms)
+benchmark beam_width 31 beam_length 21
+run 32 mlx sdpa takes 37.919 (ms)
+benchmark beam_width 31 beam_length 23
+run 32 mlx sdpa takes 42.700 (ms)
+benchmark beam_width 33 beam_length 1
+run 32 mlx sdpa takes 7.641 (ms)
+benchmark beam_width 33 beam_length 3
+run 32 mlx sdpa takes 8.777 (ms)
+benchmark beam_width 33 beam_length 5
+run 32 mlx sdpa takes 10.586 (ms)
+benchmark beam_width 33 beam_length 7
+run 32 mlx sdpa takes 13.385 (ms)
+benchmark beam_width 33 beam_length 9
+run 32 mlx sdpa takes 15.622 (ms)
+benchmark beam_width 33 beam_length 11
+run 32 mlx sdpa takes 18.617 (ms)
+benchmark beam_width 33 beam_length 13
+run 32 mlx sdpa takes 22.309 (ms)
+benchmark beam_width 33 beam_length 15
+run 32 mlx sdpa takes 25.594 (ms)
+benchmark beam_width 33 beam_length 17
+run 32 mlx sdpa takes 31.685 (ms)
+benchmark beam_width 33 beam_length 19
+run 32 mlx sdpa takes 35.608 (ms)
+benchmark beam_width 33 beam_length 21
+run 32 mlx sdpa takes 41.183 (ms)
+benchmark beam_width 33 beam_length 23
+run 32 mlx sdpa takes 44.871 (ms)
+benchmark beam_width 35 beam_length 1
+run 32 mlx sdpa takes 7.690 (ms)
+benchmark beam_width 35 beam_length 3
+run 32 mlx sdpa takes 8.787 (ms)
+benchmark beam_width 35 beam_length 5
+run 32 mlx sdpa takes 10.922 (ms)
+benchmark beam_width 35 beam_length 7
+run 32 mlx sdpa takes 13.779 (ms)
+benchmark beam_width 35 beam_length 9
+run 32 mlx sdpa takes 16.307 (ms)
+benchmark beam_width 35 beam_length 11
+run 32 mlx sdpa takes 20.352 (ms)
+benchmark beam_width 35 beam_length 13
+run 32 mlx sdpa takes 24.377 (ms)
+benchmark beam_width 35 beam_length 15
+run 32 mlx sdpa takes 29.446 (ms)
+benchmark beam_width 35 beam_length 17
+run 32 mlx sdpa takes 34.197 (ms)
+benchmark beam_width 35 beam_length 19
+run 32 mlx sdpa takes 38.330 (ms)
+benchmark beam_width 35 beam_length 21
+run 32 mlx sdpa takes 44.172 (ms)
+benchmark beam_width 35 beam_length 23
+run 32 mlx sdpa takes 49.684 (ms)
+benchmark beam_width 37 beam_length 1
+run 32 mlx sdpa takes 7.596 (ms)
+benchmark beam_width 37 beam_length 3
+run 32 mlx sdpa takes 8.847 (ms)
+benchmark beam_width 37 beam_length 5
+run 32 mlx sdpa takes 10.938 (ms)
+benchmark beam_width 37 beam_length 7
+run 32 mlx sdpa takes 14.893 (ms)
+benchmark beam_width 37 beam_length 9
+run 32 mlx sdpa takes 17.601 (ms)
+benchmark beam_width 37 beam_length 11
+run 32 mlx sdpa takes 21.715 (ms)
+benchmark beam_width 37 beam_length 13
+run 32 mlx sdpa takes 25.680 (ms)
+benchmark beam_width 37 beam_length 15
+run 32 mlx sdpa takes 31.162 (ms)
+benchmark beam_width 37 beam_length 17
+run 32 mlx sdpa takes 35.796 (ms)
+benchmark beam_width 37 beam_length 19
+run 32 mlx sdpa takes 40.789 (ms)
+benchmark beam_width 37 beam_length 21
+run 32 mlx sdpa takes 47.901 (ms)
+benchmark beam_width 37 beam_length 23
+run 32 mlx sdpa takes 53.995 (ms)
+benchmark beam_width 39 beam_length 1
+run 32 mlx sdpa takes 7.647 (ms)
+benchmark beam_width 39 beam_length 3
+run 32 mlx sdpa takes 8.943 (ms)
+benchmark beam_width 39 beam_length 5
+run 32 mlx sdpa takes 11.851 (ms)
+benchmark beam_width 39 beam_length 7
+run 32 mlx sdpa takes 15.171 (ms)
+benchmark beam_width 39 beam_length 9
+run 32 mlx sdpa takes 18.347 (ms)
+benchmark beam_width 39 beam_length 11
+run 32 mlx sdpa takes 22.638 (ms)
+benchmark beam_width 39 beam_length 13
+run 32 mlx sdpa takes 26.795 (ms)
+benchmark beam_width 39 beam_length 15
+run 32 mlx sdpa takes 33.184 (ms)
+benchmark beam_width 39 beam_length 17
+run 32 mlx sdpa takes 38.326 (ms)
+benchmark beam_width 39 beam_length 19
+run 32 mlx sdpa takes 44.708 (ms)
+benchmark beam_width 39 beam_length 21
+run 32 mlx sdpa takes 50.217 (ms)
+benchmark beam_width 39 beam_length 23
+run 32 mlx sdpa takes 61.819 (ms)
+benchmark beam_width 41 beam_length 1
+run 32 mlx sdpa takes 7.928 (ms)
+benchmark beam_width 41 beam_length 3
+run 32 mlx sdpa takes 8.992 (ms)
+benchmark beam_width 41 beam_length 5
+run 32 mlx sdpa takes 12.164 (ms)
+benchmark beam_width 41 beam_length 7
+run 32 mlx sdpa takes 15.460 (ms)
+benchmark beam_width 41 beam_length 9
+run 32 mlx sdpa takes 18.493 (ms)
+benchmark beam_width 41 beam_length 11
+run 32 mlx sdpa takes 27.853 (ms)
+benchmark beam_width 41 beam_length 13
+run 32 mlx sdpa takes 29.663 (ms)
+benchmark beam_width 41 beam_length 15
+run 32 mlx sdpa takes 35.222 (ms)
+benchmark beam_width 41 beam_length 17
+run 32 mlx sdpa takes 40.273 (ms)
+benchmark beam_width 41 beam_length 19
+run 32 mlx sdpa takes 48.030 (ms)
+benchmark beam_width 41 beam_length 21
+run 32 mlx sdpa takes 55.324 (ms)
+benchmark beam_width 41 beam_length 23
+run 32 mlx sdpa takes 66.508 (ms)
+benchmark beam_width 43 beam_length 1
+run 32 mlx sdpa takes 7.962 (ms)
+benchmark beam_width 43 beam_length 3
+run 32 mlx sdpa takes 9.466 (ms)
+benchmark beam_width 43 beam_length 5
+run 32 mlx sdpa takes 12.341 (ms)
+benchmark beam_width 43 beam_length 7
+run 32 mlx sdpa takes 16.259 (ms)
+benchmark beam_width 43 beam_length 9
+run 32 mlx sdpa takes 20.840 (ms)
+benchmark beam_width 43 beam_length 11
+run 32 mlx sdpa takes 25.502 (ms)
+benchmark beam_width 43 beam_length 13
+run 32 mlx sdpa takes 31.473 (ms)
+benchmark beam_width 43 beam_length 15
+run 32 mlx sdpa takes 37.920 (ms)
+benchmark beam_width 43 beam_length 17
+run 32 mlx sdpa takes 43.294 (ms)
+benchmark beam_width 43 beam_length 19
+run 32 mlx sdpa takes 50.106 (ms)
+benchmark beam_width 43 beam_length 21
+run 32 mlx sdpa takes 60.739 (ms)
+benchmark beam_width 43 beam_length 23
+run 32 mlx sdpa takes 72.235 (ms)
+benchmark beam_width 45 beam_length 1
+run 32 mlx sdpa takes 8.036 (ms)
+benchmark beam_width 45 beam_length 3
+run 32 mlx sdpa takes 10.157 (ms)
+benchmark beam_width 45 beam_length 5
+run 32 mlx sdpa takes 13.439 (ms)
+benchmark beam_width 45 beam_length 7
+run 32 mlx sdpa takes 16.278 (ms)
+benchmark beam_width 45 beam_length 9
+run 32 mlx sdpa takes 21.326 (ms)
+benchmark beam_width 45 beam_length 11
+run 32 mlx sdpa takes 26.016 (ms)
+benchmark beam_width 45 beam_length 13
+run 32 mlx sdpa takes 33.636 (ms)
+benchmark beam_width 45 beam_length 15
+run 32 mlx sdpa takes 41.866 (ms)
+benchmark beam_width 45 beam_length 17
+run 32 mlx sdpa takes 45.913 (ms)
+benchmark beam_width 45 beam_length 19
+run 32 mlx sdpa takes 54.835 (ms)
+benchmark beam_width 45 beam_length 21
+run 32 mlx sdpa takes 68.103 (ms)
+benchmark beam_width 45 beam_length 23
+run 32 mlx sdpa takes 79.173 (ms)
+benchmark beam_width 47 beam_length 1
+run 32 mlx sdpa takes 7.710 (ms)
+benchmark beam_width 47 beam_length 3
+run 32 mlx sdpa takes 10.060 (ms)
+benchmark beam_width 47 beam_length 5
+run 32 mlx sdpa takes 13.435 (ms)
+benchmark beam_width 47 beam_length 7
+run 32 mlx sdpa takes 17.546 (ms)
+benchmark beam_width 47 beam_length 9
+run 32 mlx sdpa takes 22.334 (ms)
+benchmark beam_width 47 beam_length 11
+run 32 mlx sdpa takes 29.009 (ms)
+benchmark beam_width 47 beam_length 13
+run 32 mlx sdpa takes 35.564 (ms)
+benchmark beam_width 47 beam_length 15
+run 32 mlx sdpa takes 42.144 (ms)
+benchmark beam_width 47 beam_length 17
+run 32 mlx sdpa takes 49.373 (ms)
+benchmark beam_width 47 beam_length 19
+run 32 mlx sdpa takes 56.994 (ms)
+benchmark beam_width 47 beam_length 21
+run 32 mlx sdpa takes 70.990 (ms)
+benchmark beam_width 47 beam_length 23
+run 32 mlx sdpa takes 80.800 (ms)
+benchmark beam_width 49 beam_length 1
+run 32 mlx sdpa takes 7.721 (ms)
+benchmark beam_width 49 beam_length 3
+run 32 mlx sdpa takes 9.856 (ms)
+benchmark beam_width 49 beam_length 5
+run 32 mlx sdpa takes 13.350 (ms)
+benchmark beam_width 49 beam_length 7
+run 32 mlx sdpa takes 17.820 (ms)
+benchmark beam_width 49 beam_length 9
+run 32 mlx sdpa takes 23.006 (ms)
+benchmark beam_width 49 beam_length 11
+run 32 mlx sdpa takes 29.923 (ms)
+benchmark beam_width 49 beam_length 13
+run 32 mlx sdpa takes 36.314 (ms)
+benchmark beam_width 49 beam_length 15
+run 32 mlx sdpa takes 43.934 (ms)
+benchmark beam_width 49 beam_length 17
+run 32 mlx sdpa takes 53.248 (ms)
+benchmark beam_width 49 beam_length 19
+run 32 mlx sdpa takes 65.814 (ms)
+benchmark beam_width 49 beam_length 21
+run 32 mlx sdpa takes 77.162 (ms)
+benchmark beam_width 49 beam_length 23
+run 32 mlx sdpa takes 86.407 (ms)
+benchmark beam_width 51 beam_length 1
+run 32 mlx sdpa takes 7.867 (ms)
+benchmark beam_width 51 beam_length 3
+run 32 mlx sdpa takes 10.072 (ms)
+benchmark beam_width 51 beam_length 5
+run 32 mlx sdpa takes 14.520 (ms)
+benchmark beam_width 51 beam_length 7
+run 32 mlx sdpa takes 17.661 (ms)
+benchmark beam_width 51 beam_length 9
+run 32 mlx sdpa takes 23.771 (ms)
+benchmark beam_width 51 beam_length 11
+run 32 mlx sdpa takes 31.316 (ms)
+benchmark beam_width 51 beam_length 13
+run 32 mlx sdpa takes 38.124 (ms)
+benchmark beam_width 51 beam_length 15
+run 32 mlx sdpa takes 45.775 (ms)
+benchmark beam_width 51 beam_length 17
+run 32 mlx sdpa takes 55.526 (ms)
+benchmark beam_width 51 beam_length 19
+run 32 mlx sdpa takes 70.414 (ms)
+benchmark beam_width 51 beam_length 21
+run 32 mlx sdpa takes 79.977 (ms)
+benchmark beam_width 51 beam_length 23
+run 32 mlx sdpa takes 95.918 (ms)
+benchmark beam_width 53 beam_length 1
+run 32 mlx sdpa takes 7.878 (ms)
+benchmark beam_width 53 beam_length 3
+run 32 mlx sdpa takes 10.438 (ms)
+benchmark beam_width 53 beam_length 5
+run 32 mlx sdpa takes 15.143 (ms)
+benchmark beam_width 53 beam_length 7
+run 32 mlx sdpa takes 18.555 (ms)
+benchmark beam_width 53 beam_length 9
+run 32 mlx sdpa takes 25.478 (ms)
+benchmark beam_width 53 beam_length 11
+run 32 mlx sdpa takes 33.271 (ms)
+benchmark beam_width 53 beam_length 13
+run 32 mlx sdpa takes 40.270 (ms)
+benchmark beam_width 53 beam_length 15
+run 32 mlx sdpa takes 48.338 (ms)
+benchmark beam_width 53 beam_length 17
+run 32 mlx sdpa takes 60.369 (ms)
+benchmark beam_width 53 beam_length 19
+run 32 mlx sdpa takes 79.036 (ms)
+benchmark beam_width 53 beam_length 21
+run 32 mlx sdpa takes 85.122 (ms)
+benchmark beam_width 53 beam_length 23
+run 32 mlx sdpa takes 100.119 (ms)
+benchmark beam_width 55 beam_length 1
+run 32 mlx sdpa takes 8.160 (ms)
+benchmark beam_width 55 beam_length 3
+run 32 mlx sdpa takes 10.898 (ms)
+benchmark beam_width 55 beam_length 5
+run 32 mlx sdpa takes 15.040 (ms)
+benchmark beam_width 55 beam_length 7
+run 32 mlx sdpa takes 20.634 (ms)
+benchmark beam_width 55 beam_length 9
+run 32 mlx sdpa takes 25.995 (ms)
+benchmark beam_width 55 beam_length 11
+run 32 mlx sdpa takes 35.416 (ms)
+benchmark beam_width 55 beam_length 13
+run 32 mlx sdpa takes 42.498 (ms)
+benchmark beam_width 55 beam_length 15
+run 32 mlx sdpa takes 51.745 (ms)
+benchmark beam_width 55 beam_length 17
+run 32 mlx sdpa takes 65.458 (ms)
+benchmark beam_width 55 beam_length 19
+run 32 mlx sdpa takes 78.141 (ms)
+benchmark beam_width 55 beam_length 21
+run 32 mlx sdpa takes 91.656 (ms)
+benchmark beam_width 55 beam_length 23
+run 32 mlx sdpa takes 104.319 (ms)
+benchmark beam_width 57 beam_length 1
+run 32 mlx sdpa takes 8.039 (ms)
+benchmark beam_width 57 beam_length 3
+run 32 mlx sdpa takes 11.251 (ms)
+benchmark beam_width 57 beam_length 5
+run 32 mlx sdpa takes 15.590 (ms)
+benchmark beam_width 57 beam_length 7
+run 32 mlx sdpa takes 21.330 (ms)
+benchmark beam_width 57 beam_length 9
+run 32 mlx sdpa takes 29.536 (ms)
+benchmark beam_width 57 beam_length 11
+run 32 mlx sdpa takes 35.382 (ms)
+benchmark beam_width 57 beam_length 13
+run 32 mlx sdpa takes 44.242 (ms)
+benchmark beam_width 57 beam_length 15
+run 32 mlx sdpa takes 54.760 (ms)
+benchmark beam_width 57 beam_length 17
+run 32 mlx sdpa takes 70.531 (ms)
+benchmark beam_width 57 beam_length 19
+run 32 mlx sdpa takes 80.633 (ms)
+benchmark beam_width 57 beam_length 21
+run 32 mlx sdpa takes 95.517 (ms)
+benchmark beam_width 57 beam_length 23
+run 32 mlx sdpa takes 112.295 (ms)
+benchmark beam_width 59 beam_length 1
+run 32 mlx sdpa takes 8.078 (ms)
+benchmark beam_width 59 beam_length 3
+run 32 mlx sdpa takes 11.069 (ms)
+benchmark beam_width 59 beam_length 5
+run 32 mlx sdpa takes 15.949 (ms)
+benchmark beam_width 59 beam_length 7
+run 32 mlx sdpa takes 22.565 (ms)
+benchmark beam_width 59 beam_length 9
+run 32 mlx sdpa takes 29.566 (ms)
+benchmark beam_width 59 beam_length 11
+run 32 mlx sdpa takes 37.997 (ms)
+benchmark beam_width 59 beam_length 13
+run 32 mlx sdpa takes 45.977 (ms)
+benchmark beam_width 59 beam_length 15
+run 32 mlx sdpa takes 55.977 (ms)
+benchmark beam_width 59 beam_length 17
+run 32 mlx sdpa takes 72.458 (ms)
+benchmark beam_width 59 beam_length 19
+run 32 mlx sdpa takes 86.607 (ms)
+benchmark beam_width 59 beam_length 21
+run 32 mlx sdpa takes 105.146 (ms)
+benchmark beam_width 59 beam_length 23
+run 32 mlx sdpa takes 119.284 (ms)
+benchmark beam_width 61 beam_length 1
+run 32 mlx sdpa takes 8.204 (ms)
+benchmark beam_width 61 beam_length 3
+run 32 mlx sdpa takes 11.120 (ms)
+benchmark beam_width 61 beam_length 5
+run 32 mlx sdpa takes 16.221 (ms)
+benchmark beam_width 61 beam_length 7
+run 32 mlx sdpa takes 22.235 (ms)
+benchmark beam_width 61 beam_length 9
+run 32 mlx sdpa takes 31.269 (ms)
+benchmark beam_width 61 beam_length 11
+run 32 mlx sdpa takes 39.520 (ms)
+benchmark beam_width 61 beam_length 13
+run 32 mlx sdpa takes 48.609 (ms)
+benchmark beam_width 61 beam_length 15
+run 32 mlx sdpa takes 61.415 (ms)
+benchmark beam_width 61 beam_length 17
+run 32 mlx sdpa takes 77.743 (ms)
+benchmark beam_width 61 beam_length 19
+run 32 mlx sdpa takes 94.464 (ms)
+benchmark beam_width 61 beam_length 21
+run 32 mlx sdpa takes 108.881 (ms)
+benchmark beam_width 61 beam_length 23
+run 32 mlx sdpa takes 123.569 (ms)
+benchmark beam_width 63 beam_length 1
+run 32 mlx sdpa takes 8.123 (ms)
+benchmark beam_width 63 beam_length 3
+run 32 mlx sdpa takes 11.541 (ms)
+benchmark beam_width 63 beam_length 5
+run 32 mlx sdpa takes 15.760 (ms)
+benchmark beam_width 63 beam_length 7
+run 32 mlx sdpa takes 22.278 (ms)
+benchmark beam_width 63 beam_length 9
+run 32 mlx sdpa takes 31.150 (ms)
+benchmark beam_width 63 beam_length 11
+run 32 mlx sdpa takes 39.707 (ms)
+benchmark beam_width 63 beam_length 13
+run 32 mlx sdpa takes 49.963 (ms)
+benchmark beam_width 63 beam_length 15
+run 32 mlx sdpa takes 66.346 (ms)
+benchmark beam_width 63 beam_length 17
+run 32 mlx sdpa takes 80.561 (ms)
+benchmark beam_width 63 beam_length 19
+run 32 mlx sdpa takes 95.507 (ms)
+benchmark beam_width 63 beam_length 21
+run 32 mlx sdpa takes 113.063 (ms)
+benchmark beam_width 63 beam_length 23
+run 32 mlx sdpa takes 134.464 (ms)
+benchmark beam_width 65 beam_length 1
+run 32 mlx sdpa takes 8.431 (ms)
+benchmark beam_width 65 beam_length 3
+run 32 mlx sdpa takes 12.848 (ms)
+benchmark beam_width 65 beam_length 5
+run 32 mlx sdpa takes 17.198 (ms)
+benchmark beam_width 65 beam_length 7
+run 32 mlx sdpa takes 24.052 (ms)
+benchmark beam_width 65 beam_length 9
+run 32 mlx sdpa takes 33.217 (ms)
+benchmark beam_width 65 beam_length 11
+run 32 mlx sdpa takes 42.777 (ms)
+benchmark beam_width 65 beam_length 13
+run 32 mlx sdpa takes 53.698 (ms)
+benchmark beam_width 65 beam_length 15
+run 32 mlx sdpa takes 70.736 (ms)
+benchmark beam_width 65 beam_length 17
+run 32 mlx sdpa takes 85.255 (ms)
+benchmark beam_width 65 beam_length 19
+run 32 mlx sdpa takes 101.945 (ms)
+benchmark beam_width 65 beam_length 21
+run 32 mlx sdpa takes 119.915 (ms)
+benchmark beam_width 65 beam_length 23
+run 32 mlx sdpa takes 142.307 (ms)
+benchmark beam_width 67 beam_length 1
+run 32 mlx sdpa takes 8.333 (ms)
+benchmark beam_width 67 beam_length 3
+run 32 mlx sdpa takes 12.224 (ms)
+benchmark beam_width 67 beam_length 5
+run 32 mlx sdpa takes 17.318 (ms)
+benchmark beam_width 67 beam_length 7
+run 32 mlx sdpa takes 24.666 (ms)
+benchmark beam_width 67 beam_length 9
+run 32 mlx sdpa takes 34.109 (ms)
+benchmark beam_width 67 beam_length 11
+run 32 mlx sdpa takes 44.207 (ms)
+benchmark beam_width 67 beam_length 13
+run 32 mlx sdpa takes 55.627 (ms)
+benchmark beam_width 67 beam_length 15
+run 32 mlx sdpa takes 72.940 (ms)
+benchmark beam_width 67 beam_length 17
+run 32 mlx sdpa takes 88.815 (ms)
+benchmark beam_width 67 beam_length 19
+run 32 mlx sdpa takes 104.856 (ms)
+benchmark beam_width 67 beam_length 21
+run 32 mlx sdpa takes 124.735 (ms)
+benchmark beam_width 67 beam_length 23
+run 32 mlx sdpa takes 151.724 (ms)
+benchmark beam_width 69 beam_length 1
+run 32 mlx sdpa takes 8.714 (ms)
+benchmark beam_width 69 beam_length 3
+run 32 mlx sdpa takes 12.486 (ms)
+benchmark beam_width 69 beam_length 5
+run 32 mlx sdpa takes 17.817 (ms)
+benchmark beam_width 69 beam_length 7
+run 32 mlx sdpa takes 25.690 (ms)
+benchmark beam_width 69 beam_length 9
+run 32 mlx sdpa takes 35.133 (ms)
+benchmark beam_width 69 beam_length 11
+run 32 mlx sdpa takes 44.726 (ms)
+benchmark beam_width 69 beam_length 13
+run 32 mlx sdpa takes 60.708 (ms)
+benchmark beam_width 69 beam_length 15
+run 32 mlx sdpa takes 77.581 (ms)
+benchmark beam_width 69 beam_length 17
+run 32 mlx sdpa takes 93.094 (ms)
+benchmark beam_width 69 beam_length 19
+run 32 mlx sdpa takes 112.324 (ms)
+benchmark beam_width 69 beam_length 21
+run 32 mlx sdpa takes 134.708 (ms)
+benchmark beam_width 69 beam_length 23
+run 32 mlx sdpa takes 155.998 (ms)
+benchmark beam_width 71 beam_length 1
+run 32 mlx sdpa takes 8.541 (ms)
+benchmark beam_width 71 beam_length 3
+run 32 mlx sdpa takes 12.481 (ms)
+benchmark beam_width 71 beam_length 5
+run 32 mlx sdpa takes 18.212 (ms)
+benchmark beam_width 71 beam_length 7
+run 32 mlx sdpa takes 26.253 (ms)
+benchmark beam_width 71 beam_length 9
+run 32 mlx sdpa takes 36.616 (ms)
+benchmark beam_width 71 beam_length 11
+run 32 mlx sdpa takes 48.300 (ms)
+benchmark beam_width 71 beam_length 13
+run 32 mlx sdpa takes 61.355 (ms)
+benchmark beam_width 71 beam_length 15
+run 32 mlx sdpa takes 79.638 (ms)
+benchmark beam_width 71 beam_length 17
+run 32 mlx sdpa takes 96.170 (ms)
+benchmark beam_width 71 beam_length 19
+run 32 mlx sdpa takes 118.436 (ms)
+benchmark beam_width 71 beam_length 21
+run 32 mlx sdpa takes 160.039 (ms)
+benchmark beam_width 71 beam_length 23
+run 32 mlx sdpa takes 165.012 (ms)
+benchmark beam_width 73 beam_length 1
+run 32 mlx sdpa takes 8.865 (ms)
+benchmark beam_width 73 beam_length 3
+run 32 mlx sdpa takes 12.573 (ms)
+benchmark beam_width 73 beam_length 5
+run 32 mlx sdpa takes 18.234 (ms)
+benchmark beam_width 73 beam_length 7
+run 32 mlx sdpa takes 26.634 (ms)
+benchmark beam_width 73 beam_length 9
+run 32 mlx sdpa takes 38.626 (ms)
+benchmark beam_width 73 beam_length 11
+run 32 mlx sdpa takes 49.817 (ms)
+benchmark beam_width 73 beam_length 13
+run 32 mlx sdpa takes 66.618 (ms)
+benchmark beam_width 73 beam_length 15
+run 32 mlx sdpa takes 86.711 (ms)
+benchmark beam_width 73 beam_length 17
+run 32 mlx sdpa takes 124.165 (ms)
+benchmark beam_width 73 beam_length 19
+run 32 mlx sdpa takes 122.302 (ms)
+benchmark beam_width 73 beam_length 21
+run 32 mlx sdpa takes 153.094 (ms)
+benchmark beam_width 73 beam_length 23
+run 32 mlx sdpa takes 173.229 (ms)
+benchmark beam_width 75 beam_length 1
+run 32 mlx sdpa takes 8.695 (ms)
+benchmark beam_width 75 beam_length 3
+run 32 mlx sdpa takes 13.102 (ms)
+benchmark beam_width 75 beam_length 5
+run 32 mlx sdpa takes 18.676 (ms)
+benchmark beam_width 75 beam_length 7
+run 32 mlx sdpa takes 29.240 (ms)
+benchmark beam_width 75 beam_length 9
+run 32 mlx sdpa takes 39.803 (ms)
+benchmark beam_width 75 beam_length 11
+run 32 mlx sdpa takes 50.583 (ms)
+benchmark beam_width 75 beam_length 13
+run 32 mlx sdpa takes 70.439 (ms)
+benchmark beam_width 75 beam_length 15
+run 32 mlx sdpa takes 86.688 (ms)
+benchmark beam_width 75 beam_length 17
+run 32 mlx sdpa takes 105.455 (ms)
+benchmark beam_width 75 beam_length 19
+run 32 mlx sdpa takes 131.739 (ms)
+benchmark beam_width 75 beam_length 21
+run 32 mlx sdpa takes 154.823 (ms)
+benchmark beam_width 75 beam_length 23
+run 32 mlx sdpa takes 188.601 (ms)
+benchmark beam_width 77 beam_length 1
+run 32 mlx sdpa takes 8.558 (ms)
+benchmark beam_width 77 beam_length 3
+run 32 mlx sdpa takes 13.518 (ms)
+benchmark beam_width 77 beam_length 5
+run 32 mlx sdpa takes 20.636 (ms)
+benchmark beam_width 77 beam_length 7
+run 32 mlx sdpa takes 29.353 (ms)
+benchmark beam_width 77 beam_length 9
+run 32 mlx sdpa takes 40.074 (ms)
+benchmark beam_width 77 beam_length 11
+run 32 mlx sdpa takes 53.772 (ms)
+benchmark beam_width 77 beam_length 13
+run 32 mlx sdpa takes 72.715 (ms)
+benchmark beam_width 77 beam_length 15
+run 32 mlx sdpa takes 91.743 (ms)
+benchmark beam_width 77 beam_length 17
+run 32 mlx sdpa takes 112.367 (ms)
+benchmark beam_width 77 beam_length 19
+run 32 mlx sdpa takes 135.753 (ms)
+benchmark beam_width 77 beam_length 21
+run 32 mlx sdpa takes 167.095 (ms)
+benchmark beam_width 77 beam_length 23
+run 32 mlx sdpa takes 189.557 (ms)
+benchmark beam_width 79 beam_length 1
+run 32 mlx sdpa takes 8.652 (ms)
+benchmark beam_width 79 beam_length 3
+run 32 mlx sdpa takes 13.633 (ms)
+benchmark beam_width 79 beam_length 5
+run 32 mlx sdpa takes 21.046 (ms)
+benchmark beam_width 79 beam_length 7
+run 32 mlx sdpa takes 30.777 (ms)
+benchmark beam_width 79 beam_length 9
+run 32 mlx sdpa takes 44.153 (ms)
+benchmark beam_width 79 beam_length 11
+run 32 mlx sdpa takes 55.792 (ms)
+benchmark beam_width 79 beam_length 13
+run 32 mlx sdpa takes 76.811 (ms)
+benchmark beam_width 79 beam_length 15
+run 32 mlx sdpa takes 94.916 (ms)
+benchmark beam_width 79 beam_length 17
+run 32 mlx sdpa takes 125.556 (ms)
+benchmark beam_width 79 beam_length 19
+run 32 mlx sdpa takes 143.862 (ms)
+benchmark beam_width 79 beam_length 21
+run 32 mlx sdpa takes 166.736 (ms)
+benchmark beam_width 79 beam_length 23
+run 32 mlx sdpa takes 199.397 (ms)
+benchmark beam_width 81 beam_length 1
+run 32 mlx sdpa takes 8.941 (ms)
+benchmark beam_width 81 beam_length 3
+run 32 mlx sdpa takes 13.897 (ms)
+benchmark beam_width 81 beam_length 5
+run 32 mlx sdpa takes 21.477 (ms)
+benchmark beam_width 81 beam_length 7
+run 32 mlx sdpa takes 31.940 (ms)
+benchmark beam_width 81 beam_length 9
+run 32 mlx sdpa takes 43.168 (ms)
+benchmark beam_width 81 beam_length 11
+run 32 mlx sdpa takes 56.389 (ms)
+benchmark beam_width 81 beam_length 13
+run 32 mlx sdpa takes 79.051 (ms)
+benchmark beam_width 81 beam_length 15
+run 32 mlx sdpa takes 100.849 (ms)
+benchmark beam_width 81 beam_length 17
+run 32 mlx sdpa takes 121.794 (ms)
+benchmark beam_width 81 beam_length 19
+run 32 mlx sdpa takes 150.745 (ms)
+benchmark beam_width 81 beam_length 21
+run 32 mlx sdpa takes 181.869 (ms)
+benchmark beam_width 81 beam_length 23
+run 32 mlx sdpa takes 221.012 (ms)
+benchmark beam_width 83 beam_length 1
+run 32 mlx sdpa takes 8.880 (ms)
+benchmark beam_width 83 beam_length 3
+run 32 mlx sdpa takes 13.650 (ms)
+benchmark beam_width 83 beam_length 5
+run 32 mlx sdpa takes 22.270 (ms)
+benchmark beam_width 83 beam_length 7
+run 32 mlx sdpa takes 33.261 (ms)
+benchmark beam_width 83 beam_length 9
+run 32 mlx sdpa takes 44.529 (ms)
+benchmark beam_width 83 beam_length 11
+run 32 mlx sdpa takes 63.001 (ms)
+benchmark beam_width 83 beam_length 13
+run 32 mlx sdpa takes 80.858 (ms)
+benchmark beam_width 83 beam_length 15
+run 32 mlx sdpa takes 102.807 (ms)
+benchmark beam_width 83 beam_length 17
+run 32 mlx sdpa takes 130.935 (ms)
+benchmark beam_width 83 beam_length 19
+run 32 mlx sdpa takes 154.768 (ms)
+benchmark beam_width 83 beam_length 21
+run 32 mlx sdpa takes 194.675 (ms)
+benchmark beam_width 83 beam_length 23
+run 32 mlx sdpa takes 215.639 (ms)
+benchmark beam_width 85 beam_length 1
+run 32 mlx sdpa takes 8.903 (ms)
+benchmark beam_width 85 beam_length 3
+run 32 mlx sdpa takes 14.025 (ms)
+benchmark beam_width 85 beam_length 5
+run 32 mlx sdpa takes 22.526 (ms)
+benchmark beam_width 85 beam_length 7
+run 32 mlx sdpa takes 34.352 (ms)
+benchmark beam_width 85 beam_length 9
+run 32 mlx sdpa takes 45.894 (ms)
+benchmark beam_width 85 beam_length 11
+run 32 mlx sdpa takes 65.774 (ms)
+benchmark beam_width 85 beam_length 13
+run 32 mlx sdpa takes 84.985 (ms)
+benchmark beam_width 85 beam_length 15
+run 32 mlx sdpa takes 105.180 (ms)
+benchmark beam_width 85 beam_length 17
+run 32 mlx sdpa takes 134.090 (ms)
+benchmark beam_width 85 beam_length 19
+run 32 mlx sdpa takes 162.079 (ms)
+benchmark beam_width 85 beam_length 21
+run 32 mlx sdpa takes 199.125 (ms)
+benchmark beam_width 85 beam_length 23
+run 32 mlx sdpa takes 240.379 (ms)
+benchmark beam_width 87 beam_length 1
+run 32 mlx sdpa takes 8.947 (ms)
+benchmark beam_width 87 beam_length 3
+run 32 mlx sdpa takes 14.602 (ms)
+benchmark beam_width 87 beam_length 5
+run 32 mlx sdpa takes 22.817 (ms)
+benchmark beam_width 87 beam_length 7
+run 32 mlx sdpa takes 34.656 (ms)
+benchmark beam_width 87 beam_length 9
+run 32 mlx sdpa takes 48.320 (ms)
+benchmark beam_width 87 beam_length 11
+run 32 mlx sdpa takes 67.724 (ms)
+benchmark beam_width 87 beam_length 13
+run 32 mlx sdpa takes 86.818 (ms)
+benchmark beam_width 87 beam_length 15
+run 32 mlx sdpa takes 114.213 (ms)
+benchmark beam_width 87 beam_length 17
+run 32 mlx sdpa takes 140.028 (ms)
+benchmark beam_width 87 beam_length 19
+run 32 mlx sdpa takes 166.518 (ms)
+benchmark beam_width 87 beam_length 21
+run 32 mlx sdpa takes 200.530 (ms)
+benchmark beam_width 87 beam_length 23
+run 32 mlx sdpa takes 251.193 (ms)
+benchmark beam_width 89 beam_length 1
+run 32 mlx sdpa takes 8.959 (ms)
+benchmark beam_width 89 beam_length 3
+run 32 mlx sdpa takes 14.833 (ms)
+benchmark beam_width 89 beam_length 5
+run 32 mlx sdpa takes 23.574 (ms)
+benchmark beam_width 89 beam_length 7
+run 32 mlx sdpa takes 35.214 (ms)
+benchmark beam_width 89 beam_length 9
+run 32 mlx sdpa takes 49.652 (ms)
+benchmark beam_width 89 beam_length 11
+run 32 mlx sdpa takes 70.923 (ms)
+benchmark beam_width 89 beam_length 13
+run 32 mlx sdpa takes 91.651 (ms)
+benchmark beam_width 89 beam_length 15
+run 32 mlx sdpa takes 114.179 (ms)
+benchmark beam_width 89 beam_length 17
+run 32 mlx sdpa takes 144.562 (ms)
+benchmark beam_width 89 beam_length 19
+run 32 mlx sdpa takes 174.156 (ms)
+benchmark beam_width 89 beam_length 21
+run 32 mlx sdpa takes 210.623 (ms)
+benchmark beam_width 89 beam_length 23
+run 32 mlx sdpa takes 243.877 (ms)
+benchmark beam_width 91 beam_length 1
+run 32 mlx sdpa takes 9.052 (ms)
+benchmark beam_width 91 beam_length 3
+run 32 mlx sdpa takes 15.278 (ms)
+benchmark beam_width 91 beam_length 5
+run 32 mlx sdpa takes 24.262 (ms)
+benchmark beam_width 91 beam_length 7
+run 32 mlx sdpa takes 36.282 (ms)
+benchmark beam_width 91 beam_length 9
+run 32 mlx sdpa takes 50.064 (ms)
+benchmark beam_width 91 beam_length 11
+run 32 mlx sdpa takes 72.827 (ms)
+benchmark beam_width 91 beam_length 13
+run 32 mlx sdpa takes 94.619 (ms)
+benchmark beam_width 91 beam_length 15
+run 32 mlx sdpa takes 120.131 (ms)
+benchmark beam_width 91 beam_length 17
+run 32 mlx sdpa takes 151.798 (ms)
+benchmark beam_width 91 beam_length 19
+run 32 mlx sdpa takes 188.671 (ms)
+benchmark beam_width 91 beam_length 21
+run 32 mlx sdpa takes 215.340 (ms)
+benchmark beam_width 91 beam_length 23
+run 32 mlx sdpa takes 252.186 (ms)
+benchmark beam_width 93 beam_length 1
+run 32 mlx sdpa takes 8.893 (ms)
+benchmark beam_width 93 beam_length 3
+run 32 mlx sdpa takes 15.186 (ms)
+benchmark beam_width 93 beam_length 5
+run 32 mlx sdpa takes 24.697 (ms)
+benchmark beam_width 93 beam_length 7
+run 32 mlx sdpa takes 38.373 (ms)
+benchmark beam_width 93 beam_length 9
+run 32 mlx sdpa takes 53.312 (ms)
+benchmark beam_width 93 beam_length 11
+run 32 mlx sdpa takes 74.638 (ms)
+benchmark beam_width 93 beam_length 13
+run 32 mlx sdpa takes 99.489 (ms)
+benchmark beam_width 93 beam_length 15
+run 32 mlx sdpa takes 133.284 (ms)
+benchmark beam_width 93 beam_length 17
+run 32 mlx sdpa takes 155.501 (ms)
+benchmark beam_width 93 beam_length 19
+run 32 mlx sdpa takes 197.711 (ms)
+benchmark beam_width 93 beam_length 21
+run 32 mlx sdpa takes 234.440 (ms)
+benchmark beam_width 93 beam_length 23
+run 32 mlx sdpa takes 265.935 (ms)
+benchmark beam_width 95 beam_length 1
+run 32 mlx sdpa takes 9.159 (ms)
+benchmark beam_width 95 beam_length 3
+run 32 mlx sdpa takes 15.355 (ms)
+benchmark beam_width 95 beam_length 5
+run 32 mlx sdpa takes 24.746 (ms)
+benchmark beam_width 95 beam_length 7
+run 32 mlx sdpa takes 38.371 (ms)
+benchmark beam_width 95 beam_length 9
+run 32 mlx sdpa takes 54.761 (ms)
+benchmark beam_width 95 beam_length 11
+run 32 mlx sdpa takes 78.277 (ms)
+benchmark beam_width 95 beam_length 13
+run 32 mlx sdpa takes 101.954 (ms)
+benchmark beam_width 95 beam_length 15
+run 32 mlx sdpa takes 131.633 (ms)
+benchmark beam_width 95 beam_length 17
+run 32 mlx sdpa takes 162.114 (ms)
+benchmark beam_width 95 beam_length 19
+run 32 mlx sdpa takes 197.291 (ms)
+benchmark beam_width 95 beam_length 21
+run 32 mlx sdpa takes 244.675 (ms)
+benchmark beam_width 95 beam_length 23
+run 32 mlx sdpa takes 273.573 (ms)
+benchmark beam_width 97 beam_length 1
+run 32 mlx sdpa takes 9.277 (ms)
+benchmark beam_width 97 beam_length 3
+run 32 mlx sdpa takes 15.749 (ms)
+benchmark beam_width 97 beam_length 5
+run 32 mlx sdpa takes 26.307 (ms)
+benchmark beam_width 97 beam_length 7
+run 32 mlx sdpa takes 39.433 (ms)
+benchmark beam_width 97 beam_length 9
+run 32 mlx sdpa takes 61.027 (ms)
+benchmark beam_width 97 beam_length 11
+run 32 mlx sdpa takes 79.863 (ms)
+benchmark beam_width 97 beam_length 13
+run 32 mlx sdpa takes 104.163 (ms)
+benchmark beam_width 97 beam_length 15
+run 32 mlx sdpa takes 134.811 (ms)
+benchmark beam_width 97 beam_length 17
+run 32 mlx sdpa takes 166.044 (ms)
+benchmark beam_width 97 beam_length 19
+run 32 mlx sdpa takes 201.602 (ms)
+benchmark beam_width 97 beam_length 21
+run 32 mlx sdpa takes 240.255 (ms)
+benchmark beam_width 97 beam_length 23
+run 32 mlx sdpa takes 280.108 (ms)
+benchmark beam_width 99 beam_length 1
+run 32 mlx sdpa takes 9.420 (ms)
+benchmark beam_width 99 beam_length 3
+run 32 mlx sdpa takes 16.009 (ms)
+benchmark beam_width 99 beam_length 5
+run 32 mlx sdpa takes 26.118 (ms)
+benchmark beam_width 99 beam_length 7
+run 32 mlx sdpa takes 40.187 (ms)
+benchmark beam_width 99 beam_length 9
+run 32 mlx sdpa takes 58.153 (ms)
+benchmark beam_width 99 beam_length 11
+run 32 mlx sdpa takes 83.334 (ms)
+benchmark beam_width 99 beam_length 13
+run 32 mlx sdpa takes 108.859 (ms)
+benchmark beam_width 99 beam_length 15
+run 32 mlx sdpa takes 141.083 (ms)
+benchmark beam_width 99 beam_length 17
+run 32 mlx sdpa takes 181.730 (ms)
+benchmark beam_width 99 beam_length 19
+run 32 mlx sdpa takes 211.502 (ms)
+benchmark beam_width 99 beam_length 21
+run 32 mlx sdpa takes 272.977 (ms)
+benchmark beam_width 99 beam_length 23
+run 32 mlx sdpa takes 294.553 (ms)
+benchmark beam_width 101 beam_length 1
+run 32 mlx sdpa takes 9.161 (ms)
+benchmark beam_width 101 beam_length 3
+run 32 mlx sdpa takes 16.133 (ms)
+benchmark beam_width 101 beam_length 5
+run 32 mlx sdpa takes 26.410 (ms)
+benchmark beam_width 101 beam_length 7
+run 32 mlx sdpa takes 43.369 (ms)
+benchmark beam_width 101 beam_length 9
+run 32 mlx sdpa takes 61.186 (ms)
+benchmark beam_width 101 beam_length 11
+run 32 mlx sdpa takes 85.214 (ms)
+benchmark beam_width 101 beam_length 13
+run 32 mlx sdpa takes 112.937 (ms)
+benchmark beam_width 101 beam_length 15
+run 32 mlx sdpa takes 144.209 (ms)
+benchmark beam_width 101 beam_length 17
+run 32 mlx sdpa takes 177.141 (ms)
+benchmark beam_width 101 beam_length 19
+run 32 mlx sdpa takes 218.543 (ms)
+benchmark beam_width 101 beam_length 21
+run 32 mlx sdpa takes 261.333 (ms)
+benchmark beam_width 101 beam_length 23
+run 32 mlx sdpa takes 306.921 (ms)
+benchmark beam_width 103 beam_length 1
+run 32 mlx sdpa takes 9.081 (ms)
+benchmark beam_width 103 beam_length 3
+run 32 mlx sdpa takes 16.117 (ms)
+benchmark beam_width 103 beam_length 5
+run 32 mlx sdpa takes 29.438 (ms)
+benchmark beam_width 103 beam_length 7
+run 32 mlx sdpa takes 43.114 (ms)
+benchmark beam_width 103 beam_length 9
+run 32 mlx sdpa takes 65.854 (ms)
+benchmark beam_width 103 beam_length 11
+run 32 mlx sdpa takes 88.718 (ms)
+benchmark beam_width 103 beam_length 13
+run 32 mlx sdpa takes 113.988 (ms)
+benchmark beam_width 103 beam_length 15
+run 32 mlx sdpa takes 151.886 (ms)
+benchmark beam_width 103 beam_length 17
+run 32 mlx sdpa takes 185.988 (ms)
+benchmark beam_width 103 beam_length 19
+run 32 mlx sdpa takes 235.923 (ms)
+benchmark beam_width 103 beam_length 21
+run 32 mlx sdpa takes 268.513 (ms)
+benchmark beam_width 103 beam_length 23
+run 32 mlx sdpa takes 324.019 (ms)
+benchmark beam_width 105 beam_length 1
+run 32 mlx sdpa takes 9.541 (ms)
+benchmark beam_width 105 beam_length 3
+run 32 mlx sdpa takes 16.559 (ms)
+benchmark beam_width 105 beam_length 5
+run 32 mlx sdpa takes 29.292 (ms)
+benchmark beam_width 105 beam_length 7
+run 32 mlx sdpa takes 45.408 (ms)
+benchmark beam_width 105 beam_length 9
+run 32 mlx sdpa takes 66.517 (ms)
+benchmark beam_width 105 beam_length 11
+run 32 mlx sdpa takes 91.595 (ms)
+benchmark beam_width 105 beam_length 13
+run 32 mlx sdpa takes 120.010 (ms)
+benchmark beam_width 105 beam_length 15
+run 32 mlx sdpa takes 155.064 (ms)
+benchmark beam_width 105 beam_length 17
+run 32 mlx sdpa takes 190.914 (ms)
+benchmark beam_width 105 beam_length 19
+run 32 mlx sdpa takes 234.930 (ms)
+benchmark beam_width 105 beam_length 21
+run 32 mlx sdpa takes 277.410 (ms)
+benchmark beam_width 105 beam_length 23
+run 32 mlx sdpa takes 351.905 (ms)
+benchmark beam_width 107 beam_length 1
+run 32 mlx sdpa takes 9.733 (ms)
+benchmark beam_width 107 beam_length 3
+run 32 mlx sdpa takes 17.479 (ms)
+benchmark beam_width 107 beam_length 5
+run 32 mlx sdpa takes 29.478 (ms)
+benchmark beam_width 107 beam_length 7
+run 32 mlx sdpa takes 46.412 (ms)
+benchmark beam_width 107 beam_length 9
+run 32 mlx sdpa takes 69.543 (ms)
+benchmark beam_width 107 beam_length 11
+run 32 mlx sdpa takes 97.562 (ms)
+benchmark beam_width 107 beam_length 13
+run 32 mlx sdpa takes 129.558 (ms)
+benchmark beam_width 107 beam_length 15
+run 32 mlx sdpa takes 161.061 (ms)
+benchmark beam_width 107 beam_length 17
+run 32 mlx sdpa takes 200.032 (ms)
+benchmark beam_width 107 beam_length 19
+run 32 mlx sdpa takes 261.400 (ms)
+benchmark beam_width 107 beam_length 21
+run 32 mlx sdpa takes 289.308 (ms)
+benchmark beam_width 107 beam_length 23
+run 32 mlx sdpa takes 341.886 (ms)
+benchmark beam_width 109 beam_length 1
+run 32 mlx sdpa takes 9.534 (ms)
+benchmark beam_width 109 beam_length 3
+run 32 mlx sdpa takes 18.042 (ms)
+benchmark beam_width 109 beam_length 5
+run 32 mlx sdpa takes 31.270 (ms)
+benchmark beam_width 109 beam_length 7
+run 32 mlx sdpa takes 45.176 (ms)
+benchmark beam_width 109 beam_length 9
+run 32 mlx sdpa takes 70.959 (ms)
+benchmark beam_width 109 beam_length 11
+run 32 mlx sdpa takes 95.824 (ms)
+benchmark beam_width 109 beam_length 13
+run 32 mlx sdpa takes 131.239 (ms)
+benchmark beam_width 109 beam_length 15
+run 32 mlx sdpa takes 164.982 (ms)
+benchmark beam_width 109 beam_length 17
+run 32 mlx sdpa takes 212.747 (ms)
+benchmark beam_width 109 beam_length 19
+run 32 mlx sdpa takes 250.571 (ms)
+benchmark beam_width 109 beam_length 21
+run 32 mlx sdpa takes 296.322 (ms)
+benchmark beam_width 109 beam_length 23
+run 32 mlx sdpa takes 352.353 (ms)
+benchmark beam_width 111 beam_length 1
+run 32 mlx sdpa takes 9.565 (ms)
+benchmark beam_width 111 beam_length 3
+run 32 mlx sdpa takes 17.940 (ms)
+benchmark beam_width 111 beam_length 5
+run 32 mlx sdpa takes 31.538 (ms)
+benchmark beam_width 111 beam_length 7
+run 32 mlx sdpa takes 49.026 (ms)
+benchmark beam_width 111 beam_length 9
+run 32 mlx sdpa takes 72.764 (ms)
+benchmark beam_width 111 beam_length 11
+run 32 mlx sdpa takes 105.100 (ms)
+benchmark beam_width 111 beam_length 13
+run 32 mlx sdpa takes 133.893 (ms)
+benchmark beam_width 111 beam_length 15
+run 32 mlx sdpa takes 172.094 (ms)
+benchmark beam_width 111 beam_length 17
+run 32 mlx sdpa takes 214.831 (ms)
+benchmark beam_width 111 beam_length 19
+run 32 mlx sdpa takes 256.917 (ms)
+benchmark beam_width 111 beam_length 21
+run 32 mlx sdpa takes 309.465 (ms)
+benchmark beam_width 111 beam_length 23
+run 32 mlx sdpa takes 360.625 (ms)
+benchmark beam_width 113 beam_length 1
+run 32 mlx sdpa takes 9.618 (ms)
+benchmark beam_width 113 beam_length 3
+run 32 mlx sdpa takes 17.889 (ms)
+benchmark beam_width 113 beam_length 5
+run 32 mlx sdpa takes 32.112 (ms)
+benchmark beam_width 113 beam_length 7
+run 32 mlx sdpa takes 50.512 (ms)
+benchmark beam_width 113 beam_length 9
+run 32 mlx sdpa takes 76.845 (ms)
+benchmark beam_width 113 beam_length 11
+run 32 mlx sdpa takes 102.170 (ms)
+benchmark beam_width 113 beam_length 13
+run 32 mlx sdpa takes 137.240 (ms)
+benchmark beam_width 113 beam_length 15
+run 32 mlx sdpa takes 175.654 (ms)
+benchmark beam_width 113 beam_length 17
+run 32 mlx sdpa takes 222.642 (ms)
+benchmark beam_width 113 beam_length 19
+run 32 mlx sdpa takes 265.657 (ms)
+benchmark beam_width 113 beam_length 21
+run 32 mlx sdpa takes 324.659 (ms)
+benchmark beam_width 113 beam_length 23
+run 32 mlx sdpa takes 377.319 (ms)
+benchmark beam_width 115 beam_length 1
+run 32 mlx sdpa takes 9.832 (ms)
+benchmark beam_width 115 beam_length 3
+run 32 mlx sdpa takes 18.090 (ms)
+benchmark beam_width 115 beam_length 5
+run 32 mlx sdpa takes 33.108 (ms)
+benchmark beam_width 115 beam_length 7
+run 32 mlx sdpa takes 49.855 (ms)
+benchmark beam_width 115 beam_length 9
+run 32 mlx sdpa takes 78.313 (ms)
+benchmark beam_width 115 beam_length 11
+run 32 mlx sdpa takes 125.340 (ms)
+benchmark beam_width 115 beam_length 13
+run 32 mlx sdpa takes 148.630 (ms)
+benchmark beam_width 115 beam_length 15
+run 32 mlx sdpa takes 179.603 (ms)
+benchmark beam_width 115 beam_length 17
+run 32 mlx sdpa takes 225.941 (ms)
+benchmark beam_width 115 beam_length 19
+run 32 mlx sdpa takes 273.837 (ms)
+benchmark beam_width 115 beam_length 21
+run 32 mlx sdpa takes 333.205 (ms)
+benchmark beam_width 115 beam_length 23
+run 32 mlx sdpa takes 391.448 (ms)
+benchmark beam_width 117 beam_length 1
+run 32 mlx sdpa takes 9.718 (ms)
+benchmark beam_width 117 beam_length 3
+run 32 mlx sdpa takes 18.460 (ms)
+benchmark beam_width 117 beam_length 5
+run 32 mlx sdpa takes 33.538 (ms)
+benchmark beam_width 117 beam_length 7
+run 32 mlx sdpa takes 50.452 (ms)
+benchmark beam_width 117 beam_length 9
+run 32 mlx sdpa takes 79.416 (ms)
+benchmark beam_width 117 beam_length 11
+run 32 mlx sdpa takes 114.071 (ms)
+benchmark beam_width 117 beam_length 13
+run 32 mlx sdpa takes 145.004 (ms)
+benchmark beam_width 117 beam_length 15
+run 32 mlx sdpa takes 194.024 (ms)
+benchmark beam_width 117 beam_length 17
+run 32 mlx sdpa takes 244.960 (ms)
+benchmark beam_width 117 beam_length 19
+run 32 mlx sdpa takes 279.844 (ms)
+benchmark beam_width 117 beam_length 21
+run 32 mlx sdpa takes 341.482 (ms)
+benchmark beam_width 117 beam_length 23
+run 32 mlx sdpa takes 401.947 (ms)
+benchmark beam_width 119 beam_length 1
+run 32 mlx sdpa takes 9.868 (ms)
+benchmark beam_width 119 beam_length 3
+run 32 mlx sdpa takes 18.140 (ms)
+benchmark beam_width 119 beam_length 5
+run 32 mlx sdpa takes 33.177 (ms)
+benchmark beam_width 119 beam_length 7
+run 32 mlx sdpa takes 53.318 (ms)
+benchmark beam_width 119 beam_length 9
+run 32 mlx sdpa takes 80.646 (ms)
+benchmark beam_width 119 beam_length 11
+run 32 mlx sdpa takes 119.101 (ms)
+benchmark beam_width 119 beam_length 13
+run 32 mlx sdpa takes 158.390 (ms)
+benchmark beam_width 119 beam_length 15
+run 32 mlx sdpa takes 191.461 (ms)
+benchmark beam_width 119 beam_length 17
+run 32 mlx sdpa takes 239.441 (ms)
+benchmark beam_width 119 beam_length 19
+run 32 mlx sdpa takes 290.888 (ms)
+benchmark beam_width 119 beam_length 21
+run 32 mlx sdpa takes 351.640 (ms)
+benchmark beam_width 119 beam_length 23
+run 32 mlx sdpa takes 410.901 (ms)
+benchmark beam_width 121 beam_length 1
+run 32 mlx sdpa takes 9.790 (ms)
+benchmark beam_width 121 beam_length 3
+run 32 mlx sdpa takes 18.710 (ms)
+benchmark beam_width 121 beam_length 5
+run 32 mlx sdpa takes 34.656 (ms)
+benchmark beam_width 121 beam_length 7
+run 32 mlx sdpa takes 57.267 (ms)
+benchmark beam_width 121 beam_length 9
+run 32 mlx sdpa takes 83.385 (ms)
+benchmark beam_width 121 beam_length 11
+run 32 mlx sdpa takes 114.330 (ms)
+benchmark beam_width 121 beam_length 13
+run 32 mlx sdpa takes 159.759 (ms)
+benchmark beam_width 121 beam_length 15
+run 32 mlx sdpa takes 199.153 (ms)
+benchmark beam_width 121 beam_length 17
+run 32 mlx sdpa takes 249.533 (ms)
+benchmark beam_width 121 beam_length 19
+run 32 mlx sdpa takes 297.758 (ms)
+benchmark beam_width 121 beam_length 21
+run 32 mlx sdpa takes 358.943 (ms)
+benchmark beam_width 121 beam_length 23
+run 32 mlx sdpa takes 428.432 (ms)
+benchmark beam_width 123 beam_length 1
+run 32 mlx sdpa takes 9.804 (ms)
+benchmark beam_width 123 beam_length 3
+run 32 mlx sdpa takes 19.455 (ms)
+benchmark beam_width 123 beam_length 5
+run 32 mlx sdpa takes 43.743 (ms)
+benchmark beam_width 123 beam_length 7
+run 32 mlx sdpa takes 55.539 (ms)
+benchmark beam_width 123 beam_length 9
+run 32 mlx sdpa takes 85.072 (ms)
+benchmark beam_width 123 beam_length 11
+run 32 mlx sdpa takes 118.507 (ms)
+benchmark beam_width 123 beam_length 13
+run 32 mlx sdpa takes 164.545 (ms)
+benchmark beam_width 123 beam_length 15
+run 32 mlx sdpa takes 201.870 (ms)
+benchmark beam_width 123 beam_length 17
+run 32 mlx sdpa takes 252.068 (ms)
+benchmark beam_width 123 beam_length 19
+run 32 mlx sdpa takes 309.142 (ms)
+benchmark beam_width 123 beam_length 21
+run 32 mlx sdpa takes 374.335 (ms)
+benchmark beam_width 123 beam_length 23
+run 32 mlx sdpa takes 445.125 (ms)
