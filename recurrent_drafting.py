@@ -424,13 +424,15 @@ def _comprehend_prompt(
     """
     assert input_ids.dtype in [mx.int32, mx.int64]
     causal_mask = attention.causal_mask(input_ids != pad_token_id, input_ids.shape[1])
-    position_ids = (
-        mx.repeat(mx.arange(input_ids.shape[1], dtype=mx.int32), repeats=input_ids.shape[0], axis=0)
-        - _count_left_paddings(input_ids, pad_token_id)[..., None]
-    )
+    # TODO add back position_ids is supported.
+    # position_ids = (
+    #     mx.repeat(mx.arange(input_ids.shape[1], dtype=mx.int32), \
+    #           repeats=input_ids.shape[0], axis=0)
+    #     - _count_left_paddings(input_ids, pad_token_id)[..., None]
+    # )
     hidden_states, logits = llm(
         input_ids,
-        position_ids=position_ids,
+        beam_len=1,
         mask=causal_mask,
         cache=cache.sliced,
     )
@@ -457,14 +459,12 @@ def _verify_candidates(
     packed_beams, mask, position_offsets = tree_attention.pack(
         beams, padding_mask=(input_ids != pad_token_id).astype(input_ids.dtype)
     )
-    past_kv_len = (
-        cache.sliced[0][0].length - _count_left_paddings(input_ids, pad_token_id)[..., None]
-    )
+    # TODO Enable the compression from tree_attention and position_ids.
     hidden_states, logits = llm(
         packed_beams,
         mask=mask,
         cache=cache.sliced,
-        position_ids=past_kv_len + position_offsets,
+        beam_len=beams.shape[2],
     )
 
     logits = modeling_drafter.warp_logits(logits)
