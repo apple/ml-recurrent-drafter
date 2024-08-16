@@ -37,18 +37,11 @@ def streaming_generate(
         if cache is not None:
             cur_input_ids = input_ids[:, -1:] if input_ids.shape[1] > context_len else input_ids
             attention_mask = attention.causal_mask(padding_mask, cur_input_ids.shape[1])
-            past_kv_len = cache.sliced[0][0].length
-            cur_kv_len = past_kv_len + cur_input_ids.shape[1]
-            position_ids = mx.repeat(
-                mx.arange(past_kv_len, cur_kv_len, dtype=mx.int32)[None, ...],
-                axis=0,
-                repeats=cur_input_ids.shape[0],
-            )
             output = model(
                 inputs=cur_input_ids,
                 cache=cache.sliced,
                 mask=attention_mask,
-                position_ids=position_ids,
+                beam_len=1,
             )
         else:
             output = model(
