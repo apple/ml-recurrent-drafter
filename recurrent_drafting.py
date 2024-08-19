@@ -432,7 +432,7 @@ def _comprehend_prompt(
     # )
     hidden_states, logits = llm(
         input_ids,
-        beam_len=1,
+        beam_len=input_ids.shape[1],
         mask=causal_mask,
         cache=cache.sliced,
     )
@@ -506,7 +506,7 @@ def _greedy_accept_candidate_tokens(
 def _accept_candidate_tokens(
     input_ids: mx.array,
     beams: mx.array,
-    log_probs_by_drafter: mx.array,
+    logits_by_drafter: mx.array,
     logits_by_llm: mx.array,
     last_hidden_state: mx.array,
     cache: kv_cache.Cache,
@@ -514,10 +514,11 @@ def _accept_candidate_tokens(
     temperature: float,
 ) -> Tuple[mx.array, mx.array, mx.array, mx.array]:
     log_probs_by_llm = mlx.nn.log_softmax(logits_by_llm / temperature, axis=-1)
+    log_probs_by_drafter = mlx.nn.log_softmax(logits_by_drafter, axis=-1)
     n_tokens_in_seq, seq_in_beam = _choose_from_candidates(
         beams,
         log_probs_by_llm,
-        log_probs_by_drafter,
+        logits_by_drafter,
     )
     input_ids = _update_kv_cache_and_input_ids(
         input_ids=input_ids,
@@ -603,7 +604,7 @@ class ReDrafterModel(mlx.nn.Module):
         while seq_len < max_length:
             # Call the draft head to generate candidates.
             # Generate draft candidates conditioning on the draft_input and next_token.
-            beams, log_probs_by_drafter = self.drafter.beam_search_candidates(
+            beams, logits_by_drafter = self.drafter.beam_search_candidates(
                 drafting_context,
                 drafting_init_tokens,
                 self.llm.model.input_embeddings,
@@ -639,7 +640,7 @@ class ReDrafterModel(mlx.nn.Module):
                 ) = _accept_candidate_tokens(
                     input_ids,
                     beams,
-                    log_probs_by_drafter,
+                    logits_by_drafter,
                     logits_by_llm,
                     last_hidden_state=hidden_states,
                     cache=cache,

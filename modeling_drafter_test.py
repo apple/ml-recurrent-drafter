@@ -19,6 +19,7 @@ _test_recurrent_drafting_config: Dict[str, Any] = {
     "hidden_size": HIDDEN_SIZE,
     "exit_dim": 24,
     "num_draft_layers": 1,
+    "emb_norm": False,
 }
 
 
