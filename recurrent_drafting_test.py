@@ -1,5 +1,4 @@
 # Copyright © 2024 Apple Inc.
-
 import unittest.mock
 from typing import Tuple
 

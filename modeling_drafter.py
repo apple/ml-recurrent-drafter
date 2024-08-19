@@ -20,6 +20,8 @@ class ModelArgs(BaseModelArgs):
     num_draft_layers: int
     model_type: str = "recurrent_drafting_drafter"
     rnn: bool = False
+    emb_norm: bool = False
+    rms_norm_eps: float = 1e-5  # TODO default value?
 
 
 @dataclass
@@ -118,6 +120,13 @@ class Drafter(nn.Module):
             self.rnn_u = nn.Linear(args.hidden_size, args.hidden_size, bias=True)
             self.rnn_w = nn.Linear(args.hidden_size, args.hidden_size, bias=False)
 
+        if args.emb_norm:
+            # NOTE: We need emb_norm here to keep it consists with the Ajax trainer and pytorch
+            # model, otherwise, pytest fails. We don't call emb_norm in the forward() method
+            # because it doesn't improve model quality.  In the future, if we remove it from
+            # the Ajax code, we should remove this one accordingly.
+            self.emb_norm = nn.RMSNorm(args.hidden_size, eps=args.rms_norm_eps)
+
     def compute_logits(self, x: mx.array) -> mx.array:
         x = self.input_proj(x) if hasattr(self, "input_proj") else x
         for layer in self.lm_head:
@@ -172,7 +181,7 @@ class Drafter(nn.Module):
             dtype=prompt_state.dtype,
         )
         # (bs,beam_width,[0,beam_length-1),vocab_size) P(token | beam, candidate_token).
-        log_p_token_in_beam = mx.zeros(0).reshape(batch_size, beam_shape.width, 0, vocab_size)
+        logits_token_in_beam = mx.zeros(0).reshape(batch_size, beam_shape.width, 0, vocab_size)
 
         for _ in range(beam_shape.length - 1):
             # Updates the RNN state of each beam given the input of the previous draft token.
@@ -184,9 +193,8 @@ class Drafter(nn.Module):
 
             # (bs,beam_width,vocab_size). For each beam, predicts the next token by computing
             # log_P(new_token) using the drafter LM head, which takes context and state as input.
-            log_p_new_token = nn.log_softmax(
-                self.compute_logits(mx.concatenate([context, state], axis=-1)), axis=-1
-            )
+            logits_new_token = self.compute_logits(mx.concatenate([context, state], axis=-1))
+            log_p_new_token = nn.log_softmax(logits_new_token, axis=-1)
 
             # (bs,beam_width,vocab_size). log_P(new_token, beam) = log_P(new_token) + log_P(beam)
             log_p_beam_new_token = log_p_new_token + mx.expand_dims(log_p_beam, axis=2)
@@ -210,15 +218,15 @@ class Drafter(nn.Module):
 
             state = _gather_beams(state, top_beam_indices)
 
-            log_p_token_in_beam = mx.concatenate(
+            logits_token_in_beam = mx.concatenate(
                 [
-                    _gather_beams(log_p_token_in_beam, top_beam_indices),
-                    mx.expand_dims(_gather_beams(log_p_new_token, top_beam_indices), axis=2),
+                    _gather_beams(logits_token_in_beam, top_beam_indices),
+                    mx.expand_dims(_gather_beams(logits_new_token, top_beam_indices), axis=2),
                 ],
                 axis=2,
             )
 
-        return beams.astype(mx.int64), log_p_token_in_beam
+        return beams.astype(mx.int64), logits_token_in_beam
 
     def assert_valid(self) -> None:
         assert isinstance(self.input_proj, nn.Linear)

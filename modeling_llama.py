@@ -84,7 +84,6 @@ class Attention(nn.Module):
 
         # Assume no tree attention or any other input compression algorithm is applied
         beam_width = query_len // beam_len
-
         # Prepare the queries, keys and values for RoPE computation
         queries = queries.reshape(batch_size * beam_width, beam_len, self.n_heads, -1).transpose(
             0, 2, 1, 3

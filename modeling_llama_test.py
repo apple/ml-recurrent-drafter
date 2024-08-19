@@ -76,7 +76,8 @@ def _parity_check(
     )
     mlx_input_ids = mx.array(input_ids)
     mlx_mask = mx.array(mask)
-    mlx_hidden_states, mlx_logits = mlx_model(mlx_input_ids, 1, mlx_mask, mlx_cache.sliced)
+    beam_len = (position_ids[0][-1] - position_ids[0][0] + 1).item()
+    mlx_hidden_states, mlx_logits = mlx_model(mlx_input_ids, beam_len, mlx_mask, mlx_cache.sliced)
     assert mx.all(
         mx.allclose(mlx_hidden_states, mx.array(ref_hidden_states.numpy()), atol=1e-4, rtol=1e-4)
     )
