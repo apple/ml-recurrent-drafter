@@ -252,7 +252,7 @@ def test_present_kv_as_beam(beam_width: int, beam_length: int, past_kv_len: int)
 
 @pytest.mark.parametrize(["beam_width", "beam_length"], [pytest.param(1, 3), pytest.param(3, 17)])
 @pytest.mark.parametrize("past_kv_len", [1, 7])
-@pytest.mark.parametrize("batch_size", [1, 7])
+@pytest.mark.parametrize("batch_size", [1])
 def test_update_kv_cache_and_input_ids(
     batch_size: int, beam_width: int, beam_length: int, past_kv_len: int
 ) -> None:
@@ -285,7 +285,6 @@ def test_update_kv_cache_and_input_ids(
         ref_cache,
         pad_token_id=0,
     )
-
     mlx_appended_input_ids = (
         mlx_recurrent_drafting.recurrent_drafting._update_kv_cache_and_input_ids(
             mx.array(input_ids),

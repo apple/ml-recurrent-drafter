@@ -291,6 +291,8 @@ def _update_kv_cache_and_input_ids(
     """This function appends accepted tokens to input_ids and the associated keys and values to the
     KV cache. Input ids and the KV cache are right-aligned and left-padded to prepare for the next
     text decoding loop step.
+    Note this MLX version focuses on batch_size = 1, thus there's no need to redo the left padding
+    in Pytorch version.
 
       input_ids: (batch_size, previous_seq_len)
 
@@ -313,32 +315,19 @@ def _update_kv_cache_and_input_ids(
           input_ids |    selected_beams
 
         - hello what     |    is    your  name  <pad> <pad>
-        - <pad> I        |    am    bob   how   are   you
 
-        num_prev_left_pads = [0, 1]
-        n_tokens_in_seq = [2, 4] (Note this doesn't include the token sampled from llm.)
-        seq_len = [5, 6]
-        max_seq_len = 6
-        num_realigned_left_pads = [1, 0]
+        n_tokens_in_seq = [2,] (Note this doesn't include the token sampled from llm.)
+        seq_len = [5,]
 
         After the token appendment and re-alignment
 
           appended_input_ids
 
-        - <pad> hello what  is    your  name
-        - I     am    bob   how   are   you
+        - hello what  is    your  name
 
     """
     assert input_ids.dtype in [mx.int32, mx.int64]
     batch_size, beam_width, beam_length = beams.shape
-    # Caluate the max new length.
-    num_prev_left_pads = _count_left_paddings(input_ids, pad_token_id)
-    # concat_length: (batch_size,)
-    n_tokens_in_seq_with_init = n_tokens_in_seq + 1
-    seq_len = input_ids.shape[1] - num_prev_left_pads + n_tokens_in_seq_with_init
-    max_seq_len = mx.max(seq_len)
-    num_realigned_left_pads = max_seq_len - seq_len
-
     # Gather along selected beam index dimension.
     selected_seqs = _select_one_per_row(beams, seq_in_beam)
 
@@ -366,37 +355,8 @@ def _update_kv_cache_and_input_ids(
         past_key.cat(selected_present_key)
         past_value.cat(selected_present_value)
 
-    # Updating kv_cache.View requires shifting examples with different offsets.
-    # Modified from the pytorch version.
-    for i in range(batch_size):
-        start = num_prev_left_pads[i]
-        end = input_ids.shape[1] + n_tokens_in_seq_with_init[i]
-        assert max_seq_len - num_realigned_left_pads[i] == end - start
-        # Right aligned.
-        for layer in range(len(cache.sliced)):
-            for kv in range(2):
-                cache.sliced[layer][kv]._cache[
-                    i, :, num_realigned_left_pads[i].item() : max_seq_len.item(), :
-                ] = cache.sliced[layer][kv]._cache[i, :, start.item() : end.item(), :]
-
-    # Collect new input_ids.
-    appended_input_ids = mx.full(
-        shape=(batch_size, max_seq_len.item()), vals=pad_token_id, dtype=input_ids.dtype
-    )
-    for i in range(batch_size):
-        # Copy previous ids, excluding the pad ids on the left.
-        start = num_realigned_left_pads[i]
-        end = start + input_ids.shape[1] - num_prev_left_pads[i]
-        appended_input_ids[i, start.item() : end.item()] = input_ids[
-            i, num_prev_left_pads[i].item() :
-        ]
-        # Copy accepted proposed ids.
-        start = end
-        end = start + n_tokens_in_seq_with_init[i]
-        appended_input_ids[i, start.item() : end.item()] = selected_seqs[
-            i, : n_tokens_in_seq_with_init[i].item()
-        ]
-
+    selected_seqs = selected_seqs[:, : 1 + n_tokens_in_seq[0].item()]
+    appended_input_ids = mx.concatenate([input_ids, selected_seqs], axis=-1)
     # Reset key and value length.
     for key, value in cache.sliced:
         key.length = value.length = appended_input_ids.shape[1]
