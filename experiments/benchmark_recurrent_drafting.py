@@ -2,6 +2,7 @@ import os
 from typing import Dict, Tuple
 
 import mlx.core as mx
+import transformers
 
 from mlx_recurrent_drafting import (
     kv_cache,
@@ -67,23 +68,33 @@ def recurrent_drafting_generate(
         special_tokens,
     )
     output_token_ids = next(output_generator)
+    step = 0
     for output_token_ids in output_generator:
         mx.eval(output_token_ids)
+        step += 1
+    print(f"total steps = {step}")
     return output_token_ids
 
 
-def benchmark_recurrent_drafting(beam_width: int, beam_length: int):
-    print(f"benchmark_recurrent_drafting beam_width={beam_width}, beam_length={beam_length}")
+def benchmark_recurrent_drafting(
+    beam_width: int, beam_length: int, dtype: mx.Dtype, max_length: int, greedy: bool
+):
+    print(
+        f"benchmark_recurrent_drafting beam_width={beam_width}, beam_length={beam_length}, \
+            dtype={dtype}, max_length={max_length}, greedy={greedy}"
+    )
     mx.random.seed(123)
     model = _get_recurrent_drafting_model()
+    model.llm.set_dtype(dtype)
+    model.drafter.set_dtype(dtype)
     mx.eval(model.llm.parameters())
     mx.eval(model.drafter.parameters())
-    recurrent_drafting_generate(
+    return recurrent_drafting_generate(
         model,
         input_ids=PROMPT,
-        max_length=PROMPT.shape[1] + 100,
+        max_length=PROMPT.shape[1] + max_length,
         beam_shape=modeling_drafter.BeamShape(beam_width, beam_length),
-        sampling_args=recurrent_drafting.SamplingArgs(1.0, True),
+        sampling_args=recurrent_drafting.SamplingArgs(1.0, greedy),
     )
 
 
@@ -128,11 +139,23 @@ def benchmark_verify_candidates(beam_width: int, beam_length: int):
 
 
 if __name__ == "__main__":
+    tokenizer = transformers.AutoTokenizer.from_pretrained("wangkuiyi/vicuna-7b-v1.3")
     ledger = time_mlx.ledger
     for i in range(2):
-        print(f"run {i}")
-        for bw in range(1, 48):
-            for bl in range(2, 10):
-                ledger.reset()
-                benchmark_recurrent_drafting(bw, bl)
-                ledger.print_table()
+        print(f"RUN {i}")
+        for greedy in (True, False):
+            for dtype in (mx.float16, mx.bfloat16):
+                for max_length in (100, 200, 400, 800):
+                    for bw in (1, 2):
+                        for bl in (2, 4, 6):
+                            print(
+                                "--------------------------START OF BENCHMARK\
+                                    --------------------------"
+                            )
+                            ledger.reset()
+                            tokens = benchmark_recurrent_drafting(bw, bl, dtype, max_length, greedy)
+                            print(f"num total tokens={tokens.shape[1]}")
+                            print(tokenizer.decode(tokens[0].tolist()))
+                            print()
+                            ledger.print_summary()
+                            print()
