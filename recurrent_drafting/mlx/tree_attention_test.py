@@ -2,8 +2,9 @@
 import mlx.core as mx
 import numpy
 import pytest
-import recurrent_drafting
 import torch
+
+import recurrent_drafting
 
 from . import tree_attention
 
