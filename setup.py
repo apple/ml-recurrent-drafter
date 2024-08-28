@@ -26,11 +26,17 @@ setup(
             "scipy",
             "datasets",
         ],
+        "mlx": [
+            "mlx",
+            "mlx-lm",
+            "absl-py",
+            "datasets",
+        ],
         "dev": [
             "pre-commit",
             "mypy",  # Install mypy in native env instead of pre-commit's to parse PyTorch code.
             "pytest",
             "pytest-xdist",
         ],
-    },  # Dependencies for the convert functionality
+    },
 )

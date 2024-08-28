@@ -5,11 +5,11 @@ from typing import Tuple
 import mlx.core as mx
 import numpy
 import pytest
-import recurrent_drafting
 import torch
 
-import mlx_recurrent_drafting
-from mlx_recurrent_drafting.modeling_drafter import LOG_0
+import recurrent_drafting
+import recurrent_drafting.mlx
+from recurrent_drafting.mlx.modeling_drafter import LOG_0
 
 from . import modeling_llama_test, tree_attention_test
 
@@ -26,7 +26,7 @@ def test_select_one_per_row(shape: Tuple[int]) -> None:
         torch.tensor(x), torch.tensor(batch_index)
     )
 
-    mlx_output = mlx_recurrent_drafting.recurrent_drafting._select_one_per_row(
+    mlx_output = recurrent_drafting.mlx.recurrent_drafting._select_one_per_row(
         mx.array(x), mx.array(batch_index)
     )
 
@@ -53,7 +53,7 @@ def test_greedy_prepare_next_input(batch_size: int, beam_width: int, beam_length
         torch.tensor(n_tokens_in_seq),
     )
 
-    mlx_state, mlx_tokens = mlx_recurrent_drafting.recurrent_drafting._greedy_prepare_next_input(
+    mlx_state, mlx_tokens = recurrent_drafting.mlx.recurrent_drafting._greedy_prepare_next_input(
         mx.array(beams_by_llm),
         mx.array(last_hidden_state),
         mx.array(seq_in_beam),
@@ -102,7 +102,7 @@ def test_prepare_next_input(batch_size: int, beam_width: int, beam_length: int) 
         torch.tensor(n_tokens_in_seq),
     )
 
-    mlx_state, mlx_tokens = mlx_recurrent_drafting.recurrent_drafting._prepare_next_input(
+    mlx_state, mlx_tokens = recurrent_drafting.mlx.recurrent_drafting._prepare_next_input(
         mx.array(log_probs_by_drafter),
         mx.array(log_probs_by_llm),
         mx.array(last_hidden_state),
@@ -131,7 +131,7 @@ def test_greedy_choose_from_candidates(batch_size: int, beam_width: int, beam_le
         torch.tensor(beams_by_drafter), torch.tensor(beams_by_llm)
     )
     mlx_n_tokens_in_seq, mlx_seq_in_beam = (
-        mlx_recurrent_drafting.recurrent_drafting._greedy_choose_from_candidates(
+        recurrent_drafting.mlx.recurrent_drafting._greedy_choose_from_candidates(
             mx.array(beams_by_drafter), mx.array(beams_by_llm)
         )
     )
@@ -181,7 +181,7 @@ def test_choose_from_candidates(
         torch.tensor(beams), torch.tensor(log_probs_by_llm), torch.tensor(log_probs_by_drafter)
     )
     mlx_n_tokens_in_seq, mlx_seq_in_beam = (
-        mlx_recurrent_drafting.recurrent_drafting._choose_from_candidates(
+        recurrent_drafting.mlx.recurrent_drafting._choose_from_candidates(
             mx.array(beams), mx.array(log_probs_by_llm), mx.array(log_probs_by_drafter)
         )
     )
@@ -209,7 +209,7 @@ def test_count_left_paddings(shape: Tuple[int]) -> None:
     numpy.random.seed(123)
     x = numpy.random.randint(low=0, high=2, size=shape)
     ref_o = recurrent_drafting.recurrent_drafting._count_left_paddings(torch.tensor(x), 0)
-    mlx_o = mlx_recurrent_drafting.recurrent_drafting._count_left_paddings(mx.array(x), 0)
+    mlx_o = recurrent_drafting.mlx.recurrent_drafting._count_left_paddings(mx.array(x), 0)
     assert mx.all(mlx_o == mx.array(ref_o))
 
 
@@ -221,7 +221,7 @@ def test_present_kv_as_beam(beam_width: int, beam_length: int, past_kv_len: int)
     ref_cache = recurrent_drafting.kv_cache.Cache(
         batch_size, max_len, n_layers, n_heads, head_dim, torch.float32, device=torch.device("cpu")
     )
-    mlx_cache = mlx_recurrent_drafting.kv_cache.Cache(
+    mlx_cache = recurrent_drafting.mlx.kv_cache.Cache(
         batch_size, max_len, n_layers, n_heads, head_dim, mx.float32
     )
     for layer_i in range(n_layers):
@@ -236,8 +236,8 @@ def test_present_kv_as_beam(beam_width: int, beam_length: int, past_kv_len: int)
         past_kv_len,
         ref_cache,
     )
-    mlx_kv = mlx_recurrent_drafting.recurrent_drafting._present_kv_as_beam(
-        mlx_recurrent_drafting.modeling_drafter.BeamShape(beam_width, beam_length),
+    mlx_kv = recurrent_drafting.mlx.recurrent_drafting._present_kv_as_beam(
+        recurrent_drafting.mlx.modeling_drafter.BeamShape(beam_width, beam_length),
         past_kv_len,
         mlx_cache,
     )
@@ -267,7 +267,7 @@ def test_update_kv_cache_and_input_ids(
     ref_cache = recurrent_drafting.kv_cache.Cache(
         batch_size, max_len, n_layers, n_heads, head_dim, torch.float32, device=torch.device("cpu")
     )
-    mlx_cache = mlx_recurrent_drafting.kv_cache.Cache(
+    mlx_cache = recurrent_drafting.mlx.kv_cache.Cache(
         batch_size, max_len, n_layers, n_heads, head_dim, mx.float32
     )
     for layer_i in range(n_layers):
@@ -286,7 +286,7 @@ def test_update_kv_cache_and_input_ids(
         pad_token_id=0,
     )
     mlx_appended_input_ids = (
-        mlx_recurrent_drafting.recurrent_drafting._update_kv_cache_and_input_ids(
+        recurrent_drafting.mlx.recurrent_drafting._update_kv_cache_and_input_ids(
             mx.array(input_ids),
             mx.array(n_tokens_in_seq),
             mx.array(seq_in_beam),
@@ -336,7 +336,7 @@ def test_comprehend_prompt(
     ref_cache = recurrent_drafting.kv_cache.Cache(
         batch_size, max_len, n_layers, n_heads, head_dim, torch.float32, device=torch.device("cpu")
     )
-    mlx_cache = mlx_recurrent_drafting.kv_cache.Cache(
+    mlx_cache = recurrent_drafting.mlx.kv_cache.Cache(
         batch_size, max_len, n_layers, n_heads, head_dim, mx.float32
     )
 
@@ -348,11 +348,11 @@ def test_comprehend_prompt(
         pad_token_id,
     )
 
-    mlx_state, mlx_token = mlx_recurrent_drafting.recurrent_drafting._comprehend_prompt(
+    mlx_state, mlx_token = recurrent_drafting.mlx.recurrent_drafting._comprehend_prompt(
         mlx_llm,
         mx.array(input_ids),
         mlx_cache,
-        mlx_recurrent_drafting.recurrent_drafting.SamplingArgs(temperature, greedy),
+        recurrent_drafting.mlx.recurrent_drafting.SamplingArgs(temperature, greedy),
         pad_token_id,
     )
 
@@ -378,7 +378,7 @@ def test_verify_candidates(prompt_len: int) -> None:
     beams = tree_attention_test.BEAMS_NO_COMMON_PREFIX
     beam_width, beam_length = beams.shape[1], beams.shape[2]
 
-    ref_llm, mlx_llm = mlx_recurrent_drafting.modeling_llama_test.create_test_models()
+    ref_llm, mlx_llm = recurrent_drafting.mlx.modeling_llama_test.create_test_models()
     config = ref_llm.config
     n_layers, n_heads, head_dim = (
         config.num_hidden_layers,
@@ -393,7 +393,7 @@ def test_verify_candidates(prompt_len: int) -> None:
     ref_cache = recurrent_drafting.kv_cache.Cache(
         batch_size, max_len, n_layers, n_heads, head_dim, torch.float32, device=torch.device("cpu")
     )
-    mlx_cache = mlx_recurrent_drafting.kv_cache.Cache(
+    mlx_cache = recurrent_drafting.mlx.kv_cache.Cache(
         batch_size, max_len, n_layers, n_heads, head_dim, mx.float32
     )
     for layer_i in range(n_layers):
@@ -414,7 +414,7 @@ def test_verify_candidates(prompt_len: int) -> None:
         pad_token_id,
     )
 
-    mlx_states, mlx_logits = mlx_recurrent_drafting.recurrent_drafting._verify_candidates(
+    mlx_states, mlx_logits = recurrent_drafting.mlx.recurrent_drafting._verify_candidates(
         mlx_llm,
         mx.array(input_ids),
         mx.array(tree_attention_test.BEAMS_NO_COMMON_PREFIX),

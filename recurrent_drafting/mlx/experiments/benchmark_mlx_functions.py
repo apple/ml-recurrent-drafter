@@ -2,8 +2,7 @@ import sys
 
 import mlx.core as mx
 import mlx.nn
-
-from mlx_recurrent_drafting import attention, time_mlx
+from recurrent_drafting.mlx import attention, time_mlx
 
 
 def benchmark_sdpa(

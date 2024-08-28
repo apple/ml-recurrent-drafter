@@ -5,7 +5,7 @@ the benchmark.
 
 Run the following command to benchmark the recurrent drafter algorithm using the default GPU.
 
-python3 -m mlx_recurrent_drafting.cmd.generate \
+python3 -m recurrent_drafting.mlx.cmd.generate \
     --hf_tokenizer=wangkuiyi/vicuna-7b-v1.3  \
     --hf_llm=wangkuiyi/vicuna-7b-v1.3 \
     --hf_drafter=$HOME/m/redrafter \
@@ -40,14 +40,13 @@ import mlx.nn
 import tqdm
 from absl import app, flags
 from mlx_lm.utils import get_model_path
-from sentencepiece import SentencePieceProcessor
-
-from mlx_recurrent_drafting import (
+from recurrent_drafting.mlx import (
     autoregressive,
     modeling_drafter,
     modeling_llama,
     recurrent_drafting,
 )
+from sentencepiece import SentencePieceProcessor
 
 FLAGS = flags.FLAGS
 
