@@ -5,7 +5,6 @@ import mlx.core as mx
 import mlx_lm
 import mlx_lm.models.base
 import mlx_lm.models.llama
-
 import mlx_recurrent_drafting
 
 MODEL_PATH = os.path.expanduser("~/m/vicuna-7b-v1.3-bf16")

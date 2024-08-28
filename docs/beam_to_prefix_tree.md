@@ -2,7 +2,7 @@
 
 Consider that for a context, the draft model returns a beam of three candidate token sequences.
 
-``` python
+```python
 import torch
 
 beam = torch.tensor(

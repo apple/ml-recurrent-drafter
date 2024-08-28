@@ -2,7 +2,6 @@ import time
 
 import mlx.core as mx
 import mlx_lm.models.base
-
 import mlx_recurrent_drafting
 
 

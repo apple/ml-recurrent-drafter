@@ -5,12 +5,12 @@ from typing import Any, Dict, Tuple
 
 import mlx
 import mlx.core as mx
+import mlx_recurrent_drafting
 import numpy
 import pytest
-import recurrent_drafting
 import torch
 
-import mlx_recurrent_drafting
+import recurrent_drafting
 
 VOCAB_SIZE = 128
 HIDDEN_SIZE = 16
