@@ -3,16 +3,16 @@ from typing import Tuple
 
 import mlx.core as mx
 import mlx.nn
-import mlx_recurrent_drafting
-import mlx_recurrent_drafting.attention
-import mlx_recurrent_drafting.kv_cache
-import mlx_recurrent_drafting.modeling_llama
 import numpy
 import pytest
 import torch
 import transformers
 
 import recurrent_drafting
+import recurrent_drafting.mlx
+import recurrent_drafting.mlx.attention
+import recurrent_drafting.mlx.kv_cache
+import recurrent_drafting.mlx.modeling_llama
 
 
 def test_rope() -> None:
@@ -38,7 +38,7 @@ def test_rope() -> None:
 @torch.inference_mode()
 def _parity_check(
     ref_model: recurrent_drafting.modeling_llama.LlamaForCausalLM,
-    mlx_model: mlx_recurrent_drafting.modeling_llama.Model,
+    mlx_model: recurrent_drafting.mlx.modeling_llama.Model,
     input_ids: numpy.ndarray,
     position_ids: numpy.ndarray,
     mask: numpy.ndarray,
@@ -66,7 +66,7 @@ def _parity_check(
     ref_logits = ref_output.logits
     ref_hidden_states = ref_output.hidden_states
 
-    mlx_cache = mlx_recurrent_drafting.kv_cache.Cache(
+    mlx_cache = recurrent_drafting.mlx.kv_cache.Cache(
         batch_size=batch_size,
         max_length=input_length + 1,
         n_layers=mlx_model.args.num_hidden_layers,
@@ -120,7 +120,7 @@ _test_llama_config = {
 
 def create_test_models() -> Tuple[
     recurrent_drafting.modeling_llama.LlamaForCausalLM,
-    mlx_recurrent_drafting.modeling_llama.Model,
+    recurrent_drafting.mlx.modeling_llama.Model,
 ]:
     recurrent_drafting.rng.seed_pytorch(123)
     mx.random.seed(123)
@@ -128,7 +128,7 @@ def create_test_models() -> Tuple[
     ref_model = recurrent_drafting.modeling_llama.LlamaForCausalLM(ref_cfg)
     with tempfile.TemporaryDirectory() as tmpdirname:
         ref_model.save_pretrained(tmpdirname)
-        mlx_model = mlx_recurrent_drafting.modeling_llama.load_model(tmpdirname)
+        mlx_model = recurrent_drafting.mlx.modeling_llama.load_model(tmpdirname)
     return ref_model, mlx_model
 
 
@@ -138,17 +138,17 @@ def create_test_models() -> Tuple[
         pytest.param(
             numpy.array([[1, 2, 3, 4, 5, 6]]),
             numpy.array([[0, 1, 2, 3, 4, 5]]),
-            mlx_recurrent_drafting.modeling_drafter.BeamShape(1, 6),
+            recurrent_drafting.mlx.modeling_drafter.BeamShape(1, 6),
         ),
         pytest.param(
             numpy.array([[1, 2, 3, 4, 5, 6]]),
             numpy.array([[0, 1, 2, 0, 1, 2]]),
-            mlx_recurrent_drafting.modeling_drafter.BeamShape(2, 3),
+            recurrent_drafting.mlx.modeling_drafter.BeamShape(2, 3),
         ),
         pytest.param(
             numpy.array([[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]]),
             numpy.array([[0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2]]),
-            mlx_recurrent_drafting.modeling_drafter.BeamShape(5, 3),
+            recurrent_drafting.mlx.modeling_drafter.BeamShape(5, 3),
         ),
     ],
 )
@@ -156,13 +156,13 @@ def create_test_models() -> Tuple[
 def test_parity_with_no_compression(
     input_ids: numpy.ndarray,
     position_ids: numpy.ndarray,
-    beam_shape: mlx_recurrent_drafting.modeling_drafter.BeamShape,
+    beam_shape: recurrent_drafting.mlx.modeling_drafter.BeamShape,
     device: mx.Device,
 ) -> None:
     mx.set_default_device(device)
     ref_model, mlx_model = create_test_models()
     mask = numpy.array(
-        mlx_recurrent_drafting.attention.causal_mask(
+        recurrent_drafting.mlx.attention.causal_mask(
             mx.ones(shape=(1, beam_shape.length), dtype=mx.bool_), beam_shape.length
         )
     )

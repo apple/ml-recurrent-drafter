@@ -3,7 +3,7 @@ import time
 import mlx
 import mlx.core as mx
 import mlx_lm
-from mlx_recurrent_drafting import kv_cache
+from recurrent_drafting.mlx import kv_cache
 
 
 def benchmark_kv_cache_cat(max_len: int):
