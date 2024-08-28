@@ -1,0 +1,2055 @@
+RUN 0
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=2, dtype=mlx.core.float16, max_length=100, greedy=True
+total steps = 63
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immer
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 11425.587 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=4, dtype=mlx.core.float16, max_length=100, greedy=True
+total steps = 46
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immer
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 3744.105 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=6, dtype=mlx.core.float16, max_length=100, greedy=True
+total steps = 45
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immer
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 4053.261 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=2, dtype=mlx.core.float16, max_length=100, greedy=True
+total steps = 57
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immer
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 4510.038 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=4, dtype=mlx.core.float16, max_length=100, greedy=True
+total steps = 42
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immer
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 3922.664 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=6, dtype=mlx.core.float16, max_length=100, greedy=True
+total steps = 44
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immer
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 4834.932 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=2, dtype=mlx.core.float16, max_length=200, greedy=True
+total steps = 129
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and the Pearl Harbor Visitor Center
+
+Upon arriving in Honolulu, I was greeted by the warm sun and the lively energy of the city. My first stop was the Pearl Harbor Visitor
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 9347.818 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=4, dtype=mlx.core.float16, max_length=200, greedy=True
+total steps = 97
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and Waikiki Beach
+
+After a long flight, I arrived in Honolulu, the vibrant capital of Hawaii. My first stop was Waikiki Beach, a world-famous stretch of golden sand and cry
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 7718.427 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=6, dtype=mlx.core.float16, max_length=200, greedy=True
+total steps = 95
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and Waikiki Beach
+
+After a long flight, I arrived in Honolulu, the vibrant capital of Hawaii. My first stop was Waikiki Beach, a world-famous stretch of golden sand and cry
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 8368.628 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=2, dtype=mlx.core.float16, max_length=200, greedy=True
+total steps = 119
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and Waikiki Beach
+
+After a long flight, I arrived in Honolulu, the vibrant capital of Hawaii. My first stop was Waikiki Beach, a world-famous stretch of golden sand and cry
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 9055.132 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=4, dtype=mlx.core.float16, max_length=200, greedy=True
+total steps = 86
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and the Pearl Harbor Visitor Center
+
+Upon arriving in Honolulu, I was greeted by the warm sun and the lively energy of the city. My first stop was the Pearl Harbor Visitor
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 7648.272 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=6, dtype=mlx.core.float16, max_length=200, greedy=True
+total steps = 90
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and Waikiki Beach
+
+After a long flight, I arrived in Honolulu, the vibrant capital of Hawaii. My first stop was Waikiki Beach, a world-famous stretch of golden sand and cry
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 9481.695 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=2, dtype=mlx.core.float16, max_length=400, greedy=True
+total steps = 260
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and the Pearl Harbor Visitor Center
+
+Upon arriving in Honolulu, I was greeted by the warm sun and the lively energy of the city. My first stop was the Pearl Harbor Visitor Center, where I learned about the history of the infamous attack on Pearl Harbor during World War II. The center features exhibits, artifacts, and multimedia presentations that provide a comprehensive understanding of the events leading up to the attack and its aftermath.
+
+Day 2: A Day Trip to Oahu's North Shore
+
+The next day, I embarked on a day trip to Oahu's North Shore, famous for its world-class surfing spots and picturesque landscapes. I started my journey at the Waimea Valley, a lush botanical garden and cultural site that houses the sacred Makuake (Banyan) Tree. After exploring the valley, I headed to the Polynesian Cultural Center, where I learned about the customs, traditions, and way of life of various Polynesian islands.
+
+Day 3: Exploring the Hidden
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 18751.365 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=4, dtype=mlx.core.float16, max_length=400, greedy=True
+total steps = 191
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and Waikiki Beach
+
+After a long flight, I arrived in Honolulu, the vibrant capital of Hawaii. My first stop was Waikiki Beach, a world-famous stretch of golden sand and crystal-clear waters. As I strolled along the beach, I couldn't help but feel the laid-back vibes of the island.
+
+Cultural Experience:
+
+Later in the day, I visited the Honolulu Museum of Art, which houses an impressive collection of Hawaiian and Asian art. The museum's stunning architecture and beautiful gardens made for a memorable experience.
+
+Day 2: Hiking in the Nuuanu Valley and Luau
+
+The next day, I embarked on a hiking adventure in the Nuuanu Valley, where I explored the lush rainforest and ancient ruins. The hike was challenging, but the breathtaking views from the top were worth it.
+
+Cultural Experience:
+
+In the evening, I attended a traditional luau, a Hawaiian feast and dance celebration. The lively
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 15050.191 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=6, dtype=mlx.core.float16, max_length=400, greedy=True
+total steps = 182
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and Waikiki Beach
+
+After a long flight, I arrived in Honolulu, the vibrant capital of Hawaii. My first stop was Waikiki Beach, a world-famous stretch of golden sand and crystal-clear waters. As I strolled along the beach, I couldn't help but feel the laid-back vibes of the island.
+
+Cultural Experience:
+
+Later in the day, I visited the Honolulu Museum of Art, which houses an impressive collection of Hawaiian and Asian art. The museum's stunning architecture and beautiful gardens made for a memorable experience.
+
+Day 2: Hiking in the Nuuanu Valley and Luau
+
+The next day, I embarked on a hiking adventure in the Nuuanu Valley, where I explored the lush rainforest and ancient ruins. The hike was challenging, but the breathtaking views from the top were worth it.
+
+Cultural Experience:
+
+In the evening, I attended a traditional luau, a Hawaiian feast and dance celebration. The lively
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 16012.435 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=2, dtype=mlx.core.float16, max_length=400, greedy=True
+total steps = 237
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and Waikiki Beach
+
+After a long flight, I arrived in Honolulu, the vibrant capital of Hawaii. My first stop was Waikiki Beach, a world-famous stretch of golden sand and crystal-clear waters. As I strolled along the beach, I couldn't help but feel the laid-back vibes of the island.
+
+Cultural Experience:
+
+Later in the day, I visited the Honolulu Museum of Art, which houses an impressive collection of Hawaiian and Asian art. The museum's stunning architecture and beautiful gardens made for a memorable experience.
+
+Day 2: Hiking in the Nuuanu Valley and Luau
+
+The next day, I embarked on a hiking adventure in the Nuuanu Valley, where I explored the lush rainforest and ancient ruins. The hike was challenging, but the breathtaking views from the top were worth it.
+
+Cultural Experience:
+
+In the evening, I attended a traditional luau, a Hawaiian feast and dance celebration. The lively
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 19653.866 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=4, dtype=mlx.core.float16, max_length=400, greedy=True
+total steps = 182
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and the Pearl Harbor Visitor Center
+
+Upon arriving in Honolulu, I was greeted by the warm sun and the lively energy of the city. My first stop was the Pearl Harbor Visitor Center, where I learned about the history of the infamous attack on Pearl Harbor during World War II. The center features exhibits, artifacts, and multimedia presentations that provide a comprehensive understanding of the events leading up to the attack and its aftermath.
+
+Day 2: A Day Trip to Oahu's North Shore
+
+The next day, I embarked on a day trip to Oahu's North Shore, famous for its world-class surfing spots and picturesque landscapes. I started my journey at the Waimea Valley, a lush botanical garden and cultural site that houses the sacred Makuake (Banyan) Tree. After exploring the valley, I headed to the Polynesian Cultural Center, where I learned about the customs, traditions, and way of life of various Polynesian islands.
+
+Day 3: Exploring the Hidden
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 18037.940 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=6, dtype=mlx.core.float16, max_length=400, greedy=True
+total steps = 172
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and Waikiki Beach
+
+After a long flight, I arrived in Honolulu, the vibrant capital of Hawaii. My first stop was Waikiki Beach, a world-famous stretch of golden sand and crystal-clear waters. As I strolled along the beach, I couldn't help but feel the laid-back vibes of the island.
+
+Cultural Experience:
+
+Later in the day, I visited the Honolulu Museum of Art, which houses an impressive collection of Hawaiian and Asian art. The museum's stunning architecture and beautiful gardens made for a memorable experience.
+
+Day 2: Hiking in the Nuuanu Valley and Luau
+
+The next day, I embarked on a hiking adventure in the Nuuanu Valley, where I explored the lush rainforest and ancient ruins. The hike was challenging, but the breathtaking views from the top were worth it.
+
+Cultural Experience:
+
+In the evening, I attended a traditional luau, a Hawaiian feast and dance celebration. The lively
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 19881.561 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=2, dtype=mlx.core.float16, max_length=800, greedy=True
+total steps = 506
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and the Pearl Harbor Visitor Center
+
+Upon arriving in Honolulu, I was greeted by the warm sun and the lively energy of the city. My first stop was the Pearl Harbor Visitor Center, where I learned about the history of the infamous attack on Pearl Harbor during World War II. The center features exhibits, artifacts, and multimedia presentations that provide a comprehensive understanding of the events leading up to the attack and its aftermath.
+
+Day 2: A Day Trip to Oahu's North Shore
+
+The next day, I embarked on a day trip to Oahu's North Shore, famous for its world-class surfing spots and picturesque landscapes. I started my journey at the Waimea Valley, a lush botanical garden and cultural site that houses the sacred Makuake (Banyan) Tree. After exploring the valley, I headed to the Polynesian Cultural Center, where I learned about the customs, traditions, and way of life of various Polynesian islands.
+
+Day 3: Exploring the Hidden Gems of Maui
+
+For my third day, I boarded a flight to Maui, where I set out to discover the island's hidden gems. My first stop was the Iao Valley State Monument, a stunning natural wonder with lush forests, waterfalls, and ancient Hawaiian ruins. Next, I visited the Maui Tropical Plantation, a working plantation that offers guided tours and delicious farm-to-table dining experiences.
+
+Day 4: Snorkeling with Turtles in Molokini Crater
+
+On the fourth day, I embarked on a snorkeling adventure to Molokini Crater, a crescent-shaped volcanic crater that's home to an abundance of marine life. I was thrilled to swim alongside sea turtles and colorful fish in the crystal-clear waters. After snorkeling, I headed to the nearby town of Lahaina, where I explored its historic streets and enjoyed some local cuisine.
+
+Day 5: Hiking to the Summit of Haleakalā
+
+On my final day in Maui, I embarked on a challenging hike to the summit of Haleakalā, a dormant volcano that's part of the island's largest national park. The hike was grueling, but the breathtaking views from the summit were worth it. I watched the sunrise from the volcano's peak, and it was an unforgettable experience.
+
+Conclusion:
+
+My Hawaiian adventure was filled with cultural experiences, stunning natural landscapes, and unforgettable moments. From the historical significance of Pearl Harbor to the serene beauty of Molokini Crater, each day brought new discoveries and
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 40177.960 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=4, dtype=mlx.core.float16, max_length=800, greedy=True
+total steps = 391
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and Waikiki Beach
+
+After a long flight, I arrived in Honolulu, the vibrant capital of Hawaii. My first stop was Waikiki Beach, a world-famous stretch of golden sand and crystal-clear waters. As I strolled along the beach, I couldn't help but feel the laid-back vibes of the island.
+
+Cultural Experience:
+
+Later in the day, I visited the Honolulu Museum of Art, which houses an impressive collection of Hawaiian and Asian art. The museum's stunning architecture and beautiful gardens made for a memorable experience.
+
+Day 2: Hiking in the Nuuanu Valley and Luau
+
+The next day, I embarked on a hiking adventure in the Nuuanu Valley, where I explored the lush rainforest and ancient ruins. The hike was challenging, but the breathtaking views from the top were worth it.
+
+Cultural Experience:
+
+In the evening, I attended a traditional luau, a Hawaiian feast and dance celebration. The lively music, colorful costumes, and delicious food made for an unforgettable cultural experience.
+
+Day 3: Volcanoes National Park and Mauna Kea
+
+On the third day, I visited Volcanoes National Park, where I witnessed the power of nature. I hiked up to the Kilauea Caldera and marveled at the steam vents and lava flows.
+
+Cultural Experience:
+
+After the hike, I drove to the summit of Mauna Kea, the tallest mountain in Hawaii. The stargazing at the observatory was awe-inspiring, and I felt a deep connection to the night sky.
+
+Day 4: Snorkeling in Hanauma Bay and Dinner at a Local Restaurant
+
+The next day, I spent the morning snorkeling in Hanauma Bay, a stunning marine preserve. The clear waters and diverse marine life made for an unforgettable snorkeling experience.
+
+Cultural Experience:
+
+In the evening, I dined at a local restaurant, where I tried traditional Hawaiian dishes like poi and laulau. The warm hospitality and lively music made for a memorable evening.
+
+Day 5: Oahu's North Shore and Sunset Cruise
+
+On the fifth day, I explored Oahu's famous North Shore, where I surfed at Pipeline and watched the sunset at Sunset Beach. The laid-back vibes and stunning scenery made for a perfect day.
+
+Cultural Experience:
+
+In the evening, I boarded a sunset cruise, which offered a unique perspective of the island's coastline. The captain shared stories of the island's history and legends, making for a fascinating
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 34160.006 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=6, dtype=mlx.core.float16, max_length=800, greedy=True
+total steps = 373
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and Waikiki Beach
+
+After a long flight, I arrived in Honolulu, the vibrant capital of Hawaii. My first stop was Waikiki Beach, a world-famous stretch of golden sand and crystal-clear waters. As I strolled along the beach, I couldn't help but feel the laid-back vibes of the island.
+
+Cultural Experience:
+
+Later in the day, I visited the Honolulu Museum of Art, which houses an impressive collection of Hawaiian and Asian art. The museum's stunning architecture and beautiful gardens made for a memorable experience.
+
+Day 2: Hiking in the Nuuanu Valley and Luau
+
+The next day, I embarked on a hiking adventure in the Nuuanu Valley, where I explored the lush rainforest and ancient ruins. The hike was challenging, but the breathtaking views from the top were worth it.
+
+Cultural Experience:
+
+In the evening, I attended a traditional luau, a Hawaiian feast and dance celebration. The lively music, colorful costumes, and delicious food made for an unforgettable cultural experience.
+
+Day 3: Volcanoes National Park and Mauna Kea
+
+On the third day, I visited Volcanoes National Park, where I witnessed the power of nature. I hiked up to the Kilauea Caldera and marveled at the steam vents and lava flows.
+
+Cultural Experience:
+
+After the hike, I drove to the summit of Mauna Kea, the tallest mountain in Hawaii. The stargazing at the observatory was awe-inspiring, and I felt a deep connection to the night sky.
+
+Day 4: Snorkeling in Hanauma Bay and Dinner at a Local Restaurant
+
+The next day, I spent the morning snorkeling in Hanauma Bay, a stunning marine preserve. The clear waters and diverse marine life made for an unforgettable snorkeling experience.
+
+Cultural Experience:
+
+In the evening, I dined at a local restaurant, where I tried traditional Hawaiian dishes like poi and laulau. The warm hospitality and lively music made for a memorable evening.
+
+Day 5: Oahu's North Shore and Sunset Cruise
+
+On the fifth day, I explored Oahu's famous North Shore, where I surfed at Pipeline and watched the sunset at Sunset Beach. The laid-back vibes and stunning scenery made for a perfect day.
+
+Cultural Experience:
+
+In the evening, I boarded a sunset cruise, which offered a unique perspective of the island's coastline. The captain shared stories of the island's history and legends, making for a fascinating
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 35691.965 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=2, dtype=mlx.core.float16, max_length=800, greedy=True
+total steps = 472
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and Waikiki Beach
+
+After a long flight, I arrived in Honolulu, the vibrant capital of Hawaii. My first stop was Waikiki Beach, a world-famous stretch of golden sand and crystal-clear waters. As I strolled along the beach, I couldn't help but feel the laid-back vibes of the island.
+
+Cultural Experience:
+
+Later in the day, I visited the Honolulu Museum of Art, which houses an impressive collection of Hawaiian and Asian art. The museum's stunning architecture and beautiful gardens made for a memorable experience.
+
+Day 2: Hiking in the Nuuanu Valley and Luau
+
+The next day, I embarked on a hiking adventure in the Nuuanu Valley, where I explored the lush rainforest and ancient ruins. The hike was challenging, but the breathtaking views from the top were worth it.
+
+Cultural Experience:
+
+In the evening, I attended a traditional luau, a Hawaiian feast and dance celebration. The lively music, colorful costumes, and delicious food made for an unforgettable cultural experience.
+
+Day 3: Volcanoes National Park and Mauna Kea
+
+On the third day, I visited Volcanoes National Park, where I witnessed the power of nature. I hiked up to the Kilauea Caldera and marveled at the steam vents and lava flows.
+
+Cultural Experience:
+
+After the hike, I drove to the summit of Mauna Kea, the tallest mountain in Hawaii. The stargazing at the observatory was awe-inspiring, and I felt a deep connection to the night sky.
+
+Day 4: Snorkeling in Hanauma Bay and Dinner at a Local Restaurant
+
+The next day, I spent the morning snorkeling in Hanauma Bay, a stunning marine preserve. The clear waters and vibrant marine life made for an unforgettable snorkeling experience.
+
+Cultural Experience:
+
+In the evening, I dined at a local restaurant, where I tried traditional Hawaiian dishes like poi and laulau. The warm hospitality and lively music made for a memorable evening.
+
+Day 5: Hiking in the Haleakala National Park and Stargazing
+
+On the fifth day, I embarked on a challenging hike in the Haleakala National Park, where I witnessed the sunrise from the summit. The crater's otherworldly landscape and the clear skies made for a magical experience.
+
+Cultural Experience:
+
+After the hike, I drove to the summit again, this time for stargazing. The darkness and the lack of light pollution made for an unfor
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 40578.913 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=4, dtype=mlx.core.float16, max_length=800, greedy=True
+total steps = 360
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and the Pearl Harbor Visitor Center
+
+Upon arriving in Honolulu, I was greeted by the warm sun and the lively energy of the city. My first stop was the Pearl Harbor Visitor Center, where I learned about the history of the infamous attack on Pearl Harbor during World War II. The center features exhibits, artifacts, and multimedia presentations that provide a comprehensive understanding of the events leading up to the attack and its aftermath.
+
+Day 2: A Day Trip to Oahu's North Shore
+
+The next day, I embarked on a day trip to Oahu's North Shore, famous for its world-class surfing spots and picturesque landscapes. I started my journey at the Waimea Valley, a lush botanical garden and cultural site that houses the sacred Makuake (Banyan) Tree. After exploring the valley, I headed to the Polynesian Cultural Center, where I learned about the customs, traditions, and way of life of various Polynesian islands.
+
+Day 3: Exploring the Hidden Gems of Maui
+
+For my third day, I boarded a flight to Maui, where I set out to discover the island's hidden gems. My first stop was the Iao Valley State Monument, a stunning natural wonder with lush forests, waterfalls, and ancient Hawaiian ruins. Next, I visited the Maui Tropical Plantation, a working plantation that offers guided tours and delicious farm-to-table dining experiences.
+
+Day 4: Snorkeling with Turtles in Molokini Crater
+
+On the fourth day, I embarked on a snorkeling adventure to Molokini Crater, a crescent-shaped volcanic crater that's home to an abundance of marine life. I was thrilled to swim alongside sea turtles and colorful fish in the crystal-clear waters. After snorkeling, I headed to the nearby town of Lahaina, where I explored its historic streets and enjoyed some local cuisine.
+
+Day 5: Hiking to the Summit of Haleakalā
+
+On my final day in Maui, I embarked on a challenging hike to the summit of Haleakalā, a dormant volcano that's part of the island's largest national park. The hike was grueling, but the breathtaking views from the summit were worth it. I watched the sunrise from the volcano's peak, and it was an unforgettable experience.
+
+Conclusion:
+
+My Hawaiian adventure was filled with cultural experiences, stunning natural landscapes, and unforgettable moments. From the historical significance of Pearl Harbor to the serene beauty of Molokini Crater, each day brought new discoveries and
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 35049.116 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=6, dtype=mlx.core.float16, max_length=800, greedy=True
+total steps = 350
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, the tropical paradise, has always been a dream destination for travelers around the world. With its lush landscapes, pristine beaches, and rich cultural heritage, the Aloha State offers an unforgettable experience. Recently, I embarked on a journey to explore the islands and immerse myself in their unique culture and stunning attractions. In this blog post, I'll be sharing my adventures and must-see spots during my Hawaiian escapade.
+
+Day 1: Arrival in Honolulu and Waikiki Beach
+
+After a long flight, I arrived in Honolulu, the vibrant capital of Hawaii. My first stop was Waikiki Beach, a world-famous stretch of golden sand and crystal-clear waters. As I strolled along the beach, I couldn't help but feel the laid-back vibes of the island.
+
+Cultural Experience:
+
+Later in the day, I visited the Honolulu Museum of Art, which houses an impressive collection of Hawaiian and Asian art. The museum's stunning architecture and beautiful gardens made for a memorable experience.
+
+Day 2: Hiking in the Nuuanu Valley and Luau
+
+The next day, I embarked on a hiking adventure in the Nuuanu Valley, where I explored the lush rainforest and ancient ruins. The hike was challenging, but the breathtaking views from the top were worth it.
+
+Cultural Experience:
+
+In the evening, I attended a traditional luau, a Hawaiian feast and dance celebration. The lively music, colorful costumes, and delicious food made for an unforgettable cultural experience.
+
+Day 3: Volcanoes National Park and Mauna Kea
+
+On the third day, I visited Volcanoes National Park, where I witnessed the power of nature. I hiked up to the Kilauea Caldera and marveled at the steam vents and lava flows.
+
+Cultural Experience:
+
+After the hike, I drove to the summit of Mauna Kea, the tallest mountain in Hawaii. The stargazing at the observatory was awe-inspiring, and I felt a deep connection to the night sky.
+
+Day 4: Snorkeling in Hanauma Bay and Dinner at a Local Restaurant
+
+The next day, I spent the morning snorkeling in Hanauma Bay, a stunning marine preserve. The clear waters and vibrant marine life made for an unforgettable snorkeling experience.
+
+Cultural Experience:
+
+In the evening, I dined at a local restaurant, where I tried traditional Hawaiian dishes like poi and laulau. The warm hospitality and lively music made for a memorable evening.
+
+Day 5: Hiking in the Haleakala National Park and Stargazing
+
+On the fifth day, I embarked on a challenging hike in the Haleakala National Park, where I witnessed the sunrise from the summit. The crater's otherworldly landscape and the clear skies made for a magical experience.
+
+Cultural Experience:
+
+After the hike, I drove to the summit again, this time for stargazing. The darkness and the lack of light pollution made for an unfor
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 40500.765 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=2, dtype=mlx.core.bfloat16, max_length=100, greedy=True
+total steps = 60
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I'll never forget
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 5453.158 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=4, dtype=mlx.core.bfloat16, max_length=100, greedy=True
+total steps = 45
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget.
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 4268.316 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=6, dtype=mlx.core.bfloat16, max_length=100, greedy=True
+total steps = 44
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget.
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 4627.661 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=2, dtype=mlx.core.bfloat16, max_length=100, greedy=True
+total steps = 57
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget.
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 5209.094 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=4, dtype=mlx.core.bfloat16, max_length=100, greedy=True
+total steps = 41
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget.
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 4657.182 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=6, dtype=mlx.core.bfloat16, max_length=100, greedy=True
+total steps = 40
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget.
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 5384.718 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=2, dtype=mlx.core.bfloat16, max_length=200, greedy=True
+total steps = 121
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I'll never forget. In this blog post, I'll be sharing my adventures, highlighting the cultural experiences and must-see attractions that made my trip unforgettable.
+
+Day 1: Arrival in Honolulu
+
+Upon arriving in Honolulu, the capital city of Hawaii, I was greeted by the warm sun and the sound of the waves crashing against the shore. After checking into my hotel, I headed straight to Waikiki
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 11154.487 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=4, dtype=mlx.core.bfloat16, max_length=200, greedy=True
+total steps = 104
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget. In this blog post, I will share with you some of the highlights of my trip, including cultural experiences and must-see attractions that will make you want to pack your bags and head to Hawaii right away.
+
+Day 1: Arrival and Oahu
+
+After a long flight, I arrived on the island of Oahu, the most populous island in the state. My first stop was the iconic Waikiki Beach, where I soaked up the
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 10639.866 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=6, dtype=mlx.core.bfloat16, max_length=200, greedy=True
+total steps = 101
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget. In this blog post, I will share with you some of the highlights of my trip, including cultural experiences and must-see attractions that will make you want to pack your bags and head to Hawaii right away.
+
+Day 1: Arrival and Oahu
+
+After a long flight, I arrived on the island of Oahu, the most populous island in the state. My first stop was the iconic Waikiki Beach, where I soaked up the
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 11185.819 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=2, dtype=mlx.core.bfloat16, max_length=200, greedy=True
+total steps = 114
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget. In this blog post, I will share my adventures, highlighting the cultural experiences and must-see attractions that made my trip unforgettable.
+
+Day 1: Arrival and Oahu
+
+Upon arriving in Honolulu, the capital city of Oahu, I was greeted by the warm sun and the sound of the waves crashing against the shore. My first stop was the iconic Waikiki Beach, where I spent the afternoon so
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 11127.694 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=4, dtype=mlx.core.bfloat16, max_length=200, greedy=True
+total steps = 90
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget. In this blog post, I will share with you some of the highlights of my trip, including cultural experiences and must-see attractions that will make you want to pack your bags and head to Hawaii right away.
+
+Day 1: Arrival and Oahu
+
+After a long flight, I arrived on the island of Oahu, the most populous island in the state. My first stop was the iconic Waikiki Beach, where I soaked up the
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 10235.660 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=6, dtype=mlx.core.bfloat16, max_length=200, greedy=True
+total steps = 86
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget. In this blog post, I will share with you some of the highlights of my trip, including cultural experiences and must-see attractions that will make you want to pack your bags and head to Hawaii right away.
+
+Day 1: Arrival and Oahu
+
+After a long flight, I arrived on the island of Oahu, the most populous island in the state. My first stop was the iconic Waikiki Beach, where I soaked up the
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 10392.384 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=2, dtype=mlx.core.bfloat16, max_length=400, greedy=True
+total steps = 245
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I'll never forget. In this blog post, I'll be sharing my adventures, highlighting the cultural experiences and must-see attractions that made my trip unforgettable.
+
+Day 1: Arrival in Honolulu
+
+Upon arriving in Honolulu, the capital city of Hawaii, I was greeted by the warm sun and the sound of the waves crashing against the shore. After checking into my hotel, I headed straight to Waikiki Beach, one of the most famous beaches in the world. The sun was shining, and the water was crystal clear, making it the perfect spot to relax and soak up the Hawaiian sun.
+
+Day 2: Exploring Honolulu
+
+The next day, I decided to explore the city of Honolulu. I started my day with a visit to the Bishop Museum, which is dedicated to the history and culture of Hawaii. The museum houses a vast collection of artifacts, including ancient Hawaiian artifacts, royal treasures, and interactive exhibits that provide a glimpse into the island's rich history.
+
+After the museum, I walked through Chinatown, a vibrant neighborhood filled with colorful shops, street vendors, and delicious food stalls. I stopped for lunch at a local restaurant, trying my first plate of poke, a traditional Hawaiian dish made with raw fish
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 21496.512 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=4, dtype=mlx.core.bfloat16, max_length=400, greedy=True
+total steps = 203
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget. In this blog post, I will share with you some of the highlights of my trip, including cultural experiences and must-see attractions that will make you want to pack your bags and head to Hawaii right away.
+
+Day 1: Arrival and Oahu
+
+After a long flight, I arrived on the island of Oahu, the most populous island in the state. My first stop was the iconic Waikiki Beach, where I soaked up the sun and enjoyed the crystal-clear waters. Later in the day, I visited the Bishop Museum, which showcases the history and culture of Hawaii, from the ancient Polynesian voyagers to the modern-day state. The museum's exhibits are fascinating, and I spent hours exploring the various galleries.
+
+Day 2: Honolulu and Pearl Harbor
+
+The next day, I explored Honolulu, the capital city of Hawaii. I visited the Iolani Palace, the only royal palace in the United States, and learned about the history of the Hawaiian monarchy. Afterward, I headed to Pearl Harbor, where I took a tour of the USS Arizona Memorial. The memorial is a moving tribute to the brave men and women who lost their lives during the Japanese attack on Pearl Harbor in 1941.
+
+Day 3: Hiking and Lu
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 20311.109 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=6, dtype=mlx.core.bfloat16, max_length=400, greedy=True
+total steps = 195
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget. In this blog post, I will share with you some of the highlights of my trip, including cultural experiences and must-see attractions that will make you want to pack your bags and head to Hawaii right away.
+
+Day 1: Arrival and Oahu
+
+After a long flight, I arrived on the island of Oahu, the most populous island in the state. My first stop was the iconic Waikiki Beach, where I soaked up the sun and enjoyed the crystal-clear waters. Later in the day, I visited the Bishop Museum, which showcases the history and culture of Hawaii, from the ancient Polynesian voyagers to the modern-day state. The museum's exhibits are fascinating, and I spent hours exploring the various galleries.
+
+Day 2: Honolulu and Pearl Harbor
+
+On day two, I explored the city of Honolulu, the capital of Hawaii. I visited the Iolani Palace, the only royal palace in the United States, and learned about the history of the monarchy in Hawaii. Afterward, I headed to Pearl Harbor, where I took a tour of the USS Arizona Memorial. The memorial is a moving tribute to the brave men and women who lost their lives during the attack on Pearl Harbor.
+
+Day 3: Hiking and Luau
+
+On
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 20846.896 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=2, dtype=mlx.core.bfloat16, max_length=400, greedy=True
+total steps = 238
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget. In this blog post, I will share my adventures, highlighting the cultural experiences and must-see attractions that made my trip unforgettable.
+
+Day 1: Arrival and Oahu
+
+Upon arriving in Honolulu, the capital city of Oahu, I was greeted by the warm sun and the sound of the waves crashing against the shore. My first stop was the iconic Waikiki Beach, where I spent the afternoon soaking up the sun and enjoying the vibrant beach scene. In the evening, I explored the historic Honolulu Chinatown, where I indulged in delicious local cuisine and browsed through the colorful markets.
+
+Day 2: Hiking and Cultural Experiences
+
+The next day, I embarked on a hiking adventure in the lush Ko'olau Mountain Range, just east of Honolulu. The hike offered breathtaking views of the island and provided a glimpse into the local flora and fauna. After the hike, I visited the Polynesian Cultural Center, where I learned about the customs, traditions, and history of the Polynesian islands. I participated in traditional dance performances, watched a fire knife show, and even tried my hand at making poi, a staple food in Hawaiian cuisine.
+
+Day
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 21711.350 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=4, dtype=mlx.core.bfloat16, max_length=400, greedy=True
+total steps = 181
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget. In this blog post, I will share with you some of the highlights of my trip, including cultural experiences and must-see attractions that will make you want to pack your bags and head to Hawaii right away.
+
+Day 1: Arrival and Oahu
+
+After a long flight, I arrived on the island of Oahu, the most populous island in the state. My first stop was the iconic Waikiki Beach, where I soaked up the sun and enjoyed the crystal-clear waters. Later in the day, I visited the Bishop Museum, which showcases the history and culture of Hawaii, from the ancient Polynesian voyagers to the modern-day state. The museum's exhibits are fascinating, and I spent hours exploring the various galleries.
+
+Day 2: Honolulu and Pearl Harbor
+
+On day two, I explored the city of Honolulu, the capital of Hawaii. I visited the Iolani Palace, the only royal palace in the United States, and learned about the history of the monarchy in Hawaii. Afterward, I headed to Pearl Harbor, where I took a tour of the USS Arizona Memorial. The memorial is a moving tribute to the brave men and women who lost their lives during the attack on Pearl Harbor.
+
+Day 3: Hiking and Luau
+
+On
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 18933.296 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=6, dtype=mlx.core.bfloat16, max_length=400, greedy=True
+total steps = 173
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget. In this blog post, I will share with you some of the highlights of my trip, including cultural experiences and must-see attractions that will make you want to pack your bags and head to Hawaii right away.
+
+Day 1: Arrival and Oahu
+
+After a long flight, I arrived on the island of Oahu, the most populous island in the state. My first stop was the iconic Waikiki Beach, where I soaked up the sun and enjoyed the crystal-clear waters. Later in the day, I visited the Bishop Museum, which showcases the history and culture of Hawaii, including the indigenous people, the Polynesians, and the influence of Western cultures.
+
+Day 2: Honolulu and Pearl Harbor
+
+On day two, I explored Honolulu, the capital city of Hawaii. I visited the Iolani Palace, the only royal palace in the United States, and learned about the history of the monarchy in Hawaii. Later in the day, I visited the USS Arizona Memorial at Pearl Harbor, which is a moving tribute to the soldiers who lost their lives during the attack on Pearl Harbor in 1941.
+
+Day 3: Hiking and Luau
+
+On day three, I went hiking in the lush Koolau Mountains, where I saw waterfalls,
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 20614.464 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=2, dtype=mlx.core.bfloat16, max_length=800, greedy=True
+total steps = 494
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I'll never forget. In this blog post, I'll be sharing my adventures, highlighting the cultural experiences and must-see attractions that made my trip unforgettable.
+
+Day 1: Arrival in Honolulu
+
+Upon arriving in Honolulu, the capital city of Hawaii, I was greeted by the warm sun and the sound of the waves crashing against the shore. After checking into my hotel, I headed straight to Waikiki Beach, one of the most famous beaches in the world. The sun was shining, and the water was crystal clear, making it the perfect spot to relax and soak up the Hawaiian sun.
+
+Day 2: Exploring Honolulu
+
+The next day, I decided to explore the city of Honolulu. I started my day with a visit to the Bishop Museum, which is dedicated to the history and culture of Hawaii. The museum houses a vast collection of artifacts, including ancient Hawaiian artifacts, royal treasures, and interactive exhibits that provide a glimpse into the island's rich history.
+
+After the museum, I walked through Chinatown, a vibrant neighborhood filled with colorful shops, street vendors, and delicious food stalls. I stopped for lunch at a local restaurant, trying my first plate of poke, a traditional Hawaiian dish made with raw fish, seaweed, and various seasonings.
+
+Day 3: Hiking in the Ko'olau Mountains
+
+On the third day, I decided to explore the natural beauty of Hawaii by hiking in the Ko'olau Mountains. The Ko'olau Mountains are a range of volcanic mountains located on the windward side of Oahu, and they are home to some of the most breathtaking views in the world.
+
+I joined a guided tour, which took me on a challenging hike through the lush rainforest, past waterfalls, and up to the summit of the mountain. The hike was grueling, but the stunning views from the top were worth it. I could see the entire island of Oahu, as well as the surrounding islands of Molokai and Lanai.
+
+Day 4: Visiting the Polynesian Cultural Center
+
+On the fourth day, I visited the Polynesian Cultural Center, a unique attraction that showcases the cultures of the Polynesian islands. The center features various exhibits, including traditional dance performances, craft workshops, and interactive activities that allow visitors to experience the culture of different Polynesian islands, such as Hawaii, Fiji, Samoa, and Tahiti.
+
+I spent the day exploring the different exhibits, trying my hand at traditional crafts like weaving and pottery, and watching the mesmerizing hula dance performances. The Polynesian Cultural Center is a must-see attraction for anyone visiting Hawaii, as it provides a glimpse into the rich cultural heritage of the islands.
+
+Day 5: Snorkeling in Hanauma Bay
+
+On the fifth day, I decided to explore the underwater world of Hawaii by snorkeling in Hanauma Bay. Hanauma Bay is
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 43145.005 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=4, dtype=mlx.core.bfloat16, max_length=800, greedy=True
+total steps = 387
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget. In this blog post, I will share with you some of the highlights of my trip, including cultural experiences and must-see attractions that will make you want to pack your bags and head to Hawaii right away.
+
+Day 1: Arrival and Oahu
+
+After a long flight, I arrived on the island of Oahu, the most populous island in the state. My first stop was the iconic Waikiki Beach, where I soaked up the sun and enjoyed the crystal-clear waters. Later in the day, I visited the Bishop Museum, which showcases the history and culture of Hawaii, from the ancient Polynesian voyagers to the modern-day state. The museum's exhibits are fascinating, and I spent hours exploring the various galleries.
+
+Day 2: Honolulu and Pearl Harbor
+
+The next day, I explored Honolulu, the capital city of Hawaii. I visited the Iolani Palace, the only royal palace in the United States, and learned about the history of the Hawaiian monarchy. Afterward, I headed to Pearl Harbor, where I took a tour of the USS Arizona Memorial. The memorial is a moving tribute to the brave men and women who lost their lives during the Japanese attack on Pearl Harbor in 1941.
+
+Day 3: Hiking and Luau
+
+On the third day, I embarked on a hiking adventure in the lush Koolau Mountains. The hike was challenging, but the stunning views from the summit were worth it. Afterward, I attended a traditional luau, where I enjoyed delicious Hawaiian cuisine and watched a lively performance of hula dancing and live music.
+
+Day 4: Maui
+
+The next day, I boarded a flight to Maui, the second-largest island in Hawaii. My first stop was the picturesque town of Lahaina, where I explored the historic Front Street and visited the Lahaina Historic District. Later in the day, I watched the sunset at the famous Kaanapali Beach, which is known for its crystal-clear waters and world-class surfing.
+
+Day 5: Haleakala National Park and Hana
+
+On the fifth day, I embarked on a road trip to Haleakala National Park, where I watched the sunrise from the summit. The park is home to unique flora and fauna, and the views from the top are breathtaking. Afterward, I drove along the scenic Road to Hana, which offers stunning views of the coastline and various waterfalls.
+
+Day 6: Kauai
+
+The next day, I boarded a flight to Kauai, the oldest and fourth-largest island in Hawaii. My first stop was the Na Pali Coast, which is known for its dramatic cliffs and lush valleys. I took a boat tour along the coast and saw various waterfalls and sea caves. Later in the day, I visited the historic town of Hanalei, where I enjoyed a delicious dinner at a local restaurant.
+
+Day 7:
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 36312.951 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=6, dtype=mlx.core.bfloat16, max_length=800, greedy=True
+total steps = 375
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget. In this blog post, I will share with you some of the highlights of my trip, including cultural experiences and must-see attractions that will make you want to pack your bags and head to Hawaii right away.
+
+Day 1: Arrival and Oahu
+
+After a long flight, I arrived on the island of Oahu, the most populous island in the state. My first stop was the iconic Waikiki Beach, where I soaked up the sun and enjoyed the crystal-clear waters. Later in the day, I visited the Bishop Museum, which showcases the history and culture of Hawaii, from the ancient Polynesian voyagers to the modern-day state. The museum's exhibits are fascinating, and I spent hours exploring the various galleries.
+
+Day 2: Honolulu and Pearl Harbor
+
+On day two, I explored the city of Honolulu, the capital of Hawaii. I visited the Iolani Palace, the only royal palace in the United States, and learned about the history of the monarchy in Hawaii. Afterward, I headed to Pearl Harbor, where I took a tour of the USS Arizona Memorial. The memorial is a moving tribute to the brave men and women who lost their lives during the attack on Pearl Harbor.
+
+Day 3: Hiking and Luau
+
+On day three, I embarked on a hiking adventure in the lush Koolau Mountains. The hike was challenging, but the stunning views from the summit were worth it. Afterward, I attended a traditional luau, where I enjoyed delicious Hawaiian cuisine and watched a lively performance of hula dancing and live music.
+
+Day 4: Maui
+
+The next day, I boarded a flight to Maui, the second-largest island in Hawaii. My first stop was the picturesque town of Lahaina, where I explored the historic Front Street and visited the Lahaina Historic District. Later in the day, I went snorkeling in the crystal-clear waters of Molokini Crater, which is a marine sanctuary known for its vibrant marine life.
+
+Day 5: Haleakala National Park
+
+On day five, I visited Haleakala National Park, which is home to the largest dormant volcano in the world. I hiked up the volcano to the summit, where I watched the sunrise and enjoyed the breathtaking views of the island. Afterward, I explored the park's other attractions, such as the Haleakala Crater and the Pipiwai Trail.
+
+Day 6: Hana and Haleakala Sunset
+
+On day six, I embarked on a scenic drive along the Hana Highway, which is one of the most beautiful drives in the world. The road winds through lush rainforests and past waterfalls, and I stopped at various lookout points to take in the stunning views. Later in the day, I watched the sunset at the summit of Haleakala, which was a magical experience.
+
+Day 7
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 39198.350 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=2, dtype=mlx.core.bfloat16, max_length=800, greedy=True
+total steps = 476
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget. In this blog post, I will share my adventures, highlighting the cultural experiences and must-see attractions that made my trip unforgettable.
+
+Day 1: Arrival and Oahu
+
+Upon arriving in Honolulu, the capital city of Oahu, I was greeted by the warm sun and the sound of the waves crashing against the shore. My first stop was the iconic Waikiki Beach, where I spent the afternoon soaking up the sun and enjoying the vibrant beach scene. In the evening, I explored the historic Honolulu Chinatown, where I indulged in delicious local cuisine and browsed through the colorful markets.
+
+Day 2: Hiking and Cultural Experiences
+
+The next day, I embarked on a hiking adventure in the lush Ko'olau Mountain Range, just east of Honolulu. The hike offered breathtaking views of the island and provided a glimpse into the local flora and fauna. After the hike, I visited the Polynesian Cultural Center, where I learned about the customs, traditions, and history of the Polynesian islands. I participated in traditional dance performances, watched a fire knife show, and even tried my hand at making poi, a staple food in Hawaiian cuisine.
+
+Day 3: Maui
+
+I then boarded a flight to Maui, the second-largest island in Hawaii. Upon arrival, I checked into my hotel, which was nestled in the lush Kaanapali Coast. In the afternoon, I explored the nearby Black Rock, a popular snorkeling spot where I swam with colorful fish and admired the vibrant coral reefs. In the evening, I attended a traditional Hawaiian luau, where I enjoyed a feast of local dishes, watched hula performances, and even learned how to play the ukulele.
+
+Day 4: Haleakala National Park and Upcountry Maui
+
+The next day, I embarked on a sunrise hike to the summit of Haleakala National Park, where I witnessed a breathtaking sunrise over the island. After the hike, I explored the park's unique landscape, which includes volcanic craters, cinder cones, and lava tubes. In the afternoon, I visited the historic town of Paia, where I strolled through its colorful art galleries, boutiques, and cafes.
+
+Day 5: Kauai
+
+I then flew to Kauai, the oldest and most remote of the main islands. Upon arrival, I checked into my hotel, which was situated on the beautiful Na Pali Coast. In the afternoon, I went on a boat tour of the Na Pali Coast, where I marveled at the towering cliffs and lush valleys. In the evening, I attended a traditional Hawaiian feast, where I indulged in local dishes such as kalua pig, poi, and lomi salmon.
+
+Day 6: Kauai Adventures
+
+The next day, I embarked on
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 44137.197 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=4, dtype=mlx.core.bfloat16, max_length=800, greedy=True
+total steps = 362
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget. In this blog post, I will share with you some of the highlights of my trip, including cultural experiences and must-see attractions that will make you want to pack your bags and head to Hawaii right away.
+
+Day 1: Arrival and Oahu
+
+After a long flight, I arrived on the island of Oahu, the most populous island in the state. My first stop was the iconic Waikiki Beach, where I soaked up the sun and enjoyed the crystal-clear waters. Later in the day, I visited the Bishop Museum, which showcases the history and culture of Hawaii, from the ancient Polynesian voyagers to the modern-day state. The museum's exhibits are fascinating, and I spent hours exploring the various galleries.
+
+Day 2: Honolulu and Pearl Harbor
+
+On day two, I explored the city of Honolulu, the capital of Hawaii. I visited the Iolani Palace, the only royal palace in the United States, and learned about the history of the monarchy in Hawaii. Afterward, I headed to Pearl Harbor, where I took a tour of the USS Arizona Memorial. The memorial is a moving tribute to the brave men and women who lost their lives during the attack on Pearl Harbor.
+
+Day 3: Hiking and Luau
+
+On day three, I embarked on a hiking adventure in the lush Koolau Mountains. The hike was challenging, but the stunning views from the summit were worth it. Afterward, I attended a traditional luau, where I enjoyed delicious Hawaiian cuisine and watched a lively performance of hula dancing and live music.
+
+Day 4: Maui
+
+The next day, I boarded a flight to the island of Maui, where I spent the next few days exploring the island's natural wonders. My first stop was the Haleakala National Park, where I watched the sunrise from the summit, which was an unforgettable experience. Later in the day, I visited the Iao Valley State Monument, where I hiked through the lush rainforest and admired the towering Iao Needle.
+
+Day 5: Maui
+
+On day five, I spent the day at the Maui Ocean Center, which is home to various marine species, including sharks, turtles, and stingrays. I also learned about the importance of coral reefs and how to protect them. In the evening, I attended a traditional Hawaiian feast, where I tried various dishes, including poke (raw fish salad) and kalua pig (roasted pig).
+
+Day 6: Kauai
+
+The next day, I boarded a flight to the island of Kauai, where I spent the next few days exploring the island's natural beauty. My first stop was the Na Pali Coast, where I took a boat tour and admired the stunning cliffs and waterfalls. Later in the day, I visited the Wailua River, where I took a kayak tour and paddled through the lush rainforest
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 38530.626 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=6, dtype=mlx.core.bfloat16, max_length=800, greedy=True
+total steps = 337
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Hawaiian Adventures: Discovering the Islands' Rich Culture and Natural Wonders"
+
+Introduction:
+
+Hawaii, a tropical paradise with its lush landscapes, pristine beaches, and vibrant culture, has always been a dream destination for travelers around the world. Recently, I had the opportunity to embark on a journey to the Hawaiian Islands, and it was an experience I will never forget. In this blog post, I will share with you some of the highlights of my trip, including cultural experiences and must-see attractions that will make you want to pack your bags and head to Hawaii right away.
+
+Day 1: Arrival and Oahu
+
+After a long flight, I arrived on the island of Oahu, the most populous island in the state. My first stop was the iconic Waikiki Beach, where I soaked up the sun and enjoyed the crystal-clear waters. Later in the day, I visited the Bishop Museum, which showcases the history and culture of Hawaii, including the indigenous people, the Polynesians, and the influence of Western cultures.
+
+Day 2: Honolulu and Pearl Harbor
+
+On day two, I explored Honolulu, the capital city of Hawaii. I visited the Iolani Palace, the only royal palace in the United States, and learned about the history of the monarchy in Hawaii. Later in the day, I visited the USS Arizona Memorial at Pearl Harbor, which is a moving tribute to the soldiers who lost their lives during the attack on Pearl Harbor in 1941.
+
+Day 3: Hiking and Luau
+
+On day three, I went hiking in the lush Koolau Mountains, where I saw waterfalls, tropical plants, and native birds. After a refreshing hike, I attended a traditional Luau, where I enjoyed Hawaiian cuisine, music, and dance performances.
+
+Day 4: Maui
+
+The next day, I flew to Maui, the second-largest island in Hawaii. My first stop was the Haleakala National Park, where I watched the sunrise from the summit, which was an unforgettable experience. Later in the day, I visited the Maui Ocean Center, which is a marine park that showcases the marine life of Hawaii, including sharks, turtles, and dolphins.
+
+Day 5: Hana and Road to Hana
+
+On day five, I went on the Road to Hana, a scenic drive that takes you through lush rainforests, waterfalls, and black sand beaches. Along the way, I stopped at several viewpoints, including the Wailua Falls and the Hamoa Beach.
+
+Day 6: Lanai
+
+On day six, I took a ferry to the island of Lanai, which is known for its luxury resorts and golf courses. I spent the day at the Lanai City, where I visited the Lanai Culture and Heritage Center, which showcases the history and culture of the island.
+
+Day 7: Molokai
+
+On day seven, I took a flight to the island of Molokai, which is known for its remote and unspoiled beauty. My first stop was the Kalaupapa National Historical Park, where I learned about the history of the leprosy colony that was established here in the late 19th century.
+
+Day 8: Return to Oahu
+
+On my last day in Hawaii, I returned to Oahu and visited
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 40153.595 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=2, dtype=mlx.core.float16, max_length=100, greedy=False
+total steps = 98
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Aloha from Hawaii: A Cultural Journey through the Islands
+```sql
+Introduction
+---------
+
+Recently, I embarked on an incredible trip to the beautiful state of Hawai‘i. Known for its luscious green landscapes, crystalline waters, and warm aloha spirit, the islands of Hawai‘i offer visitors a unique cultural experience like no other. From exploration of historical landmarks to immersion in local
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 7536.480 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=4, dtype=mlx.core.float16, max_length=100, greedy=False
+total steps = 50
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: My Journey Through Hawaii's Rich Culture and Breathtaking Scenery
+
+Destination: Hawaii
+
+Date of Trip: March 2023
+
+As I stood on the tarmac at Honolulu International Airport, the warm tropic breeze caressing my skin, I couldn't help but feel a sense of anticipation and wonder. After months of planning and saving,
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 4209.510 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=6, dtype=mlx.core.float16, max_length=100, greedy=False
+total steps = 44
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Adventures in Hawaii: Discovering the Culture and Beauty of the Pacific
+6/10/2023
+
+Hawaii calls to all adventurers and dreamers, with its lush landscapes, crystal-clear waters, and rich culture. Recently, I embarked on a journey to the Aloha State to explore its wonders and soak up its natural beauty. In this blog post, I'll
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 4216.248 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=2, dtype=mlx.core.float16, max_length=100, greedy=False
+total steps = 59
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: A Cultural Adventure through Hawaii
+
+If you're looking for an exotic destination that offers a perfect blend of natural beauty, cultural experiences, and endless sunshine, look no further than Hawaii. Recently, I embarked on a 10-day adventure that took me across the six major islands: Oahu, Maui, Kauai, Molokai, Lanai, and the
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 5207.408 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=4, dtype=mlx.core.float16, max_length=100, greedy=False
+total steps = 42
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Sun, Sand, and Soul: A Cultural Journey Through Hawaii's Paradise"
+
+Introduction:
+
+Have you ever dreamed of a destination that embodies the perfect blend of adventure, relaxation, and cultural immersion? Look no further than the enchanting islands of Hawaii, where sun-kissed beaches, lush landscapes, and rich Polynesian heritage await your discovery. In this ex
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 4186.313 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=6, dtype=mlx.core.float16, max_length=100, greedy=False
+total steps = 45
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: My Hawaiian Adventure
+
+Paradise found, that's what Hawaii is - an enchanting archipelago of tropical islands, crystal-clear waters, and a melting pot of cultures. As I embarked on my seven-day island-hopping tour, I couldn't help but feel like I was stepping into a dream come true. With each passing day, I discovered more reasons why
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 5191.328 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=2, dtype=mlx.core.float16, max_length=200, greedy=False
+total steps = 52
+num total tokens=123
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Aloha from the Hawaiian Paradise: A Cultural and Adventurous Journeys in Paradise Island!
+=====================================================================================
+
+Author: Your Adventurous Wanderer (YAW)
+--------------------------------------</s><s>
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 4266.632 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=4, dtype=mlx.core.float16, max_length=200, greedy=False
+total steps = 102
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: My Journey Through Hawaii's Rich Culture and Breathtaking Scenery
+
+Destination: Hawaii
+
+Date of Trip: March 2023
+
+As I stood on the tarmac at Honolulu International Airport, the warm tropic breeze caressing my skin, I couldn't help but feel a sense of anticipation and wonder. After months of planning and saving, I was finally on my way to one of the most beautiful and culturally rich destinations in the world - Hawaii. My mind was bursting with images of surfing in Waikiki, sunbathing on the pristine beaches of Maui, and exploring the lush valleys and cascading waterfalls of Oahu. And boy, did Hawaii exceed my expectations!
+
+Day 1: Waikiki
+
+My first stop
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 8783.713 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=6, dtype=mlx.core.float16, max_length=200, greedy=False
+total steps = 92
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Adventures in Hawaii: Discovering the Culture and Beauty of the Pacific
+6/10/2023
+
+Hawaii calls to all adventurers and dreamers, with its lush landscapes, crystal-clear waters, and rich culture. Recently, I embarked on a journey to the Aloha State to explore its wonders and soak up its natural beauty. In this blog post, I'll be sharing my highlights from this incredible trip, including some of the must-see cultural experiences and breathtaking attractions that left me starry-eyed.
+
+Day 1: Arrival in Honolulu
+
+Touching down in Honolulu, I was greeted by the warm sun and the sound of the ocean. After settling into my hotel, I decided to explore the city a bit. The vibrant streets were filled with hula
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 8769.170 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=2, dtype=mlx.core.float16, max_length=200, greedy=False
+total steps = 121
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: A Cultural Adventure through Hawaii
+
+If you're looking for an exotic destination that offers a perfect blend of natural beauty, cultural experiences, and endless sunshine, look no further than Hawaii. Recently, I embarked on a 10-day adventure that took me across the six major islands: Oahu, Maui, Kauai, Molokai, Lanai, and the Big Island. Each island boasts its own unique charm and attractions, making it a perfect destination for travelers seeking an immersive cultural experience.
+
+My journey started on the bustling streets of Honolulu, the capital of Oahu. As an AI language model, I was excited to learn about the island's rich history and immerse myself in Hawaiian culture. My first stop was the National Museum of the Pacific War, which provided a comprehensive overview
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 10154.713 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=4, dtype=mlx.core.float16, max_length=200, greedy=False
+total steps = 95
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Sun, Sand, and Soul: A Cultural Journey Through Hawaii's Paradise"
+
+Introduction:
+
+Have you ever dreamed of a destination that embodies the perfect blend of adventure, relaxation, and cultural immersion? Look no further than the enchanting islands of Hawaii, where sun-kissed beaches, lush landscapes, and rich Polynesian heritage await your discovery. In this exhilarating travel blog post, we'll explore the very best of Hawaii's cultural experiences and must-see attractions, as we venture on a journey through the Aloha State's paradise.
+
+Day 1: Honolulu and the Hawaii State Capitol
+
+Embark on your Hawaiian adventure in the dynamic city of Honolulu, the capital of Hawaii and a vibrant blend of old and new world charm.
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 9341.141 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=6, dtype=mlx.core.float16, max_length=200, greedy=False
+total steps = 97
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: My Hawaiian Adventure
+
+Paradise found, that's what Hawaii is - an enchanting archipelago of tropical islands, crystal-clear waters, and a melting pot of cultures. As I embarked on my seven-day island-hopping tour, I couldn't help but feel like I was stepping into a dream come true. With each passing day, I discovered more reasons why Hawaii is considered one of the world's most desirable travel destinations.
+
+Day 1: Maui - The Magic Isle
+
+After touching down in Kahului, the capital of Maui, I was greeted by warm aloha spirit and the intoxicating scent of plumeria flowers. My first stop was the iconic Iao Valley, where I hiked through sacred bamboo forests and gazed upon the
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 11479.459 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=2, dtype=mlx.core.float16, max_length=400, greedy=False
+total steps = 148
+num total tokens=218
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Aloha from Hawaii: A Cultural Journey through the Islands
+```sql
+Introduction
+---------
+
+Recently, I embarked on an incredible trip to the beautiful state of Hawai‘i. Known for its luscious green landscapes, crystalline waters, and warm aloha spirit, the islands of Hawai‘i offer visitors a unique cultural experience like no other. From exploration of historical landmarks to immersion in local customs and cuisines—Hawai‘i has it all. In this travel blog post series, I will take you on a virtual tour of my recent adventures, highlighted by some must-see attrac
+```</s><s>
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 12323.981 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=4, dtype=mlx.core.float16, max_length=400, greedy=False
+total steps = 209
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: My Journey Through Hawaii's Rich Culture and Breathtaking Scenery
+
+Destination: Hawaii
+
+Date of Trip: March 2023
+
+As I stood on the tarmac at Honolulu International Airport, the warm tropic breeze caressing my skin, I couldn't help but feel a sense of anticipation and wonder. After months of planning and saving, I was finally on my way to one of the most beautiful and culturally rich destinations in the world - Hawaii. My mind was bursting with images of surfing in Waikiki, sunbathing on the pristine beaches of Maui, and exploring the lush valleys and cascading waterfalls of Oahu. And boy, did Hawaii exceed my expectations!
+
+Day 1: Waikiki
+
+My first stop was the vibrant and bustling city of Honolulu, where I settled into my hotel, the Sheraton Waikiki. As the sun began to set, I made my way to the iconic Waikiki Beach, where I spent the evening watching the surfers ride the waves and feeling the warmth of the Hawaiian sun on my skin.
+
+Day 2: The Diamond Head State Monument
+
+The next morning, I embarked on a hike to the top of the Diamond Head State Monument, one of the most popular and iconic landmarks in Honolulu. The hike was challenging but rewarding, offering stunning views of Waikiki and the entire Oahu coastline.
+
+Day 3: The Road to Hana
+
+After a short layover in Honolulu, I boarded a red eye flight to Maui, where I immediately set out on the Road to Hana, a
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 17986.363 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=6, dtype=mlx.core.float16, max_length=400, greedy=False
+total steps = 187
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Adventures in Hawaii: Discovering the Culture and Beauty of the Pacific
+6/10/2023
+
+Hawaii calls to all adventurers and dreamers, with its lush landscapes, crystal-clear waters, and rich culture. Recently, I embarked on a journey to the Aloha State to explore its wonders and soak up its natural beauty. In this blog post, I'll be sharing my highlights from this incredible trip, including some of the must-see cultural experiences and breathtaking attractions that left me starry-eyed.
+
+Day 1: Arrival in Honolulu
+
+Touching down in Honolulu, I was greeted by the warm sun and the sound of the ocean. After settling into my hotel, I decided to explore the city a bit. The vibrant streets were filled with hula dancers, street performers, and the irresistible scent of plumeria flowers. I stumbled upon Waikiki Beach, where I watched the sunset over the horizon while sipping on a tropical drink. It was the perfect start to my Hawaiian adventure.
+
+Day 2: A Day in Honolulu
+
+The next day, I decided to spend my time in Honolulu by visiting some of the city's must-see attractions. First, I headed to the Honolulu Zoo, where I spent the morning observing the exotic animals native to Hawaii and other parts of the Pacific. The zoo also offered a beautiful view of the city skyline and the Waikiki shoreline.
+
+Later, I visited the Bishop Museum, which is a treasure trove of Hawaiian history, culture, and natural science exhibits. From the ancient Hawaiian artifacts to the interactive
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 18558.113 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=2, dtype=mlx.core.float16, max_length=400, greedy=False
+total steps = 242
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: A Cultural Adventure through Hawaii
+
+If you're looking for an exotic destination that offers a perfect blend of natural beauty, cultural experiences, and endless sunshine, look no further than Hawaii. Recently, I embarked on a 10-day adventure that took me across the six major islands: Oahu, Maui, Kauai, Molokai, Lanai, and the Big Island. Each island boasts its own unique charm and attractions, making it a perfect destination for travelers seeking an immersive cultural experience.
+
+My journey started on the bustling streets of Honolulu, the capital of Oahu. As an AI language model, I was excited to learn about the island's rich history and immerse myself in Hawaiian culture. My first stop was the National Museum of the Pacific War, which provided a comprehensive overview of the Pacific Theater of World War II. The museum's collection of artifacts, photographs, and documents offered a unique perspective on the battles that shaped the Pacific during the war.
+
+From there, I headed to the Punchbowl National Cemetery of the Pacific, a tranquil memorial honoring the sacrifices of American service members. The symbolic conical shape of the cemetery, created by the convergence of three volcanoes, was both awe-inspiring and sobering. I took a moment to pay my respects to the brave men and women who have served our country.
+
+My next stop was Hanauma Bay, a stunning, crescent-shaped bay that's a testament to Hawaii's natural beauty. As a marine reserve, the bay is teeming with life, and snorkeling among the colorful fish and coral was a memorable experience. A
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 20186.956 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=4, dtype=mlx.core.float16, max_length=400, greedy=False
+total steps = 193
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Sun, Sand, and Soul: A Cultural Journey Through Hawaii's Paradise"
+
+Introduction:
+
+Have you ever dreamed of a destination that embodies the perfect blend of adventure, relaxation, and cultural immersion? Look no further than the enchanting islands of Hawaii, where sun-kissed beaches, lush landscapes, and rich Polynesian heritage await your discovery. In this exhilarating travel blog post, we'll explore the very best of Hawaii's cultural experiences and must-see attractions, as we venture on a journey through the Aloha State's paradise.
+
+Day 1: Honolulu and the Hawaii State Capitol
+
+Embark on your Hawaiian adventure in the dynamic city of Honolulu, the capital of Hawaii and a vibrant blend of old and new world charm. Start your day at Waikiki Beach, a playground for sunbathers and water sport enthusiasts. As you soak up the sun, take a moment to marvel at the iconic, towering Waikiki surfboard at the Fort DeRussy Beach Park.
+
+After enjoying the coast, head to the Hawaii State Capitol building, located in downtown Honolulu. This stunning architectural masterpiece commands a panoramic view of the city and sea, offering a glimpse into Hawaii's rich history and government. Walk through the Capitol Rotunda and visit the Legislative Office Building, where you can witness the inner workings of Hawaii's democratic process.
+
+Day 2: Oahu's North Shore and the Polynesian Cultural Center
+
+Embark on a day trip to the North Shore of Oahu, where the waves of the Pacific Ocean
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 19048.216 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=6, dtype=mlx.core.float16, max_length=400, greedy=False
+total steps = 198
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: My Hawaiian Adventure
+
+Paradise found, that's what Hawaii is - an enchanting archipelago of tropical islands, crystal-clear waters, and a melting pot of cultures. As I embarked on my seven-day island-hopping tour, I couldn't help but feel like I was stepping into a dream come true. With each passing day, I discovered more reasons why Hawaii is considered one of the world's most desirable travel destinations.
+
+Day 1: Maui - The Magic Isle
+
+After touching down in Kahului, the capital of Maui, I was greeted by warm aloha spirit and the intoxicating scent of plumeria flowers. My first stop was the iconic Iao Valley, where I hiked through sacred bamboo forests and gazed upon the towering Iao needle, an ancient symbol of peace. That evening, I indulged in a traditional Hawaiian luau, complete with live music, hula dancing, and delectable island-inspired cuisine.
+
+Day 2: The Road to Hana - A Journey Through Time
+
+The next day, I embarked on the Road to Hana, a scenic 64.4-mile journey that winds along Maui's northeastern coast. Along the way, I stopped at stunning spots like Waianapanapa State Park, where black sand beaches and vibrant green craters offered a surreal landscape. I also visited the Ohe'o Gulch, where freshwater pools and cascading waterfalls invited me for a refreshing dip.
+
+Day 3: Lanai - A Day of Adventure
+
+On the third day
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 22613.635 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=2, dtype=mlx.core.float16, max_length=800, greedy=False
+total steps = 148
+num total tokens=218
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Aloha from Hawaii: A Cultural Journey through the Islands
+```sql
+Introduction
+---------
+
+Recently, I embarked on an incredible trip to the beautiful state of Hawai‘i. Known for its luscious green landscapes, crystalline waters, and warm aloha spirit, the islands of Hawai‘i offer visitors a unique cultural experience like no other. From exploration of historical landmarks to immersion in local customs and cuisines—Hawai‘i has it all. In this travel blog post series, I will take you on a virtual tour of my recent adventures, highlighted by some must-see attrac
+```</s><s>
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 11995.955 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=4, dtype=mlx.core.float16, max_length=800, greedy=False
+total steps = 418
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: My Journey Through Hawaii's Rich Culture and Breathtaking Scenery
+
+Destination: Hawaii
+
+Date of Trip: March 2023
+
+As I stood on the tarmac at Honolulu International Airport, the warm tropic breeze caressing my skin, I couldn't help but feel a sense of anticipation and wonder. After months of planning and saving, I was finally on my way to one of the most beautiful and culturally rich destinations in the world - Hawaii. My mind was bursting with images of surfing in Waikiki, sunbathing on the pristine beaches of Maui, and exploring the lush valleys and cascading waterfalls of Oahu. And boy, did Hawaii exceed my expectations!
+
+Day 1: Waikiki
+
+My first stop was the vibrant and bustling city of Honolulu, where I settled into my hotel, the Sheraton Waikiki. As the sun began to set, I made my way to the iconic Waikiki Beach, where I spent the evening watching the surfers ride the waves and feeling the warmth of the Hawaiian sun on my skin.
+
+Day 2: The Diamond Head State Monument
+
+The next morning, I embarked on a hike to the top of the Diamond Head State Monument, one of the most popular and iconic landmarks in Honolulu. The hike was challenging but rewarding, offering stunning views of Waikiki and the entire Oahu coastline.
+
+Day 3: The Road to Hana
+
+After a short layover in Honolulu, I boarded a red eye flight to Maui, where I immediately set out on the Road to Hana, a stunning scenic drive that takes you through 600 curves and 59 one-lane bridges, past lush rainforests, picturesque waterfalls, and rugged coastlines.
+
+Day 4 & 5: Maui
+
+I spent the next two days exploring the island of Maui, visiting its most iconic landmarks - the Haleakala National Park, where I watched the sunrise from the summit, and the Iao Valley State Monument, where I witnessed the breathtaking beauty of the Iao Needle, an ancient volcanic rock formation that towers 1500 feet above the valley.
+
+Day 6: The Road to Hana (Continued)
+
+After a whirlwind tour of Maui, I returned to the Road to Hana, where I visited the Garden of Eden, a lush botanical garden featuring a stunning array of exotic plants and flowers, and the Wailuku River, where I took a refreshing dip in its crystal-clear waters.
+
+Day 7: Kauai
+
+After a quick flight to Kauai, I settled into my accommodations at the Sheraton Kauai, a beautiful resort located on the island's picturesque east coast. I spent the evening exploring the nearby town of Hanalei, where I dined on fresh seafood at a local restaurant and listened to the soothing sounds of the waves crashing onto the sand.
+
+Day 8: Waimea Canyon
+
+The next morning, I embarked on a scenic drive to the Waimea Canyon, a stunning natural wonder known as the "Grand Canyon of the Pacific." I traversed the canyon on foot, marveling at its dramatic red, brown, and yellow rock
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 34838.454 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=6, dtype=mlx.core.float16, max_length=800, greedy=False
+total steps = 392
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Adventures in Hawaii: Discovering the Culture and Beauty of the Pacific
+6/10/2023
+
+Hawaii calls to all adventurers and dreamers, with its lush landscapes, crystal-clear waters, and rich culture. Recently, I embarked on a journey to the Aloha State to explore its wonders and soak up its natural beauty. In this blog post, I'll be sharing my highlights from this incredible trip, including some of the must-see cultural experiences and breathtaking attractions that left me starry-eyed.
+
+Day 1: Arrival in Honolulu
+
+Touching down in Honolulu, I was greeted by the warm sun and the sound of the ocean. After settling into my hotel, I decided to explore the city a bit. The vibrant streets were filled with hula dancers, street performers, and the irresistible scent of plumeria flowers. I stumbled upon Waikiki Beach, where I watched the sunset over the horizon while sipping on a tropical drink. It was the perfect start to my Hawaiian adventure.
+
+Day 2: A Day in Honolulu
+
+The next day, I decided to spend my time in Honolulu by visiting some of the city's must-see attractions. First, I headed to the Honolulu Zoo, where I spent the morning observing the exotic animals native to Hawaii and other parts of the Pacific. The zoo also offered a beautiful view of the city skyline and the Waikiki shoreline.
+
+Later, I visited the Bishop Museum, which is a treasure trove of Hawaiian history, culture, and natural science exhibits. From the ancient Hawaiian artifacts to the interactive displays about Hawaiian volcanoes, the museum provided a fascinating glimpse into the island's rich past.
+
+Day 3: A Helicopter Excursion
+
+For my third day in Hawaii, I booked a helicopter tour with a local company. The tour offered a breathtaking view of the islands, taking in all the major landmarks: the Waianae and Koolau mountain ranges, Hanauma Bay, and the iconic Diamond Head volcano. Soaring over the Pacific, I felt an overwhelming sense of awe at the beauty of the islands and the power of the ocean.
+
+Day 4: A Day Trip to the North Shore
+
+On the fourth day, I decided to explore the North Shore of Oahu. Known for its towering waves and world-class surf competitions, the North Shore offers a unique Hawaiian experience. I started my day at the Waimea Bay, where I watched experienced surfers take on the massive waves. Later, I strolled along the black sand beach and visited the historic Hukilau Markets, where I sampled local delicacies like kalua pig and shrimp poi.
+
+Day 5: Volcanoes National Park
+
+On the fifth day, I ventured to Volcanoes National Park on the Big Island. The park is home to two of the world's most active volcanoes: Kīlauea and Mauna Loa. I joined a guided tour that offered an up-close look at the volcanoes' lava tubes, steam vents, and active craters. As I marveled at the power of nature, I couldn't help but feel humbled by the sheer magnitude of the island's geological history.
+
+Day 6: Hilo and
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 36939.692 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=2, dtype=mlx.core.float16, max_length=800, greedy=False
+total steps = 479
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: A Cultural Adventure through Hawaii
+
+If you're looking for an exotic destination that offers a perfect blend of natural beauty, cultural experiences, and endless sunshine, look no further than Hawaii. Recently, I embarked on a 10-day adventure that took me across the six major islands: Oahu, Maui, Kauai, Molokai, Lanai, and the Big Island. Each island boasts its own unique charm and attractions, making it a perfect destination for travelers seeking an immersive cultural experience.
+
+My journey started on the bustling streets of Honolulu, the capital of Oahu. As an AI language model, I was excited to learn about the island's rich history and immerse myself in Hawaiian culture. My first stop was the National Museum of the Pacific War, which provided a comprehensive overview of the Pacific Theater of World War II. The museum's collection of artifacts, photographs, and documents offered a unique perspective on the battles that shaped the Pacific during the war.
+
+From there, I headed to the Punchbowl National Cemetery of the Pacific, a tranquil memorial honoring the sacrifices of American service members. The symbolic conical shape of the cemetery, created by the convergence of three volcanoes, was both awe-inspiring and sobering. I took a moment to pay my respects to the brave men and women who have served our country.
+
+My next stop was Hanauma Bay, a stunning, crescent-shaped bay that's a testament to Hawaii's natural beauty. As a marine reserve, the bay is teeming with life, and snorkeling among the colorful fish and coral was a memorable experience. A guide provided me with instructions on the best spots to explore and how to interact with the marine life, ensuring that I had a safe and enjoyable experience.
+
+After Hanauma Bay, I flew to Maui, where I spent several days exploring the island's diverse attractions. The Road to Hana, a scenic drive along the northeastern coast of Maui, is a must-do for any visitor. Along the way, I stopped at places like Waianapanapa State Park, Hamoa Beach, and Haleakalā National Park, where I gazed at the night sky and witnessed a phenomenon called "starry night." I also visited the Maui Ocean Center, a marine life park that offers an immersive experience with Hawaii's sea creatures.
+
+One of my most memorable experiences on Maui was interacting with the Hawaiian monk seal, an endangered species found only in Hawaii. The seal's docent taught me about their habits, habitat, and the importance of protecting them. The encounter left me with a newfound admiration for these gentle animals and a sense of responsibility for their conservation.
+
+From Maui, I flew to Kauai, the oldest and most remote of the main islands. Here, I embarked on a helicopter tour of the island's stunning landscapes. The tour offered a bird's-eye view of the iconic Na Pali Coast, the lush valleys and waterfalls, and even the sets of Jurassic Park. The aerial tour was a thrilling adventure and an incredible way to appreciate the vast beauty of Kauai.
+
+As I continued my journey, I found myself in the lesser-visited Molokai and Lanai, two smaller islands with a unique charm. In
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 38997.887 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=4, dtype=mlx.core.float16, max_length=800, greedy=False
+total steps = 393
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Sun, Sand, and Soul: A Cultural Journey Through Hawaii's Paradise"
+
+Introduction:
+
+Have you ever dreamed of a destination that embodies the perfect blend of adventure, relaxation, and cultural immersion? Look no further than the enchanting islands of Hawaii, where sun-kissed beaches, lush landscapes, and rich Polynesian heritage await your discovery. In this exhilarating travel blog post, we'll explore the very best of Hawaii's cultural experiences and must-see attractions, as we venture on a journey through the Aloha State's paradise.
+
+Day 1: Honolulu and the Hawaii State Capitol
+
+Embark on your Hawaiian adventure in the dynamic city of Honolulu, the capital of Hawaii and a vibrant blend of old and new world charm. Start your day at Waikiki Beach, a playground for sunbathers and water sport enthusiasts. As you soak up the sun, take a moment to marvel at the iconic, towering Waikiki surfboard at the Fort DeRussy Beach Park.
+
+After enjoying the coast, head to the Hawaii State Capitol building, located in downtown Honolulu. This stunning architectural masterpiece commands a panoramic view of the city and sea, offering a glimpse into Hawaii's rich history and government. Walk through the Capitol Rotunda and visit the Legislative Office Building, where you can witness the inner workings of Hawaii's democratic process.
+
+Day 2: Oahu's North Shore and the Polynesian Cultural Center
+
+Embark on a day trip to the North Shore of Oahu, where the waves of the Pacific Ocean are as legendary as the island's vibrant culture. Pipelines, fast rights, and legendary surf spots like Banzai Pipeline and Sunset Beach have made this coastline a Mecca for surfers worldwide.
+
+Discover the rich cultural heritage of the Polynesian Islands at the Polynesian Cultural Center, a living museum showcasing the customs, traditions, and island lifestyle of Hawaii, Samoa, Fiji, Aotearoa (New Zealand), and Tahiti. Witness ancient crafts, live performances, and authentic cuisine, as you immerse yourself in the captivating world of Polynesia.
+
+Day 3: Hiking and Nature in Ko'olau Mountains and Valley
+
+Embark on a thrilling adventure through the lush Ko'olau Mountain Range, Oahu's ancient backbone. Start your day with a heart-pumping hike through the Koolau Trail, offering stunning views of the valleys and ocean below. Along the trail, you'll encounter quaint village communities and diverse flora and fauna, as you connect with the natural beauty of the island.
+
+Explore the Waikane Valley, a secluded oasis shaded by towering trees and surrounded by cascading waterfalls. Here, you can wade in natural pools, surrounded by the tranquil sounds of nature. Continue your journey with a visit to the Nuuanu Pali Lookout, where you can view the breathtaking Windward Coastline and learn about the fierce battle that took place here in the 18th century.
+
+Day 4: The Road to Hana and Haleakala National Park
+
+Embark on a scenic drive along the Road to Hana, a 64
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 38921.924 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=6, dtype=mlx.core.float16, max_length=800, greedy=False
+total steps = 394
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: My Hawaiian Adventure
+
+Paradise found, that's what Hawaii is - an enchanting archipelago of tropical islands, crystal-clear waters, and a melting pot of cultures. As I embarked on my seven-day island-hopping tour, I couldn't help but feel like I was stepping into a dream come true. With each passing day, I discovered more reasons why Hawaii is considered one of the world's most desirable travel destinations.
+
+Day 1: Maui - The Magic Isle
+
+After touching down in Kahului, the capital of Maui, I was greeted by warm aloha spirit and the intoxicating scent of plumeria flowers. My first stop was the iconic Iao Valley, where I hiked through sacred bamboo forests and gazed upon the towering Iao needle, an ancient symbol of peace. That evening, I indulged in a traditional Hawaiian luau, complete with live music, hula dancing, and delectable island-inspired cuisine.
+
+Day 2: The Road to Hana - A Journey Through Time
+
+The next day, I embarked on the Road to Hana, a scenic 64.4-mile journey that winds along Maui's northeastern coast. Along the way, I stopped at stunning spots like Waianapanapa State Park, where black sand beaches and vibrant green craters offered a surreal landscape. I also visited the Ohe'o Gulch, where freshwater pools and cascading waterfalls invited me for a refreshing dip.
+
+Day 3: Lanai - A Day of Adventure
+
+On the third day, I took a ferry to Lanai, a tiny island known for its world-class golf courses, rugged landscapes, and wildlife refuge. I spent the day exploring the island's stark beauty, hiking through the Garden of Eden and admiring the stunning views from the Munro Trail. As the sun began to set, I watched the dolphins dance in the waters off the coast, realizing why Lanai is often referred to as "Pineapple Island."
+
+Day 4: Molokai - The Friendly Isle
+
+From Lanai, I hopped to Molokai, the fifth-largest island in Hawaii. Known for its unspoiled landscapes, rich history, and cultural roots, Molokai was a true gem. I spent the day exploring the island's charming villages, visiting the Kalaupapa National Historical Park, where Father Damien cared for leprosy patients in the 19th century. The park's breathtaking coastline, colorful waterfalls, and lush valleys left me in awe.
+
+Day 5: Oahu - Honolulu and the North Shore
+
+On the fifth day, I flew to Oahu, where I spent time exploring Honolulu's vibrant neighborhoods and historical landmarks. I paid a visit to Pearl Harbor, where the USS Arizona Memorial and the World War II Valor in the Pacific National Monument provided a somber but moving experience. That evening, I headed to the famous North Shore, where I watched the sunset over the crystal-clear waters and caught a glimpse of the world-renowned surfers in action.
+
+Day 6: Haleiwa - A Tropical Haven
+
+On the sixth day,
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 44631.499 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=2, dtype=mlx.core.bfloat16, max_length=100, greedy=False
+total steps = 98
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Aloha from Hawaii: A Cultural Journey through the Islands
+```sql
+Introduction
+---------
+
+Recently, I embarked on an incredible trip to the beautiful state of Hawai‘i. Known for its luscious green landscapes, crystalline waters, and warm aloha spirit, the islands of Hawai‘i offer visitors a unique cultural experience like no other. From exploration of historical sites to immersion in indigen
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 8418.788 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=4, dtype=mlx.core.bfloat16, max_length=100, greedy=False
+total steps = 50
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: My Journey Through Hawaii's Rich Culture and Breathtaking Scenery
+
+Destination: Hawaii
+
+Date of Trip: March 2023
+
+As I stood on the tarmac at Honolulu International Airport, the warm tropic breeze caressing my skin, I couldn't help but feel a sense of anticipation and wonder. After months of planning and saving,
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 4750.518 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=6, dtype=mlx.core.bfloat16, max_length=100, greedy=False
+total steps = 49
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Adventures in Hawaii: A Cultural Journey
+
+Paradise found, that's what Hawaii was for me. The lush green landscapes, the warm turquoise waters, and the spirit of aloha that envelops the island created a sense of magic that I will never forget. During my recent trip to Hawaii, I embarked on a cultural journey that awakened my senses and left me with lifel
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 5149.971 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=2, dtype=mlx.core.bfloat16, max_length=100, greedy=False
+total steps = 59
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: A Cultural Adventure through Hawaii
+
+If you're looking for an exotic destination that offers a perfect blend of natural beauty, cultural experiences, and adventures, then Hawaii should be on your bucket list. Recently, I had the opportunity to explore this Pacific paradise, and it did not disappoint. From the lush rainforests to the vibrant local culture, here's my account of a memorable trip
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 5545.132 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=4, dtype=mlx.core.bfloat16, max_length=100, greedy=False
+total steps = 43
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Sun, Sand, and Soul: A Cultural Journey Through Hawaii's Paradise"
+
+Introduction:
+
+Have you ever dreamed of a destination that embodies the perfect blend of beach escapades and cultural immersion? Look no further than Hawaii, the tropical paradise filled with breathtaking landscapes, exotic flavors, and rich tradition. In this travel blog post, we'll take you on a journey
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 4689.354 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=6, dtype=mlx.core.bfloat16, max_length=100, greedy=False
+total steps = 39
+num total tokens=168
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: My Hawaiian Adventure
+
+Paradise found, that's what Hawaii is - an enchanting archipelago of tropical islands, crystal-clear waters, and a melting pot of cultures. As I embarked on my seven-day island-hopping tour, I couldn't help but feel like I was about to embark on an adventure of a lifetime.
+
+Day 1:
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 4793.635 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=2, dtype=mlx.core.bfloat16, max_length=200, greedy=False
+total steps = 102
+num total tokens=172
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Aloha from Hawaii: A Cultural Journey through the Islands
+```sql
+Introduction
+---------
+
+Recently, I embarked on an incredible trip to the beautiful state of Hawai‘i. Known for its luscious green landscapes, crystalline waters, and warm aloha spirit, the islands of Hawai‘i offer visitors a unique cultural experience like no other. From exploration of historical sites to immersion in indigenous trad</s><s>
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 9201.153 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=4, dtype=mlx.core.bfloat16, max_length=200, greedy=False
+total steps = 99
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: My Journey Through Hawaii's Rich Culture and Breathtaking Scenery
+
+Destination: Hawaii
+
+Date of Trip: March 2023
+
+As I stood on the tarmac at Honolulu International Airport, the warm tropic breeze caressing my skin, I couldn't help but feel a sense of anticipation and wonder. After months of planning and saving, I was finally on my way to one of the most beautiful and culturally rich destinations in the world - Hawaii. My mind was bursting with images of surfing in Waikiki, sunbathing on pristine beaches, and experiencing the rich history and traditions of the locals. But little did I know, my journey was about to take me on an adventure beyond my wildest dreams.
+
+Day 1: Honolulu
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 9336.785 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=6, dtype=mlx.core.bfloat16, max_length=200, greedy=False
+total steps = 106
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Adventures in Hawaii: A Cultural Journey
+
+Paradise found, that's what Hawaii was for me. The lush green landscapes, the warm turquoise waters, and the spirit of aloha that envelops the island created a sense of magic that I will never forget. During my recent trip to Hawaii, I embarked on a cultural journey that awakened my senses and left me with lifelong memories. This is my travel blog post about my adventures in the Hawaiian islands.
+
+Day 1: Arrival and Reception
+
+My journey started with the warm embrace of Hawaiian hospitality. As I touched down at Daniel K. Inouye International Airport in Honolulu, I was immediately welcomed by the sights, sounds, and scents of Hawaii. My adventure began with a shuttle ride to my hotel, where
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 10901.492 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=2, dtype=mlx.core.bfloat16, max_length=200, greedy=False
+total steps = 120
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: A Cultural Adventure through Hawaii
+
+If you're looking for an exotic destination that offers a perfect blend of natural beauty, cultural experiences, and adventures, then Hawaii should be on your bucket list. Recently, I had the opportunity to explore this Pacific paradise, and it did not disappoint. From the lush rainforests to the vibrant local culture, here's my account of a memorable trip to Hawaii.
+
+Day 1 - Hilo, Hawaii
+
+Upon arriving in Honolulu, I started my trip by heading to Hilo, the largest city on the island of Hawaii. Known for its lush landscapes and rich history, Hilo is the perfect place to start your Hawaiian adventure. My first stop was the Hilo Farmers Market, where I sampled local fruits like guava, papaya, and star
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 11315.307 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=4, dtype=mlx.core.bfloat16, max_length=200, greedy=False
+total steps = 85
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Sun, Sand, and Soul: A Cultural Journey Through Hawaii's Paradise"
+
+Introduction:
+
+Have you ever dreamed of a destination that embodies the perfect blend of beach escapades and cultural immersion? Look no further than Hawaii, the tropical paradise filled with breathtaking landscapes, exotic flavors, and rich tradition. In this travel blog post, we'll take you on a journey to explore Hawaii's must-see attractions, delve into its vibrant culture, and share some unforgettable moments from our recent trip to the Hawaiian Islands. Get ready to escape the mundane and soak up the laid-back spirit of Hawaii!
+
+Section 1: Welcoming the Hawaiian Islands
+
+We began our journey in Honolulu, the capital city of Hawaii, situated on the island of Oahu. Located
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 8830.999 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=6, dtype=mlx.core.bfloat16, max_length=200, greedy=False
+total steps = 90
+num total tokens=268
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: My Hawaiian Adventure
+
+Paradise found, that's what Hawaii is - an enchanting archipelago of tropical islands, crystal-clear waters, and a melting pot of cultures. As I embarked on my seven-day island-hopping tour, I couldn't help but feel like I was about to embark on an adventure of a lifetime.
+
+Day 1: Oahu - The Heart of Hawaii
+My journey began on the island of Oahu, the heart of Hawaii. Known as the Gathering Place, Oahu is where the hustle and bustle of Honolulu meets the serene beauty of nature. I started my day with a visit to the iconic Diamond Head, a volcanic crater that offers a panoramic view of Waikiki. As I made my way down the b
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 10741.152 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=2, dtype=mlx.core.bfloat16, max_length=400, greedy=False
+total steps = 52
+num total tokens=123
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Aloha from the Hawaiian Paradise: A Cultural and Adventurous Journeys in Paradise Island!
+=====================================================================================
+
+Author: Your Adventurous Wanderer (YAW)
+--------------------------------------</s><s>
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 4733.911 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=4, dtype=mlx.core.bfloat16, max_length=400, greedy=False
+total steps = 206
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: My Journey Through Hawaii's Rich Culture and Breathtaking Scenery
+
+Destination: Hawaii
+
+Date of Trip: March 2023
+
+As I stood on the tarmac at Honolulu International Airport, the warm tropic breeze caressing my skin, I couldn't help but feel a sense of anticipation and wonder. After months of planning and saving, I was finally on my way to one of the most beautiful and culturally rich destinations in the world - Hawaii. My mind was bursting with images of surfing in Waikiki, sunbathing on pristine beaches, and experiencing the rich history and traditions of the locals. But little did I know, my journey was about to take me on an adventure beyond my wildest dreams.
+
+Day 1: Honolulu and Waikiki Beach
+
+My first stop in Paradise was the capital city of Honolulu, where I was greeted by the lively sounds of the hula and the tantalizing aroma of plate lunches. I made my way to the iconic statue of King Kamehameha I, who united the Hawaiian Islands under one rule in 1810. From there, I wandered through the bustling Chinatown, where I tasted exotic fruits and flavors at the local produce market.
+
+That evening, I checked into my hotel in Waikiki, where I could hear the sound of the waves crashing against the shore. The next morning, I laced up my boots and joined a local tour of the Diamond Head Crater, where I discovered the breathtaking views from the summit. After a thrilling hike, I descended into the
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 20314.598 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=6, dtype=mlx.core.bfloat16, max_length=400, greedy=False
+total steps = 201
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Adventures in Hawaii: A Cultural Journey
+
+Paradise found, that's what Hawaii was for me. The lush green landscapes, the warm turquoise waters, and the spirit of aloha that envelops the island created a sense of magic that I will never forget. During my recent trip to Hawaii, I embarked on a cultural journey that awakened my senses and left me with lifelong memories. This is my travel blog post about my adventures in the Hawaiian islands.
+
+Day 1: Arrival and Reception
+
+My journey started with the warm embrace of Hawaiian hospitality. As I touched down at Daniel K. Inouye International Airport in Honolulu, I was immediately welcomed by the sights, sounds, and scents of Hawaii. My adventure began with a shuttle ride to my hotel, where I was greeted with a traditional Hawaiian lei and a warm smile.
+
+That evening, I strolled along Waikiki Beach, soaking in the vibrant energy of the bustling sidewalks, full of street performers, vendors, and live music. Waikiki is a microcosm of Hawaiian culture, a place where locals and tourists come together to embrace the aloha spirit. As the sun set over the ocean, I couldn't help but feel a sense of wonder and anticipation for the adventures that lay ahead.
+
+Day 2: A Cultural Experience at the Polynesian Cultural Center
+
+On the second day of my trip, I visited the Polynesian Cultural Center, a living museum that showcases the rich culture and traditions of Hawaii, Fiji, Samoa, and other Polynesian islands. I participated in traditional island activities such as weaving in the F
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 21266.672 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=2, dtype=mlx.core.bfloat16, max_length=400, greedy=False
+total steps = 243
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: A Cultural Adventure through Hawaii
+
+If you're looking for an exotic destination that offers a perfect blend of natural beauty, cultural experiences, and adventures, then Hawaii should be on your bucket list. Recently, I had the opportunity to explore this Pacific paradise, and it did not disappoint. From the lush rainforests to the vibrant local culture, here's my account of a memorable trip to Hawaii.
+
+Day 1 - Hilo, Hawaii
+
+Upon arriving in Honolulu, I started my trip by heading to Hilo, the largest city on the island of Hawaii. Known for its lush landscapes and rich history, Hilo is the perfect place to start your Hawaiian adventure. My first stop was the Hilo Farmers Market, where I sampled local fruits like guava, papaya, and starfruit, and indulged in traditional Hawaiian cuisine like musubi (a sweet and savory fusion of rice, seaweed, and meat or vegetables).
+
+Before I headed back to my hotel, I strolled through the town's historic district, where I discovered quaint shops and galleries showcasing local art and trinkets. As the sun began to set, I watched the ocean's mist roll over the green hills, taking in the enchanting atmosphere of Hilo.
+
+Day 2 - Hawaii Volcanoes National Park
+
+The next day, I set off on a road trip to Hawaii Volcanoes National Park, one of the most popular attractions on the island. As I entered the park, I was greeted by a massive crater, known as the Halema'uma'u Crater, which was home to a glowing red lava lake.
+
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 23250.132 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=4, dtype=mlx.core.bfloat16, max_length=400, greedy=False
+total steps = 192
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Sun, Sand, and Soul: A Cultural Journey Through Hawaii's Paradise"
+
+Introduction:
+
+Have you ever dreamed of a destination that embodies the perfect blend of beach escapades and cultural immersion? Look no further than Hawaii, the tropical paradise filled with breathtaking landscapes, exotic flavors, and rich tradition. In this travel blog post, we'll take you on a journey to explore Hawaii's must-see attractions, delve into its vibrant culture, and share some unforgettable moments from our recent trip to the Hawaiian Islands. Get ready to escape the mundane and soak up the laid-back spirit of Hawaii!
+
+Section 1: Welcoming the Hawaiian Islands
+
+We began our journey in Honolulu, the capital city of Hawaii, situated on the island of Oahu. Located on the doorstep of Waikiki Beach, Honolulu is a bustling hub of activity, with a mix of modern skyscrapers and charming historic landmarks.
+
+One of the first stops on our itinerary was the iconic Diamond Head, a volcanic tuff cone that offers a stunning perspective of Waikiki and the surrounding waters. From the summit, we could see the crater, lush green foliage, and glimpse the Honolulu skyline.
+
+Cultural Experience:
+
+Our first cultural encounter was at the Waikiki Shell, where we attended a traditional Hawaiian Luau. The evening started with a gorgeous sunset, as we grabbed a spot on the grass to watch the live hula performances and live music. The atmosphere was electric, and the energy was contagious.
+
+Section 2: A Foodie'
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 20941.796 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=6, dtype=mlx.core.bfloat16, max_length=400, greedy=False
+total steps = 174
+num total tokens=468
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: My Hawaiian Adventure
+
+Paradise found, that's what Hawaii is - an enchanting archipelago of tropical islands, crystal-clear waters, and a melting pot of cultures. As I embarked on my seven-day island-hopping tour, I couldn't help but feel like I was about to embark on an adventure of a lifetime.
+
+Day 1: Oahu - The Heart of Hawaii
+My journey began on the island of Oahu, the heart of Hawaii. Known as the Gathering Place, Oahu is where the hustle and bustle of Honolulu meets the serene beauty of nature. I started my day with a visit to the iconic Diamond Head, a volcanic crater that offers a panoramic view of Waikiki. As I made my way down the bustling streets of Waikiki, I couldn't help but be captivated by the vibrant hues of the sunset.
+
+As the night fell, I indulged in a traditional Hawaiian luau, where I savored delicious local cuisine and witnessed a mesmerizing hula show. I dug my toes in the sand, swayed to the rhythm of the music, and soaked in the warmth of the islands.
+
+Day 2: Maui - The Magic Isle
+After a short 2-hour flight, I found myself on the enchanting island of Maui. Known as the Magic Isle, Maui has a charm that's hard to resist. I started my day with a visit to the bustling town of Lahaina, where I wandered its cobbled streets and took in the historical sites.
+
+Maui is home
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 22012.895 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=2, dtype=mlx.core.bfloat16, max_length=800, greedy=False
+total steps = 52
+num total tokens=123
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Aloha from the Hawaiian Paradise: A Cultural and Adventurous Journeys in Paradise Island!
+=====================================================================================
+
+Author: Your Adventurous Wanderer (YAW)
+--------------------------------------</s><s>
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 5186.770 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=4, dtype=mlx.core.bfloat16, max_length=800, greedy=False
+total steps = 405
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: My Journey Through Hawaii's Rich Culture and Breathtaking Scenery
+
+Destination: Hawaii
+
+Date of Trip: March 2023
+
+As I stood on the tarmac at Honolulu International Airport, the warm tropic breeze caressing my skin, I couldn't help but feel a sense of anticipation and wonder. After months of planning and saving, I was finally on my way to one of the most beautiful and culturally rich destinations in the world - Hawaii. My mind was bursting with images of surfing in Waikiki, sunbathing on pristine beaches, and experiencing the rich history and traditions of the locals. But little did I know, my journey was about to take me on an adventure beyond my wildest dreams.
+
+Day 1: Honolulu and Waikiki Beach
+
+My first stop in Paradise was the capital city of Honolulu, where I was greeted by the lively sounds of the hula and the tantalizing aroma of plate lunches. I made my way to the iconic statue of King Kamehameha I, who united the Hawaiian Islands under one rule in 1810. From there, I wandered through the bustling Chinatown, where I tasted exotic fruits and flavors at the local produce market.
+
+That evening, I checked into my hotel in Waikiki, where I could hear the sound of the waves crashing against the shore. The next morning, I laced up my boots and joined a local tour of the Diamond Head Crater, where I discovered the breathtaking views from the summit. After a thrilling hike, I descended into the depths of the volcanic formation, where I encountered ancient Hawaiian artifacts and rock formations.
+
+Day 2: North Shore and Polynesian Cultural Center
+
+The following day, I embarked on a road trip up the rugged and majestic North Shore of Oahu. Along the way, I stopped at the famous surfing spot of Pipeline, where I witnessed the artistry and athleticism of some of the world's best surfers. Continuing up the coast, I arrived at the Polynesian Cultural Center, where I was immersed in the rich traditions and customs of the island's indigenous peoples. From learning to hula and poi dummies, to exploring ancient villages and experiencing the thrill of a kapa-making session, I felt a deep connection to the culture and spirit of the Hawaiian people.
+
+Day 3: Hanauma Bay and Pearl Harbor
+
+On Day 3, I set out on a coastal drive towards Hanauma Bay, an extinct volcanic crater that now serves as a protected marine preserve. I spent the morning snorkeling amidst a kaleidoscope of colorful fish and vibrant coral reefs. After lunch, I made my way to the historic USS Arizona Memorial at Pearl Harbor, where I paid respects to the brave men and women who lost their lives during the attack on December 7, 1941. The memorial serves as a poignant reminder of the sacrifices made in the name of freedom and unity.
+
+Day 4: Maui
+
+Day 4 found me boarding a plane bound for the Garden Island of Maui. I spent the day exploring the stunning beauty of Haleakala National Park, where I hiked to
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 38734.594 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=1, beam_length=6, dtype=mlx.core.bfloat16, max_length=800, greedy=False
+total steps = 415
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Adventures in Hawaii: A Cultural Journey
+
+Paradise found, that's what Hawaii was for me. The lush green landscapes, the warm turquoise waters, and the spirit of aloha that envelops the island created a sense of magic that I will never forget. During my recent trip to Hawaii, I embarked on a cultural journey that awakened my senses and left me with lifelong memories. This is my travel blog post about my adventures in the Hawaiian islands.
+
+Day 1: Arrival and Reception
+
+My journey started with the warm embrace of Hawaiian hospitality. As I touched down at Daniel K. Inouye International Airport in Honolulu, I was immediately welcomed by the sights, sounds, and scents of Hawaii. My adventure began with a shuttle ride to my hotel, where I was greeted with a traditional Hawaiian lei and a warm smile.
+
+That evening, I strolled along Waikiki Beach, soaking in the vibrant energy of the bustling sidewalks, full of street performers, vendors, and live music. Waikiki is a microcosm of Hawaiian culture, a place where locals and tourists come together to embrace the aloha spirit. As the sun set over the ocean, I couldn't help but feel a sense of wonder and anticipation for the adventures that lay ahead.
+
+Day 2: A Cultural Experience at the Polynesian Cultural Center
+
+On the second day of my trip, I visited the Polynesian Cultural Center, a living museum that showcases the rich culture and traditions of Hawaii, Fiji, Samoa, and other Polynesian islands. I participated in traditional island activities such as weaving in the Fijian booth, learning about the sacred Hawaiian temple structures, and feasting on a traditional Samoan luau.
+
+One of the most memorable experiences was watching the ancient art of fire-knife dancing, where the performer skillfully wields a sharp blade of fire while performing intricate patterns and movements. It was a mesmerizing display of bravery and precision, and I left the performance with a renewed appreciation for the artistry and history of Polynesian culture.
+
+Day 3: Hiking and Volcanoes
+
+On the third day, I ventured into the lush interior of Oahu to conquer the world-famous Manoa Falls hike. As I embarked on the two-mile round trip trek through dense forest, I encountered various native flora and fauna, including the towering koa trees that provided a canopy above me. Ultimately, the reward was the stunning 150-foot waterfall cascading into a verdant pool below.
+
+In the afternoon, I visited the Hawaii Volcanoes National Park to witness the awe-inspiring power of nature. I caught the sunset view of Halema'uma'u Crater, where molten lava was visible glowing red in the distance. The park's rich geological history and diverse landscapes provided a unique opportunity to appreciate the raw beauty of the Hawaiian islands.
+
+Day 4: A Day in Maui
+
+On the fourth day, I boarded a ferry to Maui, where I explored the island's vibrant culture and natural beauty. At the Maui Ocean Center, I learned about the marine life that calls the island home, from graceful manta rays to playful sea turtles. The interactive exhibits allowed me to
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 41664.682 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=2, dtype=mlx.core.bfloat16, max_length=800, greedy=False
+total steps = 476
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: A Cultural Adventure through Hawaii
+
+If you're looking for an exotic destination that offers a perfect blend of natural beauty, cultural experiences, and adventures, then Hawaii should be on your bucket list. Recently, I had the opportunity to explore this Pacific paradise, and it did not disappoint. From the lush rainforests to the vibrant local culture, here's my account of a memorable trip to Hawaii.
+
+Day 1 - Hilo, Hawaii
+
+Upon arriving in Honolulu, I started my trip by heading to Hilo, the largest city on the island of Hawaii. Known for its lush landscapes and rich history, Hilo is the perfect place to start your Hawaiian adventure. My first stop was the Hilo Farmers Market, where I sampled local fruits like guava, papaya, and starfruit, and indulged in traditional Hawaiian cuisine like musubi (a sweet and savory fusion of rice, seaweed, and meat or vegetables).
+
+Before I headed back to my hotel, I strolled through the town's historic district, where I discovered quaint shops and galleries showcasing local art and trinkets. As the sun began to set, I watched the ocean's mist roll over the green hills, taking in the enchanting atmosphere of Hilo.
+
+Day 2 - Hawaii Volcanoes National Park
+
+The next day, I set off on a road trip to Hawaii Volcanoes National Park, one of the most popular attractions on the island. As I entered the park, I was greeted by a massive crater, known as the Halema'uma'u Crater, which was home to a glowing red lava lake.
+
+Exploring the park, I was in awe of the raw power of nature. I took a stroll at the Kilauea Visitor Center, where I learned about the geological history of the islands and the ongoing eruption of Kilauea, one of the most active volcanoes in the world.
+
+Later that day, I headed to the national park's Thurston Lava Tube, a natural wonder created by magma as it flowed underneath the ground. As I slowly made my way through the tube, I was amazed by the beautiful rock formations and the cool mist that filled the space.
+
+Day 3 - Maui
+
+I then spent a day exploring Maui, one of the most iconic islands in Hawaii. After landing in this tropical paradise, I headed straight to the famous Iao Valley, where I hiked to the top of the mountain and admired the stunning view of the valley below.
+
+As the sun began to set, I journeyed to the nearby Iao Needle, a towering 1600-foot volcanic spire that loomed over the valley. It was an incredible sight, and I felt a sense of peace and tranquility as I stood atop the rock formation, taking in the breathtaking view.
+
+Day 4 - Oahu
+
+Next, I embarked on the highlight of my trip - a ferry ride to the island of Oahu. There, I joined a guided cultural tour and learned about the rich history of the Hawaiian people. My first stop was the Pearl Harbor Visitor Center, where I explored exhibits dedicated to the tragic events of December 7, 1941.
+
+Later, I visited the Polynesian Cultural Center, where I imm
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 42533.134 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=4, dtype=mlx.core.bfloat16, max_length=800, greedy=False
+total steps = 372
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: "Sun, Sand, and Soul: A Cultural Journey Through Hawaii's Paradise"
+
+Introduction:
+
+Have you ever dreamed of a destination that embodies the perfect blend of beach escapades and cultural immersion? Look no further than Hawaii, the tropical paradise filled with breathtaking landscapes, exotic flavors, and rich tradition. In this travel blog post, we'll take you on a journey to explore Hawaii's must-see attractions, delve into its vibrant culture, and share some unforgettable moments from our recent trip to the Hawaiian Islands. Get ready to escape the mundane and soak up the laid-back spirit of Hawaii!
+
+Section 1: Welcoming the Hawaiian Islands
+
+We began our journey in Honolulu, the capital city of Hawaii, situated on the island of Oahu. Located on the doorstep of Waikiki Beach, Honolulu is a bustling hub of activity, with a mix of modern skyscrapers and charming historic landmarks.
+
+One of the first stops on our itinerary was the iconic Diamond Head, a volcanic tuff cone that offers a stunning perspective of Waikiki and the surrounding waters. From the summit, we could see the crater, lush green foliage, and glimpse the Honolulu skyline.
+
+Cultural Experience:
+
+Our first cultural encounter was at the Waikiki Shell, where we attended a traditional Hawaiian Luau. The evening started with a gorgeous sunset, as we grabbed a spot on the grass to watch the live hula performances and live music. The atmosphere was electric, and the energy was contagious.
+
+Section 2: A Foodie's Paradise
+
+Hawaii is known for its diverse and delectable cuisine, showcasing the best of local ingredients and Polynesian flavors. One of the must-try dishes is the poke bowl, a raw fish salad made from chilled ahi or tuna, mixed with soy sauce, sesame oil, and various seasonings. It's the perfect way to quench your thirst and enjoy the local bounty.
+
+We also indulged in traditional Hawaiian plate lunches, which come with a main dish, two scoops of rice, and a side of macaroni salad. Some of our favorites included kalua pig, laulau, and hamburger steak.
+
+Section 3: Exploring Oahu's Culture
+
+Oahu is home to many historical sites and cultural centers that offer a deeper insight into the island's rich heritage. One of the fascinating places to visit is the Polynesian Cultural Center, nestled in the Ko'olau Mountains. The center immerses visitors in the experience of living Polynesian island cultures, showcasing daily activities, traditional crafts, music, and dance performances.
+
+Another must-see attraction is the Pearl Harbor Visitor Center, where you can learn about the history of the Japanese attack on Pearl Harbor on December 7, 1941. The center features exhibits, artifacts, and personal accounts of the attack.
+
+Section 4: The Hidden Gems of Maui
+
+After leaving Oahu, we ventured to Maui, the second-largest island in the archipelago. Known for its postcard-perfect beaches, lush greenery, and natural wonders, Maui offers a
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 38486.786 (ms)
+
+--------------------------START OF BENCHMARK--------------------------
+benchmark_recurrent_drafting beam_width=2, beam_length=6, dtype=mlx.core.bfloat16, max_length=800, greedy=False
+total steps = 355
+num total tokens=868
+<s> A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting cultural experiences and must-see attractions. ASSISTANT: Title: Island Hopping in Paradise: My Hawaiian Adventure
+
+Paradise found, that's what Hawaii is - an enchanting archipelago of tropical islands, crystal-clear waters, and a melting pot of cultures. As I embarked on my seven-day island-hopping tour, I couldn't help but feel like I was about to embark on an adventure of a lifetime.
+
+Day 1: Oahu - The Heart of Hawaii
+My journey began on the island of Oahu, the heart of Hawaii. Known as the Gathering Place, Oahu is where the hustle and bustle of Honolulu meets the serene beauty of nature. I started my day with a visit to the iconic Diamond Head, a volcanic crater that offers a panoramic view of Waikiki. As I made my way down the bustling streets of Waikiki, I couldn't help but be captivated by the vibrant hues of the sunset.
+
+As the night fell, I indulged in a traditional Hawaiian luau, where I savored delicious local cuisine and witnessed a mesmerizing hula show. I dug my toes in the sand, swayed to the rhythm of the music, and soaked in the warmth of the islands.
+
+Day 2: Maui - The Magic Isle
+After a short 2-hour flight, I found myself on the enchanting island of Maui. Known as the Magic Isle, Maui has a charm that's hard to resist. I started my day with a visit to the bustling town of Lahaina, where I wandered its cobbled streets and took in the historical sites.
+
+Maui is home to some of the world's most stunning beaches, and I couldn't resist a dip in the crystal-clear waters of Wailea Beach. As I laid back, soaking in the warm sun and the gentle ocean breeze, I couldn't help but feel like I was in a dream.
+
+Day 3: Kauai - The Garden Isle
+Next on my itinerary was the verdant island of Kauai, known as the Garden Isle. As I landed at Lihue Airport, I was greeted with lush greenery and the mesmerizing scent of plumeria in the air. My first stop was the majestic Waimea Canyon, also known as the Grand Canyon of the Pacific. The views from the top were breathtaking, with vibrant reds, oranges, and yellows painting the surrounding landscape.
+
+From here, I ventured to the historic town of Hanapepe, where I wandered its art galleries and vintage shops. I soaked in the island's quirkiness and felt a sense of peace permeate my soul.
+
+Day 4: Molokai - The Friendly Isle
+Molokai, the Friendly Isle, was next on my itinerary. Known for its laid-back vibe and untouched beauty, Molokai is a treasure trove of cultural experiences. I started my day with a visit to the Maui Hawaii Foundation, an organization dedicated to preserving the island's history and culture. I marveled at the intricate tattoos and ancient Hawaiian artifacts on display.
+
+Later, I embarked on a hike to the top of the iconic Kalaupapa Lookout, where I could see the island's
+
+benchmark_recurrent_drafting.recurrent_drafting_generate 44831.926 (ms)
