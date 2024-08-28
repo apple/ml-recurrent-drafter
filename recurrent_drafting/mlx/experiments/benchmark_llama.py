@@ -5,7 +5,7 @@ import mlx.core as mx
 import mlx_lm
 import mlx_lm.models.base
 import mlx_lm.models.llama
-import mlx_recurrent_drafting
+import recurrent_drafting.mlx
 
 MODEL_PATH = os.path.expanduser("~/m/vicuna-7b-v1.3-bf16")
 """<s> A chat between a curious user and an artificial intelligence assistant.
@@ -31,27 +31,27 @@ PROMPT = mx.array(
 
 
 def benchmark_base_model(dtype: mx.Dtype, num_new_tokens: int) -> None:
-    @mlx_recurrent_drafting.time_mlx.function("test process prompt takes")
+    @recurrent_drafting.mlx.time_mlx.function("test process prompt takes")
     def process_prompt(prompt, base_model, sliced_cache):
-        mask = mlx_recurrent_drafting.attention.causal_mask(
+        mask = recurrent_drafting.mlx.attention.causal_mask(
             mx.ones(shape=(1, prompt.shape[1]), dtype=mx.bool_), prompt.shape[1]
         )
         logits = base_model(prompt, 1, mask, sliced_cache)
         return logits[1][:, -1, :]
 
-    @mlx_recurrent_drafting.time_mlx.function(f"test generate {num_new_tokens} tokens takes")
+    @recurrent_drafting.mlx.time_mlx.function(f"test generate {num_new_tokens} tokens takes")
     def generate_tokens(logits, model, cache, prompt_len):
         for i in range(num_new_tokens - 1):
             y = mx.argmax(mx.softmax(logits), axis=-1)
-            mask = mlx_recurrent_drafting.attention.causal_mask(
+            mask = recurrent_drafting.mlx.attention.causal_mask(
                 mx.ones(shape=(1, prompt_len + i + 1), dtype=mx.bool_), 1
             )
             logits = model(y[None], 1, mask, cache)[1][:, -1, :]
         return mx.argmax(logits, axis=-1)
 
-    base_model = mlx_recurrent_drafting.modeling_llama.load_model(MODEL_PATH)
+    base_model = recurrent_drafting.mlx.modeling_llama.load_model(MODEL_PATH)
     base_model.set_dtype(dtype)
-    cache = mlx_recurrent_drafting.kv_cache.Cache(
+    cache = recurrent_drafting.mlx.kv_cache.Cache(
         batch_size=1,
         max_length=PROMPT.shape[1] + num_new_tokens,
         n_layers=base_model.args.num_hidden_layers,
@@ -64,11 +64,11 @@ def benchmark_base_model(dtype: mx.Dtype, num_new_tokens: int) -> None:
 
 
 def benchmark_ref_model(dtype: mx.Dtype, num_new_tokens: int) -> None:
-    @mlx_recurrent_drafting.time_mlx.function("ref prompt processing takes")
+    @recurrent_drafting.mlx.time_mlx.function("ref prompt processing takes")
     def process_prompt(prompt, model, cache):
         return model(prompt, cache=cache)[:, -1, :]
 
-    @mlx_recurrent_drafting.time_mlx.function(f"ref generate {num_new_tokens} tokens takes")
+    @recurrent_drafting.mlx.time_mlx.function(f"ref generate {num_new_tokens} tokens takes")
     def generate_tokens(logits, model, cache):
         for _ in range(num_new_tokens - 1):
             y = mx.argmax(mx.softmax(logits), axis=-1)
@@ -96,12 +96,12 @@ if __name__ == "__main__":
                 print(f"-- Benchmark dtype {dtype} --")
                 print("** Benchmark Ref Model **")
                 mlx.core.metal.clear_cache()
-                mlx_recurrent_drafting.time_mlx.ledger.reset()
+                recurrent_drafting.mlx.time_mlx.ledger.reset()
                 benchmark_ref_model(dtype, num_new_tokens)
-                mlx_recurrent_drafting.time_mlx.ledger.print_summary()
+                recurrent_drafting.mlx.time_mlx.ledger.print_summary()
 
                 print("** Benchmark Base Model **")
                 mlx.core.metal.clear_cache()
-                mlx_recurrent_drafting.time_mlx.ledger.reset()
+                recurrent_drafting.mlx.time_mlx.ledger.reset()
                 benchmark_base_model(dtype, num_new_tokens)
-                mlx_recurrent_drafting.time_mlx.ledger.print_summary()
+                recurrent_drafting.mlx.time_mlx.ledger.print_summary()
