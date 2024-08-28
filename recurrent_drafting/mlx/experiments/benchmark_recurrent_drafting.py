@@ -3,7 +3,6 @@ from typing import Dict, Tuple
 
 import mlx.core as mx
 import transformers
-
 from mlx_recurrent_drafting import (
     kv_cache,
     modeling_drafter,

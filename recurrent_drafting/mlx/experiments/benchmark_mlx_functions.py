@@ -2,7 +2,6 @@ import sys
 
 import mlx.core as mx
 import mlx.nn
-
 from mlx_recurrent_drafting import attention, time_mlx
 
 

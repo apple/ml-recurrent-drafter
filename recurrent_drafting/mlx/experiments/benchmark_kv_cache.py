@@ -3,7 +3,6 @@ import time
 import mlx
 import mlx.core as mx
 import mlx_lm
-
 from mlx_recurrent_drafting import kv_cache
 
 

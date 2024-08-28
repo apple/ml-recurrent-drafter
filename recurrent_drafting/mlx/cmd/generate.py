@@ -40,14 +40,13 @@ import mlx.nn
 import tqdm
 from absl import app, flags
 from mlx_lm.utils import get_model_path
-from sentencepiece import SentencePieceProcessor
-
 from mlx_recurrent_drafting import (
     autoregressive,
     modeling_drafter,
     modeling_llama,
     recurrent_drafting,
 )
+from sentencepiece import SentencePieceProcessor
 
 FLAGS = flags.FLAGS
 

@@ -3,16 +3,16 @@ from typing import Tuple
 
 import mlx.core as mx
 import mlx.nn
-import numpy
-import pytest
-import recurrent_drafting
-import torch
-import transformers
-
 import mlx_recurrent_drafting
 import mlx_recurrent_drafting.attention
 import mlx_recurrent_drafting.kv_cache
 import mlx_recurrent_drafting.modeling_llama
+import numpy
+import pytest
+import torch
+import transformers
+
+import recurrent_drafting
 
 
 def test_rope() -> None:

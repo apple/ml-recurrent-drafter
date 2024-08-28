@@ -3,13 +3,13 @@ import unittest.mock
 from typing import Tuple
 
 import mlx.core as mx
+import mlx_recurrent_drafting
 import numpy
 import pytest
-import recurrent_drafting
 import torch
-
-import mlx_recurrent_drafting
 from mlx_recurrent_drafting.modeling_drafter import LOG_0
+
+import recurrent_drafting
 
 from . import modeling_llama_test, tree_attention_test
 
