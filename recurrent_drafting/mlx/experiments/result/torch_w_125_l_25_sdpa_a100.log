@@ -1,0 +1,1488 @@
+benchmark beam_width 1 beam_length 1
+run 32 torch sdpa takes  1.628 (ms)
+benchmark beam_width 1 beam_length 3
+run 32 torch sdpa takes  1.570 (ms)
+benchmark beam_width 1 beam_length 5
+run 32 torch sdpa takes  1.559 (ms)
+benchmark beam_width 1 beam_length 7
+run 32 torch sdpa takes  1.548 (ms)
+benchmark beam_width 1 beam_length 9
+run 32 torch sdpa takes  1.563 (ms)
+benchmark beam_width 1 beam_length 11
+run 32 torch sdpa takes  1.570 (ms)
+benchmark beam_width 1 beam_length 13
+run 32 torch sdpa takes  1.567 (ms)
+benchmark beam_width 1 beam_length 15
+run 32 torch sdpa takes  1.572 (ms)
+benchmark beam_width 1 beam_length 17
+run 32 torch sdpa takes  1.526 (ms)
+benchmark beam_width 1 beam_length 19
+run 32 torch sdpa takes  1.571 (ms)
+benchmark beam_width 1 beam_length 21
+run 32 torch sdpa takes  1.550 (ms)
+benchmark beam_width 1 beam_length 23
+run 32 torch sdpa takes  1.545 (ms)
+benchmark beam_width 3 beam_length 1
+run 32 torch sdpa takes  1.545 (ms)
+benchmark beam_width 3 beam_length 3
+run 32 torch sdpa takes  1.557 (ms)
+benchmark beam_width 3 beam_length 5
+run 32 torch sdpa takes  1.524 (ms)
+benchmark beam_width 3 beam_length 7
+run 32 torch sdpa takes  1.507 (ms)
+benchmark beam_width 3 beam_length 9
+run 32 torch sdpa takes  1.543 (ms)
+benchmark beam_width 3 beam_length 11
+run 32 torch sdpa takes  1.541 (ms)
+benchmark beam_width 3 beam_length 13
+run 32 torch sdpa takes  1.608 (ms)
+benchmark beam_width 3 beam_length 15
+run 32 torch sdpa takes  1.524 (ms)
+benchmark beam_width 3 beam_length 17
+run 32 torch sdpa takes  1.528 (ms)
+benchmark beam_width 3 beam_length 19
+run 32 torch sdpa takes  1.683 (ms)
+benchmark beam_width 3 beam_length 21
+run 32 torch sdpa takes  1.682 (ms)
+benchmark beam_width 3 beam_length 23
+run 32 torch sdpa takes  1.557 (ms)
+benchmark beam_width 5 beam_length 1
+run 32 torch sdpa takes  1.534 (ms)
+benchmark beam_width 5 beam_length 3
+run 32 torch sdpa takes  1.542 (ms)
+benchmark beam_width 5 beam_length 5
+run 32 torch sdpa takes  1.514 (ms)
+benchmark beam_width 5 beam_length 7
+run 32 torch sdpa takes  1.542 (ms)
+benchmark beam_width 5 beam_length 9
+run 32 torch sdpa takes  1.545 (ms)
+benchmark beam_width 5 beam_length 11
+run 32 torch sdpa takes  1.527 (ms)
+benchmark beam_width 5 beam_length 13
+run 32 torch sdpa takes  1.545 (ms)
+benchmark beam_width 5 beam_length 15
+run 32 torch sdpa takes  1.550 (ms)
+benchmark beam_width 5 beam_length 17
+run 32 torch sdpa takes  1.543 (ms)
+benchmark beam_width 5 beam_length 19
+run 32 torch sdpa takes  1.530 (ms)
+benchmark beam_width 5 beam_length 21
+run 32 torch sdpa takes  1.554 (ms)
+benchmark beam_width 5 beam_length 23
+run 32 torch sdpa takes  1.556 (ms)
+benchmark beam_width 7 beam_length 1
+run 32 torch sdpa takes  1.546 (ms)
+benchmark beam_width 7 beam_length 3
+run 32 torch sdpa takes  1.542 (ms)
+benchmark beam_width 7 beam_length 5
+run 32 torch sdpa takes  1.560 (ms)
+benchmark beam_width 7 beam_length 7
+run 32 torch sdpa takes  1.532 (ms)
+benchmark beam_width 7 beam_length 9
+run 32 torch sdpa takes  1.547 (ms)
+benchmark beam_width 7 beam_length 11
+run 32 torch sdpa takes  1.536 (ms)
+benchmark beam_width 7 beam_length 13
+run 32 torch sdpa takes  1.521 (ms)
+benchmark beam_width 7 beam_length 15
+run 32 torch sdpa takes  1.537 (ms)
+benchmark beam_width 7 beam_length 17
+run 32 torch sdpa takes  1.540 (ms)
+benchmark beam_width 7 beam_length 19
+run 32 torch sdpa takes  1.524 (ms)
+benchmark beam_width 7 beam_length 21
+run 32 torch sdpa takes  1.544 (ms)
+benchmark beam_width 7 beam_length 23
+run 32 torch sdpa takes  1.548 (ms)
+benchmark beam_width 9 beam_length 1
+run 32 torch sdpa takes  1.545 (ms)
+benchmark beam_width 9 beam_length 3
+run 32 torch sdpa takes  1.524 (ms)
+benchmark beam_width 9 beam_length 5
+run 32 torch sdpa takes  1.559 (ms)
+benchmark beam_width 9 beam_length 7
+run 32 torch sdpa takes  1.511 (ms)
+benchmark beam_width 9 beam_length 9
+run 32 torch sdpa takes  1.559 (ms)
+benchmark beam_width 9 beam_length 11
+run 32 torch sdpa takes  1.563 (ms)
+benchmark beam_width 9 beam_length 13
+run 32 torch sdpa takes  1.513 (ms)
+benchmark beam_width 9 beam_length 15
+run 32 torch sdpa takes  1.531 (ms)
+benchmark beam_width 9 beam_length 17
+run 32 torch sdpa takes  1.518 (ms)
+benchmark beam_width 9 beam_length 19
+run 32 torch sdpa takes  1.511 (ms)
+benchmark beam_width 9 beam_length 21
+run 32 torch sdpa takes  1.535 (ms)
+benchmark beam_width 9 beam_length 23
+run 32 torch sdpa takes  1.821 (ms)
+benchmark beam_width 11 beam_length 1
+run 32 torch sdpa takes  1.526 (ms)
+benchmark beam_width 11 beam_length 3
+run 32 torch sdpa takes  1.548 (ms)
+benchmark beam_width 11 beam_length 5
+run 32 torch sdpa takes  1.538 (ms)
+benchmark beam_width 11 beam_length 7
+run 32 torch sdpa takes  1.537 (ms)
+benchmark beam_width 11 beam_length 9
+run 32 torch sdpa takes  1.514 (ms)
+benchmark beam_width 11 beam_length 11
+run 32 torch sdpa takes  1.520 (ms)
+benchmark beam_width 11 beam_length 13
+run 32 torch sdpa takes  1.531 (ms)
+benchmark beam_width 11 beam_length 15
+run 32 torch sdpa takes  1.548 (ms)
+benchmark beam_width 11 beam_length 17
+run 32 torch sdpa takes  1.528 (ms)
+benchmark beam_width 11 beam_length 19
+run 32 torch sdpa takes  1.831 (ms)
+benchmark beam_width 11 beam_length 21
+run 32 torch sdpa takes  1.876 (ms)
+benchmark beam_width 11 beam_length 23
+run 32 torch sdpa takes  2.148 (ms)
+benchmark beam_width 13 beam_length 1
+run 32 torch sdpa takes  1.550 (ms)
+benchmark beam_width 13 beam_length 3
+run 32 torch sdpa takes  1.543 (ms)
+benchmark beam_width 13 beam_length 5
+run 32 torch sdpa takes  1.500 (ms)
+benchmark beam_width 13 beam_length 7
+run 32 torch sdpa takes  1.537 (ms)
+benchmark beam_width 13 beam_length 9
+run 32 torch sdpa takes  1.558 (ms)
+benchmark beam_width 13 beam_length 11
+run 32 torch sdpa takes  1.509 (ms)
+benchmark beam_width 13 beam_length 13
+run 32 torch sdpa takes  1.523 (ms)
+benchmark beam_width 13 beam_length 15
+run 32 torch sdpa takes  1.815 (ms)
+benchmark beam_width 13 beam_length 17
+run 32 torch sdpa takes  1.843 (ms)
+benchmark beam_width 13 beam_length 19
+run 32 torch sdpa takes  1.853 (ms)
+benchmark beam_width 13 beam_length 21
+run 32 torch sdpa takes  1.892 (ms)
+benchmark beam_width 13 beam_length 23
+run 32 torch sdpa takes  2.207 (ms)
+benchmark beam_width 15 beam_length 1
+run 32 torch sdpa takes  1.535 (ms)
+benchmark beam_width 15 beam_length 3
+run 32 torch sdpa takes  1.527 (ms)
+benchmark beam_width 15 beam_length 5
+run 32 torch sdpa takes  1.535 (ms)
+benchmark beam_width 15 beam_length 7
+run 32 torch sdpa takes  1.499 (ms)
+benchmark beam_width 15 beam_length 9
+run 32 torch sdpa takes  1.549 (ms)
+benchmark beam_width 15 beam_length 11
+run 32 torch sdpa takes  1.559 (ms)
+benchmark beam_width 15 beam_length 13
+run 32 torch sdpa takes  1.813 (ms)
+benchmark beam_width 15 beam_length 15
+run 32 torch sdpa takes  1.861 (ms)
+benchmark beam_width 15 beam_length 17
+run 32 torch sdpa takes  1.886 (ms)
+benchmark beam_width 15 beam_length 19
+run 32 torch sdpa takes  2.200 (ms)
+benchmark beam_width 15 beam_length 21
+run 32 torch sdpa takes  2.241 (ms)
+benchmark beam_width 15 beam_length 23
+run 32 torch sdpa takes  2.305 (ms)
+benchmark beam_width 17 beam_length 1
+run 32 torch sdpa takes  1.559 (ms)
+benchmark beam_width 17 beam_length 3
+run 32 torch sdpa takes  1.550 (ms)
+benchmark beam_width 17 beam_length 5
+run 32 torch sdpa takes  1.554 (ms)
+benchmark beam_width 17 beam_length 7
+run 32 torch sdpa takes  1.506 (ms)
+benchmark beam_width 17 beam_length 9
+run 32 torch sdpa takes  1.521 (ms)
+benchmark beam_width 17 beam_length 11
+run 32 torch sdpa takes  1.540 (ms)
+benchmark beam_width 17 beam_length 13
+run 32 torch sdpa takes  1.840 (ms)
+benchmark beam_width 17 beam_length 15
+run 32 torch sdpa takes  1.916 (ms)
+benchmark beam_width 17 beam_length 17
+run 32 torch sdpa takes  2.216 (ms)
+benchmark beam_width 17 beam_length 19
+run 32 torch sdpa takes  2.310 (ms)
+benchmark beam_width 17 beam_length 21
+run 32 torch sdpa takes  2.332 (ms)
+benchmark beam_width 17 beam_length 23
+run 32 torch sdpa takes  3.237 (ms)
+benchmark beam_width 19 beam_length 1
+run 32 torch sdpa takes  1.510 (ms)
+benchmark beam_width 19 beam_length 3
+run 32 torch sdpa takes  1.531 (ms)
+benchmark beam_width 19 beam_length 5
+run 32 torch sdpa takes  1.523 (ms)
+benchmark beam_width 19 beam_length 7
+run 32 torch sdpa takes  1.510 (ms)
+benchmark beam_width 19 beam_length 9
+run 32 torch sdpa takes  1.504 (ms)
+benchmark beam_width 19 beam_length 11
+run 32 torch sdpa takes  1.819 (ms)
+benchmark beam_width 19 beam_length 13
+run 32 torch sdpa takes  1.851 (ms)
+benchmark beam_width 19 beam_length 15
+run 32 torch sdpa takes  2.229 (ms)
+benchmark beam_width 19 beam_length 17
+run 32 torch sdpa takes  2.297 (ms)
+benchmark beam_width 19 beam_length 19
+run 32 torch sdpa takes  2.344 (ms)
+benchmark beam_width 19 beam_length 21
+run 32 torch sdpa takes  3.283 (ms)
+benchmark beam_width 19 beam_length 23
+run 32 torch sdpa takes  3.990 (ms)
+benchmark beam_width 21 beam_length 1
+run 32 torch sdpa takes  1.508 (ms)
+benchmark beam_width 21 beam_length 3
+run 32 torch sdpa takes  1.545 (ms)
+benchmark beam_width 21 beam_length 5
+run 32 torch sdpa takes  1.511 (ms)
+benchmark beam_width 21 beam_length 7
+run 32 torch sdpa takes  1.524 (ms)
+benchmark beam_width 21 beam_length 9
+run 32 torch sdpa takes  1.535 (ms)
+benchmark beam_width 21 beam_length 11
+run 32 torch sdpa takes  1.852 (ms)
+benchmark beam_width 21 beam_length 13
+run 32 torch sdpa takes  1.908 (ms)
+benchmark beam_width 21 beam_length 15
+run 32 torch sdpa takes  2.221 (ms)
+benchmark beam_width 21 beam_length 17
+run 32 torch sdpa takes  2.332 (ms)
+benchmark beam_width 21 beam_length 19
+run 32 torch sdpa takes  3.289 (ms)
+benchmark beam_width 21 beam_length 21
+run 32 torch sdpa takes  4.023 (ms)
+benchmark beam_width 21 beam_length 23
+run 32 torch sdpa takes  4.145 (ms)
+benchmark beam_width 23 beam_length 1
+run 32 torch sdpa takes  1.531 (ms)
+benchmark beam_width 23 beam_length 3
+run 32 torch sdpa takes  1.554 (ms)
+benchmark beam_width 23 beam_length 5
+run 32 torch sdpa takes  1.506 (ms)
+benchmark beam_width 23 beam_length 7
+run 32 torch sdpa takes  1.524 (ms)
+benchmark beam_width 23 beam_length 9
+run 32 torch sdpa takes  1.818 (ms)
+benchmark beam_width 23 beam_length 11
+run 32 torch sdpa takes  1.896 (ms)
+benchmark beam_width 23 beam_length 13
+run 32 torch sdpa takes  2.210 (ms)
+benchmark beam_width 23 beam_length 15
+run 32 torch sdpa takes  2.312 (ms)
+benchmark beam_width 23 beam_length 17
+run 32 torch sdpa takes  3.232 (ms)
+benchmark beam_width 23 beam_length 19
+run 32 torch sdpa takes  3.994 (ms)
+benchmark beam_width 23 beam_length 21
+run 32 torch sdpa takes  4.113 (ms)
+benchmark beam_width 23 beam_length 23
+run 32 torch sdpa takes  4.282 (ms)
+benchmark beam_width 25 beam_length 1
+run 32 torch sdpa takes  1.552 (ms)
+benchmark beam_width 25 beam_length 3
+run 32 torch sdpa takes  1.531 (ms)
+benchmark beam_width 25 beam_length 5
+run 32 torch sdpa takes  1.536 (ms)
+benchmark beam_width 25 beam_length 7
+run 32 torch sdpa takes  1.546 (ms)
+benchmark beam_width 25 beam_length 9
+run 32 torch sdpa takes  1.856 (ms)
+benchmark beam_width 25 beam_length 11
+run 32 torch sdpa takes  1.905 (ms)
+benchmark beam_width 25 beam_length 13
+run 32 torch sdpa takes  2.289 (ms)
+benchmark beam_width 25 beam_length 15
+run 32 torch sdpa takes  2.351 (ms)
+benchmark beam_width 25 beam_length 17
+run 32 torch sdpa takes  3.908 (ms)
+benchmark beam_width 25 beam_length 19
+run 32 torch sdpa takes  4.054 (ms)
+benchmark beam_width 25 beam_length 21
+run 32 torch sdpa takes  4.264 (ms)
+benchmark beam_width 25 beam_length 23
+run 32 torch sdpa takes  4.873 (ms)
+benchmark beam_width 27 beam_length 1
+run 32 torch sdpa takes  1.536 (ms)
+benchmark beam_width 27 beam_length 3
+run 32 torch sdpa takes  1.538 (ms)
+benchmark beam_width 27 beam_length 5
+run 32 torch sdpa takes  1.507 (ms)
+benchmark beam_width 27 beam_length 7
+run 32 torch sdpa takes  1.540 (ms)
+benchmark beam_width 27 beam_length 9
+run 32 torch sdpa takes  1.854 (ms)
+benchmark beam_width 27 beam_length 11
+run 32 torch sdpa takes  2.210 (ms)
+benchmark beam_width 27 beam_length 13
+run 32 torch sdpa takes  2.326 (ms)
+benchmark beam_width 27 beam_length 15
+run 32 torch sdpa takes  3.301 (ms)
+benchmark beam_width 27 beam_length 17
+run 32 torch sdpa takes  4.050 (ms)
+benchmark beam_width 27 beam_length 19
+run 32 torch sdpa takes  4.604 (ms)
+benchmark beam_width 27 beam_length 21
+run 32 torch sdpa takes  4.809 (ms)
+benchmark beam_width 27 beam_length 23
+run 32 torch sdpa takes  5.027 (ms)
+benchmark beam_width 29 beam_length 1
+run 32 torch sdpa takes  1.505 (ms)
+benchmark beam_width 29 beam_length 3
+run 32 torch sdpa takes  1.528 (ms)
+benchmark beam_width 29 beam_length 5
+run 32 torch sdpa takes  1.546 (ms)
+benchmark beam_width 29 beam_length 7
+run 32 torch sdpa takes  1.819 (ms)
+benchmark beam_width 29 beam_length 9
+run 32 torch sdpa takes  1.885 (ms)
+benchmark beam_width 29 beam_length 11
+run 32 torch sdpa takes  2.251 (ms)
+benchmark beam_width 29 beam_length 13
+run 32 torch sdpa takes  2.349 (ms)
+benchmark beam_width 29 beam_length 15
+run 32 torch sdpa takes  3.977 (ms)
+benchmark beam_width 29 beam_length 17
+run 32 torch sdpa takes  4.135 (ms)
+benchmark beam_width 29 beam_length 19
+run 32 torch sdpa takes  4.790 (ms)
+benchmark beam_width 29 beam_length 21
+run 32 torch sdpa takes  5.022 (ms)
+benchmark beam_width 29 beam_length 23
+run 32 torch sdpa takes  6.000 (ms)
+benchmark beam_width 31 beam_length 1
+run 32 torch sdpa takes  1.544 (ms)
+benchmark beam_width 31 beam_length 3
+run 32 torch sdpa takes  1.522 (ms)
+benchmark beam_width 31 beam_length 5
+run 32 torch sdpa takes  1.561 (ms)
+benchmark beam_width 31 beam_length 7
+run 32 torch sdpa takes  1.816 (ms)
+benchmark beam_width 31 beam_length 9
+run 32 torch sdpa takes  1.908 (ms)
+benchmark beam_width 31 beam_length 11
+run 32 torch sdpa takes  2.307 (ms)
+benchmark beam_width 31 beam_length 13
+run 32 torch sdpa takes  3.296 (ms)
+benchmark beam_width 31 beam_length 15
+run 32 torch sdpa takes  4.069 (ms)
+benchmark beam_width 31 beam_length 17
+run 32 torch sdpa takes  4.267 (ms)
+benchmark beam_width 31 beam_length 19
+run 32 torch sdpa takes  5.538 (ms)
+benchmark beam_width 31 beam_length 21
+run 32 torch sdpa takes  5.947 (ms)
+benchmark beam_width 31 beam_length 23
+run 32 torch sdpa takes  6.724 (ms)
+benchmark beam_width 33 beam_length 1
+run 32 torch sdpa takes  1.788 (ms)
+benchmark beam_width 33 beam_length 3
+run 32 torch sdpa takes  1.779 (ms)
+benchmark beam_width 33 beam_length 5
+run 32 torch sdpa takes  1.774 (ms)
+benchmark beam_width 33 beam_length 7
+run 32 torch sdpa takes  1.886 (ms)
+benchmark beam_width 33 beam_length 9
+run 32 torch sdpa takes  2.234 (ms)
+benchmark beam_width 33 beam_length 11
+run 32 torch sdpa takes  2.352 (ms)
+benchmark beam_width 33 beam_length 13
+run 32 torch sdpa takes  3.951 (ms)
+benchmark beam_width 33 beam_length 15
+run 32 torch sdpa takes  4.146 (ms)
+benchmark beam_width 33 beam_length 17
+run 32 torch sdpa takes  4.827 (ms)
+benchmark beam_width 33 beam_length 19
+run 32 torch sdpa takes  5.087 (ms)
+benchmark beam_width 33 beam_length 21
+run 32 torch sdpa takes  6.612 (ms)
+benchmark beam_width 33 beam_length 23
+run 32 torch sdpa takes  6.876 (ms)
+benchmark beam_width 35 beam_length 1
+run 32 torch sdpa takes  1.792 (ms)
+benchmark beam_width 35 beam_length 3
+run 32 torch sdpa takes  1.765 (ms)
+benchmark beam_width 35 beam_length 5
+run 32 torch sdpa takes  1.766 (ms)
+benchmark beam_width 35 beam_length 7
+run 32 torch sdpa takes  1.865 (ms)
+benchmark beam_width 35 beam_length 9
+run 32 torch sdpa takes  2.220 (ms)
+benchmark beam_width 35 beam_length 11
+run 32 torch sdpa takes  3.211 (ms)
+benchmark beam_width 35 beam_length 13
+run 32 torch sdpa takes  4.046 (ms)
+benchmark beam_width 35 beam_length 15
+run 32 torch sdpa takes  4.246 (ms)
+benchmark beam_width 35 beam_length 17
+run 32 torch sdpa takes  5.424 (ms)
+benchmark beam_width 35 beam_length 19
+run 32 torch sdpa takes  6.003 (ms)
+benchmark beam_width 35 beam_length 21
+run 32 torch sdpa takes  6.831 (ms)
+benchmark beam_width 35 beam_length 23
+run 32 torch sdpa takes  7.677 (ms)
+benchmark beam_width 37 beam_length 1
+run 32 torch sdpa takes  1.618 (ms)
+benchmark beam_width 37 beam_length 3
+run 32 torch sdpa takes  1.555 (ms)
+benchmark beam_width 37 beam_length 5
+run 32 torch sdpa takes  1.527 (ms)
+benchmark beam_width 37 beam_length 7
+run 32 torch sdpa takes  1.892 (ms)
+benchmark beam_width 37 beam_length 9
+run 32 torch sdpa takes  2.301 (ms)
+benchmark beam_width 37 beam_length 11
+run 32 torch sdpa takes  3.330 (ms)
+benchmark beam_width 37 beam_length 13
+run 32 torch sdpa takes  4.117 (ms)
+benchmark beam_width 37 beam_length 15
+run 32 torch sdpa takes  4.787 (ms)
+benchmark beam_width 37 beam_length 17
+run 32 torch sdpa takes  5.054 (ms)
+benchmark beam_width 37 beam_length 19
+run 32 torch sdpa takes  6.670 (ms)
+benchmark beam_width 37 beam_length 21
+run 32 torch sdpa takes  6.999 (ms)
+benchmark beam_width 37 beam_length 23
+run 32 torch sdpa takes  9.817 (ms)
+benchmark beam_width 39 beam_length 1
+run 32 torch sdpa takes  1.535 (ms)
+benchmark beam_width 39 beam_length 3
+run 32 torch sdpa takes  1.547 (ms)
+benchmark beam_width 39 beam_length 5
+run 32 torch sdpa takes  1.828 (ms)
+benchmark beam_width 39 beam_length 7
+run 32 torch sdpa takes  1.888 (ms)
+benchmark beam_width 39 beam_length 9
+run 32 torch sdpa takes  2.326 (ms)
+benchmark beam_width 39 beam_length 11
+run 32 torch sdpa takes  3.954 (ms)
+benchmark beam_width 39 beam_length 13
+run 32 torch sdpa takes  4.172 (ms)
+benchmark beam_width 39 beam_length 15
+run 32 torch sdpa takes  5.351 (ms)
+benchmark beam_width 39 beam_length 17
+run 32 torch sdpa takes  5.990 (ms)
+benchmark beam_width 39 beam_length 19
+run 32 torch sdpa takes  6.840 (ms)
+benchmark beam_width 39 beam_length 21
+run 32 torch sdpa takes  7.675 (ms)
+benchmark beam_width 39 beam_length 23
+run 32 torch sdpa takes  10.177 (ms)
+benchmark beam_width 41 beam_length 1
+run 32 torch sdpa takes  1.557 (ms)
+benchmark beam_width 41 beam_length 3
+run 32 torch sdpa takes  1.538 (ms)
+benchmark beam_width 41 beam_length 5
+run 32 torch sdpa takes  1.817 (ms)
+benchmark beam_width 41 beam_length 7
+run 32 torch sdpa takes  2.205 (ms)
+benchmark beam_width 41 beam_length 9
+run 32 torch sdpa takes  2.351 (ms)
+benchmark beam_width 41 beam_length 11
+run 32 torch sdpa takes  4.142 (ms)
+benchmark beam_width 41 beam_length 13
+run 32 torch sdpa takes  4.274 (ms)
+benchmark beam_width 41 beam_length 15
+run 32 torch sdpa takes  5.084 (ms)
+benchmark beam_width 41 beam_length 17
+run 32 torch sdpa takes  6.625 (ms)
+benchmark beam_width 41 beam_length 19
+run 32 torch sdpa takes  7.055 (ms)
+benchmark beam_width 41 beam_length 21
+run 32 torch sdpa takes  9.850 (ms)
+benchmark beam_width 41 beam_length 23
+run 32 torch sdpa takes  10.999 (ms)
+benchmark beam_width 43 beam_length 1
+run 32 torch sdpa takes  1.533 (ms)
+benchmark beam_width 43 beam_length 3
+run 32 torch sdpa takes  1.526 (ms)
+benchmark beam_width 43 beam_length 5
+run 32 torch sdpa takes  1.824 (ms)
+benchmark beam_width 43 beam_length 7
+run 32 torch sdpa takes  2.208 (ms)
+benchmark beam_width 43 beam_length 9
+run 32 torch sdpa takes  3.222 (ms)
+benchmark beam_width 43 beam_length 11
+run 32 torch sdpa takes  4.067 (ms)
+benchmark beam_width 43 beam_length 13
+run 32 torch sdpa takes  4.797 (ms)
+benchmark beam_width 43 beam_length 15
+run 32 torch sdpa takes  5.949 (ms)
+benchmark beam_width 43 beam_length 17
+run 32 torch sdpa takes  6.735 (ms)
+benchmark beam_width 43 beam_length 19
+run 32 torch sdpa takes  7.680 (ms)
+benchmark beam_width 43 beam_length 21
+run 32 torch sdpa takes  10.239 (ms)
+benchmark beam_width 43 beam_length 23
+run 32 torch sdpa takes  11.333 (ms)
+benchmark beam_width 45 beam_length 1
+run 32 torch sdpa takes  1.546 (ms)
+benchmark beam_width 45 beam_length 3
+run 32 torch sdpa takes  1.542 (ms)
+benchmark beam_width 45 beam_length 5
+run 32 torch sdpa takes  1.867 (ms)
+benchmark beam_width 45 beam_length 7
+run 32 torch sdpa takes  2.227 (ms)
+benchmark beam_width 45 beam_length 9
+run 32 torch sdpa takes  3.289 (ms)
+benchmark beam_width 45 beam_length 11
+run 32 torch sdpa takes  4.182 (ms)
+benchmark beam_width 45 beam_length 13
+run 32 torch sdpa takes  5.360 (ms)
+benchmark beam_width 45 beam_length 15
+run 32 torch sdpa takes  6.592 (ms)
+benchmark beam_width 45 beam_length 17
+run 32 torch sdpa takes  6.910 (ms)
+benchmark beam_width 45 beam_length 19
+run 32 torch sdpa takes  9.758 (ms)
+benchmark beam_width 45 beam_length 21
+run 32 torch sdpa takes  11.006 (ms)
+benchmark beam_width 45 beam_length 23
+run 32 torch sdpa takes  12.455 (ms)
+benchmark beam_width 47 beam_length 1
+run 32 torch sdpa takes  1.781 (ms)
+benchmark beam_width 47 beam_length 3
+run 32 torch sdpa takes  1.756 (ms)
+benchmark beam_width 47 beam_length 5
+run 32 torch sdpa takes  1.873 (ms)
+benchmark beam_width 47 beam_length 7
+run 32 torch sdpa takes  2.297 (ms)
+benchmark beam_width 47 beam_length 9
+run 32 torch sdpa takes  3.901 (ms)
+benchmark beam_width 47 beam_length 11
+run 32 torch sdpa takes  4.280 (ms)
+benchmark beam_width 47 beam_length 13
+run 32 torch sdpa takes  5.059 (ms)
+benchmark beam_width 47 beam_length 15
+run 32 torch sdpa takes  6.730 (ms)
+benchmark beam_width 47 beam_length 17
+run 32 torch sdpa takes  7.651 (ms)
+benchmark beam_width 47 beam_length 19
+run 32 torch sdpa takes  10.087 (ms)
+benchmark beam_width 47 beam_length 21
+run 32 torch sdpa takes  11.279 (ms)
+benchmark beam_width 47 beam_length 23
+run 32 torch sdpa takes  13.554 (ms)
+benchmark beam_width 49 beam_length 1
+run 32 torch sdpa takes  1.785 (ms)
+benchmark beam_width 49 beam_length 3
+run 32 torch sdpa takes  1.745 (ms)
+benchmark beam_width 49 beam_length 5
+run 32 torch sdpa takes  1.874 (ms)
+benchmark beam_width 49 beam_length 7
+run 32 torch sdpa takes  2.303 (ms)
+benchmark beam_width 49 beam_length 9
+run 32 torch sdpa takes  4.028 (ms)
+benchmark beam_width 49 beam_length 11
+run 32 torch sdpa takes  4.276 (ms)
+benchmark beam_width 49 beam_length 13
+run 32 torch sdpa takes  5.128 (ms)
+benchmark beam_width 49 beam_length 15
+run 32 torch sdpa takes  6.819 (ms)
+benchmark beam_width 49 beam_length 17
+run 32 torch sdpa takes  9.826 (ms)
+benchmark beam_width 49 beam_length 19
+run 32 torch sdpa takes  10.980 (ms)
+benchmark beam_width 49 beam_length 21
+run 32 torch sdpa takes  12.446 (ms)
+benchmark beam_width 49 beam_length 23
+run 32 torch sdpa takes  13.965 (ms)
+benchmark beam_width 51 beam_length 1
+run 32 torch sdpa takes  1.786 (ms)
+benchmark beam_width 51 beam_length 3
+run 32 torch sdpa takes  1.777 (ms)
+benchmark beam_width 51 beam_length 5
+run 32 torch sdpa takes  1.911 (ms)
+benchmark beam_width 51 beam_length 7
+run 32 torch sdpa takes  2.334 (ms)
+benchmark beam_width 51 beam_length 9
+run 32 torch sdpa takes  4.058 (ms)
+benchmark beam_width 51 beam_length 11
+run 32 torch sdpa takes  4.817 (ms)
+benchmark beam_width 51 beam_length 13
+run 32 torch sdpa takes  5.991 (ms)
+benchmark beam_width 51 beam_length 15
+run 32 torch sdpa takes  6.910 (ms)
+benchmark beam_width 51 beam_length 17
+run 32 torch sdpa takes  9.959 (ms)
+benchmark beam_width 51 beam_length 19
+run 32 torch sdpa takes  11.583 (ms)
+benchmark beam_width 51 beam_length 21
+run 32 torch sdpa takes  13.522 (ms)
+benchmark beam_width 51 beam_length 23
+run 32 torch sdpa takes  14.220 (ms)
+benchmark beam_width 53 beam_length 1
+run 32 torch sdpa takes  1.790 (ms)
+benchmark beam_width 53 beam_length 3
+run 32 torch sdpa takes  1.784 (ms)
+benchmark beam_width 53 beam_length 5
+run 32 torch sdpa takes  1.893 (ms)
+benchmark beam_width 53 beam_length 7
+run 32 torch sdpa takes  2.354 (ms)
+benchmark beam_width 53 beam_length 9
+run 32 torch sdpa takes  4.114 (ms)
+benchmark beam_width 53 beam_length 11
+run 32 torch sdpa takes  5.385 (ms)
+benchmark beam_width 53 beam_length 13
+run 32 torch sdpa takes  6.606 (ms)
+benchmark beam_width 53 beam_length 15
+run 32 torch sdpa takes  7.028 (ms)
+benchmark beam_width 53 beam_length 17
+run 32 torch sdpa takes  10.156 (ms)
+benchmark beam_width 53 beam_length 19
+run 32 torch sdpa takes  11.329 (ms)
+benchmark beam_width 53 beam_length 21
+run 32 torch sdpa takes  13.840 (ms)
+benchmark beam_width 53 beam_length 23
+run 32 torch sdpa takes  15.399 (ms)
+benchmark beam_width 55 beam_length 1
+run 32 torch sdpa takes  1.777 (ms)
+benchmark beam_width 55 beam_length 3
+run 32 torch sdpa takes  1.774 (ms)
+benchmark beam_width 55 beam_length 5
+run 32 torch sdpa takes  1.926 (ms)
+benchmark beam_width 55 beam_length 7
+run 32 torch sdpa takes  3.210 (ms)
+benchmark beam_width 55 beam_length 9
+run 32 torch sdpa takes  4.153 (ms)
+benchmark beam_width 55 beam_length 11
+run 32 torch sdpa takes  5.368 (ms)
+benchmark beam_width 55 beam_length 13
+run 32 torch sdpa takes  6.712 (ms)
+benchmark beam_width 55 beam_length 15
+run 32 torch sdpa takes  7.716 (ms)
+benchmark beam_width 55 beam_length 17
+run 32 torch sdpa takes  10.998 (ms)
+benchmark beam_width 55 beam_length 19
+run 32 torch sdpa takes  12.516 (ms)
+benchmark beam_width 55 beam_length 21
+run 32 torch sdpa takes  14.179 (ms)
+benchmark beam_width 55 beam_length 23
+run 32 torch sdpa takes  15.545 (ms)
+benchmark beam_width 57 beam_length 1
+run 32 torch sdpa takes  1.785 (ms)
+benchmark beam_width 57 beam_length 3
+run 32 torch sdpa takes  1.750 (ms)
+benchmark beam_width 57 beam_length 5
+run 32 torch sdpa takes  2.197 (ms)
+benchmark beam_width 57 beam_length 7
+run 32 torch sdpa takes  3.279 (ms)
+benchmark beam_width 57 beam_length 9
+run 32 torch sdpa takes  4.551 (ms)
+benchmark beam_width 57 beam_length 11
+run 32 torch sdpa takes  5.058 (ms)
+benchmark beam_width 57 beam_length 13
+run 32 torch sdpa takes  6.821 (ms)
+benchmark beam_width 57 beam_length 15
+run 32 torch sdpa takes  9.743 (ms)
+benchmark beam_width 57 beam_length 17
+run 32 torch sdpa takes  11.604 (ms)
+benchmark beam_width 57 beam_length 19
+run 32 torch sdpa takes  13.546 (ms)
+benchmark beam_width 57 beam_length 21
+run 32 torch sdpa takes  15.179 (ms)
+benchmark beam_width 57 beam_length 23
+run 32 torch sdpa takes  19.531 (ms)
+benchmark beam_width 59 beam_length 1
+run 32 torch sdpa takes  1.569 (ms)
+benchmark beam_width 59 beam_length 3
+run 32 torch sdpa takes  1.507 (ms)
+benchmark beam_width 59 beam_length 5
+run 32 torch sdpa takes  2.203 (ms)
+benchmark beam_width 59 beam_length 7
+run 32 torch sdpa takes  3.836 (ms)
+benchmark beam_width 59 beam_length 9
+run 32 torch sdpa takes  4.280 (ms)
+benchmark beam_width 59 beam_length 11
+run 32 torch sdpa takes  5.957 (ms)
+benchmark beam_width 59 beam_length 13
+run 32 torch sdpa takes  6.949 (ms)
+benchmark beam_width 59 beam_length 15
+run 32 torch sdpa takes  9.944 (ms)
+benchmark beam_width 59 beam_length 17
+run 32 torch sdpa takes  11.269 (ms)
+benchmark beam_width 59 beam_length 19
+run 32 torch sdpa takes  13.928 (ms)
+benchmark beam_width 59 beam_length 21
+run 32 torch sdpa takes  15.429 (ms)
+benchmark beam_width 59 beam_length 23
+run 32 torch sdpa takes  19.964 (ms)
+benchmark beam_width 61 beam_length 1
+run 32 torch sdpa takes  1.558 (ms)
+benchmark beam_width 61 beam_length 3
+run 32 torch sdpa takes  1.529 (ms)
+benchmark beam_width 61 beam_length 5
+run 32 torch sdpa takes  2.216 (ms)
+benchmark beam_width 61 beam_length 7
+run 32 torch sdpa takes  3.920 (ms)
+benchmark beam_width 61 beam_length 9
+run 32 torch sdpa takes  4.811 (ms)
+benchmark beam_width 61 beam_length 11
+run 32 torch sdpa takes  6.611 (ms)
+benchmark beam_width 61 beam_length 13
+run 32 torch sdpa takes  7.015 (ms)
+benchmark beam_width 61 beam_length 15
+run 32 torch sdpa takes  10.207 (ms)
+benchmark beam_width 61 beam_length 17
+run 32 torch sdpa takes  12.495 (ms)
+benchmark beam_width 61 beam_length 19
+run 32 torch sdpa takes  14.168 (ms)
+benchmark beam_width 61 beam_length 21
+run 32 torch sdpa takes  18.440 (ms)
+benchmark beam_width 61 beam_length 23
+run 32 torch sdpa takes  20.066 (ms)
+benchmark beam_width 63 beam_length 1
+run 32 torch sdpa takes  1.547 (ms)
+benchmark beam_width 63 beam_length 3
+run 32 torch sdpa takes  1.540 (ms)
+benchmark beam_width 63 beam_length 5
+run 32 torch sdpa takes  2.228 (ms)
+benchmark beam_width 63 beam_length 7
+run 32 torch sdpa takes  4.046 (ms)
+benchmark beam_width 63 beam_length 9
+run 32 torch sdpa takes  4.863 (ms)
+benchmark beam_width 63 beam_length 11
+run 32 torch sdpa takes  6.614 (ms)
+benchmark beam_width 63 beam_length 13
+run 32 torch sdpa takes  7.682 (ms)
+benchmark beam_width 63 beam_length 15
+run 32 torch sdpa takes  10.995 (ms)
+benchmark beam_width 63 beam_length 17
+run 32 torch sdpa takes  13.510 (ms)
+benchmark beam_width 63 beam_length 19
+run 32 torch sdpa takes  15.196 (ms)
+benchmark beam_width 63 beam_length 21
+run 32 torch sdpa takes  19.545 (ms)
+benchmark beam_width 63 beam_length 23
+run 32 torch sdpa takes  21.377 (ms)
+benchmark beam_width 65 beam_length 1
+run 32 torch sdpa takes  1.568 (ms)
+benchmark beam_width 65 beam_length 3
+run 32 torch sdpa takes  1.810 (ms)
+benchmark beam_width 65 beam_length 5
+run 32 torch sdpa takes  2.292 (ms)
+benchmark beam_width 65 beam_length 7
+run 32 torch sdpa takes  4.055 (ms)
+benchmark beam_width 65 beam_length 9
+run 32 torch sdpa takes  5.518 (ms)
+benchmark beam_width 65 beam_length 11
+run 32 torch sdpa takes  6.701 (ms)
+benchmark beam_width 65 beam_length 13
+run 32 torch sdpa takes  9.813 (ms)
+benchmark beam_width 65 beam_length 15
+run 32 torch sdpa takes  11.673 (ms)
+benchmark beam_width 65 beam_length 17
+run 32 torch sdpa takes  13.813 (ms)
+benchmark beam_width 65 beam_length 19
+run 32 torch sdpa takes  15.429 (ms)
+benchmark beam_width 65 beam_length 21
+run 32 torch sdpa takes  19.824 (ms)
+benchmark beam_width 65 beam_length 23
+run 32 torch sdpa takes  23.312 (ms)
+benchmark beam_width 67 beam_length 1
+run 32 torch sdpa takes  1.556 (ms)
+benchmark beam_width 67 beam_length 3
+run 32 torch sdpa takes  1.813 (ms)
+benchmark beam_width 67 beam_length 5
+run 32 torch sdpa takes  2.310 (ms)
+benchmark beam_width 67 beam_length 7
+run 32 torch sdpa takes  4.075 (ms)
+benchmark beam_width 67 beam_length 9
+run 32 torch sdpa takes  5.101 (ms)
+benchmark beam_width 67 beam_length 11
+run 32 torch sdpa takes  6.821 (ms)
+benchmark beam_width 67 beam_length 13
+run 32 torch sdpa takes  9.882 (ms)
+benchmark beam_width 67 beam_length 15
+run 32 torch sdpa takes  11.429 (ms)
+benchmark beam_width 67 beam_length 17
+run 32 torch sdpa takes  13.999 (ms)
+benchmark beam_width 67 beam_length 19
+run 32 torch sdpa takes  15.558 (ms)
+benchmark beam_width 67 beam_length 21
+run 32 torch sdpa takes  20.150 (ms)
+benchmark beam_width 67 beam_length 23
+run 32 torch sdpa takes  23.942 (ms)
+benchmark beam_width 69 beam_length 1
+run 32 torch sdpa takes  1.573 (ms)
+benchmark beam_width 69 beam_length 3
+run 32 torch sdpa takes  1.823 (ms)
+benchmark beam_width 69 beam_length 5
+run 32 torch sdpa takes  2.308 (ms)
+benchmark beam_width 69 beam_length 7
+run 32 torch sdpa takes  4.135 (ms)
+benchmark beam_width 69 beam_length 9
+run 32 torch sdpa takes  5.020 (ms)
+benchmark beam_width 69 beam_length 11
+run 32 torch sdpa takes  6.870 (ms)
+benchmark beam_width 69 beam_length 13
+run 32 torch sdpa takes  10.248 (ms)
+benchmark beam_width 69 beam_length 15
+run 32 torch sdpa takes  12.464 (ms)
+benchmark beam_width 69 beam_length 17
+run 32 torch sdpa takes  14.216 (ms)
+benchmark beam_width 69 beam_length 19
+run 32 torch sdpa takes  19.524 (ms)
+benchmark beam_width 69 beam_length 21
+run 32 torch sdpa takes  21.372 (ms)
+benchmark beam_width 69 beam_length 23
+run 32 torch sdpa takes  25.236 (ms)
+benchmark beam_width 71 beam_length 1
+run 32 torch sdpa takes  1.546 (ms)
+benchmark beam_width 71 beam_length 3
+run 32 torch sdpa takes  1.819 (ms)
+benchmark beam_width 71 beam_length 5
+run 32 torch sdpa takes  2.328 (ms)
+benchmark beam_width 71 beam_length 7
+run 32 torch sdpa takes  4.136 (ms)
+benchmark beam_width 71 beam_length 9
+run 32 torch sdpa takes  5.127 (ms)
+benchmark beam_width 71 beam_length 11
+run 32 torch sdpa takes  7.003 (ms)
+benchmark beam_width 71 beam_length 13
+run 32 torch sdpa takes  10.128 (ms)
+benchmark beam_width 71 beam_length 15
+run 32 torch sdpa takes  13.480 (ms)
+benchmark beam_width 71 beam_length 17
+run 32 torch sdpa takes  15.194 (ms)
+benchmark beam_width 71 beam_length 19
+run 32 torch sdpa takes  20.108 (ms)
+benchmark beam_width 71 beam_length 21
+run 32 torch sdpa takes  23.347 (ms)
+benchmark beam_width 71 beam_length 23
+run 32 torch sdpa takes  25.703 (ms)
+benchmark beam_width 73 beam_length 1
+run 32 torch sdpa takes  1.559 (ms)
+benchmark beam_width 73 beam_length 3
+run 32 torch sdpa takes  1.818 (ms)
+benchmark beam_width 73 beam_length 5
+run 32 torch sdpa takes  2.334 (ms)
+benchmark beam_width 73 beam_length 7
+run 32 torch sdpa takes  4.242 (ms)
+benchmark beam_width 73 beam_length 9
+run 32 torch sdpa takes  5.954 (ms)
+benchmark beam_width 73 beam_length 11
+run 32 torch sdpa takes  7.676 (ms)
+benchmark beam_width 73 beam_length 13
+run 32 torch sdpa takes  10.997 (ms)
+benchmark beam_width 73 beam_length 15
+run 32 torch sdpa takes  13.873 (ms)
+benchmark beam_width 73 beam_length 17
+run 32 torch sdpa takes  15.405 (ms)
+benchmark beam_width 73 beam_length 19
+run 32 torch sdpa takes  19.968 (ms)
+benchmark beam_width 73 beam_length 21
+run 32 torch sdpa takes  23.675 (ms)
+benchmark beam_width 73 beam_length 23
+run 32 torch sdpa takes  26.240 (ms)
+benchmark beam_width 75 beam_length 1
+run 32 torch sdpa takes  1.562 (ms)
+benchmark beam_width 75 beam_length 3
+run 32 torch sdpa takes  1.854 (ms)
+benchmark beam_width 75 beam_length 5
+run 32 torch sdpa takes  2.356 (ms)
+benchmark beam_width 75 beam_length 7
+run 32 torch sdpa takes  4.264 (ms)
+benchmark beam_width 75 beam_length 9
+run 32 torch sdpa takes  6.629 (ms)
+benchmark beam_width 75 beam_length 11
+run 32 torch sdpa takes  7.708 (ms)
+benchmark beam_width 75 beam_length 13
+run 32 torch sdpa takes  11.556 (ms)
+benchmark beam_width 75 beam_length 15
+run 32 torch sdpa takes  13.925 (ms)
+benchmark beam_width 75 beam_length 17
+run 32 torch sdpa takes  15.555 (ms)
+benchmark beam_width 75 beam_length 19
+run 32 torch sdpa takes  20.344 (ms)
+benchmark beam_width 75 beam_length 21
+run 32 torch sdpa takes  25.234 (ms)
+benchmark beam_width 75 beam_length 23
+run 32 torch sdpa takes  27.572 (ms)
+benchmark beam_width 77 beam_length 1
+run 32 torch sdpa takes  1.524 (ms)
+benchmark beam_width 77 beam_length 3
+run 32 torch sdpa takes  1.861 (ms)
+benchmark beam_width 77 beam_length 5
+run 32 torch sdpa takes  3.204 (ms)
+benchmark beam_width 77 beam_length 7
+run 32 torch sdpa takes  4.280 (ms)
+benchmark beam_width 77 beam_length 9
+run 32 torch sdpa takes  6.608 (ms)
+benchmark beam_width 77 beam_length 11
+run 32 torch sdpa takes  9.843 (ms)
+benchmark beam_width 77 beam_length 13
+run 32 torch sdpa takes  11.324 (ms)
+benchmark beam_width 77 beam_length 15
+run 32 torch sdpa takes  14.167 (ms)
+benchmark beam_width 77 beam_length 17
+run 32 torch sdpa takes  19.525 (ms)
+benchmark beam_width 77 beam_length 19
+run 32 torch sdpa takes  21.415 (ms)
+benchmark beam_width 77 beam_length 21
+run 32 torch sdpa takes  25.567 (ms)
+benchmark beam_width 77 beam_length 23
+run 32 torch sdpa takes  31.209 (ms)
+benchmark beam_width 79 beam_length 1
+run 32 torch sdpa takes  1.550 (ms)
+benchmark beam_width 79 beam_length 3
+run 32 torch sdpa takes  1.868 (ms)
+benchmark beam_width 79 beam_length 5
+run 32 torch sdpa takes  3.245 (ms)
+benchmark beam_width 79 beam_length 7
+run 32 torch sdpa takes  4.821 (ms)
+benchmark beam_width 79 beam_length 9
+run 32 torch sdpa takes  6.700 (ms)
+benchmark beam_width 79 beam_length 11
+run 32 torch sdpa takes  9.909 (ms)
+benchmark beam_width 79 beam_length 13
+run 32 torch sdpa takes  12.401 (ms)
+benchmark beam_width 79 beam_length 15
+run 32 torch sdpa takes  15.172 (ms)
+benchmark beam_width 79 beam_length 17
+run 32 torch sdpa takes  19.738 (ms)
+benchmark beam_width 79 beam_length 19
+run 32 torch sdpa takes  23.491 (ms)
+benchmark beam_width 79 beam_length 21
+run 32 torch sdpa takes  25.775 (ms)
+benchmark beam_width 79 beam_length 23
+run 32 torch sdpa takes  31.452 (ms)
+benchmark beam_width 81 beam_length 1
+run 32 torch sdpa takes  1.554 (ms)
+benchmark beam_width 81 beam_length 3
+run 32 torch sdpa takes  1.861 (ms)
+benchmark beam_width 81 beam_length 5
+run 32 torch sdpa takes  3.299 (ms)
+benchmark beam_width 81 beam_length 7
+run 32 torch sdpa takes  4.830 (ms)
+benchmark beam_width 81 beam_length 9
+run 32 torch sdpa takes  6.746 (ms)
+benchmark beam_width 81 beam_length 11
+run 32 torch sdpa takes  9.977 (ms)
+benchmark beam_width 81 beam_length 13
+run 32 torch sdpa takes  13.475 (ms)
+benchmark beam_width 81 beam_length 15
+run 32 torch sdpa takes  15.282 (ms)
+benchmark beam_width 81 beam_length 17
+run 32 torch sdpa takes  19.948 (ms)
+benchmark beam_width 81 beam_length 19
+run 32 torch sdpa takes  23.928 (ms)
+benchmark beam_width 81 beam_length 21
+run 32 torch sdpa takes  27.335 (ms)
+benchmark beam_width 81 beam_length 23
+run 32 torch sdpa takes  33.309 (ms)
+benchmark beam_width 83 beam_length 1
+run 32 torch sdpa takes  1.570 (ms)
+benchmark beam_width 83 beam_length 3
+run 32 torch sdpa takes  1.889 (ms)
+benchmark beam_width 83 beam_length 5
+run 32 torch sdpa takes  3.855 (ms)
+benchmark beam_width 83 beam_length 7
+run 32 torch sdpa takes  5.539 (ms)
+benchmark beam_width 83 beam_length 9
+run 32 torch sdpa takes  6.824 (ms)
+benchmark beam_width 83 beam_length 11
+run 32 torch sdpa takes  10.220 (ms)
+benchmark beam_width 83 beam_length 13
+run 32 torch sdpa takes  13.528 (ms)
+benchmark beam_width 83 beam_length 15
+run 32 torch sdpa takes  15.520 (ms)
+benchmark beam_width 83 beam_length 17
+run 32 torch sdpa takes  20.316 (ms)
+benchmark beam_width 83 beam_length 19
+run 32 torch sdpa takes  25.225 (ms)
+benchmark beam_width 83 beam_length 21
+run 32 torch sdpa takes  30.939 (ms)
+benchmark beam_width 83 beam_length 23
+run 32 torch sdpa takes  33.588 (ms)
+benchmark beam_width 85 beam_length 1
+run 32 torch sdpa takes  1.544 (ms)
+benchmark beam_width 85 beam_length 3
+run 32 torch sdpa takes  1.882 (ms)
+benchmark beam_width 85 beam_length 5
+run 32 torch sdpa takes  3.922 (ms)
+benchmark beam_width 85 beam_length 7
+run 32 torch sdpa takes  5.397 (ms)
+benchmark beam_width 85 beam_length 9
+run 32 torch sdpa takes  6.972 (ms)
+benchmark beam_width 85 beam_length 11
+run 32 torch sdpa takes  10.968 (ms)
+benchmark beam_width 85 beam_length 13
+run 32 torch sdpa takes  13.834 (ms)
+benchmark beam_width 85 beam_length 15
+run 32 torch sdpa takes  15.580 (ms)
+benchmark beam_width 85 beam_length 17
+run 32 torch sdpa takes  21.356 (ms)
+benchmark beam_width 85 beam_length 19
+run 32 torch sdpa takes  25.558 (ms)
+benchmark beam_width 85 beam_length 21
+run 32 torch sdpa takes  31.298 (ms)
+benchmark beam_width 85 beam_length 23
+run 32 torch sdpa takes  37.787 (ms)
+benchmark beam_width 87 beam_length 1
+run 32 torch sdpa takes  1.793 (ms)
+benchmark beam_width 87 beam_length 3
+run 32 torch sdpa takes  1.889 (ms)
+benchmark beam_width 87 beam_length 5
+run 32 torch sdpa takes  3.988 (ms)
+benchmark beam_width 87 beam_length 7
+run 32 torch sdpa takes  5.250 (ms)
+benchmark beam_width 87 beam_length 9
+run 32 torch sdpa takes  7.016 (ms)
+benchmark beam_width 87 beam_length 11
+run 32 torch sdpa takes  11.125 (ms)
+benchmark beam_width 87 beam_length 13
+run 32 torch sdpa takes  13.945 (ms)
+benchmark beam_width 87 beam_length 15
+run 32 torch sdpa takes  18.364 (ms)
+benchmark beam_width 87 beam_length 17
+run 32 torch sdpa takes  23.243 (ms)
+benchmark beam_width 87 beam_length 19
+run 32 torch sdpa takes  25.747 (ms)
+benchmark beam_width 87 beam_length 21
+run 32 torch sdpa takes  32.902 (ms)
+benchmark beam_width 87 beam_length 23
+run 32 torch sdpa takes  38.172 (ms)
+benchmark beam_width 89 beam_length 1
+run 32 torch sdpa takes  1.546 (ms)
+benchmark beam_width 89 beam_length 3
+run 32 torch sdpa takes  1.888 (ms)
+benchmark beam_width 89 beam_length 5
+run 32 torch sdpa takes  4.068 (ms)
+benchmark beam_width 89 beam_length 7
+run 32 torch sdpa takes  5.034 (ms)
+benchmark beam_width 89 beam_length 9
+run 32 torch sdpa takes  7.661 (ms)
+benchmark beam_width 89 beam_length 11
+run 32 torch sdpa takes  11.451 (ms)
+benchmark beam_width 89 beam_length 13
+run 32 torch sdpa takes  14.180 (ms)
+benchmark beam_width 89 beam_length 15
+run 32 torch sdpa takes  19.614 (ms)
+benchmark beam_width 89 beam_length 17
+run 32 torch sdpa takes  23.515 (ms)
+benchmark beam_width 89 beam_length 19
+run 32 torch sdpa takes  26.201 (ms)
+benchmark beam_width 89 beam_length 21
+run 32 torch sdpa takes  33.324 (ms)
+benchmark beam_width 89 beam_length 23
+run 32 torch sdpa takes  38.678 (ms)
+benchmark beam_width 91 beam_length 1
+run 32 torch sdpa takes  1.542 (ms)
+benchmark beam_width 91 beam_length 3
+run 32 torch sdpa takes  1.883 (ms)
+benchmark beam_width 91 beam_length 5
+run 32 torch sdpa takes  4.070 (ms)
+benchmark beam_width 91 beam_length 7
+run 32 torch sdpa takes  5.094 (ms)
+benchmark beam_width 91 beam_length 9
+run 32 torch sdpa takes  7.685 (ms)
+benchmark beam_width 91 beam_length 11
+run 32 torch sdpa takes  11.315 (ms)
+benchmark beam_width 91 beam_length 13
+run 32 torch sdpa takes  15.163 (ms)
+benchmark beam_width 91 beam_length 15
+run 32 torch sdpa takes  19.836 (ms)
+benchmark beam_width 91 beam_length 17
+run 32 torch sdpa takes  23.923 (ms)
+benchmark beam_width 91 beam_length 19
+run 32 torch sdpa takes  30.906 (ms)
+benchmark beam_width 91 beam_length 21
+run 32 torch sdpa takes  33.610 (ms)
+benchmark beam_width 91 beam_length 23
+run 32 torch sdpa takes  40.379 (ms)
+benchmark beam_width 93 beam_length 1
+run 32 torch sdpa takes  1.544 (ms)
+benchmark beam_width 93 beam_length 3
+run 32 torch sdpa takes  1.900 (ms)
+benchmark beam_width 93 beam_length 5
+run 32 torch sdpa takes  4.060 (ms)
+benchmark beam_width 93 beam_length 7
+run 32 torch sdpa takes  5.928 (ms)
+benchmark beam_width 93 beam_length 9
+run 32 torch sdpa takes  9.812 (ms)
+benchmark beam_width 93 beam_length 11
+run 32 torch sdpa takes  11.422 (ms)
+benchmark beam_width 93 beam_length 13
+run 32 torch sdpa takes  15.203 (ms)
+benchmark beam_width 93 beam_length 15
+run 32 torch sdpa takes  20.012 (ms)
+benchmark beam_width 93 beam_length 17
+run 32 torch sdpa takes  25.208 (ms)
+benchmark beam_width 93 beam_length 19
+run 32 torch sdpa takes  31.181 (ms)
+benchmark beam_width 93 beam_length 21
+run 32 torch sdpa takes  37.713 (ms)
+benchmark beam_width 93 beam_length 23
+run 32 torch sdpa takes  44.395 (ms)
+benchmark beam_width 95 beam_length 1
+run 32 torch sdpa takes  1.540 (ms)
+benchmark beam_width 95 beam_length 3
+run 32 torch sdpa takes  2.193 (ms)
+benchmark beam_width 95 beam_length 5
+run 32 torch sdpa takes  4.068 (ms)
+benchmark beam_width 95 beam_length 7
+run 32 torch sdpa takes  5.989 (ms)
+benchmark beam_width 95 beam_length 9
+run 32 torch sdpa takes  9.752 (ms)
+benchmark beam_width 95 beam_length 11
+run 32 torch sdpa takes  12.525 (ms)
+benchmark beam_width 95 beam_length 13
+run 32 torch sdpa takes  15.427 (ms)
+benchmark beam_width 95 beam_length 15
+run 32 torch sdpa takes  20.390 (ms)
+benchmark beam_width 95 beam_length 17
+run 32 torch sdpa takes  25.540 (ms)
+benchmark beam_width 95 beam_length 19
+run 32 torch sdpa takes  31.571 (ms)
+benchmark beam_width 95 beam_length 21
+run 32 torch sdpa takes  38.081 (ms)
+benchmark beam_width 95 beam_length 23
+run 32 torch sdpa takes  45.265 (ms)
+benchmark beam_width 97 beam_length 1
+run 32 torch sdpa takes  1.545 (ms)
+benchmark beam_width 97 beam_length 3
+run 32 torch sdpa takes  2.199 (ms)
+benchmark beam_width 97 beam_length 5
+run 32 torch sdpa takes  4.131 (ms)
+benchmark beam_width 97 beam_length 7
+run 32 torch sdpa takes  6.611 (ms)
+benchmark beam_width 97 beam_length 9
+run 32 torch sdpa takes  9.911 (ms)
+benchmark beam_width 97 beam_length 11
+run 32 torch sdpa takes  13.491 (ms)
+benchmark beam_width 97 beam_length 13
+run 32 torch sdpa takes  15.544 (ms)
+benchmark beam_width 97 beam_length 15
+run 32 torch sdpa takes  21.422 (ms)
+benchmark beam_width 97 beam_length 17
+run 32 torch sdpa takes  25.742 (ms)
+benchmark beam_width 97 beam_length 19
+run 32 torch sdpa takes  33.020 (ms)
+benchmark beam_width 97 beam_length 21
+run 32 torch sdpa takes  38.516 (ms)
+benchmark beam_width 97 beam_length 23
+run 32 torch sdpa takes  47.160 (ms)
+benchmark beam_width 99 beam_length 1
+run 32 torch sdpa takes  1.562 (ms)
+benchmark beam_width 99 beam_length 3
+run 32 torch sdpa takes  2.230 (ms)
+benchmark beam_width 99 beam_length 5
+run 32 torch sdpa takes  4.149 (ms)
+benchmark beam_width 99 beam_length 7
+run 32 torch sdpa takes  6.611 (ms)
+benchmark beam_width 99 beam_length 9
+run 32 torch sdpa takes  9.973 (ms)
+benchmark beam_width 99 beam_length 11
+run 32 torch sdpa takes  13.811 (ms)
+benchmark beam_width 99 beam_length 13
+run 32 torch sdpa takes  18.360 (ms)
+benchmark beam_width 99 beam_length 15
+run 32 torch sdpa takes  23.327 (ms)
+benchmark beam_width 99 beam_length 17
+run 32 torch sdpa takes  26.265 (ms)
+benchmark beam_width 99 beam_length 19
+run 32 torch sdpa takes  33.249 (ms)
+benchmark beam_width 99 beam_length 21
+run 32 torch sdpa takes  40.283 (ms)
+benchmark beam_width 99 beam_length 23
+run 32 torch sdpa takes  47.797 (ms)
+benchmark beam_width 101 beam_length 1
+run 32 torch sdpa takes  1.528 (ms)
+benchmark beam_width 101 beam_length 3
+run 32 torch sdpa takes  2.216 (ms)
+benchmark beam_width 101 beam_length 5
+run 32 torch sdpa takes  4.179 (ms)
+benchmark beam_width 101 beam_length 7
+run 32 torch sdpa takes  6.712 (ms)
+benchmark beam_width 101 beam_length 9
+run 32 torch sdpa takes  10.194 (ms)
+benchmark beam_width 101 beam_length 11
+run 32 torch sdpa takes  13.819 (ms)
+benchmark beam_width 101 beam_length 13
+run 32 torch sdpa takes  19.529 (ms)
+benchmark beam_width 101 beam_length 15
+run 32 torch sdpa takes  23.529 (ms)
+benchmark beam_width 101 beam_length 17
+run 32 torch sdpa takes  27.373 (ms)
+benchmark beam_width 101 beam_length 19
+run 32 torch sdpa takes  33.845 (ms)
+benchmark beam_width 101 beam_length 21
+run 32 torch sdpa takes  44.294 (ms)
+benchmark beam_width 101 beam_length 23
+run 32 torch sdpa takes  48.496 (ms)
+benchmark beam_width 103 beam_length 1
+run 32 torch sdpa takes  1.537 (ms)
+benchmark beam_width 103 beam_length 3
+run 32 torch sdpa takes  2.215 (ms)
+benchmark beam_width 103 beam_length 5
+run 32 torch sdpa takes  4.421 (ms)
+benchmark beam_width 103 beam_length 7
+run 32 torch sdpa takes  6.746 (ms)
+benchmark beam_width 103 beam_length 9
+run 32 torch sdpa takes  10.928 (ms)
+benchmark beam_width 103 beam_length 11
+run 32 torch sdpa takes  13.971 (ms)
+benchmark beam_width 103 beam_length 13
+run 32 torch sdpa takes  19.641 (ms)
+benchmark beam_width 103 beam_length 15
+run 32 torch sdpa takes  23.929 (ms)
+benchmark beam_width 103 beam_length 17
+run 32 torch sdpa takes  30.924 (ms)
+benchmark beam_width 103 beam_length 19
+run 32 torch sdpa takes  37.735 (ms)
+benchmark beam_width 103 beam_length 21
+run 32 torch sdpa takes  44.934 (ms)
+benchmark beam_width 103 beam_length 23
+run 32 torch sdpa takes  53.290 (ms)
+benchmark beam_width 105 beam_length 1
+run 32 torch sdpa takes  1.552 (ms)
+benchmark beam_width 105 beam_length 3
+run 32 torch sdpa takes  2.235 (ms)
+benchmark beam_width 105 beam_length 5
+run 32 torch sdpa takes  4.260 (ms)
+benchmark beam_width 105 beam_length 7
+run 32 torch sdpa takes  6.821 (ms)
+benchmark beam_width 105 beam_length 9
+run 32 torch sdpa takes  10.992 (ms)
+benchmark beam_width 105 beam_length 11
+run 32 torch sdpa takes  14.203 (ms)
+benchmark beam_width 105 beam_length 13
+run 32 torch sdpa takes  19.765 (ms)
+benchmark beam_width 105 beam_length 15
+run 32 torch sdpa takes  25.212 (ms)
+benchmark beam_width 105 beam_length 17
+run 32 torch sdpa takes  31.331 (ms)
+benchmark beam_width 105 beam_length 19
+run 32 torch sdpa takes  38.084 (ms)
+benchmark beam_width 105 beam_length 21
+run 32 torch sdpa takes  47.034 (ms)
+benchmark beam_width 105 beam_length 23
+run 32 torch sdpa takes  53.762 (ms)
+benchmark beam_width 107 beam_length 1
+run 32 torch sdpa takes  1.539 (ms)
+benchmark beam_width 107 beam_length 3
+run 32 torch sdpa takes  2.319 (ms)
+benchmark beam_width 107 beam_length 5
+run 32 torch sdpa takes  4.277 (ms)
+benchmark beam_width 107 beam_length 7
+run 32 torch sdpa takes  6.840 (ms)
+benchmark beam_width 107 beam_length 9
+run 32 torch sdpa takes  11.698 (ms)
+benchmark beam_width 107 beam_length 11
+run 32 torch sdpa takes  14.231 (ms)
+benchmark beam_width 107 beam_length 13
+run 32 torch sdpa takes  19.990 (ms)
+benchmark beam_width 107 beam_length 15
+run 32 torch sdpa takes  25.458 (ms)
+benchmark beam_width 107 beam_length 17
+run 32 torch sdpa takes  31.476 (ms)
+benchmark beam_width 107 beam_length 19
+run 32 torch sdpa takes  38.514 (ms)
+benchmark beam_width 107 beam_length 21
+run 32 torch sdpa takes  47.573 (ms)
+benchmark beam_width 107 beam_length 23
+run 32 torch sdpa takes  55.956 (ms)
+benchmark beam_width 109 beam_length 1
+run 32 torch sdpa takes  1.592 (ms)
+benchmark beam_width 109 beam_length 3
+run 32 torch sdpa takes  2.291 (ms)
+benchmark beam_width 109 beam_length 5
+run 32 torch sdpa takes  4.792 (ms)
+benchmark beam_width 109 beam_length 7
+run 32 torch sdpa takes  6.882 (ms)
+benchmark beam_width 109 beam_length 9
+run 32 torch sdpa takes  11.325 (ms)
+benchmark beam_width 109 beam_length 11
+run 32 torch sdpa takes  15.199 (ms)
+benchmark beam_width 109 beam_length 13
+run 32 torch sdpa takes  20.453 (ms)
+benchmark beam_width 109 beam_length 15
+run 32 torch sdpa takes  25.778 (ms)
+benchmark beam_width 109 beam_length 17
+run 32 torch sdpa takes  33.179 (ms)
+benchmark beam_width 109 beam_length 19
+run 32 torch sdpa takes  38.843 (ms)
+benchmark beam_width 109 beam_length 21
+run 32 torch sdpa takes  47.872 (ms)
+benchmark beam_width 109 beam_length 23
+run 32 torch sdpa takes  56.519 (ms)
+benchmark beam_width 111 beam_length 1
+run 32 torch sdpa takes  1.530 (ms)
+benchmark beam_width 111 beam_length 3
+run 32 torch sdpa takes  2.309 (ms)
+benchmark beam_width 111 beam_length 5
+run 32 torch sdpa takes  4.791 (ms)
+benchmark beam_width 111 beam_length 7
+run 32 torch sdpa takes  7.006 (ms)
+benchmark beam_width 111 beam_length 9
+run 32 torch sdpa takes  11.455 (ms)
+benchmark beam_width 111 beam_length 11
+run 32 torch sdpa takes  15.391 (ms)
+benchmark beam_width 111 beam_length 13
+run 32 torch sdpa takes  21.380 (ms)
+benchmark beam_width 111 beam_length 15
+run 32 torch sdpa takes  26.126 (ms)
+benchmark beam_width 111 beam_length 17
+run 32 torch sdpa takes  33.463 (ms)
+benchmark beam_width 111 beam_length 19
+run 32 torch sdpa takes  40.603 (ms)
+benchmark beam_width 111 beam_length 21
+run 32 torch sdpa takes  48.354 (ms)
+benchmark beam_width 111 beam_length 23
+run 32 torch sdpa takes  57.038 (ms)
+benchmark beam_width 113 beam_length 1
+run 32 torch sdpa takes  1.530 (ms)
+benchmark beam_width 113 beam_length 3
+run 32 torch sdpa takes  2.312 (ms)
+benchmark beam_width 113 beam_length 5
+run 32 torch sdpa takes  4.825 (ms)
+benchmark beam_width 113 beam_length 7
+run 32 torch sdpa takes  7.011 (ms)
+benchmark beam_width 113 beam_length 9
+run 32 torch sdpa takes  11.320 (ms)
+benchmark beam_width 113 beam_length 11
+run 32 torch sdpa takes  15.388 (ms)
+benchmark beam_width 113 beam_length 13
+run 32 torch sdpa takes  21.541 (ms)
+benchmark beam_width 113 beam_length 15
+run 32 torch sdpa takes  27.288 (ms)
+benchmark beam_width 113 beam_length 17
+run 32 torch sdpa takes  36.089 (ms)
+benchmark beam_width 113 beam_length 19
+run 32 torch sdpa takes  44.712 (ms)
+benchmark beam_width 113 beam_length 21
+run 32 torch sdpa takes  53.282 (ms)
+benchmark beam_width 113 beam_length 23
+run 32 torch sdpa takes  63.862 (ms)
+benchmark beam_width 115 beam_length 1
+run 32 torch sdpa takes  1.531 (ms)
+benchmark beam_width 115 beam_length 3
+run 32 torch sdpa takes  2.308 (ms)
+benchmark beam_width 115 beam_length 5
+run 32 torch sdpa takes  4.313 (ms)
+benchmark beam_width 115 beam_length 7
+run 32 torch sdpa takes  6.724 (ms)
+benchmark beam_width 115 beam_length 9
+run 32 torch sdpa takes  10.984 (ms)
+benchmark beam_width 115 beam_length 11
+run 32 torch sdpa takes  13.654 (ms)
+benchmark beam_width 115 beam_length 13
+run 32 torch sdpa takes  20.463 (ms)
+benchmark beam_width 115 beam_length 15
+run 32 torch sdpa takes  24.208 (ms)
+benchmark beam_width 115 beam_length 17
+run 32 torch sdpa takes  33.084 (ms)
+benchmark beam_width 115 beam_length 19
+run 32 torch sdpa takes  39.697 (ms)
+benchmark beam_width 115 beam_length 21
+run 32 torch sdpa takes  47.134 (ms)
+benchmark beam_width 115 beam_length 23
+run 32 torch sdpa takes  64.188 (ms)
+benchmark beam_width 117 beam_length 1
+run 32 torch sdpa takes  1.555 (ms)
+benchmark beam_width 117 beam_length 3
+run 32 torch sdpa takes  2.334 (ms)
+benchmark beam_width 117 beam_length 5
+run 32 torch sdpa takes  4.564 (ms)
+benchmark beam_width 117 beam_length 7
+run 32 torch sdpa takes  6.685 (ms)
+benchmark beam_width 117 beam_length 9
+run 32 torch sdpa takes  11.703 (ms)
+benchmark beam_width 117 beam_length 11
+run 32 torch sdpa takes  15.931 (ms)
+benchmark beam_width 117 beam_length 13
+run 32 torch sdpa takes  20.407 (ms)
+benchmark beam_width 117 beam_length 15
+run 32 torch sdpa takes  26.776 (ms)
+benchmark beam_width 117 beam_length 17
+run 32 torch sdpa takes  32.965 (ms)
+benchmark beam_width 117 beam_length 19
+run 32 torch sdpa takes  40.877 (ms)
+benchmark beam_width 117 beam_length 21
+run 32 torch sdpa takes  46.949 (ms)
+benchmark beam_width 117 beam_length 23
+run 32 torch sdpa takes  65.157 (ms)
+benchmark beam_width 119 beam_length 1
+run 32 torch sdpa takes  1.547 (ms)
+benchmark beam_width 119 beam_length 3
+run 32 torch sdpa takes  2.332 (ms)
+benchmark beam_width 119 beam_length 5
+run 32 torch sdpa takes  4.592 (ms)
+benchmark beam_width 119 beam_length 7
+run 32 torch sdpa takes  8.486 (ms)
+benchmark beam_width 119 beam_length 9
+run 32 torch sdpa takes  11.619 (ms)
+benchmark beam_width 119 beam_length 11
+run 32 torch sdpa takes  16.726 (ms)
+benchmark beam_width 119 beam_length 13
+run 32 torch sdpa takes  20.555 (ms)
+benchmark beam_width 119 beam_length 15
+run 32 torch sdpa takes  26.841 (ms)
+benchmark beam_width 119 beam_length 17
+run 32 torch sdpa takes  32.906 (ms)
+benchmark beam_width 119 beam_length 19
+run 32 torch sdpa takes  40.665 (ms)
+benchmark beam_width 119 beam_length 21
+run 32 torch sdpa takes  53.676 (ms)
+benchmark beam_width 119 beam_length 23
+run 32 torch sdpa takes  67.393 (ms)
+benchmark beam_width 121 beam_length 1
+run 32 torch sdpa takes  2.598 (ms)
+benchmark beam_width 121 beam_length 3
+run 32 torch sdpa takes  2.338 (ms)
+benchmark beam_width 121 beam_length 5
+run 32 torch sdpa takes  5.549 (ms)
+benchmark beam_width 121 beam_length 7
+run 32 torch sdpa takes  9.723 (ms)
+benchmark beam_width 121 beam_length 9
+run 32 torch sdpa takes  13.790 (ms)
+benchmark beam_width 121 beam_length 11
+run 32 torch sdpa takes  19.619 (ms)
+benchmark beam_width 121 beam_length 13
+run 32 torch sdpa takes  25.220 (ms)
+benchmark beam_width 121 beam_length 15
+run 32 torch sdpa takes  31.469 (ms)
+benchmark beam_width 121 beam_length 17
+run 32 torch sdpa takes  38.828 (ms)
+benchmark beam_width 121 beam_length 19
+run 32 torch sdpa takes  48.037 (ms)
+benchmark beam_width 121 beam_length 21
+run 32 torch sdpa takes  56.940 (ms)
+benchmark beam_width 121 beam_length 23
+run 32 torch sdpa takes  71.150 (ms)
+benchmark beam_width 123 beam_length 1
+run 32 torch sdpa takes  1.796 (ms)
+benchmark beam_width 123 beam_length 3
+run 32 torch sdpa takes  2.357 (ms)
+benchmark beam_width 123 beam_length 5
+run 32 torch sdpa takes  5.095 (ms)
+benchmark beam_width 123 beam_length 7
+run 32 torch sdpa takes  9.889 (ms)
+benchmark beam_width 123 beam_length 9
+run 32 torch sdpa takes  13.823 (ms)
+benchmark beam_width 123 beam_length 11
+run 32 torch sdpa takes  20.033 (ms)
+benchmark beam_width 123 beam_length 13
+run 32 torch sdpa takes  25.383 (ms)
+benchmark beam_width 123 beam_length 15
+run 32 torch sdpa takes  33.033 (ms)
+benchmark beam_width 123 beam_length 17
+run 32 torch sdpa takes  40.321 (ms)
+benchmark beam_width 123 beam_length 19
+run 32 torch sdpa takes  50.023 (ms)
+benchmark beam_width 123 beam_length 21
+run 32 torch sdpa takes  61.639 (ms)
+benchmark beam_width 123 beam_length 23
+run 32 torch sdpa takes  69.560 (ms)
