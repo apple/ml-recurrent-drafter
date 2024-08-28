@@ -1,0 +1,1488 @@
+benchmark batch_size 1 seq_len 1
+run 32 torch sdpa takes  1.620 (ms)
+benchmark batch_size 1 seq_len 3
+run 32 torch sdpa takes  1.586 (ms)
+benchmark batch_size 1 seq_len 5
+run 32 torch sdpa takes  1.517 (ms)
+benchmark batch_size 1 seq_len 7
+run 32 torch sdpa takes  1.543 (ms)
+benchmark batch_size 1 seq_len 9
+run 32 torch sdpa takes  1.517 (ms)
+benchmark batch_size 1 seq_len 11
+run 32 torch sdpa takes  1.523 (ms)
+benchmark batch_size 1 seq_len 13
+run 32 torch sdpa takes  1.532 (ms)
+benchmark batch_size 1 seq_len 15
+run 32 torch sdpa takes  1.536 (ms)
+benchmark batch_size 1 seq_len 17
+run 32 torch sdpa takes  1.544 (ms)
+benchmark batch_size 1 seq_len 19
+run 32 torch sdpa takes  1.507 (ms)
+benchmark batch_size 1 seq_len 21
+run 32 torch sdpa takes  1.545 (ms)
+benchmark batch_size 1 seq_len 23
+run 32 torch sdpa takes  1.537 (ms)
+benchmark batch_size 3 seq_len 1
+run 32 torch sdpa takes  1.540 (ms)
+benchmark batch_size 3 seq_len 3
+run 32 torch sdpa takes  1.541 (ms)
+benchmark batch_size 3 seq_len 5
+run 32 torch sdpa takes  1.506 (ms)
+benchmark batch_size 3 seq_len 7
+run 32 torch sdpa takes  1.540 (ms)
+benchmark batch_size 3 seq_len 9
+run 32 torch sdpa takes  1.536 (ms)
+benchmark batch_size 3 seq_len 11
+run 32 torch sdpa takes  1.651 (ms)
+benchmark batch_size 3 seq_len 13
+run 32 torch sdpa takes  1.505 (ms)
+benchmark batch_size 3 seq_len 15
+run 32 torch sdpa takes  1.493 (ms)
+benchmark batch_size 3 seq_len 17
+run 32 torch sdpa takes  1.498 (ms)
+benchmark batch_size 3 seq_len 19
+run 32 torch sdpa takes  1.535 (ms)
+benchmark batch_size 3 seq_len 21
+run 32 torch sdpa takes  1.522 (ms)
+benchmark batch_size 3 seq_len 23
+run 32 torch sdpa takes  1.506 (ms)
+benchmark batch_size 5 seq_len 1
+run 32 torch sdpa takes  1.542 (ms)
+benchmark batch_size 5 seq_len 3
+run 32 torch sdpa takes  1.517 (ms)
+benchmark batch_size 5 seq_len 5
+run 32 torch sdpa takes  1.542 (ms)
+benchmark batch_size 5 seq_len 7
+run 32 torch sdpa takes  1.530 (ms)
+benchmark batch_size 5 seq_len 9
+run 32 torch sdpa takes  1.532 (ms)
+benchmark batch_size 5 seq_len 11
+run 32 torch sdpa takes  1.538 (ms)
+benchmark batch_size 5 seq_len 13
+run 32 torch sdpa takes  1.554 (ms)
+benchmark batch_size 5 seq_len 15
+run 32 torch sdpa takes  1.513 (ms)
+benchmark batch_size 5 seq_len 17
+run 32 torch sdpa takes  1.528 (ms)
+benchmark batch_size 5 seq_len 19
+run 32 torch sdpa takes  1.545 (ms)
+benchmark batch_size 5 seq_len 21
+run 32 torch sdpa takes  1.522 (ms)
+benchmark batch_size 5 seq_len 23
+run 32 torch sdpa takes  1.548 (ms)
+benchmark batch_size 7 seq_len 1
+run 32 torch sdpa takes  1.595 (ms)
+benchmark batch_size 7 seq_len 3
+run 32 torch sdpa takes  1.526 (ms)
+benchmark batch_size 7 seq_len 5
+run 32 torch sdpa takes  1.540 (ms)
+benchmark batch_size 7 seq_len 7
+run 32 torch sdpa takes  1.519 (ms)
+benchmark batch_size 7 seq_len 9
+run 32 torch sdpa takes  1.560 (ms)
+benchmark batch_size 7 seq_len 11
+run 32 torch sdpa takes  1.539 (ms)
+benchmark batch_size 7 seq_len 13
+run 32 torch sdpa takes  1.521 (ms)
+benchmark batch_size 7 seq_len 15
+run 32 torch sdpa takes  1.564 (ms)
+benchmark batch_size 7 seq_len 17
+run 32 torch sdpa takes  1.537 (ms)
+benchmark batch_size 7 seq_len 19
+run 32 torch sdpa takes  1.568 (ms)
+benchmark batch_size 7 seq_len 21
+run 32 torch sdpa takes  1.569 (ms)
+benchmark batch_size 7 seq_len 23
+run 32 torch sdpa takes  1.557 (ms)
+benchmark batch_size 9 seq_len 1
+run 32 torch sdpa takes  1.598 (ms)
+benchmark batch_size 9 seq_len 3
+run 32 torch sdpa takes  1.564 (ms)
+benchmark batch_size 9 seq_len 5
+run 32 torch sdpa takes  1.535 (ms)
+benchmark batch_size 9 seq_len 7
+run 32 torch sdpa takes  1.567 (ms)
+benchmark batch_size 9 seq_len 9
+run 32 torch sdpa takes  1.536 (ms)
+benchmark batch_size 9 seq_len 11
+run 32 torch sdpa takes  1.591 (ms)
+benchmark batch_size 9 seq_len 13
+run 32 torch sdpa takes  1.570 (ms)
+benchmark batch_size 9 seq_len 15
+run 32 torch sdpa takes  1.571 (ms)
+benchmark batch_size 9 seq_len 17
+run 32 torch sdpa takes  1.582 (ms)
+benchmark batch_size 9 seq_len 19
+run 32 torch sdpa takes  1.555 (ms)
+benchmark batch_size 9 seq_len 21
+run 32 torch sdpa takes  1.661 (ms)
+benchmark batch_size 9 seq_len 23
+run 32 torch sdpa takes  1.604 (ms)
+benchmark batch_size 11 seq_len 1
+run 32 torch sdpa takes  1.622 (ms)
+benchmark batch_size 11 seq_len 3
+run 32 torch sdpa takes  1.566 (ms)
+benchmark batch_size 11 seq_len 5
+run 32 torch sdpa takes  1.549 (ms)
+benchmark batch_size 11 seq_len 7
+run 32 torch sdpa takes  1.563 (ms)
+benchmark batch_size 11 seq_len 9
+run 32 torch sdpa takes  1.706 (ms)
+benchmark batch_size 11 seq_len 11
+run 32 torch sdpa takes  1.581 (ms)
+benchmark batch_size 11 seq_len 13
+run 32 torch sdpa takes  1.591 (ms)
+benchmark batch_size 11 seq_len 15
+run 32 torch sdpa takes  1.569 (ms)
+benchmark batch_size 11 seq_len 17
+run 32 torch sdpa takes  1.568 (ms)
+benchmark batch_size 11 seq_len 19
+run 32 torch sdpa takes  1.561 (ms)
+benchmark batch_size 11 seq_len 21
+run 32 torch sdpa takes  1.587 (ms)
+benchmark batch_size 11 seq_len 23
+run 32 torch sdpa takes  1.556 (ms)
+benchmark batch_size 13 seq_len 1
+run 32 torch sdpa takes  1.605 (ms)
+benchmark batch_size 13 seq_len 3
+run 32 torch sdpa takes  1.557 (ms)
+benchmark batch_size 13 seq_len 5
+run 32 torch sdpa takes  1.569 (ms)
+benchmark batch_size 13 seq_len 7
+run 32 torch sdpa takes  1.517 (ms)
+benchmark batch_size 13 seq_len 9
+run 32 torch sdpa takes  1.575 (ms)
+benchmark batch_size 13 seq_len 11
+run 32 torch sdpa takes  1.580 (ms)
+benchmark batch_size 13 seq_len 13
+run 32 torch sdpa takes  1.549 (ms)
+benchmark batch_size 13 seq_len 15
+run 32 torch sdpa takes  1.527 (ms)
+benchmark batch_size 13 seq_len 17
+run 32 torch sdpa takes  1.591 (ms)
+benchmark batch_size 13 seq_len 19
+run 32 torch sdpa takes  1.577 (ms)
+benchmark batch_size 13 seq_len 21
+run 32 torch sdpa takes  1.675 (ms)
+benchmark batch_size 13 seq_len 23
+run 32 torch sdpa takes  1.587 (ms)
+benchmark batch_size 15 seq_len 1
+run 32 torch sdpa takes  1.740 (ms)
+benchmark batch_size 15 seq_len 3
+run 32 torch sdpa takes  1.712 (ms)
+benchmark batch_size 15 seq_len 5
+run 32 torch sdpa takes  1.703 (ms)
+benchmark batch_size 15 seq_len 7
+run 32 torch sdpa takes  1.641 (ms)
+benchmark batch_size 15 seq_len 9
+run 32 torch sdpa takes  1.644 (ms)
+benchmark batch_size 15 seq_len 11
+run 32 torch sdpa takes  1.681 (ms)
+benchmark batch_size 15 seq_len 13
+run 32 torch sdpa takes  2.181 (ms)
+benchmark batch_size 15 seq_len 15
+run 32 torch sdpa takes  1.756 (ms)
+benchmark batch_size 15 seq_len 17
+run 32 torch sdpa takes  1.808 (ms)
+benchmark batch_size 15 seq_len 19
+run 32 torch sdpa takes  1.816 (ms)
+benchmark batch_size 15 seq_len 21
+run 32 torch sdpa takes  1.850 (ms)
+benchmark batch_size 15 seq_len 23
+run 32 torch sdpa takes  1.898 (ms)
+benchmark batch_size 17 seq_len 1
+run 32 torch sdpa takes  1.712 (ms)
+benchmark batch_size 17 seq_len 3
+run 32 torch sdpa takes  1.732 (ms)
+benchmark batch_size 17 seq_len 5
+run 32 torch sdpa takes  1.786 (ms)
+benchmark batch_size 17 seq_len 7
+run 32 torch sdpa takes  1.804 (ms)
+benchmark batch_size 17 seq_len 9
+run 32 torch sdpa takes  1.825 (ms)
+benchmark batch_size 17 seq_len 11
+run 32 torch sdpa takes  1.839 (ms)
+benchmark batch_size 17 seq_len 13
+run 32 torch sdpa takes  1.889 (ms)
+benchmark batch_size 17 seq_len 15
+run 32 torch sdpa takes  1.972 (ms)
+benchmark batch_size 17 seq_len 17
+run 32 torch sdpa takes  2.004 (ms)
+benchmark batch_size 17 seq_len 19
+run 32 torch sdpa takes  2.024 (ms)
+benchmark batch_size 17 seq_len 21
+run 32 torch sdpa takes  2.031 (ms)
+benchmark batch_size 17 seq_len 23
+run 32 torch sdpa takes  2.061 (ms)
+benchmark batch_size 19 seq_len 1
+run 32 torch sdpa takes  1.749 (ms)
+benchmark batch_size 19 seq_len 3
+run 32 torch sdpa takes  1.817 (ms)
+benchmark batch_size 19 seq_len 5
+run 32 torch sdpa takes  1.875 (ms)
+benchmark batch_size 19 seq_len 7
+run 32 torch sdpa takes  1.908 (ms)
+benchmark batch_size 19 seq_len 9
+run 32 torch sdpa takes  1.951 (ms)
+benchmark batch_size 19 seq_len 11
+run 32 torch sdpa takes  1.985 (ms)
+benchmark batch_size 19 seq_len 13
+run 32 torch sdpa takes  2.014 (ms)
+benchmark batch_size 19 seq_len 15
+run 32 torch sdpa takes  2.055 (ms)
+benchmark batch_size 19 seq_len 17
+run 32 torch sdpa takes  2.093 (ms)
+benchmark batch_size 19 seq_len 19
+run 32 torch sdpa takes  2.116 (ms)
+benchmark batch_size 19 seq_len 21
+run 32 torch sdpa takes  2.114 (ms)
+benchmark batch_size 19 seq_len 23
+run 32 torch sdpa takes  2.135 (ms)
+benchmark batch_size 21 seq_len 1
+run 32 torch sdpa takes  2.103 (ms)
+benchmark batch_size 21 seq_len 3
+run 32 torch sdpa takes  2.112 (ms)
+benchmark batch_size 21 seq_len 5
+run 32 torch sdpa takes  2.190 (ms)
+benchmark batch_size 21 seq_len 7
+run 32 torch sdpa takes  2.188 (ms)
+benchmark batch_size 21 seq_len 9
+run 32 torch sdpa takes  2.196 (ms)
+benchmark batch_size 21 seq_len 11
+run 32 torch sdpa takes  2.226 (ms)
+benchmark batch_size 21 seq_len 13
+run 32 torch sdpa takes  2.274 (ms)
+benchmark batch_size 21 seq_len 15
+run 32 torch sdpa takes  2.278 (ms)
+benchmark batch_size 21 seq_len 17
+run 32 torch sdpa takes  2.314 (ms)
+benchmark batch_size 21 seq_len 19
+run 32 torch sdpa takes  2.348 (ms)
+benchmark batch_size 21 seq_len 21
+run 32 torch sdpa takes  2.376 (ms)
+benchmark batch_size 21 seq_len 23
+run 32 torch sdpa takes  2.403 (ms)
+benchmark batch_size 23 seq_len 1
+run 32 torch sdpa takes  2.090 (ms)
+benchmark batch_size 23 seq_len 3
+run 32 torch sdpa takes  2.183 (ms)
+benchmark batch_size 23 seq_len 5
+run 32 torch sdpa takes  2.248 (ms)
+benchmark batch_size 23 seq_len 7
+run 32 torch sdpa takes  2.280 (ms)
+benchmark batch_size 23 seq_len 9
+run 32 torch sdpa takes  2.322 (ms)
+benchmark batch_size 23 seq_len 11
+run 32 torch sdpa takes  2.336 (ms)
+benchmark batch_size 23 seq_len 13
+run 32 torch sdpa takes  2.383 (ms)
+benchmark batch_size 23 seq_len 15
+run 32 torch sdpa takes  2.426 (ms)
+benchmark batch_size 23 seq_len 17
+run 32 torch sdpa takes  2.457 (ms)
+benchmark batch_size 23 seq_len 19
+run 32 torch sdpa takes  2.479 (ms)
+benchmark batch_size 23 seq_len 21
+run 32 torch sdpa takes  2.479 (ms)
+benchmark batch_size 23 seq_len 23
+run 32 torch sdpa takes  2.524 (ms)
+benchmark batch_size 25 seq_len 1
+run 32 torch sdpa takes  2.252 (ms)
+benchmark batch_size 25 seq_len 3
+run 32 torch sdpa takes  2.349 (ms)
+benchmark batch_size 25 seq_len 5
+run 32 torch sdpa takes  2.344 (ms)
+benchmark batch_size 25 seq_len 7
+run 32 torch sdpa takes  2.381 (ms)
+benchmark batch_size 25 seq_len 9
+run 32 torch sdpa takes  2.410 (ms)
+benchmark batch_size 25 seq_len 11
+run 32 torch sdpa takes  2.416 (ms)
+benchmark batch_size 25 seq_len 13
+run 32 torch sdpa takes  2.465 (ms)
+benchmark batch_size 25 seq_len 15
+run 32 torch sdpa takes  2.510 (ms)
+benchmark batch_size 25 seq_len 17
+run 32 torch sdpa takes  2.558 (ms)
+benchmark batch_size 25 seq_len 19
+run 32 torch sdpa takes  2.557 (ms)
+benchmark batch_size 25 seq_len 21
+run 32 torch sdpa takes  2.591 (ms)
+benchmark batch_size 25 seq_len 23
+run 32 torch sdpa takes  2.639 (ms)
+benchmark batch_size 27 seq_len 1
+run 32 torch sdpa takes  2.305 (ms)
+benchmark batch_size 27 seq_len 3
+run 32 torch sdpa takes  2.358 (ms)
+benchmark batch_size 27 seq_len 5
+run 32 torch sdpa takes  2.426 (ms)
+benchmark batch_size 27 seq_len 7
+run 32 torch sdpa takes  2.444 (ms)
+benchmark batch_size 27 seq_len 9
+run 32 torch sdpa takes  2.468 (ms)
+benchmark batch_size 27 seq_len 11
+run 32 torch sdpa takes  2.511 (ms)
+benchmark batch_size 27 seq_len 13
+run 32 torch sdpa takes  2.546 (ms)
+benchmark batch_size 27 seq_len 15
+run 32 torch sdpa takes  2.586 (ms)
+benchmark batch_size 27 seq_len 17
+run 32 torch sdpa takes  2.650 (ms)
+benchmark batch_size 27 seq_len 19
+run 32 torch sdpa takes  2.665 (ms)
+benchmark batch_size 27 seq_len 21
+run 32 torch sdpa takes  2.697 (ms)
+benchmark batch_size 27 seq_len 23
+run 32 torch sdpa takes  2.710 (ms)
+benchmark batch_size 29 seq_len 1
+run 32 torch sdpa takes  2.533 (ms)
+benchmark batch_size 29 seq_len 3
+run 32 torch sdpa takes  2.613 (ms)
+benchmark batch_size 29 seq_len 5
+run 32 torch sdpa takes  2.626 (ms)
+benchmark batch_size 29 seq_len 7
+run 32 torch sdpa takes  2.677 (ms)
+benchmark batch_size 29 seq_len 9
+run 32 torch sdpa takes  2.694 (ms)
+benchmark batch_size 29 seq_len 11
+run 32 torch sdpa takes  2.734 (ms)
+benchmark batch_size 29 seq_len 13
+run 32 torch sdpa takes  2.783 (ms)
+benchmark batch_size 29 seq_len 15
+run 32 torch sdpa takes  2.792 (ms)
+benchmark batch_size 29 seq_len 17
+run 32 torch sdpa takes  2.896 (ms)
+benchmark batch_size 29 seq_len 19
+run 32 torch sdpa takes  2.900 (ms)
+benchmark batch_size 29 seq_len 21
+run 32 torch sdpa takes  2.926 (ms)
+benchmark batch_size 29 seq_len 23
+run 32 torch sdpa takes  2.936 (ms)
+benchmark batch_size 31 seq_len 1
+run 32 torch sdpa takes  2.686 (ms)
+benchmark batch_size 31 seq_len 3
+run 32 torch sdpa takes  2.749 (ms)
+benchmark batch_size 31 seq_len 5
+run 32 torch sdpa takes  2.797 (ms)
+benchmark batch_size 31 seq_len 7
+run 32 torch sdpa takes  2.821 (ms)
+benchmark batch_size 31 seq_len 9
+run 32 torch sdpa takes  2.832 (ms)
+benchmark batch_size 31 seq_len 11
+run 32 torch sdpa takes  2.856 (ms)
+benchmark batch_size 31 seq_len 13
+run 32 torch sdpa takes  2.911 (ms)
+benchmark batch_size 31 seq_len 15
+run 32 torch sdpa takes  2.947 (ms)
+benchmark batch_size 31 seq_len 17
+run 32 torch sdpa takes  2.999 (ms)
+benchmark batch_size 31 seq_len 19
+run 32 torch sdpa takes  2.997 (ms)
+benchmark batch_size 31 seq_len 21
+run 32 torch sdpa takes  3.036 (ms)
+benchmark batch_size 31 seq_len 23
+run 32 torch sdpa takes  3.080 (ms)
+benchmark batch_size 33 seq_len 1
+run 32 torch sdpa takes  2.743 (ms)
+benchmark batch_size 33 seq_len 3
+run 32 torch sdpa takes  2.825 (ms)
+benchmark batch_size 33 seq_len 5
+run 32 torch sdpa takes  2.861 (ms)
+benchmark batch_size 33 seq_len 7
+run 32 torch sdpa takes  2.889 (ms)
+benchmark batch_size 33 seq_len 9
+run 32 torch sdpa takes  2.926 (ms)
+benchmark batch_size 33 seq_len 11
+run 32 torch sdpa takes  2.956 (ms)
+benchmark batch_size 33 seq_len 13
+run 32 torch sdpa takes  2.970 (ms)
+benchmark batch_size 33 seq_len 15
+run 32 torch sdpa takes  3.029 (ms)
+benchmark batch_size 33 seq_len 17
+run 32 torch sdpa takes  3.070 (ms)
+benchmark batch_size 33 seq_len 19
+run 32 torch sdpa takes  3.111 (ms)
+benchmark batch_size 33 seq_len 21
+run 32 torch sdpa takes  3.128 (ms)
+benchmark batch_size 33 seq_len 23
+run 32 torch sdpa takes  3.184 (ms)
+benchmark batch_size 35 seq_len 1
+run 32 torch sdpa takes  2.977 (ms)
+benchmark batch_size 35 seq_len 3
+run 32 torch sdpa takes  3.050 (ms)
+benchmark batch_size 35 seq_len 5
+run 32 torch sdpa takes  3.060 (ms)
+benchmark batch_size 35 seq_len 7
+run 32 torch sdpa takes  3.115 (ms)
+benchmark batch_size 35 seq_len 9
+run 32 torch sdpa takes  3.142 (ms)
+benchmark batch_size 35 seq_len 11
+run 32 torch sdpa takes  3.164 (ms)
+benchmark batch_size 35 seq_len 13
+run 32 torch sdpa takes  3.199 (ms)
+benchmark batch_size 35 seq_len 15
+run 32 torch sdpa takes  3.230 (ms)
+benchmark batch_size 35 seq_len 17
+run 32 torch sdpa takes  3.299 (ms)
+benchmark batch_size 35 seq_len 19
+run 32 torch sdpa takes  3.297 (ms)
+benchmark batch_size 35 seq_len 21
+run 32 torch sdpa takes  3.343 (ms)
+benchmark batch_size 35 seq_len 23
+run 32 torch sdpa takes  3.391 (ms)
+benchmark batch_size 37 seq_len 1
+run 32 torch sdpa takes  3.006 (ms)
+benchmark batch_size 37 seq_len 3
+run 32 torch sdpa takes  3.091 (ms)
+benchmark batch_size 37 seq_len 5
+run 32 torch sdpa takes  3.155 (ms)
+benchmark batch_size 37 seq_len 7
+run 32 torch sdpa takes  3.214 (ms)
+benchmark batch_size 37 seq_len 9
+run 32 torch sdpa takes  3.215 (ms)
+benchmark batch_size 37 seq_len 11
+run 32 torch sdpa takes  3.282 (ms)
+benchmark batch_size 37 seq_len 13
+run 32 torch sdpa takes  3.304 (ms)
+benchmark batch_size 37 seq_len 15
+run 32 torch sdpa takes  3.357 (ms)
+benchmark batch_size 37 seq_len 17
+run 32 torch sdpa takes  3.411 (ms)
+benchmark batch_size 37 seq_len 19
+run 32 torch sdpa takes  3.457 (ms)
+benchmark batch_size 37 seq_len 21
+run 32 torch sdpa takes  3.483 (ms)
+benchmark batch_size 37 seq_len 23
+run 32 torch sdpa takes  3.534 (ms)
+benchmark batch_size 39 seq_len 1
+run 32 torch sdpa takes  3.165 (ms)
+benchmark batch_size 39 seq_len 3
+run 32 torch sdpa takes  3.236 (ms)
+benchmark batch_size 39 seq_len 5
+run 32 torch sdpa takes  3.305 (ms)
+benchmark batch_size 39 seq_len 7
+run 32 torch sdpa takes  3.321 (ms)
+benchmark batch_size 39 seq_len 9
+run 32 torch sdpa takes  3.353 (ms)
+benchmark batch_size 39 seq_len 11
+run 32 torch sdpa takes  3.391 (ms)
+benchmark batch_size 39 seq_len 13
+run 32 torch sdpa takes  3.427 (ms)
+benchmark batch_size 39 seq_len 15
+run 32 torch sdpa takes  3.456 (ms)
+benchmark batch_size 39 seq_len 17
+run 32 torch sdpa takes  3.528 (ms)
+benchmark batch_size 39 seq_len 19
+run 32 torch sdpa takes  3.552 (ms)
+benchmark batch_size 39 seq_len 21
+run 32 torch sdpa takes  3.593 (ms)
+benchmark batch_size 39 seq_len 23
+run 32 torch sdpa takes  3.636 (ms)
+benchmark batch_size 41 seq_len 1
+run 32 torch sdpa takes  3.404 (ms)
+benchmark batch_size 41 seq_len 3
+run 32 torch sdpa takes  3.448 (ms)
+benchmark batch_size 41 seq_len 5
+run 32 torch sdpa takes  3.478 (ms)
+benchmark batch_size 41 seq_len 7
+run 32 torch sdpa takes  3.527 (ms)
+benchmark batch_size 41 seq_len 9
+run 32 torch sdpa takes  3.542 (ms)
+benchmark batch_size 41 seq_len 11
+run 32 torch sdpa takes  3.575 (ms)
+benchmark batch_size 41 seq_len 13
+run 32 torch sdpa takes  3.617 (ms)
+benchmark batch_size 41 seq_len 15
+run 32 torch sdpa takes  3.664 (ms)
+benchmark batch_size 41 seq_len 17
+run 32 torch sdpa takes  3.748 (ms)
+benchmark batch_size 41 seq_len 19
+run 32 torch sdpa takes  3.732 (ms)
+benchmark batch_size 41 seq_len 21
+run 32 torch sdpa takes  3.758 (ms)
+benchmark batch_size 41 seq_len 23
+run 32 torch sdpa takes  3.791 (ms)
+benchmark batch_size 43 seq_len 1
+run 32 torch sdpa takes  3.458 (ms)
+benchmark batch_size 43 seq_len 3
+run 32 torch sdpa takes  3.513 (ms)
+benchmark batch_size 43 seq_len 5
+run 32 torch sdpa takes  3.560 (ms)
+benchmark batch_size 43 seq_len 7
+run 32 torch sdpa takes  3.607 (ms)
+benchmark batch_size 43 seq_len 9
+run 32 torch sdpa takes  3.635 (ms)
+benchmark batch_size 43 seq_len 11
+run 32 torch sdpa takes  3.656 (ms)
+benchmark batch_size 43 seq_len 13
+run 32 torch sdpa takes  3.738 (ms)
+benchmark batch_size 43 seq_len 15
+run 32 torch sdpa takes  3.769 (ms)
+benchmark batch_size 43 seq_len 17
+run 32 torch sdpa takes  3.853 (ms)
+benchmark batch_size 43 seq_len 19
+run 32 torch sdpa takes  3.884 (ms)
+benchmark batch_size 43 seq_len 21
+run 32 torch sdpa takes  3.908 (ms)
+benchmark batch_size 43 seq_len 23
+run 32 torch sdpa takes  3.972 (ms)
+benchmark batch_size 45 seq_len 1
+run 32 torch sdpa takes  3.609 (ms)
+benchmark batch_size 45 seq_len 3
+run 32 torch sdpa takes  3.670 (ms)
+benchmark batch_size 45 seq_len 5
+run 32 torch sdpa takes  3.720 (ms)
+benchmark batch_size 45 seq_len 7
+run 32 torch sdpa takes  3.769 (ms)
+benchmark batch_size 45 seq_len 9
+run 32 torch sdpa takes  3.804 (ms)
+benchmark batch_size 45 seq_len 11
+run 32 torch sdpa takes  3.824 (ms)
+benchmark batch_size 45 seq_len 13
+run 32 torch sdpa takes  3.867 (ms)
+benchmark batch_size 45 seq_len 15
+run 32 torch sdpa takes  3.907 (ms)
+benchmark batch_size 45 seq_len 17
+run 32 torch sdpa takes  3.963 (ms)
+benchmark batch_size 45 seq_len 19
+run 32 torch sdpa takes  4.002 (ms)
+benchmark batch_size 45 seq_len 21
+run 32 torch sdpa takes  4.015 (ms)
+benchmark batch_size 45 seq_len 23
+run 32 torch sdpa takes  4.085 (ms)
+benchmark batch_size 47 seq_len 1
+run 32 torch sdpa takes  3.664 (ms)
+benchmark batch_size 47 seq_len 3
+run 32 torch sdpa takes  3.735 (ms)
+benchmark batch_size 47 seq_len 5
+run 32 torch sdpa takes  3.808 (ms)
+benchmark batch_size 47 seq_len 7
+run 32 torch sdpa takes  3.831 (ms)
+benchmark batch_size 47 seq_len 9
+run 32 torch sdpa takes  3.863 (ms)
+benchmark batch_size 47 seq_len 11
+run 32 torch sdpa takes  3.889 (ms)
+benchmark batch_size 47 seq_len 13
+run 32 torch sdpa takes  3.954 (ms)
+benchmark batch_size 47 seq_len 15
+run 32 torch sdpa takes  3.993 (ms)
+benchmark batch_size 47 seq_len 17
+run 32 torch sdpa takes  4.075 (ms)
+benchmark batch_size 47 seq_len 19
+run 32 torch sdpa takes  4.093 (ms)
+benchmark batch_size 47 seq_len 21
+run 32 torch sdpa takes  4.135 (ms)
+benchmark batch_size 47 seq_len 23
+run 32 torch sdpa takes  4.197 (ms)
+benchmark batch_size 49 seq_len 1
+run 32 torch sdpa takes  3.875 (ms)
+benchmark batch_size 49 seq_len 3
+run 32 torch sdpa takes  3.942 (ms)
+benchmark batch_size 49 seq_len 5
+run 32 torch sdpa takes  4.005 (ms)
+benchmark batch_size 49 seq_len 7
+run 32 torch sdpa takes  4.042 (ms)
+benchmark batch_size 49 seq_len 9
+run 32 torch sdpa takes  4.060 (ms)
+benchmark batch_size 49 seq_len 11
+run 32 torch sdpa takes  4.108 (ms)
+benchmark batch_size 49 seq_len 13
+run 32 torch sdpa takes  4.162 (ms)
+benchmark batch_size 49 seq_len 15
+run 32 torch sdpa takes  4.224 (ms)
+benchmark batch_size 49 seq_len 17
+run 32 torch sdpa takes  4.279 (ms)
+benchmark batch_size 49 seq_len 19
+run 32 torch sdpa takes  4.325 (ms)
+benchmark batch_size 49 seq_len 21
+run 32 torch sdpa takes  4.363 (ms)
+benchmark batch_size 49 seq_len 23
+run 32 torch sdpa takes  4.421 (ms)
+benchmark batch_size 51 seq_len 1
+run 32 torch sdpa takes  4.019 (ms)
+benchmark batch_size 51 seq_len 3
+run 32 torch sdpa takes  4.098 (ms)
+benchmark batch_size 51 seq_len 5
+run 32 torch sdpa takes  4.140 (ms)
+benchmark batch_size 51 seq_len 7
+run 32 torch sdpa takes  4.163 (ms)
+benchmark batch_size 51 seq_len 9
+run 32 torch sdpa takes  4.196 (ms)
+benchmark batch_size 51 seq_len 11
+run 32 torch sdpa takes  4.229 (ms)
+benchmark batch_size 51 seq_len 13
+run 32 torch sdpa takes  4.287 (ms)
+benchmark batch_size 51 seq_len 15
+run 32 torch sdpa takes  4.333 (ms)
+benchmark batch_size 51 seq_len 17
+run 32 torch sdpa takes  4.385 (ms)
+benchmark batch_size 51 seq_len 19
+run 32 torch sdpa takes  4.445 (ms)
+benchmark batch_size 51 seq_len 21
+run 32 torch sdpa takes  4.462 (ms)
+benchmark batch_size 51 seq_len 23
+run 32 torch sdpa takes  4.503 (ms)
+benchmark batch_size 53 seq_len 1
+run 32 torch sdpa takes  4.091 (ms)
+benchmark batch_size 53 seq_len 3
+run 32 torch sdpa takes  4.170 (ms)
+benchmark batch_size 53 seq_len 5
+run 32 torch sdpa takes  4.231 (ms)
+benchmark batch_size 53 seq_len 7
+run 32 torch sdpa takes  4.273 (ms)
+benchmark batch_size 53 seq_len 9
+run 32 torch sdpa takes  4.331 (ms)
+benchmark batch_size 53 seq_len 11
+run 32 torch sdpa takes  4.338 (ms)
+benchmark batch_size 53 seq_len 13
+run 32 torch sdpa takes  4.383 (ms)
+benchmark batch_size 53 seq_len 15
+run 32 torch sdpa takes  4.430 (ms)
+benchmark batch_size 53 seq_len 17
+run 32 torch sdpa takes  4.499 (ms)
+benchmark batch_size 53 seq_len 19
+run 32 torch sdpa takes  4.532 (ms)
+benchmark batch_size 53 seq_len 21
+run 32 torch sdpa takes  4.569 (ms)
+benchmark batch_size 53 seq_len 23
+run 32 torch sdpa takes  4.630 (ms)
+benchmark batch_size 55 seq_len 1
+run 32 torch sdpa takes  4.294 (ms)
+benchmark batch_size 55 seq_len 3
+run 32 torch sdpa takes  4.372 (ms)
+benchmark batch_size 55 seq_len 5
+run 32 torch sdpa takes  4.428 (ms)
+benchmark batch_size 55 seq_len 7
+run 32 torch sdpa takes  4.485 (ms)
+benchmark batch_size 55 seq_len 9
+run 32 torch sdpa takes  4.521 (ms)
+benchmark batch_size 55 seq_len 11
+run 32 torch sdpa takes  4.534 (ms)
+benchmark batch_size 55 seq_len 13
+run 32 torch sdpa takes  4.575 (ms)
+benchmark batch_size 55 seq_len 15
+run 32 torch sdpa takes  4.611 (ms)
+benchmark batch_size 55 seq_len 17
+run 32 torch sdpa takes  4.690 (ms)
+benchmark batch_size 55 seq_len 19
+run 32 torch sdpa takes  4.733 (ms)
+benchmark batch_size 55 seq_len 21
+run 32 torch sdpa takes  4.744 (ms)
+benchmark batch_size 55 seq_len 23
+run 32 torch sdpa takes  4.804 (ms)
+benchmark batch_size 57 seq_len 1
+run 32 torch sdpa takes  4.361 (ms)
+benchmark batch_size 57 seq_len 3
+run 32 torch sdpa takes  4.435 (ms)
+benchmark batch_size 57 seq_len 5
+run 32 torch sdpa takes  4.570 (ms)
+benchmark batch_size 57 seq_len 7
+run 32 torch sdpa takes  4.547 (ms)
+benchmark batch_size 57 seq_len 9
+run 32 torch sdpa takes  4.600 (ms)
+benchmark batch_size 57 seq_len 11
+run 32 torch sdpa takes  4.623 (ms)
+benchmark batch_size 57 seq_len 13
+run 32 torch sdpa takes  4.663 (ms)
+benchmark batch_size 57 seq_len 15
+run 32 torch sdpa takes  4.744 (ms)
+benchmark batch_size 57 seq_len 17
+run 32 torch sdpa takes  4.810 (ms)
+benchmark batch_size 57 seq_len 19
+run 32 torch sdpa takes  4.856 (ms)
+benchmark batch_size 57 seq_len 21
+run 32 torch sdpa takes  4.933 (ms)
+benchmark batch_size 57 seq_len 23
+run 32 torch sdpa takes  4.980 (ms)
+benchmark batch_size 59 seq_len 1
+run 32 torch sdpa takes  4.519 (ms)
+benchmark batch_size 59 seq_len 3
+run 32 torch sdpa takes  4.602 (ms)
+benchmark batch_size 59 seq_len 5
+run 32 torch sdpa takes  4.655 (ms)
+benchmark batch_size 59 seq_len 7
+run 32 torch sdpa takes  4.707 (ms)
+benchmark batch_size 59 seq_len 9
+run 32 torch sdpa takes  4.731 (ms)
+benchmark batch_size 59 seq_len 11
+run 32 torch sdpa takes  4.793 (ms)
+benchmark batch_size 59 seq_len 13
+run 32 torch sdpa takes  4.814 (ms)
+benchmark batch_size 59 seq_len 15
+run 32 torch sdpa takes  4.874 (ms)
+benchmark batch_size 59 seq_len 17
+run 32 torch sdpa takes  4.935 (ms)
+benchmark batch_size 59 seq_len 19
+run 32 torch sdpa takes  4.967 (ms)
+benchmark batch_size 59 seq_len 21
+run 32 torch sdpa takes  5.009 (ms)
+benchmark batch_size 59 seq_len 23
+run 32 torch sdpa takes  5.081 (ms)
+benchmark batch_size 61 seq_len 1
+run 32 torch sdpa takes  4.715 (ms)
+benchmark batch_size 61 seq_len 3
+run 32 torch sdpa takes  4.776 (ms)
+benchmark batch_size 61 seq_len 5
+run 32 torch sdpa takes  4.835 (ms)
+benchmark batch_size 61 seq_len 7
+run 32 torch sdpa takes  4.863 (ms)
+benchmark batch_size 61 seq_len 9
+run 32 torch sdpa takes  4.897 (ms)
+benchmark batch_size 61 seq_len 11
+run 32 torch sdpa takes  4.932 (ms)
+benchmark batch_size 61 seq_len 13
+run 32 torch sdpa takes  4.965 (ms)
+benchmark batch_size 61 seq_len 15
+run 32 torch sdpa takes  5.021 (ms)
+benchmark batch_size 61 seq_len 17
+run 32 torch sdpa takes  5.101 (ms)
+benchmark batch_size 61 seq_len 19
+run 32 torch sdpa takes  5.114 (ms)
+benchmark batch_size 61 seq_len 21
+run 32 torch sdpa takes  5.146 (ms)
+benchmark batch_size 61 seq_len 23
+run 32 torch sdpa takes  5.227 (ms)
+benchmark batch_size 63 seq_len 1
+run 32 torch sdpa takes  4.786 (ms)
+benchmark batch_size 63 seq_len 3
+run 32 torch sdpa takes  4.876 (ms)
+benchmark batch_size 63 seq_len 5
+run 32 torch sdpa takes  4.928 (ms)
+benchmark batch_size 63 seq_len 7
+run 32 torch sdpa takes  4.985 (ms)
+benchmark batch_size 63 seq_len 9
+run 32 torch sdpa takes  5.041 (ms)
+benchmark batch_size 63 seq_len 11
+run 32 torch sdpa takes  5.068 (ms)
+benchmark batch_size 63 seq_len 13
+run 32 torch sdpa takes  5.103 (ms)
+benchmark batch_size 63 seq_len 15
+run 32 torch sdpa takes  5.180 (ms)
+benchmark batch_size 63 seq_len 17
+run 32 torch sdpa takes  5.272 (ms)
+benchmark batch_size 63 seq_len 19
+run 32 torch sdpa takes  5.279 (ms)
+benchmark batch_size 63 seq_len 21
+run 32 torch sdpa takes  5.344 (ms)
+benchmark batch_size 63 seq_len 23
+run 32 torch sdpa takes  5.412 (ms)
+benchmark batch_size 65 seq_len 1
+run 32 torch sdpa takes  4.963 (ms)
+benchmark batch_size 65 seq_len 3
+run 32 torch sdpa takes  5.033 (ms)
+benchmark batch_size 65 seq_len 5
+run 32 torch sdpa takes  5.104 (ms)
+benchmark batch_size 65 seq_len 7
+run 32 torch sdpa takes  5.151 (ms)
+benchmark batch_size 65 seq_len 9
+run 32 torch sdpa takes  5.172 (ms)
+benchmark batch_size 65 seq_len 11
+run 32 torch sdpa takes  5.192 (ms)
+benchmark batch_size 65 seq_len 13
+run 32 torch sdpa takes  5.240 (ms)
+benchmark batch_size 65 seq_len 15
+run 32 torch sdpa takes  5.264 (ms)
+benchmark batch_size 65 seq_len 17
+run 32 torch sdpa takes  5.346 (ms)
+benchmark batch_size 65 seq_len 19
+run 32 torch sdpa takes  5.420 (ms)
+benchmark batch_size 65 seq_len 21
+run 32 torch sdpa takes  5.431 (ms)
+benchmark batch_size 65 seq_len 23
+run 32 torch sdpa takes  5.504 (ms)
+benchmark batch_size 67 seq_len 1
+run 32 torch sdpa takes  5.031 (ms)
+benchmark batch_size 67 seq_len 3
+run 32 torch sdpa takes  5.114 (ms)
+benchmark batch_size 67 seq_len 5
+run 32 torch sdpa takes  5.188 (ms)
+benchmark batch_size 67 seq_len 7
+run 32 torch sdpa takes  5.223 (ms)
+benchmark batch_size 67 seq_len 9
+run 32 torch sdpa takes  5.254 (ms)
+benchmark batch_size 67 seq_len 11
+run 32 torch sdpa takes  5.274 (ms)
+benchmark batch_size 67 seq_len 13
+run 32 torch sdpa takes  5.323 (ms)
+benchmark batch_size 67 seq_len 15
+run 32 torch sdpa takes  5.385 (ms)
+benchmark batch_size 67 seq_len 17
+run 32 torch sdpa takes  5.471 (ms)
+benchmark batch_size 67 seq_len 19
+run 32 torch sdpa takes  5.514 (ms)
+benchmark batch_size 67 seq_len 21
+run 32 torch sdpa takes  5.573 (ms)
+benchmark batch_size 67 seq_len 23
+run 32 torch sdpa takes  5.627 (ms)
+benchmark batch_size 69 seq_len 1
+run 32 torch sdpa takes  5.245 (ms)
+benchmark batch_size 69 seq_len 3
+run 32 torch sdpa takes  5.308 (ms)
+benchmark batch_size 69 seq_len 5
+run 32 torch sdpa takes  5.385 (ms)
+benchmark batch_size 69 seq_len 7
+run 32 torch sdpa takes  5.444 (ms)
+benchmark batch_size 69 seq_len 9
+run 32 torch sdpa takes  5.441 (ms)
+benchmark batch_size 69 seq_len 11
+run 32 torch sdpa takes  5.470 (ms)
+benchmark batch_size 69 seq_len 13
+run 32 torch sdpa takes  5.540 (ms)
+benchmark batch_size 69 seq_len 15
+run 32 torch sdpa takes  5.631 (ms)
+benchmark batch_size 69 seq_len 17
+run 32 torch sdpa takes  5.659 (ms)
+benchmark batch_size 69 seq_len 19
+run 32 torch sdpa takes  5.711 (ms)
+benchmark batch_size 69 seq_len 21
+run 32 torch sdpa takes  5.754 (ms)
+benchmark batch_size 69 seq_len 23
+run 32 torch sdpa takes  5.841 (ms)
+benchmark batch_size 71 seq_len 1
+run 32 torch sdpa takes  5.358 (ms)
+benchmark batch_size 71 seq_len 3
+run 32 torch sdpa takes  5.432 (ms)
+benchmark batch_size 71 seq_len 5
+run 32 torch sdpa takes  5.480 (ms)
+benchmark batch_size 71 seq_len 7
+run 32 torch sdpa takes  5.503 (ms)
+benchmark batch_size 71 seq_len 9
+run 32 torch sdpa takes  5.543 (ms)
+benchmark batch_size 71 seq_len 11
+run 32 torch sdpa takes  5.572 (ms)
+benchmark batch_size 71 seq_len 13
+run 32 torch sdpa takes  5.629 (ms)
+benchmark batch_size 71 seq_len 15
+run 32 torch sdpa takes  5.714 (ms)
+benchmark batch_size 71 seq_len 17
+run 32 torch sdpa takes  5.773 (ms)
+benchmark batch_size 71 seq_len 19
+run 32 torch sdpa takes  5.802 (ms)
+benchmark batch_size 71 seq_len 21
+run 32 torch sdpa takes  5.886 (ms)
+benchmark batch_size 71 seq_len 23
+run 32 torch sdpa takes  5.942 (ms)
+benchmark batch_size 73 seq_len 1
+run 32 torch sdpa takes  5.473 (ms)
+benchmark batch_size 73 seq_len 3
+run 32 torch sdpa takes  5.557 (ms)
+benchmark batch_size 73 seq_len 5
+run 32 torch sdpa takes  5.605 (ms)
+benchmark batch_size 73 seq_len 7
+run 32 torch sdpa takes  5.665 (ms)
+benchmark batch_size 73 seq_len 9
+run 32 torch sdpa takes  5.696 (ms)
+benchmark batch_size 73 seq_len 11
+run 32 torch sdpa takes  5.708 (ms)
+benchmark batch_size 73 seq_len 13
+run 32 torch sdpa takes  5.768 (ms)
+benchmark batch_size 73 seq_len 15
+run 32 torch sdpa takes  5.812 (ms)
+benchmark batch_size 73 seq_len 17
+run 32 torch sdpa takes  5.893 (ms)
+benchmark batch_size 73 seq_len 19
+run 32 torch sdpa takes  5.934 (ms)
+benchmark batch_size 73 seq_len 21
+run 32 torch sdpa takes  6.015 (ms)
+benchmark batch_size 73 seq_len 23
+run 32 torch sdpa takes  6.061 (ms)
+benchmark batch_size 75 seq_len 1
+run 32 torch sdpa takes  5.665 (ms)
+benchmark batch_size 75 seq_len 3
+run 32 torch sdpa takes  5.740 (ms)
+benchmark batch_size 75 seq_len 5
+run 32 torch sdpa takes  5.795 (ms)
+benchmark batch_size 75 seq_len 7
+run 32 torch sdpa takes  5.842 (ms)
+benchmark batch_size 75 seq_len 9
+run 32 torch sdpa takes  5.872 (ms)
+benchmark batch_size 75 seq_len 11
+run 32 torch sdpa takes  5.893 (ms)
+benchmark batch_size 75 seq_len 13
+run 32 torch sdpa takes  5.924 (ms)
+benchmark batch_size 75 seq_len 15
+run 32 torch sdpa takes  6.008 (ms)
+benchmark batch_size 75 seq_len 17
+run 32 torch sdpa takes  6.067 (ms)
+benchmark batch_size 75 seq_len 19
+run 32 torch sdpa takes  6.090 (ms)
+benchmark batch_size 75 seq_len 21
+run 32 torch sdpa takes  6.157 (ms)
+benchmark batch_size 75 seq_len 23
+run 32 torch sdpa takes  6.227 (ms)
+benchmark batch_size 77 seq_len 1
+run 32 torch sdpa takes  5.743 (ms)
+benchmark batch_size 77 seq_len 3
+run 32 torch sdpa takes  5.818 (ms)
+benchmark batch_size 77 seq_len 5
+run 32 torch sdpa takes  5.872 (ms)
+benchmark batch_size 77 seq_len 7
+run 32 torch sdpa takes  5.929 (ms)
+benchmark batch_size 77 seq_len 9
+run 32 torch sdpa takes  5.949 (ms)
+benchmark batch_size 77 seq_len 11
+run 32 torch sdpa takes  5.993 (ms)
+benchmark batch_size 77 seq_len 13
+run 32 torch sdpa takes  6.066 (ms)
+benchmark batch_size 77 seq_len 15
+run 32 torch sdpa takes  6.138 (ms)
+benchmark batch_size 77 seq_len 17
+run 32 torch sdpa takes  6.210 (ms)
+benchmark batch_size 77 seq_len 19
+run 32 torch sdpa takes  6.280 (ms)
+benchmark batch_size 77 seq_len 21
+run 32 torch sdpa takes  6.317 (ms)
+benchmark batch_size 77 seq_len 23
+run 32 torch sdpa takes  6.399 (ms)
+benchmark batch_size 79 seq_len 1
+run 32 torch sdpa takes  5.899 (ms)
+benchmark batch_size 79 seq_len 3
+run 32 torch sdpa takes  5.977 (ms)
+benchmark batch_size 79 seq_len 5
+run 32 torch sdpa takes  6.038 (ms)
+benchmark batch_size 79 seq_len 7
+run 32 torch sdpa takes  6.090 (ms)
+benchmark batch_size 79 seq_len 9
+run 32 torch sdpa takes  6.123 (ms)
+benchmark batch_size 79 seq_len 11
+run 32 torch sdpa takes  6.153 (ms)
+benchmark batch_size 79 seq_len 13
+run 32 torch sdpa takes  6.188 (ms)
+benchmark batch_size 79 seq_len 15
+run 32 torch sdpa takes  6.260 (ms)
+benchmark batch_size 79 seq_len 17
+run 32 torch sdpa takes  6.316 (ms)
+benchmark batch_size 79 seq_len 19
+run 32 torch sdpa takes  6.361 (ms)
+benchmark batch_size 79 seq_len 21
+run 32 torch sdpa takes  6.420 (ms)
+benchmark batch_size 79 seq_len 23
+run 32 torch sdpa takes  6.497 (ms)
+benchmark batch_size 81 seq_len 1
+run 32 torch sdpa takes  6.161 (ms)
+benchmark batch_size 81 seq_len 3
+run 32 torch sdpa takes  6.079 (ms)
+benchmark batch_size 81 seq_len 5
+run 32 torch sdpa takes  6.145 (ms)
+benchmark batch_size 81 seq_len 7
+run 32 torch sdpa takes  6.187 (ms)
+benchmark batch_size 81 seq_len 9
+run 32 torch sdpa takes  6.236 (ms)
+benchmark batch_size 81 seq_len 11
+run 32 torch sdpa takes  6.277 (ms)
+benchmark batch_size 81 seq_len 13
+run 32 torch sdpa takes  6.301 (ms)
+benchmark batch_size 81 seq_len 15
+run 32 torch sdpa takes  6.378 (ms)
+benchmark batch_size 81 seq_len 17
+run 32 torch sdpa takes  6.432 (ms)
+benchmark batch_size 81 seq_len 19
+run 32 torch sdpa takes  6.498 (ms)
+benchmark batch_size 81 seq_len 21
+run 32 torch sdpa takes  6.537 (ms)
+benchmark batch_size 81 seq_len 23
+run 32 torch sdpa takes  6.639 (ms)
+benchmark batch_size 83 seq_len 1
+run 32 torch sdpa takes  6.170 (ms)
+benchmark batch_size 83 seq_len 3
+run 32 torch sdpa takes  6.239 (ms)
+benchmark batch_size 83 seq_len 5
+run 32 torch sdpa takes  6.314 (ms)
+benchmark batch_size 83 seq_len 7
+run 32 torch sdpa takes  6.401 (ms)
+benchmark batch_size 83 seq_len 9
+run 32 torch sdpa takes  6.393 (ms)
+benchmark batch_size 83 seq_len 11
+run 32 torch sdpa takes  6.437 (ms)
+benchmark batch_size 83 seq_len 13
+run 32 torch sdpa takes  6.481 (ms)
+benchmark batch_size 83 seq_len 15
+run 32 torch sdpa takes  6.587 (ms)
+benchmark batch_size 83 seq_len 17
+run 32 torch sdpa takes  6.629 (ms)
+benchmark batch_size 83 seq_len 19
+run 32 torch sdpa takes  6.671 (ms)
+benchmark batch_size 83 seq_len 21
+run 32 torch sdpa takes  6.748 (ms)
+benchmark batch_size 83 seq_len 23
+run 32 torch sdpa takes  6.800 (ms)
+benchmark batch_size 85 seq_len 1
+run 32 torch sdpa takes  6.333 (ms)
+benchmark batch_size 85 seq_len 3
+run 32 torch sdpa takes  6.417 (ms)
+benchmark batch_size 85 seq_len 5
+run 32 torch sdpa takes  6.473 (ms)
+benchmark batch_size 85 seq_len 7
+run 32 torch sdpa takes  6.507 (ms)
+benchmark batch_size 85 seq_len 9
+run 32 torch sdpa takes  6.682 (ms)
+benchmark batch_size 85 seq_len 11
+run 32 torch sdpa takes  6.542 (ms)
+benchmark batch_size 85 seq_len 13
+run 32 torch sdpa takes  6.565 (ms)
+benchmark batch_size 85 seq_len 15
+run 32 torch sdpa takes  6.654 (ms)
+benchmark batch_size 85 seq_len 17
+run 32 torch sdpa takes  6.762 (ms)
+benchmark batch_size 85 seq_len 19
+run 32 torch sdpa takes  6.787 (ms)
+benchmark batch_size 85 seq_len 21
+run 32 torch sdpa takes  6.834 (ms)
+benchmark batch_size 85 seq_len 23
+run 32 torch sdpa takes  6.939 (ms)
+benchmark batch_size 87 seq_len 1
+run 32 torch sdpa takes  6.405 (ms)
+benchmark batch_size 87 seq_len 3
+run 32 torch sdpa takes  6.505 (ms)
+benchmark batch_size 87 seq_len 5
+run 32 torch sdpa takes  6.562 (ms)
+benchmark batch_size 87 seq_len 7
+run 32 torch sdpa takes  6.612 (ms)
+benchmark batch_size 87 seq_len 9
+run 32 torch sdpa takes  6.637 (ms)
+benchmark batch_size 87 seq_len 11
+run 32 torch sdpa takes  6.662 (ms)
+benchmark batch_size 87 seq_len 13
+run 32 torch sdpa takes  6.715 (ms)
+benchmark batch_size 87 seq_len 15
+run 32 torch sdpa takes  6.781 (ms)
+benchmark batch_size 87 seq_len 17
+run 32 torch sdpa takes  6.863 (ms)
+benchmark batch_size 87 seq_len 19
+run 32 torch sdpa takes  6.906 (ms)
+benchmark batch_size 87 seq_len 21
+run 32 torch sdpa takes  6.978 (ms)
+benchmark batch_size 87 seq_len 23
+run 32 torch sdpa takes  7.052 (ms)
+benchmark batch_size 89 seq_len 1
+run 32 torch sdpa takes  6.577 (ms)
+benchmark batch_size 89 seq_len 3
+run 32 torch sdpa takes  6.687 (ms)
+benchmark batch_size 89 seq_len 5
+run 32 torch sdpa takes  6.753 (ms)
+benchmark batch_size 89 seq_len 7
+run 32 torch sdpa takes  6.791 (ms)
+benchmark batch_size 89 seq_len 9
+run 32 torch sdpa takes  6.815 (ms)
+benchmark batch_size 89 seq_len 11
+run 32 torch sdpa takes  6.865 (ms)
+benchmark batch_size 89 seq_len 13
+run 32 torch sdpa takes  6.913 (ms)
+benchmark batch_size 89 seq_len 15
+run 32 torch sdpa takes  6.971 (ms)
+benchmark batch_size 89 seq_len 17
+run 32 torch sdpa takes  7.059 (ms)
+benchmark batch_size 89 seq_len 19
+run 32 torch sdpa takes  7.085 (ms)
+benchmark batch_size 89 seq_len 21
+run 32 torch sdpa takes  7.164 (ms)
+benchmark batch_size 89 seq_len 23
+run 32 torch sdpa takes  7.245 (ms)
+benchmark batch_size 91 seq_len 1
+run 32 torch sdpa takes  6.665 (ms)
+benchmark batch_size 91 seq_len 3
+run 32 torch sdpa takes  6.762 (ms)
+benchmark batch_size 91 seq_len 5
+run 32 torch sdpa takes  6.838 (ms)
+benchmark batch_size 91 seq_len 7
+run 32 torch sdpa takes  6.874 (ms)
+benchmark batch_size 91 seq_len 9
+run 32 torch sdpa takes  6.914 (ms)
+benchmark batch_size 91 seq_len 11
+run 32 torch sdpa takes  6.951 (ms)
+benchmark batch_size 91 seq_len 13
+run 32 torch sdpa takes  7.000 (ms)
+benchmark batch_size 91 seq_len 15
+run 32 torch sdpa takes  7.086 (ms)
+benchmark batch_size 91 seq_len 17
+run 32 torch sdpa takes  7.172 (ms)
+benchmark batch_size 91 seq_len 19
+run 32 torch sdpa takes  7.227 (ms)
+benchmark batch_size 91 seq_len 21
+run 32 torch sdpa takes  7.298 (ms)
+benchmark batch_size 91 seq_len 23
+run 32 torch sdpa takes  7.367 (ms)
+benchmark batch_size 93 seq_len 1
+run 32 torch sdpa takes  6.828 (ms)
+benchmark batch_size 93 seq_len 3
+run 32 torch sdpa takes  6.917 (ms)
+benchmark batch_size 93 seq_len 5
+run 32 torch sdpa takes  6.993 (ms)
+benchmark batch_size 93 seq_len 7
+run 32 torch sdpa takes  7.027 (ms)
+benchmark batch_size 93 seq_len 9
+run 32 torch sdpa takes  7.061 (ms)
+benchmark batch_size 93 seq_len 11
+run 32 torch sdpa takes  7.085 (ms)
+benchmark batch_size 93 seq_len 13
+run 32 torch sdpa takes  7.139 (ms)
+benchmark batch_size 93 seq_len 15
+run 32 torch sdpa takes  7.217 (ms)
+benchmark batch_size 93 seq_len 17
+run 32 torch sdpa takes  7.285 (ms)
+benchmark batch_size 93 seq_len 19
+run 32 torch sdpa takes  7.332 (ms)
+benchmark batch_size 93 seq_len 21
+run 32 torch sdpa takes  7.403 (ms)
+benchmark batch_size 93 seq_len 23
+run 32 torch sdpa takes  7.515 (ms)
+benchmark batch_size 95 seq_len 1
+run 32 torch sdpa takes  7.013 (ms)
+benchmark batch_size 95 seq_len 3
+run 32 torch sdpa takes  7.076 (ms)
+benchmark batch_size 95 seq_len 5
+run 32 torch sdpa takes  7.188 (ms)
+benchmark batch_size 95 seq_len 7
+run 32 torch sdpa takes  7.192 (ms)
+benchmark batch_size 95 seq_len 9
+run 32 torch sdpa takes  7.201 (ms)
+benchmark batch_size 95 seq_len 11
+run 32 torch sdpa takes  7.239 (ms)
+benchmark batch_size 95 seq_len 13
+run 32 torch sdpa takes  7.319 (ms)
+benchmark batch_size 95 seq_len 15
+run 32 torch sdpa takes  7.362 (ms)
+benchmark batch_size 95 seq_len 17
+run 32 torch sdpa takes  7.454 (ms)
+benchmark batch_size 95 seq_len 19
+run 32 torch sdpa takes  7.498 (ms)
+benchmark batch_size 95 seq_len 21
+run 32 torch sdpa takes  7.543 (ms)
+benchmark batch_size 95 seq_len 23
+run 32 torch sdpa takes  7.603 (ms)
+benchmark batch_size 97 seq_len 1
+run 32 torch sdpa takes  7.092 (ms)
+benchmark batch_size 97 seq_len 3
+run 32 torch sdpa takes  7.187 (ms)
+benchmark batch_size 97 seq_len 5
+run 32 torch sdpa takes  7.250 (ms)
+benchmark batch_size 97 seq_len 7
+run 32 torch sdpa takes  7.299 (ms)
+benchmark batch_size 97 seq_len 9
+run 32 torch sdpa takes  7.325 (ms)
+benchmark batch_size 97 seq_len 11
+run 32 torch sdpa takes  7.383 (ms)
+benchmark batch_size 97 seq_len 13
+run 32 torch sdpa takes  7.443 (ms)
+benchmark batch_size 97 seq_len 15
+run 32 torch sdpa takes  7.524 (ms)
+benchmark batch_size 97 seq_len 17
+run 32 torch sdpa takes  7.616 (ms)
+benchmark batch_size 97 seq_len 19
+run 32 torch sdpa takes  7.672 (ms)
+benchmark batch_size 97 seq_len 21
+run 32 torch sdpa takes  7.708 (ms)
+benchmark batch_size 97 seq_len 23
+run 32 torch sdpa takes  7.810 (ms)
+benchmark batch_size 99 seq_len 1
+run 32 torch sdpa takes  7.268 (ms)
+benchmark batch_size 99 seq_len 3
+run 32 torch sdpa takes  7.360 (ms)
+benchmark batch_size 99 seq_len 5
+run 32 torch sdpa takes  7.423 (ms)
+benchmark batch_size 99 seq_len 7
+run 32 torch sdpa takes  7.468 (ms)
+benchmark batch_size 99 seq_len 9
+run 32 torch sdpa takes  7.487 (ms)
+benchmark batch_size 99 seq_len 11
+run 32 torch sdpa takes  7.511 (ms)
+benchmark batch_size 99 seq_len 13
+run 32 torch sdpa takes  7.551 (ms)
+benchmark batch_size 99 seq_len 15
+run 32 torch sdpa takes  7.601 (ms)
+benchmark batch_size 99 seq_len 17
+run 32 torch sdpa takes  7.680 (ms)
+benchmark batch_size 99 seq_len 19
+run 32 torch sdpa takes  7.761 (ms)
+benchmark batch_size 99 seq_len 21
+run 32 torch sdpa takes  7.816 (ms)
+benchmark batch_size 99 seq_len 23
+run 32 torch sdpa takes  7.913 (ms)
+benchmark batch_size 101 seq_len 1
+run 32 torch sdpa takes  7.357 (ms)
+benchmark batch_size 101 seq_len 3
+run 32 torch sdpa takes  7.439 (ms)
+benchmark batch_size 101 seq_len 5
+run 32 torch sdpa takes  7.519 (ms)
+benchmark batch_size 101 seq_len 7
+run 32 torch sdpa takes  7.568 (ms)
+benchmark batch_size 101 seq_len 9
+run 32 torch sdpa takes  7.588 (ms)
+benchmark batch_size 101 seq_len 11
+run 32 torch sdpa takes  7.642 (ms)
+benchmark batch_size 101 seq_len 13
+run 32 torch sdpa takes  7.666 (ms)
+benchmark batch_size 101 seq_len 15
+run 32 torch sdpa takes  7.739 (ms)
+benchmark batch_size 101 seq_len 17
+run 32 torch sdpa takes  7.819 (ms)
+benchmark batch_size 101 seq_len 19
+run 32 torch sdpa takes  7.874 (ms)
+benchmark batch_size 101 seq_len 21
+run 32 torch sdpa takes  7.954 (ms)
+benchmark batch_size 101 seq_len 23
+run 32 torch sdpa takes  8.034 (ms)
+benchmark batch_size 103 seq_len 1
+run 32 torch sdpa takes  7.527 (ms)
+benchmark batch_size 103 seq_len 3
+run 32 torch sdpa takes  7.629 (ms)
+benchmark batch_size 103 seq_len 5
+run 32 torch sdpa takes  7.681 (ms)
+benchmark batch_size 103 seq_len 7
+run 32 torch sdpa takes  7.729 (ms)
+benchmark batch_size 103 seq_len 9
+run 32 torch sdpa takes  7.760 (ms)
+benchmark batch_size 103 seq_len 11
+run 32 torch sdpa takes  7.806 (ms)
+benchmark batch_size 103 seq_len 13
+run 32 torch sdpa takes  7.868 (ms)
+benchmark batch_size 103 seq_len 15
+run 32 torch sdpa takes  7.958 (ms)
+benchmark batch_size 103 seq_len 17
+run 32 torch sdpa takes  8.009 (ms)
+benchmark batch_size 103 seq_len 19
+run 32 torch sdpa takes  8.062 (ms)
+benchmark batch_size 103 seq_len 21
+run 32 torch sdpa takes  8.150 (ms)
+benchmark batch_size 103 seq_len 23
+run 32 torch sdpa takes  8.222 (ms)
+benchmark batch_size 105 seq_len 1
+run 32 torch sdpa takes  7.678 (ms)
+benchmark batch_size 105 seq_len 3
+run 32 torch sdpa takes  7.762 (ms)
+benchmark batch_size 105 seq_len 5
+run 32 torch sdpa takes  7.842 (ms)
+benchmark batch_size 105 seq_len 7
+run 32 torch sdpa takes  7.863 (ms)
+benchmark batch_size 105 seq_len 9
+run 32 torch sdpa takes  7.881 (ms)
+benchmark batch_size 105 seq_len 11
+run 32 torch sdpa takes  7.890 (ms)
+benchmark batch_size 105 seq_len 13
+run 32 torch sdpa takes  7.944 (ms)
+benchmark batch_size 105 seq_len 15
+run 32 torch sdpa takes  8.044 (ms)
+benchmark batch_size 105 seq_len 17
+run 32 torch sdpa takes  8.125 (ms)
+benchmark batch_size 105 seq_len 19
+run 32 torch sdpa takes  8.187 (ms)
+benchmark batch_size 105 seq_len 21
+run 32 torch sdpa takes  8.252 (ms)
+benchmark batch_size 105 seq_len 23
+run 32 torch sdpa takes  8.327 (ms)
+benchmark batch_size 107 seq_len 1
+run 32 torch sdpa takes  7.772 (ms)
+benchmark batch_size 107 seq_len 3
+run 32 torch sdpa takes  7.864 (ms)
+benchmark batch_size 107 seq_len 5
+run 32 torch sdpa takes  7.947 (ms)
+benchmark batch_size 107 seq_len 7
+run 32 torch sdpa takes  7.981 (ms)
+benchmark batch_size 107 seq_len 9
+run 32 torch sdpa takes  8.011 (ms)
+benchmark batch_size 107 seq_len 11
+run 32 torch sdpa takes  8.058 (ms)
+benchmark batch_size 107 seq_len 13
+run 32 torch sdpa takes  8.103 (ms)
+benchmark batch_size 107 seq_len 15
+run 32 torch sdpa takes  8.170 (ms)
+benchmark batch_size 107 seq_len 17
+run 32 torch sdpa takes  8.259 (ms)
+benchmark batch_size 107 seq_len 19
+run 32 torch sdpa takes  8.303 (ms)
+benchmark batch_size 107 seq_len 21
+run 32 torch sdpa takes  8.384 (ms)
+benchmark batch_size 107 seq_len 23
+run 32 torch sdpa takes  8.483 (ms)
+benchmark batch_size 109 seq_len 1
+run 32 torch sdpa takes  7.948 (ms)
+benchmark batch_size 109 seq_len 3
+run 32 torch sdpa takes  8.034 (ms)
+benchmark batch_size 109 seq_len 5
+run 32 torch sdpa takes  8.103 (ms)
+benchmark batch_size 109 seq_len 7
+run 32 torch sdpa takes  8.156 (ms)
+benchmark batch_size 109 seq_len 9
+run 32 torch sdpa takes  8.180 (ms)
+benchmark batch_size 109 seq_len 11
+run 32 torch sdpa takes  8.208 (ms)
+benchmark batch_size 109 seq_len 13
+run 32 torch sdpa takes  8.249 (ms)
+benchmark batch_size 109 seq_len 15
+run 32 torch sdpa takes  8.337 (ms)
+benchmark batch_size 109 seq_len 17
+run 32 torch sdpa takes  8.431 (ms)
+benchmark batch_size 109 seq_len 19
+run 32 torch sdpa takes  8.476 (ms)
+benchmark batch_size 109 seq_len 21
+run 32 torch sdpa takes  8.549 (ms)
+benchmark batch_size 109 seq_len 23
+run 32 torch sdpa takes  8.611 (ms)
+benchmark batch_size 111 seq_len 1
+run 32 torch sdpa takes  8.043 (ms)
+benchmark batch_size 111 seq_len 3
+run 32 torch sdpa takes  8.126 (ms)
+benchmark batch_size 111 seq_len 5
+run 32 torch sdpa takes  8.205 (ms)
+benchmark batch_size 111 seq_len 7
+run 32 torch sdpa takes  8.237 (ms)
+benchmark batch_size 111 seq_len 9
+run 32 torch sdpa takes  8.270 (ms)
+benchmark batch_size 111 seq_len 11
+run 32 torch sdpa takes  8.383 (ms)
+benchmark batch_size 111 seq_len 13
+run 32 torch sdpa takes  8.383 (ms)
+benchmark batch_size 111 seq_len 15
+run 32 torch sdpa takes  8.482 (ms)
+benchmark batch_size 111 seq_len 17
+run 32 torch sdpa takes  8.568 (ms)
+benchmark batch_size 111 seq_len 19
+run 32 torch sdpa takes  8.600 (ms)
+benchmark batch_size 111 seq_len 21
+run 32 torch sdpa takes  8.683 (ms)
+benchmark batch_size 111 seq_len 23
+run 32 torch sdpa takes  8.749 (ms)
+benchmark batch_size 113 seq_len 1
+run 32 torch sdpa takes  8.213 (ms)
+benchmark batch_size 113 seq_len 3
+run 32 torch sdpa takes  8.307 (ms)
+benchmark batch_size 113 seq_len 5
+run 32 torch sdpa takes  8.370 (ms)
+benchmark batch_size 113 seq_len 7
+run 32 torch sdpa takes  8.409 (ms)
+benchmark batch_size 113 seq_len 9
+run 32 torch sdpa takes  8.428 (ms)
+benchmark batch_size 113 seq_len 11
+run 32 torch sdpa takes  8.454 (ms)
+benchmark batch_size 113 seq_len 13
+run 32 torch sdpa takes  8.532 (ms)
+benchmark batch_size 113 seq_len 15
+run 32 torch sdpa takes  8.596 (ms)
+benchmark batch_size 113 seq_len 17
+run 32 torch sdpa takes  8.681 (ms)
+benchmark batch_size 113 seq_len 19
+run 32 torch sdpa takes  8.735 (ms)
+benchmark batch_size 113 seq_len 21
+run 32 torch sdpa takes  8.791 (ms)
+benchmark batch_size 113 seq_len 23
+run 32 torch sdpa takes  8.893 (ms)
+benchmark batch_size 115 seq_len 1
+run 32 torch sdpa takes  8.363 (ms)
+benchmark batch_size 115 seq_len 3
+run 32 torch sdpa takes  8.462 (ms)
+benchmark batch_size 115 seq_len 5
+run 32 torch sdpa takes  8.502 (ms)
+benchmark batch_size 115 seq_len 7
+run 32 torch sdpa takes  8.540 (ms)
+benchmark batch_size 115 seq_len 9
+run 32 torch sdpa takes  8.567 (ms)
+benchmark batch_size 115 seq_len 11
+run 32 torch sdpa takes  8.582 (ms)
+benchmark batch_size 115 seq_len 13
+run 32 torch sdpa takes  8.691 (ms)
+benchmark batch_size 115 seq_len 15
+run 32 torch sdpa takes  8.736 (ms)
+benchmark batch_size 115 seq_len 17
+run 32 torch sdpa takes  8.790 (ms)
+benchmark batch_size 115 seq_len 19
+run 32 torch sdpa takes  8.850 (ms)
+benchmark batch_size 115 seq_len 21
+run 32 torch sdpa takes  8.927 (ms)
+benchmark batch_size 115 seq_len 23
+run 32 torch sdpa takes  9.011 (ms)
+benchmark batch_size 117 seq_len 1
+run 32 torch sdpa takes  8.462 (ms)
+benchmark batch_size 117 seq_len 3
+run 32 torch sdpa takes  8.573 (ms)
+benchmark batch_size 117 seq_len 5
+run 32 torch sdpa takes  8.631 (ms)
+benchmark batch_size 117 seq_len 7
+run 32 torch sdpa takes  8.667 (ms)
+benchmark batch_size 117 seq_len 9
+run 32 torch sdpa takes  8.697 (ms)
+benchmark batch_size 117 seq_len 11
+run 32 torch sdpa takes  8.751 (ms)
+benchmark batch_size 117 seq_len 13
+run 32 torch sdpa takes  8.810 (ms)
+benchmark batch_size 117 seq_len 15
+run 32 torch sdpa takes  8.889 (ms)
+benchmark batch_size 117 seq_len 17
+run 32 torch sdpa takes  9.019 (ms)
+benchmark batch_size 117 seq_len 19
+run 32 torch sdpa takes  9.041 (ms)
+benchmark batch_size 117 seq_len 21
+run 32 torch sdpa takes  9.104 (ms)
+benchmark batch_size 117 seq_len 23
+run 32 torch sdpa takes  9.196 (ms)
+benchmark batch_size 119 seq_len 1
+run 32 torch sdpa takes  8.616 (ms)
+benchmark batch_size 119 seq_len 3
+run 32 torch sdpa takes  8.717 (ms)
+benchmark batch_size 119 seq_len 5
+run 32 torch sdpa takes  8.780 (ms)
+benchmark batch_size 119 seq_len 7
+run 32 torch sdpa takes  8.828 (ms)
+benchmark batch_size 119 seq_len 9
+run 32 torch sdpa takes  8.883 (ms)
+benchmark batch_size 119 seq_len 11
+run 32 torch sdpa takes  8.870 (ms)
+benchmark batch_size 119 seq_len 13
+run 32 torch sdpa takes  8.913 (ms)
+benchmark batch_size 119 seq_len 15
+run 32 torch sdpa takes  8.991 (ms)
+benchmark batch_size 119 seq_len 17
+run 32 torch sdpa takes  9.081 (ms)
+benchmark batch_size 119 seq_len 19
+run 32 torch sdpa takes  9.154 (ms)
+benchmark batch_size 119 seq_len 21
+run 32 torch sdpa takes  9.228 (ms)
+benchmark batch_size 119 seq_len 23
+run 32 torch sdpa takes  9.316 (ms)
+benchmark batch_size 121 seq_len 1
+run 32 torch sdpa takes  8.713 (ms)
+benchmark batch_size 121 seq_len 3
+run 32 torch sdpa takes  8.809 (ms)
+benchmark batch_size 121 seq_len 5
+run 32 torch sdpa takes  8.896 (ms)
+benchmark batch_size 121 seq_len 7
+run 32 torch sdpa takes  8.921 (ms)
+benchmark batch_size 121 seq_len 9
+run 32 torch sdpa takes  8.966 (ms)
+benchmark batch_size 121 seq_len 11
+run 32 torch sdpa takes  9.003 (ms)
+benchmark batch_size 121 seq_len 13
+run 32 torch sdpa takes  9.038 (ms)
+benchmark batch_size 121 seq_len 15
+run 32 torch sdpa takes  9.146 (ms)
+benchmark batch_size 121 seq_len 17
+run 32 torch sdpa takes  9.224 (ms)
+benchmark batch_size 121 seq_len 19
+run 32 torch sdpa takes  9.275 (ms)
+benchmark batch_size 121 seq_len 21
+run 32 torch sdpa takes  9.390 (ms)
+benchmark batch_size 121 seq_len 23
+run 32 torch sdpa takes  9.456 (ms)
+benchmark batch_size 123 seq_len 1
+run 32 torch sdpa takes  8.885 (ms)
+benchmark batch_size 123 seq_len 3
+run 32 torch sdpa takes  8.983 (ms)
+benchmark batch_size 123 seq_len 5
+run 32 torch sdpa takes  9.037 (ms)
+benchmark batch_size 123 seq_len 7
+run 32 torch sdpa takes  9.082 (ms)
+benchmark batch_size 123 seq_len 9
+run 32 torch sdpa takes  9.124 (ms)
+benchmark batch_size 123 seq_len 11
+run 32 torch sdpa takes  9.153 (ms)
+benchmark batch_size 123 seq_len 13
+run 32 torch sdpa takes  9.235 (ms)
+benchmark batch_size 123 seq_len 15
+run 32 torch sdpa takes  9.303 (ms)
+benchmark batch_size 123 seq_len 17
+run 32 torch sdpa takes  9.411 (ms)
+benchmark batch_size 123 seq_len 19
+run 32 torch sdpa takes  9.448 (ms)
+benchmark batch_size 123 seq_len 21
+run 32 torch sdpa takes  9.525 (ms)
+benchmark batch_size 123 seq_len 23
+run 32 torch sdpa takes  9.591 (ms)

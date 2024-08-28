@@ -1,0 +1,1000 @@
+benchmark beam_width 10 beam_length 10
+run 32 mlx linear projection takes 31.008 (ms)
+benchmark beam_width 10 beam_length 20
+run 32 mlx linear projection takes 45.697 (ms)
+benchmark beam_width 10 beam_length 30
+run 32 mlx linear projection takes 56.818 (ms)
+benchmark beam_width 10 beam_length 40
+run 32 mlx linear projection takes 74.209 (ms)
+benchmark beam_width 10 beam_length 50
+run 32 mlx linear projection takes 83.045 (ms)
+benchmark beam_width 10 beam_length 60
+run 32 mlx linear projection takes 101.389 (ms)
+benchmark beam_width 10 beam_length 70
+run 32 mlx linear projection takes 112.244 (ms)
+benchmark beam_width 10 beam_length 80
+run 32 mlx linear projection takes 127.764 (ms)
+benchmark beam_width 10 beam_length 90
+run 32 mlx linear projection takes 149.064 (ms)
+benchmark beam_width 10 beam_length 100
+run 32 mlx linear projection takes 156.557 (ms)
+benchmark beam_width 20 beam_length 10
+run 32 mlx linear projection takes 44.197 (ms)
+benchmark beam_width 20 beam_length 20
+run 32 mlx linear projection takes 74.817 (ms)
+benchmark beam_width 20 beam_length 30
+run 32 mlx linear projection takes 101.504 (ms)
+benchmark beam_width 20 beam_length 40
+run 32 mlx linear projection takes 127.454 (ms)
+benchmark beam_width 20 beam_length 50
+run 32 mlx linear projection takes 156.016 (ms)
+benchmark beam_width 20 beam_length 60
+run 32 mlx linear projection takes 181.575 (ms)
+benchmark beam_width 20 beam_length 70
+run 32 mlx linear projection takes 211.706 (ms)
+benchmark beam_width 20 beam_length 80
+run 32 mlx linear projection takes 233.401 (ms)
+benchmark beam_width 20 beam_length 90
+run 32 mlx linear projection takes 273.491 (ms)
+benchmark beam_width 20 beam_length 100
+run 32 mlx linear projection takes 300.538 (ms)
+benchmark beam_width 30 beam_length 10
+run 32 mlx linear projection takes 57.662 (ms)
+benchmark beam_width 30 beam_length 20
+run 32 mlx linear projection takes 102.194 (ms)
+benchmark beam_width 30 beam_length 30
+run 32 mlx linear projection takes 147.673 (ms)
+benchmark beam_width 30 beam_length 40
+run 32 mlx linear projection takes 183.718 (ms)
+benchmark beam_width 30 beam_length 50
+run 32 mlx linear projection takes 228.177 (ms)
+benchmark beam_width 30 beam_length 60
+run 32 mlx linear projection takes 273.934 (ms)
+benchmark beam_width 30 beam_length 70
+run 32 mlx linear projection takes 307.453 (ms)
+benchmark beam_width 30 beam_length 80
+run 32 mlx linear projection takes 355.283 (ms)
+benchmark beam_width 30 beam_length 90
+run 32 mlx linear projection takes 415.097 (ms)
+benchmark beam_width 30 beam_length 100
+run 32 mlx linear projection takes 448.142 (ms)
+benchmark beam_width 40 beam_length 10
+run 32 mlx linear projection takes 72.670 (ms)
+benchmark beam_width 40 beam_length 20
+run 32 mlx linear projection takes 127.335 (ms)
+benchmark beam_width 40 beam_length 30
+run 32 mlx linear projection takes 181.578 (ms)
+benchmark beam_width 40 beam_length 40
+run 32 mlx linear projection takes 233.039 (ms)
+benchmark beam_width 40 beam_length 50
+run 32 mlx linear projection takes 298.608 (ms)
+benchmark beam_width 40 beam_length 60
+run 32 mlx linear projection takes 352.181 (ms)
+benchmark beam_width 40 beam_length 70
+run 32 mlx linear projection takes 405.664 (ms)
+benchmark beam_width 40 beam_length 80
+run 32 mlx linear projection takes 454.479 (ms)
+benchmark beam_width 40 beam_length 90
+run 32 mlx linear projection takes 522.006 (ms)
+benchmark beam_width 40 beam_length 100
+run 32 mlx linear projection takes 574.928 (ms)
+benchmark beam_width 50 beam_length 10
+run 32 mlx linear projection takes 82.043 (ms)
+benchmark beam_width 50 beam_length 20
+run 32 mlx linear projection takes 154.478 (ms)
+benchmark beam_width 50 beam_length 30
+run 32 mlx linear projection takes 226.191 (ms)
+benchmark beam_width 50 beam_length 40
+run 32 mlx linear projection takes 298.160 (ms)
+benchmark beam_width 50 beam_length 50
+run 32 mlx linear projection takes 370.268 (ms)
+benchmark beam_width 50 beam_length 60
+run 32 mlx linear projection takes 432.617 (ms)
+benchmark beam_width 50 beam_length 70
+run 32 mlx linear projection takes 503.884 (ms)
+benchmark beam_width 50 beam_length 80
+run 32 mlx linear projection takes 575.360 (ms)
+benchmark beam_width 50 beam_length 90
+run 32 mlx linear projection takes 647.199 (ms)
+benchmark beam_width 50 beam_length 100
+run 32 mlx linear projection takes 718.748 (ms)
+benchmark beam_width 60 beam_length 10
+run 32 mlx linear projection takes 99.938 (ms)
+benchmark beam_width 60 beam_length 20
+run 32 mlx linear projection takes 181.312 (ms)
+benchmark beam_width 60 beam_length 30
+run 32 mlx linear projection takes 272.887 (ms)
+benchmark beam_width 60 beam_length 40
+run 32 mlx linear projection takes 351.821 (ms)
+benchmark beam_width 60 beam_length 50
+run 32 mlx linear projection takes 432.700 (ms)
+benchmark beam_width 60 beam_length 60
+run 32 mlx linear projection takes 521.723 (ms)
+benchmark beam_width 60 beam_length 70
+run 32 mlx linear projection takes 604.051 (ms)
+benchmark beam_width 60 beam_length 80
+run 32 mlx linear projection takes 676.577 (ms)
+benchmark beam_width 60 beam_length 90
+run 32 mlx linear projection takes 771.914 (ms)
+benchmark beam_width 60 beam_length 100
+run 32 mlx linear projection takes 853.089 (ms)
+benchmark beam_width 70 beam_length 10
+run 32 mlx linear projection takes 109.591 (ms)
+benchmark beam_width 70 beam_length 20
+run 32 mlx linear projection takes 208.406 (ms)
+benchmark beam_width 70 beam_length 30
+run 32 mlx linear projection takes 307.406 (ms)
+benchmark beam_width 70 beam_length 40
+run 32 mlx linear projection takes 405.764 (ms)
+benchmark beam_width 70 beam_length 50
+run 32 mlx linear projection takes 504.080 (ms)
+benchmark beam_width 70 beam_length 60
+run 32 mlx linear projection takes 601.864 (ms)
+benchmark beam_width 70 beam_length 70
+run 32 mlx linear projection takes 701.038 (ms)
+benchmark beam_width 70 beam_length 80
+run 32 mlx linear projection takes 799.867 (ms)
+benchmark beam_width 70 beam_length 90
+run 32 mlx linear projection takes 898.107 (ms)
+benchmark beam_width 70 beam_length 100
+run 32 mlx linear projection takes 996.020 (ms)
+benchmark beam_width 80 beam_length 10
+run 32 mlx linear projection takes 127.122 (ms)
+benchmark beam_width 80 beam_length 20
+run 32 mlx linear projection takes 232.832 (ms)
+benchmark beam_width 80 beam_length 30
+run 32 mlx linear projection takes 351.777 (ms)
+benchmark beam_width 80 beam_length 40
+run 32 mlx linear projection takes 454.110 (ms)
+benchmark beam_width 80 beam_length 50
+run 32 mlx linear projection takes 575.558 (ms)
+benchmark beam_width 80 beam_length 60
+run 32 mlx linear projection takes 677.175 (ms)
+benchmark beam_width 80 beam_length 70
+run 32 mlx linear projection takes 799.548 (ms)
+benchmark beam_width 80 beam_length 80
+run 32 mlx linear projection takes 899.875 (ms)
+benchmark beam_width 80 beam_length 90
+run 32 mlx linear projection takes 1023.991 (ms)
+benchmark beam_width 80 beam_length 100
+run 32 mlx linear projection takes 1119.855 (ms)
+benchmark beam_width 90 beam_length 10
+run 32 mlx linear projection takes 145.741 (ms)
+benchmark beam_width 90 beam_length 20
+run 32 mlx linear projection takes 271.528 (ms)
+benchmark beam_width 90 beam_length 30
+run 32 mlx linear projection takes 396.281 (ms)
+benchmark beam_width 90 beam_length 40
+run 32 mlx linear projection takes 522.015 (ms)
+benchmark beam_width 90 beam_length 50
+run 32 mlx linear projection takes 647.195 (ms)
+benchmark beam_width 90 beam_length 60
+run 32 mlx linear projection takes 771.954 (ms)
+benchmark beam_width 90 beam_length 70
+run 32 mlx linear projection takes 898.141 (ms)
+benchmark beam_width 90 beam_length 80
+run 32 mlx linear projection takes 1022.223 (ms)
+benchmark beam_width 90 beam_length 90
+run 32 mlx linear projection takes 1146.925 (ms)
+benchmark beam_width 90 beam_length 100
+run 32 mlx linear projection takes 1274.901 (ms)
+benchmark beam_width 100 beam_length 10
+run 32 mlx linear projection takes 154.261 (ms)
+benchmark beam_width 100 beam_length 20
+run 32 mlx linear projection takes 298.010 (ms)
+benchmark beam_width 100 beam_length 30
+run 32 mlx linear projection takes 433.136 (ms)
+benchmark beam_width 100 beam_length 40
+run 32 mlx linear projection takes 576.157 (ms)
+benchmark beam_width 100 beam_length 50
+run 32 mlx linear projection takes 723.706 (ms)
+benchmark beam_width 100 beam_length 60
+run 32 mlx linear projection takes 860.233 (ms)
+benchmark beam_width 100 beam_length 70
+run 32 mlx linear projection takes 1037.670 (ms)
+benchmark beam_width 100 beam_length 80
+run 32 mlx linear projection takes 1182.747 (ms)
+benchmark beam_width 100 beam_length 90
+run 32 mlx linear projection takes 1319.817 (ms)
+benchmark beam_width 100 beam_length 100
+run 32 mlx linear projection takes 1438.088 (ms)
+benchmark beam_width 110 beam_length 10
+run 32 mlx linear projection takes 176.799 (ms)
+benchmark beam_width 110 beam_length 20
+run 32 mlx linear projection takes 329.002 (ms)
+benchmark beam_width 110 beam_length 30
+run 32 mlx linear projection takes 479.820 (ms)
+benchmark beam_width 110 beam_length 40
+run 32 mlx linear projection takes 644.436 (ms)
+benchmark beam_width 110 beam_length 50
+run 32 mlx linear projection takes 814.846 (ms)
+benchmark beam_width 110 beam_length 60
+run 32 mlx linear projection takes 987.200 (ms)
+benchmark beam_width 110 beam_length 70
+run 32 mlx linear projection takes 1147.552 (ms)
+benchmark beam_width 110 beam_length 80
+run 32 mlx linear projection takes 1297.396 (ms)
+benchmark beam_width 110 beam_length 90
+run 32 mlx linear projection takes 1498.666 (ms)
+benchmark beam_width 110 beam_length 100
+run 32 mlx linear projection takes 1654.184 (ms)
+benchmark beam_width 120 beam_length 10
+run 32 mlx linear projection takes 190.077 (ms)
+benchmark beam_width 120 beam_length 20
+run 32 mlx linear projection takes 365.017 (ms)
+benchmark beam_width 120 beam_length 30
+run 32 mlx linear projection takes 540.915 (ms)
+benchmark beam_width 120 beam_length 40
+run 32 mlx linear projection takes 707.763 (ms)
+benchmark beam_width 120 beam_length 50
+run 32 mlx linear projection takes 918.057 (ms)
+benchmark beam_width 120 beam_length 60
+run 32 mlx linear projection takes 1114.233 (ms)
+benchmark beam_width 120 beam_length 70
+run 32 mlx linear projection takes 1283.492 (ms)
+benchmark beam_width 120 beam_length 80
+run 32 mlx linear projection takes 1452.018 (ms)
+benchmark beam_width 120 beam_length 90
+run 32 mlx linear projection takes 1637.239 (ms)
+benchmark beam_width 120 beam_length 100
+run 32 mlx linear projection takes 1821.790 (ms)
+benchmark beam_width 130 beam_length 10
+run 32 mlx linear projection takes 216.367 (ms)
+benchmark beam_width 130 beam_length 20
+run 32 mlx linear projection takes 408.559 (ms)
+benchmark beam_width 130 beam_length 30
+run 32 mlx linear projection takes 601.915 (ms)
+benchmark beam_width 130 beam_length 40
+run 32 mlx linear projection takes 799.167 (ms)
+benchmark beam_width 130 beam_length 50
+run 32 mlx linear projection takes 986.461 (ms)
+benchmark beam_width 130 beam_length 60
+run 32 mlx linear projection takes 1166.433 (ms)
+benchmark beam_width 130 beam_length 70
+run 32 mlx linear projection takes 1377.689 (ms)
+benchmark beam_width 130 beam_length 80
+run 32 mlx linear projection takes 1624.531 (ms)
+benchmark beam_width 130 beam_length 90
+run 32 mlx linear projection takes 1845.857 (ms)
+benchmark beam_width 130 beam_length 100
+run 32 mlx linear projection takes 2027.491 (ms)
+benchmark beam_width 140 beam_length 10
+run 32 mlx linear projection takes 230.371 (ms)
+benchmark beam_width 140 beam_length 20
+run 32 mlx linear projection takes 443.520 (ms)
+benchmark beam_width 140 beam_length 30
+run 32 mlx linear projection takes 652.497 (ms)
+benchmark beam_width 140 beam_length 40
+run 32 mlx linear projection takes 857.753 (ms)
+benchmark beam_width 140 beam_length 50
+run 32 mlx linear projection takes 1066.759 (ms)
+benchmark beam_width 140 beam_length 60
+run 32 mlx linear projection takes 1291.168 (ms)
+benchmark beam_width 140 beam_length 70
+run 32 mlx linear projection takes 1522.000 (ms)
+benchmark beam_width 140 beam_length 80
+run 32 mlx linear projection takes 1726.031 (ms)
+benchmark beam_width 140 beam_length 90
+run 32 mlx linear projection takes 1955.448 (ms)
+benchmark beam_width 140 beam_length 100
+run 32 mlx linear projection takes 2179.003 (ms)
+benchmark beam_width 150 beam_length 10
+run 32 mlx linear projection takes 250.480 (ms)
+benchmark beam_width 150 beam_length 20
+run 32 mlx linear projection takes 473.623 (ms)
+benchmark beam_width 150 beam_length 30
+run 32 mlx linear projection takes 704.448 (ms)
+benchmark beam_width 150 beam_length 40
+run 32 mlx linear projection takes 930.284 (ms)
+benchmark beam_width 150 beam_length 50
+run 32 mlx linear projection takes 1175.968 (ms)
+benchmark beam_width 150 beam_length 60
+run 32 mlx linear projection takes 1416.757 (ms)
+benchmark beam_width 150 beam_length 70
+run 32 mlx linear projection takes 1658.381 (ms)
+benchmark beam_width 150 beam_length 80
+run 32 mlx linear projection takes 1888.720 (ms)
+benchmark beam_width 150 beam_length 90
+run 32 mlx linear projection takes 2124.270 (ms)
+benchmark beam_width 150 beam_length 100
+run 32 mlx linear projection takes 2376.267 (ms)
+benchmark beam_width 160 beam_length 10
+run 32 mlx linear projection takes 265.452 (ms)
+benchmark beam_width 160 beam_length 20
+run 32 mlx linear projection takes 508.652 (ms)
+benchmark beam_width 160 beam_length 30
+run 32 mlx linear projection takes 756.432 (ms)
+benchmark beam_width 160 beam_length 40
+run 32 mlx linear projection takes 1007.238 (ms)
+benchmark beam_width 160 beam_length 50
+run 32 mlx linear projection takes 1275.348 (ms)
+benchmark beam_width 160 beam_length 60
+run 32 mlx linear projection takes 1558.668 (ms)
+benchmark beam_width 160 beam_length 70
+run 32 mlx linear projection takes 1811.716 (ms)
+benchmark beam_width 160 beam_length 80
+run 32 mlx linear projection takes 2043.182 (ms)
+benchmark beam_width 160 beam_length 90
+run 32 mlx linear projection takes 2323.829 (ms)
+benchmark beam_width 160 beam_length 100
+run 32 mlx linear projection takes 2581.247 (ms)
+benchmark beam_width 170 beam_length 10
+run 32 mlx linear projection takes 295.940 (ms)
+benchmark beam_width 170 beam_length 20
+run 32 mlx linear projection takes 566.607 (ms)
+benchmark beam_width 170 beam_length 30
+run 32 mlx linear projection takes 817.382 (ms)
+benchmark beam_width 170 beam_length 40
+run 32 mlx linear projection takes 1077.900 (ms)
+benchmark beam_width 170 beam_length 50
+run 32 mlx linear projection takes 1349.508 (ms)
+benchmark beam_width 170 beam_length 60
+run 32 mlx linear projection takes 1619.417 (ms)
+benchmark beam_width 170 beam_length 70
+run 32 mlx linear projection takes 1765.712 (ms)
+benchmark beam_width 170 beam_length 80
+run 32 mlx linear projection takes 1907.609 (ms)
+benchmark beam_width 170 beam_length 90
+run 32 mlx linear projection takes 2154.157 (ms)
+benchmark beam_width 170 beam_length 100
+run 32 mlx linear projection takes 2818.876 (ms)
+benchmark beam_width 180 beam_length 10
+run 32 mlx linear projection takes 315.618 (ms)
+benchmark beam_width 180 beam_length 20
+run 32 mlx linear projection takes 581.419 (ms)
+benchmark beam_width 180 beam_length 30
+run 32 mlx linear projection takes 803.387 (ms)
+benchmark beam_width 180 beam_length 40
+run 32 mlx linear projection takes 1057.865 (ms)
+benchmark beam_width 180 beam_length 50
+run 32 mlx linear projection takes 1362.533 (ms)
+benchmark beam_width 180 beam_length 60
+run 32 mlx linear projection takes 1716.734 (ms)
+benchmark beam_width 180 beam_length 70
+run 32 mlx linear projection takes 1916.845 (ms)
+benchmark beam_width 180 beam_length 80
+run 32 mlx linear projection takes 2213.102 (ms)
+benchmark beam_width 180 beam_length 90
+run 32 mlx linear projection takes 2538.433 (ms)
+benchmark beam_width 180 beam_length 100
+run 32 mlx linear projection takes 2803.227 (ms)
+benchmark beam_width 190 beam_length 10
+run 32 mlx linear projection takes 312.366 (ms)
+benchmark beam_width 190 beam_length 20
+run 32 mlx linear projection takes 583.913 (ms)
+benchmark beam_width 190 beam_length 30
+run 32 mlx linear projection takes 870.160 (ms)
+benchmark beam_width 190 beam_length 40
+run 32 mlx linear projection takes 1184.044 (ms)
+benchmark beam_width 190 beam_length 50
+run 32 mlx linear projection takes 1501.648 (ms)
+benchmark beam_width 190 beam_length 60
+run 32 mlx linear projection takes 1802.887 (ms)
+benchmark beam_width 190 beam_length 70
+run 32 mlx linear projection takes 2048.919 (ms)
+benchmark beam_width 190 beam_length 80
+run 32 mlx linear projection takes 2381.542 (ms)
+benchmark beam_width 190 beam_length 90
+run 32 mlx linear projection takes 2667.552 (ms)
+benchmark beam_width 190 beam_length 100
+run 32 mlx linear projection takes 2937.837 (ms)
+benchmark beam_width 200 beam_length 10
+run 32 mlx linear projection takes 327.495 (ms)
+benchmark beam_width 200 beam_length 20
+run 32 mlx linear projection takes 631.185 (ms)
+benchmark beam_width 200 beam_length 30
+run 32 mlx linear projection takes 899.335 (ms)
+benchmark beam_width 200 beam_length 40
+run 32 mlx linear projection takes 1185.217 (ms)
+benchmark beam_width 200 beam_length 50
+run 32 mlx linear projection takes 1562.496 (ms)
+benchmark beam_width 200 beam_length 60
+run 32 mlx linear projection takes 1819.746 (ms)
+benchmark beam_width 200 beam_length 70
+run 32 mlx linear projection takes 2090.523 (ms)
+benchmark beam_width 200 beam_length 80
+run 32 mlx linear projection takes 2432.498 (ms)
+benchmark beam_width 200 beam_length 90
+run 32 mlx linear projection takes 2782.109 (ms)
+benchmark beam_width 200 beam_length 100
+run 32 mlx linear projection takes 3064.891 (ms)
+benchmark beam_width 210 beam_length 10
+run 32 mlx linear projection takes 336.041 (ms)
+benchmark beam_width 210 beam_length 20
+run 32 mlx linear projection takes 640.278 (ms)
+benchmark beam_width 210 beam_length 30
+run 32 mlx linear projection takes 944.901 (ms)
+benchmark beam_width 210 beam_length 40
+run 32 mlx linear projection takes 1247.909 (ms)
+benchmark beam_width 210 beam_length 50
+run 32 mlx linear projection takes 1563.878 (ms)
+benchmark beam_width 210 beam_length 60
+run 32 mlx linear projection takes 1891.783 (ms)
+benchmark beam_width 210 beam_length 70
+run 32 mlx linear projection takes 2251.016 (ms)
+benchmark beam_width 210 beam_length 80
+run 32 mlx linear projection takes 2528.890 (ms)
+benchmark beam_width 210 beam_length 90
+run 32 mlx linear projection takes 2872.079 (ms)
+benchmark beam_width 210 beam_length 100
+run 32 mlx linear projection takes 3277.175 (ms)
+benchmark beam_width 220 beam_length 10
+run 32 mlx linear projection takes 358.679 (ms)
+benchmark beam_width 220 beam_length 20
+run 32 mlx linear projection takes 693.750 (ms)
+benchmark beam_width 220 beam_length 30
+run 32 mlx linear projection takes 1037.078 (ms)
+benchmark beam_width 220 beam_length 40
+run 32 mlx linear projection takes 1369.710 (ms)
+benchmark beam_width 220 beam_length 50
+run 32 mlx linear projection takes 1636.673 (ms)
+benchmark beam_width 220 beam_length 60
+run 32 mlx linear projection takes 2005.950 (ms)
+benchmark beam_width 220 beam_length 70
+run 32 mlx linear projection takes 2356.177 (ms)
+benchmark beam_width 220 beam_length 80
+run 32 mlx linear projection takes 2689.580 (ms)
+benchmark beam_width 220 beam_length 90
+run 32 mlx linear projection takes 3115.107 (ms)
+benchmark beam_width 220 beam_length 100
+run 32 mlx linear projection takes 3533.370 (ms)
+benchmark beam_width 230 beam_length 10
+run 32 mlx linear projection takes 373.011 (ms)
+benchmark beam_width 230 beam_length 20
+run 32 mlx linear projection takes 721.278 (ms)
+benchmark beam_width 230 beam_length 30
+run 32 mlx linear projection takes 1014.482 (ms)
+benchmark beam_width 230 beam_length 40
+run 32 mlx linear projection takes 1374.672 (ms)
+benchmark beam_width 230 beam_length 50
+run 32 mlx linear projection takes 1832.424 (ms)
+benchmark beam_width 230 beam_length 60
+run 32 mlx linear projection takes 2114.334 (ms)
+benchmark beam_width 230 beam_length 70
+run 32 mlx linear projection takes 2468.577 (ms)
+benchmark beam_width 230 beam_length 80
+run 32 mlx linear projection takes 2813.109 (ms)
+benchmark beam_width 230 beam_length 90
+run 32 mlx linear projection takes 3230.857 (ms)
+benchmark beam_width 230 beam_length 100
+run 32 mlx linear projection takes 3499.466 (ms)
+benchmark beam_width 240 beam_length 10
+run 32 mlx linear projection takes 367.942 (ms)
+benchmark beam_width 240 beam_length 20
+run 32 mlx linear projection takes 684.520 (ms)
+benchmark beam_width 240 beam_length 30
+run 32 mlx linear projection takes 1060.387 (ms)
+benchmark beam_width 240 beam_length 40
+run 32 mlx linear projection takes 1380.038 (ms)
+benchmark beam_width 240 beam_length 50
+run 32 mlx linear projection takes 1741.141 (ms)
+benchmark beam_width 240 beam_length 60
+run 32 mlx linear projection takes 1998.911 (ms)
+benchmark beam_width 240 beam_length 70
+run 32 mlx linear projection takes 2352.532 (ms)
+benchmark beam_width 240 beam_length 80
+run 32 mlx linear projection takes 2660.503 (ms)
+benchmark beam_width 240 beam_length 90
+run 32 mlx linear projection takes 3154.025 (ms)
+benchmark beam_width 240 beam_length 100
+run 32 mlx linear projection takes 3557.829 (ms)
+benchmark beam_width 250 beam_length 10
+run 32 mlx linear projection takes 384.719 (ms)
+benchmark beam_width 250 beam_length 20
+run 32 mlx linear projection takes 745.673 (ms)
+benchmark beam_width 250 beam_length 30
+run 32 mlx linear projection takes 1082.294 (ms)
+benchmark beam_width 250 beam_length 40
+run 32 mlx linear projection takes 1430.609 (ms)
+benchmark beam_width 250 beam_length 50
+run 32 mlx linear projection takes 1863.783 (ms)
+benchmark beam_width 250 beam_length 60
+run 32 mlx linear projection takes 2203.874 (ms)
+benchmark beam_width 250 beam_length 70
+run 32 mlx linear projection takes 2582.636 (ms)
+benchmark beam_width 250 beam_length 80
+run 32 mlx linear projection takes 2910.206 (ms)
+benchmark beam_width 250 beam_length 90
+run 32 mlx linear projection takes 3352.012 (ms)
+benchmark beam_width 250 beam_length 100
+run 32 mlx linear projection takes 3664.890 (ms)
+benchmark beam_width 260 beam_length 10
+run 32 mlx linear projection takes 427.910 (ms)
+benchmark beam_width 260 beam_length 20
+run 32 mlx linear projection takes 773.277 (ms)
+benchmark beam_width 260 beam_length 30
+run 32 mlx linear projection takes 1135.280 (ms)
+benchmark beam_width 260 beam_length 40
+run 32 mlx linear projection takes 1560.278 (ms)
+benchmark beam_width 260 beam_length 50
+run 32 mlx linear projection takes 1980.838 (ms)
+benchmark beam_width 260 beam_length 60
+run 32 mlx linear projection takes 2311.683 (ms)
+benchmark beam_width 260 beam_length 70
+run 32 mlx linear projection takes 2709.381 (ms)
+benchmark beam_width 260 beam_length 80
+run 32 mlx linear projection takes 3069.191 (ms)
+benchmark beam_width 260 beam_length 90
+run 32 mlx linear projection takes 3271.508 (ms)
+benchmark beam_width 260 beam_length 100
+run 32 mlx linear projection takes 3825.624 (ms)
+benchmark beam_width 270 beam_length 10
+run 32 mlx linear projection takes 443.306 (ms)
+benchmark beam_width 270 beam_length 20
+run 32 mlx linear projection takes 833.660 (ms)
+benchmark beam_width 270 beam_length 30
+run 32 mlx linear projection takes 1175.519 (ms)
+benchmark beam_width 270 beam_length 40
+run 32 mlx linear projection takes 1528.073 (ms)
+benchmark beam_width 270 beam_length 50
+run 32 mlx linear projection takes 2027.318 (ms)
+benchmark beam_width 270 beam_length 60
+run 32 mlx linear projection takes 2467.981 (ms)
+benchmark beam_width 270 beam_length 70
+run 32 mlx linear projection takes 2782.381 (ms)
+benchmark beam_width 270 beam_length 80
+run 32 mlx linear projection takes 3039.893 (ms)
+benchmark beam_width 270 beam_length 90
+run 32 mlx linear projection takes 3605.249 (ms)
+benchmark beam_width 270 beam_length 100
+run 32 mlx linear projection takes 3929.669 (ms)
+benchmark beam_width 280 beam_length 10
+run 32 mlx linear projection takes 426.617 (ms)
+benchmark beam_width 280 beam_length 20
+run 32 mlx linear projection takes 843.024 (ms)
+benchmark beam_width 280 beam_length 30
+run 32 mlx linear projection takes 1188.657 (ms)
+benchmark beam_width 280 beam_length 40
+run 32 mlx linear projection takes 1589.704 (ms)
+benchmark beam_width 280 beam_length 50
+run 32 mlx linear projection takes 2079.669 (ms)
+benchmark beam_width 280 beam_length 60
+run 32 mlx linear projection takes 2362.467 (ms)
+benchmark beam_width 280 beam_length 70
+run 32 mlx linear projection takes 2912.101 (ms)
+benchmark beam_width 280 beam_length 80
+run 32 mlx linear projection takes 3228.999 (ms)
+benchmark beam_width 280 beam_length 90
+run 32 mlx linear projection takes 3698.519 (ms)
+benchmark beam_width 280 beam_length 100
+run 32 mlx linear projection takes 4114.481 (ms)
+benchmark beam_width 290 beam_length 10
+run 32 mlx linear projection takes 440.881 (ms)
+benchmark beam_width 290 beam_length 20
+run 32 mlx linear projection takes 845.256 (ms)
+benchmark beam_width 290 beam_length 30
+run 32 mlx linear projection takes 1255.109 (ms)
+benchmark beam_width 290 beam_length 40
+run 32 mlx linear projection takes 1691.335 (ms)
+benchmark beam_width 290 beam_length 50
+run 32 mlx linear projection takes 2109.306 (ms)
+benchmark beam_width 290 beam_length 60
+run 32 mlx linear projection takes 2534.089 (ms)
+benchmark beam_width 290 beam_length 70
+run 32 mlx linear projection takes 3009.485 (ms)
+benchmark beam_width 290 beam_length 80
+run 32 mlx linear projection takes 3434.856 (ms)
+benchmark beam_width 290 beam_length 90
+run 32 mlx linear projection takes 3799.933 (ms)
+benchmark beam_width 290 beam_length 100
+run 32 mlx linear projection takes 4238.679 (ms)
+benchmark beam_width 300 beam_length 10
+run 32 mlx linear projection takes 449.605 (ms)
+benchmark beam_width 300 beam_length 20
+run 32 mlx linear projection takes 886.690 (ms)
+benchmark beam_width 300 beam_length 30
+run 32 mlx linear projection takes 1271.503 (ms)
+benchmark beam_width 300 beam_length 40
+run 32 mlx linear projection takes 1736.236 (ms)
+benchmark beam_width 300 beam_length 50
+run 32 mlx linear projection takes 2203.151 (ms)
+benchmark beam_width 300 beam_length 60
+run 32 mlx linear projection takes 3929.608 (ms)
+benchmark beam_width 300 beam_length 70
+run 32 mlx linear projection takes 2956.995 (ms)
+benchmark beam_width 300 beam_length 80
+run 32 mlx linear projection takes 3322.801 (ms)
+benchmark beam_width 300 beam_length 90
+run 32 mlx linear projection takes 3766.528 (ms)
+benchmark beam_width 300 beam_length 100
+run 32 mlx linear projection takes 4259.614 (ms)
+benchmark beam_width 310 beam_length 10
+run 32 mlx linear projection takes 475.146 (ms)
+benchmark beam_width 310 beam_length 20
+run 32 mlx linear projection takes 884.698 (ms)
+benchmark beam_width 310 beam_length 30
+run 32 mlx linear projection takes 1312.220 (ms)
+benchmark beam_width 310 beam_length 40
+run 32 mlx linear projection takes 1744.805 (ms)
+benchmark beam_width 310 beam_length 50
+run 32 mlx linear projection takes 2224.064 (ms)
+benchmark beam_width 310 beam_length 60
+run 32 mlx linear projection takes 2739.212 (ms)
+benchmark beam_width 310 beam_length 70
+run 32 mlx linear projection takes 3239.849 (ms)
+benchmark beam_width 310 beam_length 80
+run 32 mlx linear projection takes 3615.199 (ms)
+benchmark beam_width 310 beam_length 90
+run 32 mlx linear projection takes 4150.474 (ms)
+benchmark beam_width 310 beam_length 100
+run 32 mlx linear projection takes 4501.493 (ms)
+benchmark beam_width 320 beam_length 10
+run 32 mlx linear projection takes 474.795 (ms)
+benchmark beam_width 320 beam_length 20
+run 32 mlx linear projection takes 926.238 (ms)
+benchmark beam_width 320 beam_length 30
+run 32 mlx linear projection takes 1380.017 (ms)
+benchmark beam_width 320 beam_length 40
+run 32 mlx linear projection takes 1847.774 (ms)
+benchmark beam_width 320 beam_length 50
+run 32 mlx linear projection takes 2337.478 (ms)
+benchmark beam_width 320 beam_length 60
+run 32 mlx linear projection takes 2738.081 (ms)
+benchmark beam_width 320 beam_length 70
+run 32 mlx linear projection takes 3227.764 (ms)
+benchmark beam_width 320 beam_length 80
+run 32 mlx linear projection takes 3689.121 (ms)
+benchmark beam_width 320 beam_length 90
+run 32 mlx linear projection takes 4183.782 (ms)
+benchmark beam_width 320 beam_length 100
+run 32 mlx linear projection takes 4642.506 (ms)
+benchmark beam_width 330 beam_length 10
+run 32 mlx linear projection takes 496.929 (ms)
+benchmark beam_width 330 beam_length 20
+run 32 mlx linear projection takes 961.982 (ms)
+benchmark beam_width 330 beam_length 30
+run 32 mlx linear projection takes 1450.320 (ms)
+benchmark beam_width 330 beam_length 40
+run 32 mlx linear projection takes 1883.252 (ms)
+benchmark beam_width 330 beam_length 50
+run 32 mlx linear projection takes 2427.506 (ms)
+benchmark beam_width 330 beam_length 60
+run 32 mlx linear projection takes 2950.978 (ms)
+benchmark beam_width 330 beam_length 70
+run 32 mlx linear projection takes 3325.062 (ms)
+benchmark beam_width 330 beam_length 80
+run 32 mlx linear projection takes 3851.238 (ms)
+benchmark beam_width 330 beam_length 90
+run 32 mlx linear projection takes 4366.442 (ms)
+benchmark beam_width 330 beam_length 100
+run 32 mlx linear projection takes 4788.287 (ms)
+benchmark beam_width 340 beam_length 10
+run 32 mlx linear projection takes 511.684 (ms)
+benchmark beam_width 340 beam_length 20
+run 32 mlx linear projection takes 978.111 (ms)
+benchmark beam_width 340 beam_length 30
+run 32 mlx linear projection takes 1454.408 (ms)
+benchmark beam_width 340 beam_length 40
+run 32 mlx linear projection takes 1985.058 (ms)
+benchmark beam_width 340 beam_length 50
+run 32 mlx linear projection takes 2456.640 (ms)
+benchmark beam_width 340 beam_length 60
+run 32 mlx linear projection takes 2966.164 (ms)
+benchmark beam_width 340 beam_length 70
+run 32 mlx linear projection takes 3467.793 (ms)
+benchmark beam_width 340 beam_length 80
+run 32 mlx linear projection takes 4017.652 (ms)
+benchmark beam_width 340 beam_length 90
+run 32 mlx linear projection takes 4482.569 (ms)
+benchmark beam_width 340 beam_length 100
+run 32 mlx linear projection takes 4997.905 (ms)
+benchmark beam_width 350 beam_length 10
+run 32 mlx linear projection takes 524.238 (ms)
+benchmark beam_width 350 beam_length 20
+run 32 mlx linear projection takes 995.019 (ms)
+benchmark beam_width 350 beam_length 30
+run 32 mlx linear projection takes 1533.756 (ms)
+benchmark beam_width 350 beam_length 40
+run 32 mlx linear projection takes 2021.635 (ms)
+benchmark beam_width 350 beam_length 50
+run 32 mlx linear projection takes 2535.173 (ms)
+benchmark beam_width 350 beam_length 60
+run 32 mlx linear projection takes 3051.147 (ms)
+benchmark beam_width 350 beam_length 70
+run 32 mlx linear projection takes 3551.466 (ms)
+benchmark beam_width 350 beam_length 80
+run 32 mlx linear projection takes 4078.663 (ms)
+benchmark beam_width 350 beam_length 90
+run 32 mlx linear projection takes 4590.565 (ms)
+benchmark beam_width 350 beam_length 100
+run 32 mlx linear projection takes 5103.454 (ms)
+benchmark beam_width 360 beam_length 10
+run 32 mlx linear projection takes 560.598 (ms)
+benchmark beam_width 360 beam_length 20
+run 32 mlx linear projection takes 1091.184 (ms)
+benchmark beam_width 360 beam_length 30
+run 32 mlx linear projection takes 1588.284 (ms)
+benchmark beam_width 360 beam_length 40
+run 32 mlx linear projection takes 2109.453 (ms)
+benchmark beam_width 360 beam_length 50
+run 32 mlx linear projection takes 2660.835 (ms)
+benchmark beam_width 360 beam_length 60
+run 32 mlx linear projection takes 3255.959 (ms)
+benchmark beam_width 360 beam_length 70
+run 32 mlx linear projection takes 3731.590 (ms)
+benchmark beam_width 360 beam_length 80
+run 32 mlx linear projection takes 4135.730 (ms)
+benchmark beam_width 360 beam_length 90
+run 32 mlx linear projection takes 4692.839 (ms)
+benchmark beam_width 360 beam_length 100
+run 32 mlx linear projection takes 5232.928 (ms)
+benchmark beam_width 370 beam_length 10
+run 32 mlx linear projection takes 546.353 (ms)
+benchmark beam_width 370 beam_length 20
+run 32 mlx linear projection takes 1064.072 (ms)
+benchmark beam_width 370 beam_length 30
+run 32 mlx linear projection takes 1607.594 (ms)
+benchmark beam_width 370 beam_length 40
+run 32 mlx linear projection takes 2175.551 (ms)
+benchmark beam_width 370 beam_length 50
+run 32 mlx linear projection takes 2707.503 (ms)
+benchmark beam_width 370 beam_length 60
+run 32 mlx linear projection takes 3280.873 (ms)
+benchmark beam_width 370 beam_length 70
+run 32 mlx linear projection takes 3797.729 (ms)
+benchmark beam_width 370 beam_length 80
+run 32 mlx linear projection takes 4314.153 (ms)
+benchmark beam_width 370 beam_length 90
+run 32 mlx linear projection takes 4888.077 (ms)
+benchmark beam_width 370 beam_length 100
+run 32 mlx linear projection takes 5465.263 (ms)
+benchmark beam_width 380 beam_length 10
+run 32 mlx linear projection takes 563.576 (ms)
+benchmark beam_width 380 beam_length 20
+run 32 mlx linear projection takes 1078.994 (ms)
+benchmark beam_width 380 beam_length 30
+run 32 mlx linear projection takes 1628.662 (ms)
+benchmark beam_width 380 beam_length 40
+run 32 mlx linear projection takes 2155.746 (ms)
+benchmark beam_width 380 beam_length 50
+run 32 mlx linear projection takes 2673.017 (ms)
+benchmark beam_width 380 beam_length 60
+run 32 mlx linear projection takes 3289.140 (ms)
+benchmark beam_width 380 beam_length 70
+run 32 mlx linear projection takes 3898.170 (ms)
+benchmark beam_width 380 beam_length 80
+run 32 mlx linear projection takes 4433.532 (ms)
+benchmark beam_width 380 beam_length 90
+run 32 mlx linear projection takes 4985.453 (ms)
+benchmark beam_width 380 beam_length 100
+run 32 mlx linear projection takes 5492.848 (ms)
+benchmark beam_width 390 beam_length 10
+run 32 mlx linear projection takes 580.365 (ms)
+benchmark beam_width 390 beam_length 20
+run 32 mlx linear projection takes 1112.172 (ms)
+benchmark beam_width 390 beam_length 30
+run 32 mlx linear projection takes 1659.487 (ms)
+benchmark beam_width 390 beam_length 40
+run 32 mlx linear projection takes 2186.666 (ms)
+benchmark beam_width 390 beam_length 50
+run 32 mlx linear projection takes 2726.260 (ms)
+benchmark beam_width 390 beam_length 60
+run 32 mlx linear projection takes 3313.180 (ms)
+benchmark beam_width 390 beam_length 70
+run 32 mlx linear projection takes 3869.937 (ms)
+benchmark beam_width 390 beam_length 80
+run 32 mlx linear projection takes 4582.772 (ms)
+benchmark beam_width 390 beam_length 90
+run 32 mlx linear projection takes 5148.349 (ms)
+benchmark beam_width 390 beam_length 100
+run 32 mlx linear projection takes 5628.586 (ms)
+benchmark beam_width 400 beam_length 10
+run 32 mlx linear projection takes 603.144 (ms)
+benchmark beam_width 400 beam_length 20
+run 32 mlx linear projection takes 1205.874 (ms)
+benchmark beam_width 400 beam_length 30
+run 32 mlx linear projection takes 1694.389 (ms)
+benchmark beam_width 400 beam_length 40
+run 32 mlx linear projection takes 2300.587 (ms)
+benchmark beam_width 400 beam_length 50
+run 32 mlx linear projection takes 2906.138 (ms)
+benchmark beam_width 400 beam_length 60
+run 32 mlx linear projection takes 3442.364 (ms)
+benchmark beam_width 400 beam_length 70
+run 32 mlx linear projection takes 4065.104 (ms)
+benchmark beam_width 400 beam_length 80
+run 32 mlx linear projection takes 4643.930 (ms)
+benchmark beam_width 400 beam_length 90
+run 32 mlx linear projection takes 5242.268 (ms)
+benchmark beam_width 400 beam_length 100
+run 32 mlx linear projection takes 5794.675 (ms)
+benchmark beam_width 410 beam_length 10
+run 32 mlx linear projection takes 610.602 (ms)
+benchmark beam_width 410 beam_length 20
+run 32 mlx linear projection takes 1166.915 (ms)
+benchmark beam_width 410 beam_length 30
+run 32 mlx linear projection takes 1784.072 (ms)
+benchmark beam_width 410 beam_length 40
+run 32 mlx linear projection takes 2400.550 (ms)
+benchmark beam_width 410 beam_length 50
+run 32 mlx linear projection takes 2979.824 (ms)
+benchmark beam_width 410 beam_length 60
+run 32 mlx linear projection takes 3651.733 (ms)
+benchmark beam_width 410 beam_length 70
+run 32 mlx linear projection takes 4254.038 (ms)
+benchmark beam_width 410 beam_length 80
+run 32 mlx linear projection takes 4811.103 (ms)
+benchmark beam_width 410 beam_length 90
+run 32 mlx linear projection takes 5386.697 (ms)
+benchmark beam_width 410 beam_length 100
+run 32 mlx linear projection takes 6066.652 (ms)
+benchmark beam_width 420 beam_length 10
+run 32 mlx linear projection takes 629.163 (ms)
+benchmark beam_width 420 beam_length 20
+run 32 mlx linear projection takes 1220.744 (ms)
+benchmark beam_width 420 beam_length 30
+run 32 mlx linear projection takes 1840.001 (ms)
+benchmark beam_width 420 beam_length 40
+run 32 mlx linear projection takes 2478.295 (ms)
+benchmark beam_width 420 beam_length 50
+run 32 mlx linear projection takes 3052.624 (ms)
+benchmark beam_width 420 beam_length 60
+run 32 mlx linear projection takes 3712.256 (ms)
+benchmark beam_width 420 beam_length 70
+run 32 mlx linear projection takes 4311.169 (ms)
+benchmark beam_width 420 beam_length 80
+run 32 mlx linear projection takes 4930.956 (ms)
+benchmark beam_width 420 beam_length 90
+run 32 mlx linear projection takes 5869.112 (ms)
+benchmark beam_width 420 beam_length 100
+run 32 mlx linear projection takes 6171.122 (ms)
+benchmark beam_width 430 beam_length 10
+run 32 mlx linear projection takes 625.057 (ms)
+benchmark beam_width 430 beam_length 20
+run 32 mlx linear projection takes 1238.599 (ms)
+benchmark beam_width 430 beam_length 30
+run 32 mlx linear projection takes 1949.533 (ms)
+benchmark beam_width 430 beam_length 40
+run 32 mlx linear projection takes 2655.421 (ms)
+benchmark beam_width 430 beam_length 50
+run 32 mlx linear projection takes 3125.603 (ms)
+benchmark beam_width 430 beam_length 60
+run 32 mlx linear projection takes 3833.300 (ms)
+benchmark beam_width 430 beam_length 70
+run 32 mlx linear projection takes 4408.934 (ms)
+benchmark beam_width 430 beam_length 80
+run 32 mlx linear projection takes 5005.562 (ms)
+benchmark beam_width 430 beam_length 90
+run 32 mlx linear projection takes 5697.292 (ms)
+benchmark beam_width 430 beam_length 100
+run 32 mlx linear projection takes 6338.587 (ms)
+benchmark beam_width 440 beam_length 10
+run 32 mlx linear projection takes 644.358 (ms)
+benchmark beam_width 440 beam_length 20
+run 32 mlx linear projection takes 1264.208 (ms)
+benchmark beam_width 440 beam_length 30
+run 32 mlx linear projection takes 1926.344 (ms)
+benchmark beam_width 440 beam_length 40
+run 32 mlx linear projection takes 2577.441 (ms)
+benchmark beam_width 440 beam_length 50
+run 32 mlx linear projection takes 3227.105 (ms)
+benchmark beam_width 440 beam_length 60
+run 32 mlx linear projection takes 3803.498 (ms)
+benchmark beam_width 440 beam_length 70
+run 32 mlx linear projection takes 4529.989 (ms)
+benchmark beam_width 440 beam_length 80
+run 32 mlx linear projection takes 5159.459 (ms)
+benchmark beam_width 440 beam_length 90
+run 32 mlx linear projection takes 5817.232 (ms)
+benchmark beam_width 440 beam_length 100
+run 32 mlx linear projection takes 6388.519 (ms)
+benchmark beam_width 450 beam_length 10
+run 32 mlx linear projection takes 665.782 (ms)
+benchmark beam_width 450 beam_length 20
+run 32 mlx linear projection takes 1289.967 (ms)
+benchmark beam_width 450 beam_length 30
+run 32 mlx linear projection takes 1953.463 (ms)
+benchmark beam_width 450 beam_length 40
+run 32 mlx linear projection takes 2638.927 (ms)
+benchmark beam_width 450 beam_length 50
+run 32 mlx linear projection takes 3281.986 (ms)
+benchmark beam_width 450 beam_length 60
+run 32 mlx linear projection takes 3945.211 (ms)
+benchmark beam_width 450 beam_length 70
+run 32 mlx linear projection takes 4605.048 (ms)
+benchmark beam_width 450 beam_length 80
+run 32 mlx linear projection takes 5174.228 (ms)
+benchmark beam_width 450 beam_length 90
+run 32 mlx linear projection takes 5938.988 (ms)
+benchmark beam_width 450 beam_length 100
+run 32 mlx linear projection takes 6688.589 (ms)
+benchmark beam_width 460 beam_length 10
+run 32 mlx linear projection takes 684.851 (ms)
+benchmark beam_width 460 beam_length 20
+run 32 mlx linear projection takes 1337.546 (ms)
+benchmark beam_width 460 beam_length 30
+run 32 mlx linear projection takes 2038.299 (ms)
+benchmark beam_width 460 beam_length 40
+run 32 mlx linear projection takes 2722.199 (ms)
+benchmark beam_width 460 beam_length 50
+run 32 mlx linear projection takes 3379.914 (ms)
+benchmark beam_width 460 beam_length 60
+run 32 mlx linear projection takes 4075.448 (ms)
+benchmark beam_width 460 beam_length 70
+run 32 mlx linear projection takes 4745.082 (ms)
+benchmark beam_width 460 beam_length 80
+run 32 mlx linear projection takes 5411.056 (ms)
+benchmark beam_width 460 beam_length 90
+run 32 mlx linear projection takes 6102.885 (ms)
+benchmark beam_width 460 beam_length 100
+run 32 mlx linear projection takes 6763.577 (ms)
+benchmark beam_width 470 beam_length 10
+run 32 mlx linear projection takes 698.346 (ms)
+benchmark beam_width 470 beam_length 20
+run 32 mlx linear projection takes 1358.065 (ms)
+benchmark beam_width 470 beam_length 30
+run 32 mlx linear projection takes 2069.136 (ms)
+benchmark beam_width 470 beam_length 40
+run 32 mlx linear projection takes 2749.486 (ms)
+benchmark beam_width 470 beam_length 50
+run 32 mlx linear projection takes 3465.849 (ms)
+benchmark beam_width 470 beam_length 60
+run 32 mlx linear projection takes 4200.038 (ms)
+benchmark beam_width 470 beam_length 70
+run 32 mlx linear projection takes 4903.920 (ms)
+benchmark beam_width 470 beam_length 80
+run 32 mlx linear projection takes 5507.987 (ms)
+benchmark beam_width 470 beam_length 90
+run 32 mlx linear projection takes 6188.412 (ms)
+benchmark beam_width 470 beam_length 100
+run 32 mlx linear projection takes 6783.595 (ms)
+benchmark beam_width 480 beam_length 10
+run 32 mlx linear projection takes 708.460 (ms)
+benchmark beam_width 480 beam_length 20
+run 32 mlx linear projection takes 1378.583 (ms)
+benchmark beam_width 480 beam_length 30
+run 32 mlx linear projection takes 2081.181 (ms)
+benchmark beam_width 480 beam_length 40
+run 32 mlx linear projection takes 2858.351 (ms)
+benchmark beam_width 480 beam_length 50
+run 32 mlx linear projection takes 3526.759 (ms)
+benchmark beam_width 480 beam_length 60
+run 32 mlx linear projection takes 4201.807 (ms)
+benchmark beam_width 480 beam_length 70
+run 32 mlx linear projection takes 4921.280 (ms)
+benchmark beam_width 480 beam_length 80
+run 32 mlx linear projection takes 5652.031 (ms)
+benchmark beam_width 480 beam_length 90
+run 32 mlx linear projection takes 6515.886 (ms)
+benchmark beam_width 480 beam_length 100
+run 32 mlx linear projection takes 7186.989 (ms)
+benchmark beam_width 490 beam_length 10
+run 32 mlx linear projection takes 717.297 (ms)
+benchmark beam_width 490 beam_length 20
+run 32 mlx linear projection takes 1441.385 (ms)
+benchmark beam_width 490 beam_length 30
+run 32 mlx linear projection takes 2168.013 (ms)
+benchmark beam_width 490 beam_length 40
+run 32 mlx linear projection takes 2784.903 (ms)
+benchmark beam_width 490 beam_length 50
+run 32 mlx linear projection takes 3645.151 (ms)
+benchmark beam_width 490 beam_length 60
+run 32 mlx linear projection takes 4332.298 (ms)
+benchmark beam_width 490 beam_length 70
+run 32 mlx linear projection takes 5072.778 (ms)
+benchmark beam_width 490 beam_length 80
+run 32 mlx linear projection takes 5806.153 (ms)
+benchmark beam_width 490 beam_length 90
+run 32 mlx linear projection takes 6560.720 (ms)
+benchmark beam_width 490 beam_length 100
+run 32 mlx linear projection takes 7300.681 (ms)
+benchmark beam_width 500 beam_length 10
+run 32 mlx linear projection takes 770.626 (ms)
+benchmark beam_width 500 beam_length 20
+run 32 mlx linear projection takes 1445.309 (ms)
+benchmark beam_width 500 beam_length 30
+run 32 mlx linear projection takes 2202.151 (ms)
+benchmark beam_width 500 beam_length 40
+run 32 mlx linear projection takes 2939.492 (ms)
+benchmark beam_width 500 beam_length 50
+run 32 mlx linear projection takes 3635.870 (ms)
+benchmark beam_width 500 beam_length 60
+run 32 mlx linear projection takes 4402.649 (ms)
+benchmark beam_width 500 beam_length 70
+run 32 mlx linear projection takes 5150.825 (ms)
+benchmark beam_width 500 beam_length 80
+run 32 mlx linear projection takes 5840.734 (ms)
+benchmark beam_width 500 beam_length 90
+run 32 mlx linear projection takes 6613.154 (ms)
+benchmark beam_width 500 beam_length 100
+run 32 mlx linear projection takes 7247.649 (ms)
