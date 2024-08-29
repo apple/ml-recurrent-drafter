@@ -1,5 +1,5 @@
+import itertools
 import os
-from typing import Dict, Optional
 
 import mlx.core as mx
 import transformers
@@ -10,44 +10,6 @@ from recurrent_drafting.mlx import (
     recurrent_drafting,
     time_mlx,
 )
-
-# MODEL_PATH = os.path.expanduser("~/m/vicuna-7b-v1.3-bf16")
-# DRAFTER_PATH = os.path.expanduser("~/m/redrafter")
-# """<s> A chat between a curious user and an artificial intelligence assistant.
-# The assistant gives helpful, detailed, and polite answers to the user\'s questions.
-# USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting
-# cultural experiences and must-see attractions. ASSISTANT:
-# """
-# # Disable the multi-line reformatting by black.
-# # fmt: off
-# PROMPT = mx.array(
-#     [
-#         [
-#             529, 29879, 29958, 319, 13563, 1546, 263, 12758, 1404, 322, 385, 23116, 21082
-#             , 20255, 29889, 450, 20255, 4076, 8444, 29892, 13173, 29892, 322, 1248, 568
-#             , 6089, 304, 278, 1404, 29915, 29879, 5155, 29889, 3148, 1001, 29901, 3831
-#             , 852, 385, 3033, 6751, 9850, 12618, 1400, 1048, 263, 7786, 17487, 304, 26901
-#             , 29875, 29892, 12141, 292, 16375, 27482, 322, 1818, 29899, 4149, 19650, 1953
-#             , 29889, 319, 1799, 9047, 13566, 29901
-#         ]
-#     ]
-# )
-# # fmt: on
-
-_model: Optional[recurrent_drafting.ReDrafterModel] = None
-
-
-def _get_recurrent_drafting_model(
-    llm_dir: str, drafter_dir: str
-) -> recurrent_drafting.ReDrafterModel:
-    global _model
-    if _model is None:
-        llm = modeling_llama.load_model(llm_dir)
-        # llm.set_dtype(mx.bfloat16)  # Set dtype bfloat16 for testing
-        drafter = modeling_drafter.load_model(drafter_dir)
-        # drafter.set_dtype(mx.bfloat16)  # Set dtype bfloat16 for testing
-        _model = recurrent_drafting.ReDrafterModel(llm, drafter)
-    return _model
 
 
 @time_mlx.function("benchmark_recurrent_drafting.recurrent_drafting_generate")
@@ -76,8 +38,7 @@ def recurrent_drafting_generate(
 
 
 def benchmark_recurrent_drafting(
-    llm_dir,
-    drafter_dir,
+    model,
     prompt: mx.array,
     beam_width: int,
     beam_length: int,
@@ -90,7 +51,7 @@ def benchmark_recurrent_drafting(
         + f"dtype: {dtype}\nmax_length: {max_length}\ngreedy: {greedy}"
     )
     mx.random.seed(123)
-    model = _get_recurrent_drafting_model(llm_dir, drafter_dir)
+    # model = _get_recurrent_drafting_model(llm_dir, drafter_dir)
     model.llm.set_dtype(dtype)
     model.drafter.set_dtype(dtype)
     mx.eval(model.llm.parameters())
@@ -114,6 +75,10 @@ if __name__ == "__main__":
     drafter_dir = os.path.expanduser("~/m/redrafter")
     tokenizer_path = os.path.expanduser("~/m/vicuna-7b-v1.3-bf16")
 
+    model = recurrent_drafting.ReDrafterModel(
+        llm=modeling_llama.load_model(llm_dir), drafter=modeling_drafter.load_model(drafter_dir)
+    )
+
     tokenizer = transformers.AutoTokenizer.from_pretrained(tokenizer_path)
     new_ids = tokenizer(
         "A chat between a curious user and an artificial intelligence assistant. "
@@ -123,16 +88,18 @@ if __name__ == "__main__":
     ).input_ids
     prompt = mx.array([new_ids])  # batch size = 1
     ledger = time_mlx.ledger
-    for greedy in (True, False):
-        for dtype in [mx.float16]:
-            for max_length in [200]:
-                for bw in (1, 2):
-                    for bl in (2, 4):
-                        print("=" * 80)
-                        ledger.reset()
-                        tokens = benchmark_recurrent_drafting(
-                            llm_dir, drafter_dir, prompt, bw, bl, dtype, max_length, greedy
-                        )
-                        print(f"num_ total_tokens: {tokens.shape[1]}")
-                        print(f"parse_and_generation_time: {timed_call(ledger)}")
-                        print(tokenizer.decode(tokens[0].tolist()))
+    # for greedy in (True, False):
+    #     for dtype in [mx.float16]:
+    #         for max_length in [200]:
+    #             for bw in (1, 2, 4):
+    #                 for bl in (2, 4):
+    for greedy, dtype, max_length, bw, bl in itertools.product(
+        [True, False], [mx.float16, mx.bfloat16], [200], [1, 2, 4], [2, 4]
+    ):
+
+        print("=" * 80)
+        ledger.reset()
+        tokens = benchmark_recurrent_drafting(model, prompt, bw, bl, dtype, max_length, greedy)
+        print(f"num_ total_tokens: {tokens.shape[1]}")
+        print(f"parse_and_generation_time: {timed_call(ledger)}")
+        print(tokenizer.decode(tokens[0].tolist()))
