@@ -59,6 +59,8 @@ if __name__ == "__main__":
     model = recurrent_drafting.ReDrafterModel(
         llm=modeling_llama.load_model(MODEL_PATH), drafter=modeling_drafter.load_model(DRAFTER_PATH)
     )
+    mx.eval(model.llm.parameters())
+    mx.eval(model.drafter.parameters())
 
     ledger = time_mlx.ledger
     for greedy, dtype, max_length, beam_width, beam_length in itertools.product(
