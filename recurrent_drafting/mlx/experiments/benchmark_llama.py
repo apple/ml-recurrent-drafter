@@ -95,22 +95,25 @@ def benchmark_ref_model(dtype: mx.Dtype, num_new_tokens: int) -> None:
 
 
 if __name__ == "__main__":
-    print("dtype,implementation,comprehension,generation")  # table header
+    print(
+        "run,dtype,comprehension_mlx,generation_mlx,comprehension_ours,generation_ours"
+    )  # table header
     for run, dtype, num_new_tokens in itertools.product(range(2), [mx.float16, mx.bfloat16], [100]):
         mlx.core.metal.clear_cache()
         recurrent_drafting.mlx.time_mlx.ledger.reset()
         benchmark_ref_model(dtype, num_new_tokens)
         assert len(recurrent_drafting.mlx.time_mlx.ledger.records) == 2
-        print(
-            f"{dtype},MLX's LLaMA,{recurrent_drafting.mlx.time_mlx.ledger.records[0].timing[0]},"
-            + f"{recurrent_drafting.mlx.time_mlx.ledger.records[1].timing[0]}"
-        )
+        comprehension_mlx = recurrent_drafting.mlx.time_mlx.ledger.records[0].timing[0]
+        generation_mlx = recurrent_drafting.mlx.time_mlx.ledger.records[1].timing[0]
 
         mlx.core.metal.clear_cache()
         recurrent_drafting.mlx.time_mlx.ledger.reset()
         benchmark_base_model(dtype, num_new_tokens)
         assert len(recurrent_drafting.mlx.time_mlx.ledger.records) == 2
+        comprehension_ours = recurrent_drafting.mlx.time_mlx.ledger.records[0].timing[0]
+        generation_ours = recurrent_drafting.mlx.time_mlx.ledger.records[1].timing[0]
+
         print(
-            f"{dtype},MLX's LLaMA,{recurrent_drafting.mlx.time_mlx.ledger.records[0].timing[0]},"
-            + f"{recurrent_drafting.mlx.time_mlx.ledger.records[1].timing[0]}"
+            f"{run},{dtype},{comprehension_mlx},{generation_mlx},"
+            + f"{comprehension_ours},{generation_ours}"
         )
