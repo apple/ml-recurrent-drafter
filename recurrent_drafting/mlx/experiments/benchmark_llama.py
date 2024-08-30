@@ -10,30 +10,20 @@ import mlx.core as mx
 import mlx_lm
 import mlx_lm.models.base
 import mlx_lm.models.llama
+import transformers
 
 import recurrent_drafting.mlx
 
 MODEL_PATH = os.path.expanduser("~/m/vicuna-7b-v1.3-bf16")
-"""<s> A chat between a curious user and an artificial intelligence assistant.
-The assistant gives helpful, detailed, and polite answers to the user\'s questions.
-USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting
-cultural experiences and must-see attractions. ASSISTANT:
-"""
-# Disable the multi-line reformatting by black.
-# fmt: off
-PROMPT = mx.array(
-    [
-        [
-            529, 29879, 29958, 319, 13563, 1546, 263, 12758, 1404, 322, 385, 23116, 21082
-            , 20255, 29889, 450, 20255, 4076, 8444, 29892, 13173, 29892, 322, 1248, 568
-            , 6089, 304, 278, 1404, 29915, 29879, 5155, 29889, 3148, 1001, 29901, 3831
-            , 852, 385, 3033, 6751, 9850, 12618, 1400, 1048, 263, 7786, 17487, 304, 26901
-            , 29875, 29892, 12141, 292, 16375, 27482, 322, 1818, 29899, 4149, 19650, 1953
-            , 29889, 319, 1799, 9047, 13566, 29901
-        ]
-    ]
-)
-# fmt: on
+
+tokenizer = transformers.AutoTokenizer.from_pretrained(MODEL_PATH)
+new_ids = tokenizer(
+    "A chat between a curious user and an artificial intelligence assistant. "
+    + "The assistant gives helpful, detailed, and polite answers to the user's questions. "
+    + "USER: Compose an engaging travel blog post about a recent trip to Hawaii, highlighting "
+    + "cultural experiences and must-see attractions. ASSISTANT:"
+).input_ids
+PROMPT = mx.array([new_ids])  # batch size = 1
 
 
 def benchmark_base_model(dtype: mx.Dtype, num_new_tokens: int) -> None:
