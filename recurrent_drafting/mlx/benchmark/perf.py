@@ -1,3 +1,4 @@
+import gc
 import itertools
 import os
 
@@ -59,16 +60,11 @@ if __name__ == "__main__":
     model = recurrent_drafting.ReDrafterModel(
         llm=modeling_llama.load_model(MODEL_PATH), drafter=modeling_drafter.load_model(DRAFTER_PATH)
     )
-    mx.eval(model.llm.parameters())
-    mx.eval(model.drafter.parameters())
 
     ledger = time_mlx.ledger
     for greedy, dtype, max_length, beam_width, beam_length in itertools.product(
         [True, False], [mx.float16, mx.bfloat16], [200], [1, 2, 4], [2, 4]
     ):
-        # for greedy, dtype, max_length, beam_width, beam_length in itertools.product(
-        #     [True], [mx.float16], [200], [2], [4]
-        # ):
         ledger.reset()
         mx.random.seed(123)
         print(
@@ -91,4 +87,7 @@ if __name__ == "__main__":
         print(f"prompt_length:{prompt.shape[1]}")
         print(f"num_tokens:{tokens.shape[1]}")
         print(f"parse_and_generation_time:{timed_call(ledger)}")
-        print(f"generated:{tokenizer.decode(tokens[0].tolist())}")
+        print(tokenizer.decode(tokens[0].tolist()))
+
+        del tokens
+        gc.collect()
