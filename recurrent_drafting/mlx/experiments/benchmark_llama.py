@@ -1,3 +1,8 @@
+"""Usage:
+python recurrent_drafting/mlx/experiments/benchmark_llama.py
+"""
+
+import itertools
 import os
 
 import mlx
@@ -5,6 +10,7 @@ import mlx.core as mx
 import mlx_lm
 import mlx_lm.models.base
 import mlx_lm.models.llama
+
 import recurrent_drafting.mlx
 
 MODEL_PATH = os.path.expanduser("~/m/vicuna-7b-v1.3-bf16")
@@ -89,19 +95,22 @@ def benchmark_ref_model(dtype: mx.Dtype, num_new_tokens: int) -> None:
 
 
 if __name__ == "__main__":
-    for i in range(2):
-        print(f"run {i}")
-        for dtype in (mx.float16, mx.bfloat16):
-            for num_new_tokens in (100, 200, 400, 800):
-                print(f"-- Benchmark dtype {dtype} --")
-                print("** Benchmark Ref Model **")
-                mlx.core.metal.clear_cache()
-                recurrent_drafting.mlx.time_mlx.ledger.reset()
-                benchmark_ref_model(dtype, num_new_tokens)
-                recurrent_drafting.mlx.time_mlx.ledger.print_summary()
+    print("dtype,implementation,comprehension,generation")  # table header
+    for run, dtype, num_new_tokens in itertools.product(range(2), [mx.float16, mx.bfloat16], [100]):
+        mlx.core.metal.clear_cache()
+        recurrent_drafting.mlx.time_mlx.ledger.reset()
+        benchmark_ref_model(dtype, num_new_tokens)
+        assert len(recurrent_drafting.mlx.time_mlx.ledger.records) == 2
+        print(
+            f"{dtype},MLX's LLaMA,{recurrent_drafting.mlx.time_mlx.ledger.records[0].timing[0]},"
+            + f"{recurrent_drafting.mlx.time_mlx.ledger.records[1].timing[0]}"
+        )
 
-                print("** Benchmark Base Model **")
-                mlx.core.metal.clear_cache()
-                recurrent_drafting.mlx.time_mlx.ledger.reset()
-                benchmark_base_model(dtype, num_new_tokens)
-                recurrent_drafting.mlx.time_mlx.ledger.print_summary()
+        mlx.core.metal.clear_cache()
+        recurrent_drafting.mlx.time_mlx.ledger.reset()
+        benchmark_base_model(dtype, num_new_tokens)
+        assert len(recurrent_drafting.mlx.time_mlx.ledger.records) == 2
+        print(
+            f"{dtype},MLX's LLaMA,{recurrent_drafting.mlx.time_mlx.ledger.records[0].timing[0]},"
+            + f"{recurrent_drafting.mlx.time_mlx.ledger.records[1].timing[0]}"
+        )
