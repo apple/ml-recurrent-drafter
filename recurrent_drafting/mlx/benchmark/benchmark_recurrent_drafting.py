@@ -1,7 +1,10 @@
 import itertools
 import os
+import sys
+from typing import Any, Dict, List, Tuple
 
 import mlx.core as mx
+import pandas
 import transformers
 
 from recurrent_drafting.mlx import (
@@ -20,7 +23,7 @@ def recurrent_drafting_generate(
     beam_shape: modeling_drafter.BeamShape,
     sampling_args: recurrent_drafting.SamplingArgs,
     special_tokens: recurrent_drafting.SpecialTokens = recurrent_drafting.SpecialTokens(0, 1),
-) -> mx.array:
+) -> Tuple[mx.array, int]:
     output_generator = model.generate(
         input_ids,
         max_length,
@@ -29,12 +32,11 @@ def recurrent_drafting_generate(
         special_tokens,
     )
     output_token_ids = next(output_generator)
-    step = 0
+    steps = 0
     for output_token_ids in output_generator:
         mx.eval(output_token_ids)
-        step += 1
-    print(f"steps:{step}")
-    return output_token_ids
+        steps += 1
+    return output_token_ids, steps
 
 
 def timed_call(ledger: time_mlx.Ledger) -> float:
@@ -62,30 +64,42 @@ if __name__ == "__main__":
     ).input_ids
     prompt = mx.array([new_ids])  # batch size = 1
 
+    table: List[Dict[str, Any]] = []
     ledger = time_mlx.ledger
-    for greedy, dtype, max_length, beam_width, beam_length in itertools.product(
-        [True, False], [mx.float16, mx.bfloat16], [200], [1, 2, 4], [2, 4]
+    for run, greedy, dtype, max_length, beam_width, beam_length in itertools.product(
+        range(2), [True, False], [mx.float16, mx.bfloat16], [200], [1, 2, 3, 4], [2, 3, 4, 5]
     ):
         ledger.reset()
         mx.random.seed(123)
-        print(
-            "=" * 80
-            + f"\nbeam_width:{beam_width}\nbeam_length:{beam_length}\ndtype:{dtype}"
-            + f"\nmax_length:{max_length}\ngreedy:{greedy}"
-        )
+        r = {
+            "run": run,
+            "beam_width": beam_width,
+            "beam_length": beam_length,
+            "dtype": dtype,
+            "nmax_length": max_length,
+            "greedy": greedy,
+        }
+        print("=" * 80, "\n", r)
         model.llm.set_dtype(dtype)
         model.drafter.set_dtype(dtype)
         mx.eval(model.llm.parameters())
         mx.eval(model.drafter.parameters())
 
-        tokens = recurrent_drafting_generate(
+        tokens, steps = recurrent_drafting_generate(
             model,
             input_ids=prompt,
             max_length=prompt.shape[1] + max_length,
             beam_shape=modeling_drafter.BeamShape(beam_width, beam_length),
             sampling_args=recurrent_drafting.SamplingArgs(1.0, greedy),
         )
-        print(f"prompt_length:{prompt.shape[1]}")
-        print(f"num_tokens:{tokens.shape[1]}")
-        print(f"parse_and_generation_time:{timed_call(ledger)}")
+        rr = {
+            "steps": steps,
+            "prompt_length": prompt.shape[1],
+            "prompt_and_generated_length": tokens.shape[1],
+            "comprehension_and_generation_time": timed_call(ledger),
+        }
+        print(rr)
+        r.update(rr)
+        table.append(r)
         print(tokenizer.decode(tokens[0].tolist()))
+    pandas.DataFrame(table).to_csv(sys.stdout, index=False)
