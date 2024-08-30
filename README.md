@@ -9,7 +9,7 @@ The following animation compares recurrent drafting (right) with auto-regressive
 
 Both methods were run in sampling mode, resulting in non-identical outputs. If identical results are required, running both in greedy search mode would achieve this. For more details, refer to [this guide](docs/parity_check.md).
 
-Regarding the specific prompt used, the token acceptance rate was 3.17. By employing a larger dataset of prompts, we expect to observe a more realistic and higher acceptance rate, along with increased GPU utilization and enhanced text generation speed. The following animation shows the top per-prompt token generation speed with a batch size of 8, averaging about 85 tokens per second. This equates to a total throughput of 85x8=680 tokens per second. The average number of accepted candidate tokens per prompt is close to 5.
+Regarding the specific prompt used, the token acceptance rate was 3.17. By employing a larger dataset of prompts, we expect to observe a more realistic and higher acceptance rate, along with increased GPU utilization and enhanced text generation speed. The following animation shows the top per-prompt token generation speed with Vicuna 1.3 7B model and a batch size of 8, averaging about 85 tokens per second. This equates to a total throughput of 85x8=680 tokens per second. The average number of accepted candidate tokens per prompt is close to 5.
 
 [![](docs/animation_icon.png)](recurrent_drafting/benchmark/perf_wrt_candidates/bs-8-np-32-beam-48-len-16.mov)
 
