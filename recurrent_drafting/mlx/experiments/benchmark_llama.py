@@ -88,7 +88,7 @@ if __name__ == "__main__":
     print(
         "run,dtype,comprehension_mlx,generation_mlx,comprehension_ours,generation_ours"
     )  # table header
-    for run, dtype, num_new_tokens in itertools.product(range(2), [mx.float16, mx.bfloat16], [100]):
+    for run, dtype, num_new_tokens in itertools.product(range(2), [mx.float16, mx.bfloat16], [200]):
         mlx.core.metal.clear_cache()
         recurrent_drafting.mlx.time_mlx.ledger.reset()
         benchmark_ref_model(dtype, num_new_tokens)
