@@ -1,4 +1,3 @@
-import gc
 import itertools
 import os
 
@@ -88,6 +87,3 @@ if __name__ == "__main__":
         print(f"num_tokens:{tokens.shape[1]}")
         print(f"parse_and_generation_time:{timed_call(ledger)}")
         print(tokenizer.decode(tokens[0].tolist()))
-
-        del tokens
-        gc.collect()
