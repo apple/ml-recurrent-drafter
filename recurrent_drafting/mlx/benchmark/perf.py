@@ -1,4 +1,3 @@
-import gc
 import itertools
 import os
 
@@ -48,6 +47,12 @@ if __name__ == "__main__":
     DRAFTER_PATH = os.path.expanduser("~/m/redrafter")
     TOKENIZER_PATH = os.path.expanduser("~/m/vicuna-7b-v1.3-bf16")
 
+    # BUG: This piece of code utterly puzzled me. If I dare to move the instiantiation of model
+    # after prompt, some loop steps will generate many <unk>'s.
+    model = recurrent_drafting.ReDrafterModel(
+        llm=modeling_llama.load_model(MODEL_PATH), drafter=modeling_drafter.load_model(DRAFTER_PATH)
+    )
+
     tokenizer = transformers.AutoTokenizer.from_pretrained(TOKENIZER_PATH)
     new_ids = tokenizer(
         "A chat between a curious user and an artificial intelligence assistant. "
@@ -56,10 +61,6 @@ if __name__ == "__main__":
         + "cultural experiences and must-see attractions. ASSISTANT:"
     ).input_ids
     prompt = mx.array([new_ids])  # batch size = 1
-
-    model = recurrent_drafting.ReDrafterModel(
-        llm=modeling_llama.load_model(MODEL_PATH), drafter=modeling_drafter.load_model(DRAFTER_PATH)
-    )
 
     ledger = time_mlx.ledger
     for greedy, dtype, max_length, beam_width, beam_length in itertools.product(
@@ -88,6 +89,3 @@ if __name__ == "__main__":
         print(f"num_tokens:{tokens.shape[1]}")
         print(f"parse_and_generation_time:{timed_call(ledger)}")
         print(tokenizer.decode(tokens[0].tolist()))
-
-        del tokens
-        gc.collect()
