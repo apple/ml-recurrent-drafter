@@ -2,6 +2,14 @@
 # For licensing see accompanying LICENSE file.
 # Copyright (C) 2020 Apple Inc. All Rights Reserved.
 #
+"""Usage:
+1. Download the LLM, the drafter, and the tokenizer to $HOME/m
+
+2. Run this script
+
+   python recurrent_drafting/mlx/experiments/benchmark_recurrent_drafting.py \
+    > /tmp/recurrent_drafting.csv
+"""
 import itertools
 import os
 import sys
@@ -102,8 +110,8 @@ if __name__ == "__main__":
             "prompt_and_generated_length": tokens.shape[1],
             "comprehension_and_generation_time": timed_call(ledger),
         }
-        print(rr)
+        print(rr, file=sys.stderr)
         r.update(rr)
         table.append(r)
-        print(tokenizer.decode(tokens[0].tolist()))
+        print(tokenizer.decode(tokens[0].tolist()), file=sys.stderr)
     pandas.DataFrame(table).to_csv(sys.stdout, index=False)

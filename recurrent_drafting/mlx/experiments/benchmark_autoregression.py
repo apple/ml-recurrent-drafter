@@ -2,6 +2,14 @@
 # For licensing see accompanying LICENSE file.
 # Copyright (C) 2020 Apple Inc. All Rights Reserved.
 #
+"""Usage:
+1. Download the LLM and the tokenizer to $HOME/m
+
+2. Run this script
+
+   python recurrent_drafting/mlx/experiments/benchmark_autoregression.py \
+    > /tmp/autoregression.csv
+"""
 import itertools
 import os
 

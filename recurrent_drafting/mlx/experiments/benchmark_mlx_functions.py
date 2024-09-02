@@ -2,6 +2,7 @@ import sys
 
 import mlx.core as mx
 import mlx.nn
+
 from recurrent_drafting.mlx import attention, time_mlx
 
 
@@ -53,6 +54,11 @@ def benchmark_linear_projection(
     return time_linear(proj, x)
 
 
+def timed_call(ledger: time_mlx.Ledger) -> float:
+    assert len(ledger.records) == 1  # only one call to recurrent_drafting_generate
+    return ledger.records[0].timing[0]  # in ms
+
+
 if __name__ == "__main__":
     mx.random.seed(123)
     # On M1 Max:
@@ -67,7 +73,7 @@ if __name__ == "__main__":
                 print(f"benchmark beam_width {bw} beam_length {bl}")
                 q_len = bw * bl
                 benchmark_linear_projection(4096, 4096, q_len, mx.bfloat16)
-                time_mlx.ledger.print_summary()
+                print(timed_call(time_mlx.ledger))
 
     with open("/tmp/sdpa.log", "w") as sys.stdout:
         for bw in range(1, 125, 2):
@@ -76,4 +82,4 @@ if __name__ == "__main__":
                 print(f"benchmark beam_width {bw} beam_length {bl}")
                 q_len = bw * bl
                 benchmark_sdpa(1, 32, q_len, q_len + 100, 128, mx.bfloat16)
-                time_mlx.ledger.print_summary()
+                print(timed_call(time_mlx.ledger))
