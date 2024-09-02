@@ -82,7 +82,7 @@ def plot_groups(df: pandas.DataFrame) -> None:
         ax.set_zlabel("speedup")
         ax.set_title(group_name + "\n" + max_label)
         # plt.tight_layout()
-        fig.suptitle("Speedup of Recurrent Drafting over Autoregression on M1 Max", fontsize=16)
+        # fig.suptitle("Speedup of Recurrent Drafting over Autoregression on M1 Max", fontsize=16)
         plt.savefig("/tmp/p.pdf")
 
 
