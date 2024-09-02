@@ -1,7 +1,7 @@
-"""Usage:
-python recurrent_drafting/mlx/experiments/benchmark_llama.py
-"""
-
+#
+# For licensing see accompanying LICENSE file.
+# Copyright (C) 2020 Apple Inc. All Rights Reserved.
+#
 import itertools
 import os
 
