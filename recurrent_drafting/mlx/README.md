@@ -2,7 +2,7 @@
 
 This project implements our paper https://arxiv.org/abs/2403.09919 in [MLX](https://github.com/ml-explore/mlx).
 
-## Develop 
+## Develop
 
 It is recommended to develop MLX projects using macOS and Apple Silicon.  In a Conda environment with Python >3.10.1, running the following command to install this project.
 
@@ -16,7 +16,7 @@ Run the following command to enable pre-commit:
 pre-commit install
 ```
 
-However, many CI/CD runs Linux on x86_64. MLX team does not release Linux package on PyPI, so we need to install from Conda.
+Many CI/CD run Linux on x86_64. MLX for Linux is only available on Conda.
 
 ```shell
 conda install conda-forge::mlx
@@ -45,3 +45,25 @@ pytest recurrent_drafting/mlx/
 - `attention.py` contains commonly-used routines for attention mask and bias.
 
 - `time_mlx.py` contains Python decorators that measures the time used to run MLX graphs.
+
+## Benchmark
+
+Benchmark autoregression.
+
+```shell
+python recurrent_drafting/mlx/experiments/benchmark_autoregression.py \
+ > /tmp/autoregression.csv
+```
+
+Benchmark recurrent drafting.
+
+```shell
+python recurrent_drafting/mlx/experiments/benchmark_recurrent_drafting.py \
+  > /tmp/recurrent_drafting.csv
+```
+
+Run a script to load the two result files `/tmp/autoregression.csv` and `/tmp/recurrent_drafting.csv`, and draw the plot `/tmp/p.pdf`.
+
+```shell
+python recurrent_drafting/mlx/experiments/analyze_perf_data.py
+```

@@ -21,13 +21,13 @@ class Ledger:
         self.indentation = -1
         self.key = ""
 
-    def reset(self):
+    def reset(self) -> None:
         self.records = []
-        self.records_dict: Dict[str, _Record] = {}
+        self.records_dict = {}
         self.indentation = -1
         self.key = ""
 
-    def print_table(self):
+    def print(self) -> None:
         table = [
             [
                 "-" * r.indentation + "> " + r.msg,
@@ -49,10 +49,6 @@ class Ledger:
                 tablefmt="psql",
             )
         )
-
-    def print_summary(self):
-        for r in self.records:
-            print(f"{r.msg} {sum(r.timing):.3f} (ms)")
 
 
 ledger = Ledger()
