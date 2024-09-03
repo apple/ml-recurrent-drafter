@@ -86,7 +86,7 @@ if __name__ == "__main__":
     table: List[Dict[str, Any]] = []
     ledger = time_mlx.ledger
     for run, greedy, dtype, max_length, beam_width, beam_length in itertools.product(
-        range(2), [True, False], [mx.float16, mx.bfloat16], [200], [1, 2, 3, 4], [2, 3, 4, 5]
+        range(1), [True, False], [mx.float16, mx.bfloat16], [200], [1, 2, 3, 4], [2, 3, 4, 5]
     ):
         ledger.reset()
         mx.random.seed(123)
@@ -98,7 +98,7 @@ if __name__ == "__main__":
             "nmax_length": max_length,
             "greedy": greedy,
         }
-        print("=" * 80, "\n", r)
+        print("=" * 80, "\n", r, file=sys.stderr)
         model.llm.set_dtype(dtype)
         model.drafter.set_dtype(dtype)
         mx.eval(model.llm.parameters())
