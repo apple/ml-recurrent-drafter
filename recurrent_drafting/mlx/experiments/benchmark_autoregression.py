@@ -1,7 +1,22 @@
+#
+# For licensing see accompanying LICENSE file.
+# Copyright (C) 2020 Apple Inc. All Rights Reserved.
+#
 """Usage:
-python recurrent_drafting/mlx/experiments/benchmark_llama.py
-"""
+1. Download the LLM and the tokenizer to $HOME/m
 
+2. Run this script
+
+   python recurrent_drafting/mlx/experiments/benchmark_autoregression.py \
+    > /tmp/autoregression.csv
+
+   Or, if you want to watch the output in the terminal, you need unbuffer, which comes with expect.
+
+   brew install expect
+
+   unbuffer python recurrent_drafting/mlx/experiments/benchmark_autoregression.py \
+    | tee /tmp/autoregression.csv
+"""
 import itertools
 import os
 
