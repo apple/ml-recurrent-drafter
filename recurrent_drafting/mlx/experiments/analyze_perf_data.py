@@ -7,6 +7,8 @@
 2. Run benchmark_recurrent_drafting.py to generate /tmp/recurrent_drafting.csv
 3. Run this script to generate /tmp/p.pdf
 """
+import argparse
+import os
 from typing import Tuple
 
 import matplotlib.pyplot as plt
@@ -25,14 +27,6 @@ def average_autoregression_time(autoregression_csv: str) -> Tuple[float, ...]:
         float(bf16["comprehension_ours"].mean()),
         float(bf16["generation_ours"].mean()),
     )
-
-
-(
-    average_comprehension_time_fp16,
-    average_autoregression_generation_time_fp16,
-    average_comprehension_time_bf16,
-    average_autoregression_generation_time_bf16,
-) = average_autoregression_time("/tmp/autoregression.csv")
 
 
 def plot_groups(
@@ -94,14 +88,15 @@ def plot_groups(
         ax.set_title(grp_name + "\n" + max_label)
         # plt.tight_layout()
         # fig.suptitle("Speedup of Recurrent Drafting over Autoregression on M1 Max", fontsize=16)
-    plt.savefig("/tmp/p.pdf")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Analyze benchmark result")
+    parser.add_argument("--dir", type=str, help="A directory of CSV files", required=True)
+    args = parser.parse_args()
+    plot_groups(
+        os.path.join(args.dir, "recurrent_drafting.csv"),
+        *average_autoregression_time(os.path.join(args.dir, "autoregression.csv")),
+    )
+    plt.savefig(os.path.join(args.dir, "p.pdf"))
     plt.show()
-
-
-plot_groups(
-    "/tmp/recurrent_drafting.csv",
-    average_comprehension_time_fp16,
-    average_autoregression_generation_time_fp16,
-    average_comprehension_time_bf16,
-    average_autoregression_generation_time_bf16,
-)
