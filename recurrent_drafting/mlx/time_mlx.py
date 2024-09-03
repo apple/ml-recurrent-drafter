@@ -21,13 +21,13 @@ class Ledger:
         self.indentation = -1
         self.key = ""
 
-    def reset(self):
-        self.records: List[_Record] = []
-        self.records_dict: Dict[str, _Record] = {}
+    def reset(self) -> None:
+        self.records = []
+        self.records_dict = {}
         self.indentation = -1
         self.key = ""
 
-    def print(self):
+    def print(self) -> None:
         table = [
             [
                 "-" * r.indentation + "> " + r.msg,
