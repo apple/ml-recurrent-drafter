@@ -9,6 +9,13 @@
 
    python recurrent_drafting/mlx/experiments/benchmark_recurrent_drafting.py \
     > /tmp/recurrent_drafting.csv
+
+   Or, if you want to watch the output in the terminal, you need unbuffer, which comes with expect.
+
+   brew install expect
+
+   unbuffer python recurrent_drafting/mlx/experiments/benchmark_recurrent_drafting.py \
+    | tee /tmp/recurrent_drafting.csv
 """
 import itertools
 import os

@@ -32,6 +32,8 @@ def derive_perf_versus_beam_shape(
     average_autoregression_generation_time: float,
 ) -> pandas.DataFrame:
     df = pandas.read_csv(recurrent_drafting_csv)
+    df = df[df["run"] == 0]
+    df = df[df["dtype"] == "mlx.core.float16"]
     df["generated_length"] = df["prompt_and_generated_length"] - df["prompt_length"]
     df["generation_time"] = df["comprehension_and_generation_time"] - average_comprehension_time
     df["tokens_per_sec"] = df["generated_length"] / df["generation_time"] * 1000.0
@@ -54,12 +56,13 @@ def plot_groups(df: pandas.DataFrame) -> None:
         "float16 non-greedy": df[
             (df["dtype"] == "mlx.core.float16") & (df["greedy"] == False)  # noqa: E712
         ],
-        "bfloat16 greedy": df[
-            (df["dtype"] == "mlx.core.bfloat16") & (df["greedy"] == True)  # noqa: E712
-        ],
-        "bfloat16 non-greedy": df[
-            (df["dtype"] == "mlx.core.bfloat16") & (df["greedy"] == False)  # noqa: E712
-        ],
+        # derive_perf_versus_beam_shape had filtered bfloat16 cases.
+        # "bfloat16 greedy": df[
+        #     (df["dtype"] == "mlx.core.bfloat16") & (df["greedy"] == True)  # noqa: E712
+        # ],
+        # "bfloat16 non-greedy": df[
+        #     (df["dtype"] == "mlx.core.bfloat16") & (df["greedy"] == False)  # noqa: E712
+        # ],
     }
 
     # Create a figure with 2x2 subplots
@@ -68,12 +71,14 @@ def plot_groups(df: pandas.DataFrame) -> None:
     # Iterate over each group and plot the 3D terrain using the new Z axis
     for i, (group_name, group_df) in enumerate(groups.items(), 1):
         max_row = group_df.loc[group_df["speedup"].idxmax()]
+        print(groups["float16 greedy"])  # debug
+        print(max_row)  # debug
         max_label = (
             f"beam shape=({max_row['beam_width']},{max_row['beam_length']}) "
             + f"{max_row['tokens_per_sec']:.3f} tokens/sec speedup={max_row['speedup']:.3f}"
         )
 
-        ax: Axes3D = fig.add_subplot(2, 2, i, projection="3d")
+        ax: Axes3D = fig.add_subplot(1, 2, i, projection="3d")
         ax.plot_trisurf(
             group_df["beam_width"], group_df["beam_length"], group_df["speedup"], cmap="viridis"
         )
@@ -83,7 +88,8 @@ def plot_groups(df: pandas.DataFrame) -> None:
         ax.set_title(group_name + "\n" + max_label)
         # plt.tight_layout()
         # fig.suptitle("Speedup of Recurrent Drafting over Autoregression on M1 Max", fontsize=16)
-        plt.savefig("/tmp/p.pdf")
+    plt.savefig("/tmp/p.pdf")
+    plt.show()
 
 
 plot_groups(df)
