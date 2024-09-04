@@ -1,5 +1,7 @@
 # Benchmark Recurrent Drafting, A Fast Speculative Decoding Method, in MLX
 
+Yunfei Cheng, Yi Wang, Awni Hannan, Chong Wang, Aonan Zhang, Xuanyu Zhang
+
 ## Speculative Decoding is Helpful on Apple Silicon
 
 Earlier this year, we published our work on Recurrent Drafting (https://arxiv.org/abs/2403.09919). Our PyTorch implementation (https://github.com/apple/ml-recurrent-drafter/) demonstrated a 4x speedup over autoregressive methods on CUDA GPUs. This remarkable improvement stems from the fact that speculative decoding better leverages the highly parallelized architecture of GPUs. By reducing the number of calls to large language models (LLMs) and generating multiple tokens per call, we can maximize GPU efficiency. On powerful GPUs, generating multiple tokens in a single call incurs only a marginal increase in time compared to generating one token. However, this raises the question: would speculative decoding still be advantageous on the Apple GPUs found in Apple silicon chips, which may not be as computationally powerful?
