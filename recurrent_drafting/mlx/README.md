@@ -34,7 +34,7 @@ pytest recurrent_drafting/mlx/
 
 - `modeling_drafter.py` implements the draft model, which includes the beam search-based drafting algorithm.
 
-- `tree_attention.py` implements the dynamic tree attention algorithm, which removes duplicate common prefixes from the beam search result and reduces the number of tokens that must be verified by the LLM.
+- `tree_attention.py` implements a simplified dynamic tree attention algorithm.
 
 - `recurrent_drafting.py` implements the fast text decoding method, which is dependent on the previous three files.
 
