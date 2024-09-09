@@ -5,6 +5,7 @@
 from . import (
     attention,
     autoregressive,
+    chat,
     configuration_drafter,
     kv_cache,
     modeling_drafter,
