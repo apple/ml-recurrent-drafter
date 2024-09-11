@@ -41,13 +41,13 @@ new_ids = tokenizer(
 PROMPT = mx.array([new_ids])  # batch size = 1
 
 
-def benchmark_base_model(dtype: mx.Dtype, num_new_tokens: int) -> None:
+def benchmark_our_model(dtype: mx.Dtype, num_new_tokens: int) -> None:
     @recurrent_drafting.mlx.time_mlx.function("test process prompt takes")
-    def process_prompt(prompt, base_model, sliced_cache):
+    def process_prompt(prompt, our_model, sliced_cache):
         mask = recurrent_drafting.mlx.attention.causal_mask(
             mx.ones(shape=(1, prompt.shape[1]), dtype=mx.bool_), prompt.shape[1]
         )
-        logits = base_model(prompt, 1, mask, sliced_cache)
+        logits = our_model(prompt, prompt.shape[1], mask, sliced_cache)
         return logits[1][:, -1, :]
 
     @recurrent_drafting.mlx.time_mlx.function(f"test generate {num_new_tokens} tokens takes")
@@ -60,21 +60,21 @@ def benchmark_base_model(dtype: mx.Dtype, num_new_tokens: int) -> None:
             logits = model(y[None], 1, mask, cache)[1][:, -1, :]
         return mx.argmax(logits, axis=-1)
 
-    base_model = recurrent_drafting.mlx.modeling_llama.load_model(MODEL_PATH)
-    base_model.set_dtype(dtype)
+    our_model = recurrent_drafting.mlx.modeling_llama.load_model(MODEL_PATH)
+    our_model.set_dtype(dtype)
     cache = recurrent_drafting.mlx.kv_cache.Cache(
         batch_size=1,
         max_length=PROMPT.shape[1] + num_new_tokens,
-        n_layers=base_model.args.num_hidden_layers,
-        n_heads=base_model.args.num_key_value_heads or base_model.args.num_attention_heads,
-        head_dim=base_model.args.hidden_size // base_model.args.num_attention_heads,
-        dtype=base_model.model.embed_tokens.weight.dtype,
+        n_layers=our_model.args.num_hidden_layers,
+        n_heads=our_model.args.num_key_value_heads or our_model.args.num_attention_heads,
+        head_dim=our_model.args.hidden_size // our_model.args.num_attention_heads,
+        dtype=our_model.model.embed_tokens.weight.dtype,
     )
-    logits = process_prompt(PROMPT, base_model, cache.sliced)
-    generate_tokens(logits, base_model, cache.sliced, PROMPT.shape[1])
+    logits = process_prompt(PROMPT, our_model, cache.sliced)
+    generate_tokens(logits, our_model, cache.sliced, PROMPT.shape[1])
 
 
-def benchmark_ref_model(dtype: mx.Dtype, num_new_tokens: int) -> None:
+def benchmark_mlxlm_model(dtype: mx.Dtype, num_new_tokens: int) -> None:
     @recurrent_drafting.mlx.time_mlx.function("ref prompt processing takes")
     def process_prompt(prompt, model, cache):
         return model(prompt, cache=cache)[:, -1, :]
@@ -86,17 +86,17 @@ def benchmark_ref_model(dtype: mx.Dtype, num_new_tokens: int) -> None:
             logits = model(y[None], cache)[:, -1, :]
         return mx.argmax(logits, axis=-1)
 
-    ref_model, _ = mlx_lm.utils.load(MODEL_PATH)
-    ref_model.set_dtype(dtype)
+    mlxlm_model, _ = mlx_lm.utils.load(MODEL_PATH)
+    mlxlm_model.set_dtype(dtype)
     ref_cache = [
         mlx_lm.models.base.KVCache(
-            ref_model.args.hidden_size // ref_model.args.num_attention_heads,
-            ref_model.args.num_key_value_heads,
+            mlxlm_model.args.hidden_size // mlxlm_model.args.num_attention_heads,
+            mlxlm_model.args.num_key_value_heads,
         )
-        for _ in range(ref_model.args.num_hidden_layers)
+        for _ in range(mlxlm_model.args.num_hidden_layers)
     ]
-    logits = process_prompt(PROMPT, ref_model, ref_cache)
-    generate_tokens(logits, ref_model, ref_cache)
+    logits = process_prompt(PROMPT, mlxlm_model, ref_cache)
+    generate_tokens(logits, mlxlm_model, ref_cache)
 
 
 if __name__ == "__main__":
@@ -106,14 +106,14 @@ if __name__ == "__main__":
     for run, dtype, num_new_tokens in itertools.product(range(2), [mx.float16, mx.bfloat16], [200]):
         mlx.core.metal.clear_cache()
         recurrent_drafting.mlx.time_mlx.ledger.reset()
-        benchmark_ref_model(dtype, num_new_tokens)
+        benchmark_mlxlm_model(dtype, num_new_tokens)
         assert len(recurrent_drafting.mlx.time_mlx.ledger.records) == 2
         comprehension_mlx = recurrent_drafting.mlx.time_mlx.ledger.records[0].timing[0]
         generation_mlx = recurrent_drafting.mlx.time_mlx.ledger.records[1].timing[0]
 
         mlx.core.metal.clear_cache()
         recurrent_drafting.mlx.time_mlx.ledger.reset()
-        benchmark_base_model(dtype, num_new_tokens)
+        benchmark_our_model(dtype, num_new_tokens)
         assert len(recurrent_drafting.mlx.time_mlx.ledger.records) == 2
         comprehension_ours = recurrent_drafting.mlx.time_mlx.ledger.records[0].timing[0]
         generation_ours = recurrent_drafting.mlx.time_mlx.ledger.records[1].timing[0]
