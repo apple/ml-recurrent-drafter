@@ -73,7 +73,7 @@ class Attention(nn.Module):
     def __call__(
         self,
         x: mx.array,
-        beam_len: int,  # required by rotary embedding
+        num_positions: int,  # for rotary embedding; beam_len at generation time or prompt_len
         mask: mx.array,
         cache: Tuple[kv_cache.View, kv_cache.View],
     ) -> mx.array:
@@ -83,17 +83,17 @@ class Attention(nn.Module):
         queries, keys, values = self.q_proj(x), self.k_proj(x), self.v_proj(x)
 
         # Assume no tree attention or any other input compression algorithm is applied
-        beam_width = query_len // beam_len
+        beam_width = query_len // num_positions
         # Prepare the queries, keys and values for RoPE computation
-        queries = queries.reshape(batch_size * beam_width, beam_len, self.n_heads, -1).transpose(
+        queries = queries.reshape(
+            batch_size * beam_width, num_positions, self.n_heads, -1
+        ).transpose(0, 2, 1, 3)
+        keys = keys.reshape(batch_size * beam_width, num_positions, self.n_kv_heads, -1).transpose(
             0, 2, 1, 3
         )
-        keys = keys.reshape(batch_size * beam_width, beam_len, self.n_kv_heads, -1).transpose(
-            0, 2, 1, 3
-        )
-        values = values.reshape(batch_size * beam_width, beam_len, self.n_kv_heads, -1).transpose(
-            0, 2, 1, 3
-        )
+        values = values.reshape(
+            batch_size * beam_width, num_positions, self.n_kv_heads, -1
+        ).transpose(0, 2, 1, 3)
 
         # Compute RoPE
         key_cache, value_cache = cache
@@ -152,11 +152,11 @@ class TransformerBlock(nn.Module):
     def __call__(
         self,
         x: mx.array,
-        beam_len: int,  # required by rotary embedding
+        num_positions: int,  # for rotary embedding; beam_len at generation time or prompt_len
         mask: mx.array,
         cache: Tuple[kv_cache.View, kv_cache.View],
     ) -> mx.array:
-        r = self.self_attn(self.input_layernorm(x), beam_len, mask, cache)
+        r = self.self_attn(self.input_layernorm(x), num_positions, mask, cache)
         h = x + r
         r = self.mlp(self.post_attention_layernorm(h))
         out = h + r
@@ -181,7 +181,7 @@ class LlamaModel(nn.Module):
     def __call__(
         self,
         inputs: mx.array,
-        beam_len: int,  # required by rotary embedding
+        num_positions: int,  # for rotary embedding; beam_len at generation time or prompt_len
         mask: mx.array,
         cache: Tuple[Tuple[kv_cache.View, kv_cache.View], ...],
     ) -> mx.array:
@@ -189,7 +189,7 @@ class LlamaModel(nn.Module):
         bias = attention.bias(mask, h.dtype)
 
         for layer, c in zip(self.layers, cache):
-            h = layer(h, beam_len, bias, cache=c)
+            h = layer(h, num_positions, bias, cache=c)
         return self.norm(h)
 
 
@@ -204,11 +204,11 @@ class Model(nn.Module):
     def __call__(
         self,
         inputs: mx.array,
-        beam_len: int,  # required by rotary embedding
+        num_positions: int,  # for rotary embedding; beam_len at generation time or prompt_len
         mask: mx.array,
         cache: Tuple[Tuple[kv_cache.View, kv_cache.View], ...],
     ) -> mx.array:
-        h = self.model(inputs, beam_len, mask, cache)
+        h = self.model(inputs, num_positions, mask, cache)
         return h, self.lm_head(h)
 
     @property
