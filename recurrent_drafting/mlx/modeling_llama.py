@@ -190,6 +190,7 @@ class LlamaModel(nn.Module):
 
         for layer, c in zip(self.layers, cache):
             h = layer(h, num_positions, bias, cache=c)
+
         return self.norm(h)
 
 
@@ -239,7 +240,24 @@ def load_model(model_path: str) -> Model:
         config = json.loads(f.read())
 
     model = Model(ModelArgs.from_dict(config))
-    model.load_weights(list(sanitize(weights).items()))
+
+    if hasattr(model, "sanitize"):
+        weights = model.sanitize(weights)
+
+    if (quantization := config.get("quantization", None)) is not None:
+        # Handle legacy models which may not have everything quantized
+        def class_predicate(p, m):
+            if not hasattr(m, "to_quantized"):
+                return False
+            return f"{p}.scales" in weights
+
+        nn.quantize(
+            model,
+            **quantization,
+            class_predicate=class_predicate,
+        )
+
+    model.load_weights(list(weights.items()))
     mx.eval(model.parameters())
     model.eval()
     return model
