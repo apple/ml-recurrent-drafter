@@ -3,16 +3,6 @@
 This software project accompanies the research paper, [Recurrent Drafter for Fast Speculative Decoding in Large Language Models
 ](https://arxiv.org/abs/2403.09919).
 
-The following animation compares recurrent drafting (right) with auto-regressive decoding (left) using bf16 precision on H100 GPUs. The prompt instructs the model to generate a travel plan. As visible in the animation, recurrent drafting is significantly faster than auto-regression. For a performance comparison against Medusa and similar methods, please see our paper.
-
-![](docs/bf16-non-greedy.gif)
-
-Both methods were run in sampling mode, resulting in non-identical outputs. If identical results are required, running both in greedy search mode would achieve this. For more details, refer to [this guide](docs/parity_check.md).
-
-Regarding the specific prompt used, the token acceptance rate was 3.17. By employing a larger dataset of prompts, we expect to observe a more realistic and higher acceptance rate, along with increased GPU utilization and enhanced text generation speed. The following animation shows the top per-prompt token generation speed with Vicuna 1.3 7B model and a batch size of 8, averaging about 85 tokens per second. This equates to a total throughput of 85x8=680 tokens per second. The average number of accepted candidate tokens per prompt is close to 5.
-
-[![](docs/animation_icon.png)](recurrent_drafting/benchmark/perf_wrt_candidates/bs-8-np-32-beam-48-len-16.mov)
-
 ## Installation
 
 Run the following commands:
@@ -55,7 +45,7 @@ python3 -m recurrent_drafting.cmd.generate \
     --max_generation_length=2048 \
     --beam_width=45 \
     --beam_length=5 \
-    --greedy_search=False \
+    --greedy_search=True \
     --batch_size=8 \
     --dtype=bf16
 ```
@@ -65,6 +55,10 @@ To specify a certain GPU, say, the fourth one, use: `--use_gpu=3`. To run genera
 ## Documentation
 
 Please refer to [the documentation site](docs/index.md).
+
+## Known Issues
+
+For non-greedy decoding (temperature > 0), the current implementation might not give the exact distribution match and we are actively working to improve it. This does not impact greedy decoding when temperature = 0.
 
 ## Citation
 
