@@ -118,6 +118,10 @@ class TrainingArguments(transformers.TrainingArguments):
         default="tir",
         metadata={"help": "Huggingface dataset split."},
     )
+    dataset_nrows: str = field(
+        default=100000,
+        metadata={"help": "Number of training rows."},
+    )
     dataset_eval: str = field(
         default="nvidia/OpenMathReasoning",
         metadata={"help": "Huggingface dataset."},
@@ -203,8 +207,22 @@ def record_to_training_instance(
 def train(model_args, training_args):
     tokenizer = get_tokenizer(model_args, training_args)
     compute_metrics = get_compute_metrics(training_args)
-    # Load data
-    train_dataset = datasets.load_dataset(training_args.dataset, split=training_args.dataset_split).map(
+    # Load data in streaming mode
+    train_dataset = datasets.load_dataset(
+        training_args.dataset, 
+        split=training_args.dataset_split,
+        streaming=True
+    )
+    
+    # Take only the required number of samples if specified
+    if hasattr(training_args, 'dataset_nrows') and training_args.dataset_nrows:
+        train_dataset = train_dataset.take(training_args.dataset_nrows)
+    
+    # Convert to regular dataset and map
+    train_dataset = datasets.Dataset.from_generator(
+        lambda: train_dataset, 
+        features=train_dataset.features
+    ).map(
         lambda x: record_to_training_instance(x, tokenizer),
         num_proc=multiprocessing.cpu_count(),
     )
@@ -254,7 +272,9 @@ def eval(model_args, training_args):
     compute_metrics = get_compute_metrics(training_args)
     # Load data
     eval_dataset = (
-        datasets.load_dataset(training_args.dataset, split=training_args.dataset_split)
+        datasets.load_dataset(training_args.dataset, 
+                              num_proc=multiprocessing.cpu_count(),
+                              split=training_args.dataset_split)
         .map(
             lambda x: record_to_training_instance(x, tokenizer),
             num_proc=multiprocessing.cpu_count(),

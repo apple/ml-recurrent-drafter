@@ -3,15 +3,15 @@
 # For licensing see accompanying LICENSE file.
 # Copyright (C) 2020 Apple Inc. All Rights Reserved.
 #
-set -e # exit on error
-llm_name=nvidia/OpenMath-Nemotron-14B-Kaggle
+# set -e # exit on error
+llm_name=OpenMath-Nemotron-1.5B
 n_layers=2
 n_epochs=2
 nproc_per_node=2
 lr=0.001
 weight_decay=0.0
 current_time=$(date '+%Y-%m-%d_%H:%M:%S')
-torchrun --nproc_per_node=${nproc_per_node} recurrent_drafting/cmd/train.py \
+torchrun --nproc_per_node=${nproc_per_node} train.py \
     --llm_name_or_path $llm_name \
     --bf16 True \
     --output_dir $current_time \
