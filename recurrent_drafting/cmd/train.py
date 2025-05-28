@@ -29,7 +29,7 @@ import math
 import multiprocessing
 import pathlib
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Dict, Any
 
 import datasets
 import numpy as np
@@ -110,6 +110,22 @@ class TrainingArguments(transformers.TrainingArguments):
         default=False,
         metadata={"help": "Include rnn in drafter."},
     )
+    dataset: str = field(
+        default="nvidia/OpenMathReasoning",
+        metadata={"help": "Huggingface dataset."},
+    )
+    dataset_split: str = field(
+        default="tir",
+        metadata={"help": "Huggingface dataset split."},
+    )
+    dataset_eval: str = field(
+        default="nvidia/OpenMathReasoning",
+        metadata={"help": "Huggingface dataset."},
+    )
+    dataset_eval_split: str = field(
+        default="tir",
+        metadata={"help": "Huggingface dataset split."},
+    )
 
 
 def get_tokenizer(model_args, training_args):
@@ -118,9 +134,8 @@ def get_tokenizer(model_args, training_args):
         cache_dir=training_args.cache_dir,
         model_max_length=training_args.model_max_length,
         padding_side="right",
-        use_fast=False,
+        use_fast=False,  # Try with False
     )
-    tokenizer.pad_token = tokenizer.unk_token
     return tokenizer
 
 
@@ -132,7 +147,6 @@ def generate_drafter_config_from_base(llm, training_args):
         num_draft_layers=training_args.drafter_num_layers,
         rnn=training_args.rnn,
     )
-
 
 def get_compute_metrics(training_args):
     predict_n_tokens = training_args.drafter_predict_n_tokens
@@ -149,12 +163,49 @@ def get_compute_metrics(training_args):
     return compute_metrics
 
 
+def record_to_training_instance(
+    record: Dict[str, Any],
+    tokenizer: transformers.PreTrainedTokenizer,
+) -> Dict[str, torch.Tensor]:
+    """Given a conversation, outputs a training instance into which the conversation is
+    converted.
+
+    Returns:
+
+      A dictionary of tokenized inputs, labels, and attention mask.
+
+    """
+    problem = record["problem"]
+    solution = record["generated_solution"]
+    IGNORE_TOKEN_ID = -100
+
+    messages = [
+            {"role": "system", "content": f""},
+            {"role": "user", "content": problem},
+            {"role": "assistant", "content": solution}]
+
+    input_text = tokenizer.apply_chat_template(messages,
+                                                   tokenize = False,
+                                                   add_generation_prompt = False)
+
+    input_dict = tokenizer(
+            input_text,
+            return_tensors="pt",
+            padding="max_length",
+            max_length=tokenizer.model_max_length,
+            truncation=True,
+        )
+    input_dict['labels'] = input_dict['input_ids'].clone()
+    input_dict['labels'][~input_dict['attention_mask'].bool()] = IGNORE_TOKEN_ID
+
+    return input_dict
+
 def train(model_args, training_args):
     tokenizer = get_tokenizer(model_args, training_args)
     compute_metrics = get_compute_metrics(training_args)
     # Load data
-    train_dataset = datasets.load_dataset("Aeala/ShareGPT_Vicuna_unfiltered", split="train").map(
-        lambda x: data.sharegpt_record_to_vicuna_training_instance(x, tokenizer),
+    train_dataset = datasets.load_dataset(training_args.dataset, split=training_args.dataset_split).map(
+        lambda x: record_to_training_instance(x, tokenizer),
         num_proc=multiprocessing.cpu_count(),
     )
     # Set RoPE scaling factor
@@ -203,10 +254,9 @@ def eval(model_args, training_args):
     compute_metrics = get_compute_metrics(training_args)
     # Load data
     eval_dataset = (
-        datasets.load_dataset("tatsu-lab/alpaca_eval", split="eval")
-        .map(data.convert_alpaca_to_sharegpt, num_proc=multiprocessing.cpu_count())
+        datasets.load_dataset(training_args.dataset, split=training_args.dataset_split)
         .map(
-            lambda x: data.sharegpt_record_to_vicuna_training_instance(x, tokenizer),
+            lambda x: record_to_training_instance(x, tokenizer),
             num_proc=multiprocessing.cpu_count(),
         )
     )
